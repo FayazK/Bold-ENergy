@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <footer className="w-full relative">
-      <div className="w-full relative min-h-screen">
+      <div className="w-full relative">
         <img
           src="/bold.png.png"
           alt="Bold Energy Footer"
-          className="w-full h-full object-cover absolute inset-0"
-          style={{ minHeight: '800px' }}
+          style={{ width: '100%', height: '1270px', objectFit: 'cover' }}
         />
         {/* Green Overlay */}
         <div
@@ -16,41 +15,43 @@ const Footer = () => {
           style={{
             backgroundColor: '#A1B502',
             opacity: '0.8',
+            width: '100%',
+            height: '1270px',
             zIndex: 1
           }}
         />
         {/* Bold Section Image */}
-        <div className="absolute w-full flex justify-center pt-12 sm:pt-16 md:pt-20 lg:pt-24 px-4" style={{ zIndex: 2 }}>
+        <div className="absolute w-full flex justify-center" style={{ top: '100px', zIndex: 2 }}>
           <img
             src="/boldsection.png.png"
             alt="Bold Section"
-            className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-4xl h-auto object-cover"
+            style={{ width: '1100px', height: '400px', objectFit: 'cover' }}
           />
         </div>
 
         {/* Text Content */}
-        <div className="absolute w-full flex flex-col items-center px-4 sm:px-6 md:px-8" style={{ top: '350px', zIndex: 2 }}>
-          <h2 className="mb-4 sm:mb-6 text-white font-bold text-center text-3xl sm:text-4xl md:text-5xl" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+        <div className="absolute w-full flex flex-col items-center" style={{ top: '550px', zIndex: 2 }}>
+          <h2 className="mb-6 text-white font-bold text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px' }}>
             Partner With Us
           </h2>
-          <p className="text-white text-center mb-8 sm:mb-10 text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl leading-relaxed" style={{ fontFamily: 'Archivo, sans-serif' }}>
+          <p className="text-white text-center mb-10" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '23px', maxWidth: '900px', lineHeight: '1.4' }}>
             We are an environmentally conscious renewable energy company that's focused on creating the most customer centric experience in the industry!
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+          <div className="flex gap-6">
             <button
-              className="px-8 sm:px-10 py-3 sm:py-4 rounded-full font-bold hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-3 text-sm sm:text-base"
-              style={{ fontFamily: 'Poppins, sans-serif', backgroundColor: '#FFFFFF', color: '#A1B502' }}
+              className="px-10 py-4 rounded-full font-bold hover:opacity-90 transition-opacity duration-300 flex items-center gap-3"
+              style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#FFFFFF', color: '#A1B502' }}
             >
-              <img src="/greenquote.png.png" alt="Get a Quote" className="w-6 sm:w-7 h-4 sm:h-5" />
+              <img src="/greenquote.png.png" alt="Get a Quote" className="w-7 h-5" />
               GET A QUOTE
             </button>
             <button
-              className="px-8 sm:px-10 py-3 sm:py-4 rounded-full font-bold text-white hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-3 text-sm sm:text-base"
-              style={{ fontFamily: 'Poppins, sans-serif', backgroundColor: '#385887' }}
+              className="px-10 py-4 rounded-full font-bold text-white hover:opacity-90 transition-opacity duration-300 flex items-center gap-3"
+              style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#385887' }}
             >
-              <img src="/handshake.png.png" alt="Become a Sales Dealer" className="w-5 sm:w-6 h-5 sm:h-6" />
+              <img src="/handshake.png.png" alt="Become a Sales Dealer" className="w-6 h-6" />
               BECOME A SALES DEALER
             </button>
           </div>
@@ -58,7 +59,7 @@ const Footer = () => {
       </div>
 
       {/* White Rectangle - Half on bold section, half on footer */}
-      <div className="hidden lg:block absolute w-full flex justify-center" style={{ top: '875.5px', zIndex: 10 }}>
+      <div className="absolute w-full flex justify-center" style={{ top: '875.5px', zIndex: 10 }}>
         <div className="relative" style={{ width: '1350px', height: '789px', backgroundColor: '#FFFFFF', borderRadius: '10px' }}>
           {/* Text Content */}
           <p className="absolute" style={{ left: '70px', top: '100px', fontFamily: 'Archivo, sans-serif', fontSize: '20px', fontWeight: 'bold', color: '#222222', maxWidth: '400px', paddingRight: '20px', lineHeight: '1.5' }}>
@@ -244,28 +245,27 @@ const Footer = () => {
       </div>
 
       {/* Footer Image */}
-      <div className="w-full relative min-h-screen">
+      <div className="w-full relative">
         <img
           src="/footer.png.jpg"
           alt="Footer"
-          className="w-full h-full object-cover absolute inset-0"
-          style={{ minHeight: '600px' }}
+          style={{ width: '100%', height: '1000px', objectFit: 'cover', display: 'block' }}
         />
         {/* Bold Energy Logo */}
-        <div className="absolute top-12 sm:top-16 md:top-20 lg:top-32 left-4 sm:left-8 md:left-12 lg:left-24">
+        <div className="absolute" style={{ top: '450px', left: '250px' }}>
           <img
             src="/boldenergy.png"
             alt="Bold Energy"
-            className="w-32 sm:w-48 md:w-64 lg:w-80 h-auto"
+            style={{ width: '353px', height: '250px' }}
           />
         </div>
 
         {/* Company Section */}
-        <div className="absolute top-32 sm:top-40 md:top-48 lg:top-64 left-1/2 transform -translate-x-1/2">
-          <h4 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 sm:mb-4" style={{ fontFamily: 'Archivo, sans-serif' }}>
+        <div className="absolute" style={{ top: '500px', left: 'calc(50% + 50px)', transform: 'translateX(-50%)' }}>
+          <h4 style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#FFFFFF', marginBottom: '15px' }}>
             Company
           </h4>
-          <div className="text-sm sm:text-base md:text-lg text-white space-y-2" style={{ fontFamily: 'Archivo, sans-serif' }}>
+          <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF', lineHeight: '2' }}>
             <p>Homeowners</p>
             <p>Sales Dealers</p>
             <Link to="/customer-reviews" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
@@ -278,33 +278,33 @@ const Footer = () => {
         </div>
 
         {/* Contact Us Section */}
-        <div className="absolute top-12 sm:top-16 md:top-20 lg:top-32 right-4 sm:right-8 md:right-12 lg:right-24 max-w-sm p-6 sm:p-8 rounded-lg" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }}>
-          <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-6" style={{ fontFamily: 'Archivo, sans-serif' }}>
+        <div className="absolute" style={{ top: '450px', right: 'calc((100vw - 1350px) / 2)', backgroundColor: 'rgba(255, 255, 255, 0.1)', borderRadius: '10px', padding: '30px', width: '370px', height: '298px' }}>
+          <h4 style={{ fontFamily: 'Archivo, sans-serif', fontSize: '30px', fontWeight: 'bold', color: '#FFFFFF', marginBottom: '25px' }}>
             Contact Us
           </h4>
 
           {/* Contact Items */}
-          <div className="flex flex-col gap-3 sm:gap-4">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             {/* Phone */}
-            <div className="flex items-start gap-2 sm:gap-3">
-              <img src="/phone.png" alt="Phone" className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 flex-shrink-0" />
-              <span className="text-sm sm:text-base md:text-lg text-white" style={{ fontFamily: 'Archivo, sans-serif' }}>
+            <div className="flex items-start gap-3">
+              <img src="/phone.png" alt="Phone" style={{ width: '24px', height: '24px', flexShrink: 0 }} />
+              <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF' }}>
                 123-456-7890
               </span>
             </div>
 
             {/* Email */}
-            <div className="flex items-start gap-2 sm:gap-3">
-              <img src="/email.png" alt="Email" className="w-5 sm:w-6 md:w-7 h-3 sm:h-4 md:h-5 flex-shrink-0" />
-              <span className="text-sm sm:text-base md:text-lg text-white" style={{ fontFamily: 'Archivo, sans-serif' }}>
+            <div className="flex items-start gap-3">
+              <img src="/email.png" alt="Email" style={{ width: '25px', height: '17px', flexShrink: 0 }} />
+              <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF' }}>
                 info@bold.energy
               </span>
             </div>
 
             {/* Address */}
-            <div className="flex items-start gap-2 sm:gap-3">
-              <img src="/address.png" alt="Address" className="w-4 sm:w-5 md:w-6 h-6 sm:h-7 md:h-8 flex-shrink-0" />
-              <span className="text-sm sm:text-base md:text-lg text-white leading-relaxed" style={{ fontFamily: 'Archivo, sans-serif' }}>
+            <div className="flex items-start gap-3">
+              <img src="/address.png" alt="Address" style={{ width: '24px', height: '32px', flexShrink: 0 }} />
+              <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '17px', color: '#FFFFFF', lineHeight: '1.4' }}>
                 30 Old Kings Hwy S, Darien, Suite #1001, CT 06820
               </span>
             </div>
@@ -312,43 +312,45 @@ const Footer = () => {
         </div>
 
         {/* Social Media Icons */}
-        <div className="absolute bottom-32 sm:bottom-24 md:bottom-20 left-4 sm:left-8 md:left-12 lg:left-24 flex gap-3 sm:gap-4">
+        <div className="absolute flex gap-4" style={{ top: '820px', left: '250px' }}>
           {/* Facebook */}
-          <div className="flex items-center justify-center rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white">
-            <img src="/fb.png" alt="Facebook" className="w-3 h-5" />
+          <div className="flex items-center justify-center rounded-full" style={{ width: '60px', height: '60px', backgroundColor: '#FFFFFF' }}>
+            <img src="/fb.png" alt="Facebook" style={{ width: '12px', height: '20px' }} />
           </div>
 
           {/* X (Twitter) */}
-          <div className="flex items-center justify-center rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white">
-            <img src="/x.png" alt="X" className="w-4 h-4 sm:w-5 sm:h-5" />
+          <div className="flex items-center justify-center rounded-full" style={{ width: '60px', height: '60px', backgroundColor: '#FFFFFF' }}>
+            <img src="/x.png" alt="X" style={{ width: '20px', height: '20px' }} />
           </div>
 
           {/* Instagram */}
-          <div className="flex items-center justify-center rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white">
-            <img src="/insta.png" alt="Instagram" className="w-4 h-4 sm:w-5 sm:h-5" />
+          <div className="flex items-center justify-center rounded-full" style={{ width: '60px', height: '60px', backgroundColor: '#FFFFFF' }}>
+            <img src="/insta.png" alt="Instagram" style={{ width: '20px', height: '20px' }} />
           </div>
 
           {/* LinkedIn */}
-          <div className="flex items-center justify-center rounded-full w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white">
-            <img src="/linkdin.png" alt="LinkedIn" className="w-4 h-4 sm:w-5 sm:h-5" />
+          <div className="flex items-center justify-center rounded-full" style={{ width: '60px', height: '60px', backgroundColor: '#FFFFFF' }}>
+            <img src="/linkdin.png" alt="LinkedIn" style={{ width: '20px', height: '20px' }} />
           </div>
         </div>
 
         {/* White Line */}
-        <div className="absolute bottom-16 sm:bottom-12 left-4 sm:left-8 md:left-12 lg:left-24 right-4 sm:right-8 md:right-12 lg:right-24 h-px bg-white"></div>
+        <div className="absolute" style={{ top: '920px', left: '250px', width: '1400px', height: '0.5px', backgroundColor: '#FFFFFF' }}></div>
 
         {/* Copyright Text - Left */}
-        <div className="absolute bottom-6 sm:bottom-4 left-4 sm:left-8 md:left-12 lg:left-24">
-          <p className="text-xs sm:text-sm md:text-base text-white" style={{ fontFamily: 'Archivo, sans-serif' }}>
+        <div className="absolute" style={{ top: '950px', left: '250px' }}>
+          <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#FFFFFF' }}>
             Copyright © 2025 Bold Energy. All Rights Reserved.
           </p>
         </div>
 
         {/* Terms & Privacy - Right */}
-        <div className="absolute bottom-6 sm:bottom-4 right-4 sm:right-8 md:right-12 lg:right-24">
-          <p className="text-xs sm:text-sm md:text-base text-white" style={{ fontFamily: 'Archivo, sans-serif' }}>
-            Terms & Conditions | Privacy Policy
-          </p>
+        <div className="absolute" style={{ top: '950px', left: '1650px', transform: 'translateX(-100%)' }}>
+          <Link to="/privacy-policy" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
+            <p className="hover:opacity-80 transition-opacity cursor-pointer" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF', whiteSpace: 'nowrap' }}>
+              Terms & Conditions    |    Privacy Policy
+            </p>
+          </Link>
         </div>
       </div>
     </footer>

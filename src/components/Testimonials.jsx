@@ -39,28 +39,39 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 lg:py-24" style={{ backgroundColor: '#EBEEF3' }}>
-      <div className="px-4 sm:px-8 md:px-12 lg:px-24 xl:px-48">
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-8">
+    <section className="relative" style={{ backgroundColor: '#EBEEF3', padding: '100px' }}>
+      {/* Background Image with Opacity */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: 'url(/reviewsectionbg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: '0.05',
+          zIndex: 0
+        }}
+      />
+      <div className="relative" style={{ paddingLeft: '200px', paddingRight: '200px', zIndex: 1 }}>
+        <div className="flex items-start justify-between">
           {/* Left Side Content */}
-          <div className="relative w-full lg:w-auto">
-            <p className="mb-2 text-base sm:text-lg md:text-xl" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222' }}>
+          <div className="relative">
+            <p className="mb-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '20px', color: '#222222' }}>
               Testimonials
             </p>
-            <h2 className="mb-4 text-3xl sm:text-4xl md:text-5xl" style={{ fontFamily: 'Quicksand, sans-serif', fontWeight: 'bold', color: '#222222' }}>
+            <h2 className="mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#222222' }}>
               Customer Reviews
             </h2>
-            <div className="w-full max-w-md lg:max-w-lg aspect-[4/5] mb-8 lg:mb-0">
+            <div style={{ width: '570px', height: '652px' }}>
               <img
                 src="/CustomerReviewSectionImage1.png.jpg"
                 alt="Customer Review"
                 className="w-full h-full object-cover rounded-lg"
-                style={{ transform: 'scaleX(-1)' }}
+                style={{ width: '570px', height: '652px', transform: 'scaleX(-1)' }}
               />
             </div>
 
             {/* Review Cards Carousel */}
-            <div className="lg:absolute overflow-hidden" style={{ top: '200px', left: '385px', width: '100%', maxWidth: '100%' }}>
+            <div className="absolute" style={{ top: '200px', left: '385px', width: 'calc(100vw - 385px - 200px)', overflow: 'visible', paddingTop: '30px' }}>
               <div
                 className="flex transition-transform duration-300 ease-in-out"
                 style={{
@@ -73,24 +84,24 @@ const Testimonials = () => {
                     // Video Player Card
                     <div
                       key={review.id}
-                      className="rounded-lg flex-shrink-0 flex items-center justify-center w-full sm:w-80 md:w-96"
+                      className="rounded-lg flex-shrink-0 flex items-center justify-center"
                       style={{
-                        minHeight: '350px',
-                        height: 'auto',
+                        width: '370px',
+                        height: '450px',
                         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                         backgroundColor: '#FFFFFF'
                       }}
                     >
                       {/* Inner Video Container */}
                       <div
-                        className="relative overflow-hidden w-full"
+                        className="relative overflow-hidden"
                         style={{
-                          minHeight: '330px',
+                          width: '350px',
+                          height: '430px',
                           backgroundImage: `url(${review.videoThumbnail})`,
                           backgroundSize: 'cover',
                           backgroundPosition: 'center',
-                          borderRadius: '8px',
-                          margin: '10px'
+                          borderRadius: '8px'
                         }}
                       >
                         {/* Dark Overlay */}
@@ -120,21 +131,21 @@ const Testimonials = () => {
                     // Regular Review Card
                     <div
                       key={review.id}
-                      className="rounded-lg flex-shrink-0 flex items-center justify-center w-full sm:w-80 md:w-96"
+                      className="rounded-lg flex-shrink-0 flex items-center justify-center"
                       style={{
-                        minHeight: '350px',
-                        height: 'auto',
+                        width: '370px',
+                        height: '450px',
                         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                         backgroundColor: '#FFFFFF'
                       }}
                     >
                       {/* Inner Card Container */}
                       <div
-                        className="bg-white rounded-lg flex flex-col items-center relative w-full"
+                        className="bg-white rounded-lg flex flex-col items-center relative"
                         style={{
-                          minHeight: '330px',
-                          padding: '50px 20px 30px 20px',
-                          margin: '10px'
+                          width: '350px',
+                          height: '430px',
+                          padding: '50px 24px 30px 24px'
                         }}
                       >
                         {/* Colons Image */}
@@ -178,7 +189,7 @@ const Testimonials = () => {
               </div>
 
               {/* Dot Navigation */}
-              <div className="flex gap-3 justify-center mt-6">
+              <div className="flex gap-3 justify-center mt-6" style={{ marginLeft: '-500px' }}>
                 {reviews.map((_, index) => (
                   <button
                     key={index}
@@ -199,11 +210,11 @@ const Testimonials = () => {
           </div>
 
           {/* Right Side Content */}
-          <div className="w-full lg:w-auto lg:max-w-md pt-8 lg:pt-12">
-            <p className="text-base sm:text-lg leading-relaxed" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222' }}>
-              Because we believe energy should do more than power homes — it
-              should empower lives. With ethical practices, bold execution, and
-              transparent communication, we're redefining what it means to go
+          <div style={{ width: '590px', paddingTop: '50px', paddingBottom: '100px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.6' }}>
+              Because we believe energy should do more than power homes — it<br />
+              should empower lives. With ethical practices, bold execution, and<br />
+              transparent communication, we're redefining what it means to go<br />
               solar.
             </p>
           </div>

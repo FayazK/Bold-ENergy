@@ -10,10 +10,9 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="/logo.png.png"
+              src="/headerlogo.png"
               alt="Bold Energy"
               className="h-36 w-auto"
-              style={{ filter: 'brightness(0) invert(1)' }}
             />
           </Link>
 

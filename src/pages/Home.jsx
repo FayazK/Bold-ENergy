@@ -8,6 +8,7 @@ const Home = () => {
   return (
     <div>
       <Hero />
+      <div style={{ height: '60px' }}></div>
       <About />
       <GoBold />
       <FollowUs />

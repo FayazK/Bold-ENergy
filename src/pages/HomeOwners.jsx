@@ -5,11 +5,12 @@ const HomeOwners = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="w-full relative mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+      <section className="w-full relative" style={{ height: '900px', marginBottom: '100px' }}>
         <img
           src="/homeowners.png"
           alt="Homeowners"
-          className="w-full h-96 sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] object-cover"
+          className="w-full h-full object-cover"
+          style={{ height: '900px' }}
         />
         {/* Black Overlay */}
         <div
@@ -22,14 +23,14 @@ const HomeOwners = () => {
 
         {/* Content */}
         <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
-          <div className="text-center px-4 sm:px-6 max-w-5xl mx-auto">
-            <h1 className="font-bold text-white mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+          <div className="text-center" style={{ paddingLeft: '200px', paddingRight: '200px' }}>
+            <h1 className="font-bold text-white mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '60px' }}>
               See if solar is the<br />right fit for you.
             </h1>
-            <p className="text-white mb-6 sm:mb-8 text-base sm:text-lg md:text-xl lg:text-2xl" style={{ fontFamily: 'Archivo, sans-serif' }}>
-              Join thousands switching to solar and save on your<br className="hidden sm:inline" />energy bills while protecting the planet.
+            <p className="text-white mb-8" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '23px' }}>
+              Join thousands switching to solar and save on your<br />energy bills while protecting the planet.
             </p>
-            <button className="px-8 sm:px-10 py-3 sm:py-4 rounded-full text-white font-bold hover:opacity-90 transition-opacity duration-300 text-sm sm:text-base" style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502' }}>
+            <button className="px-10 py-4 rounded-full text-white font-bold text-lg hover:opacity-90 transition-opacity duration-300" style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502' }}>
               GET A FREE QUOTE
             </button>
           </div>
@@ -37,45 +38,45 @@ const HomeOwners = () => {
 
         {/* Three Stats Pills - Half on hero, half below */}
         <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2">
-          <div className="w-full flex justify-center px-4 sm:px-8 md:px-12 lg:px-24 xl:px-48">
-            <div className="flex flex-col md:flex-row flex-wrap justify-center gap-6 sm:gap-8 md:gap-12 lg:gap-20 xl:gap-24">
-              <div className="bg-white rounded-full flex items-center gap-3 sm:gap-4 w-full max-w-sm md:max-w-md lg:max-w-lg" style={{ minHeight: '100px', padding: '16px 24px' }}>
-                <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-gray-100 flex items-center justify-center p-2 sm:p-3">
+          <div className="w-full flex justify-center" style={{ paddingLeft: '200px', paddingRight: '200px' }}>
+            <div className="flex justify-center" style={{ gap: '30px' }}>
+              <div className="bg-white rounded-full flex items-center" style={{ width: '417px', height: '148px', gap: '20px', paddingLeft: '24px', paddingRight: '24px' }}>
+                <div className="flex-shrink-0 rounded-full bg-gray-100 flex items-center justify-center" style={{ width: '100px', height: '100px', padding: '12px' }}>
                   <img src="/Solar_Experience.png.png" alt="Solar Experience" className="w-full h-full object-contain" />
                 </div>
                 <div className="text-left">
-                  <div className="text-4xl sm:text-5xl md:text-6xl font-bold mb-1" style={{ fontFamily: 'Archivo, sans-serif', color: '#A1B502' }}>
+                  <div className="font-bold mb-1" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '60px', color: '#A1B502' }}>
                     25+
                   </div>
-                  <div className="text-gray-700 text-xs sm:text-sm" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                  <div className="text-gray-700" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px' }}>
                     Years of Solar Experience
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white rounded-full flex items-center gap-3 sm:gap-4 w-full max-w-sm md:max-w-md lg:max-w-lg" style={{ minHeight: '100px', padding: '16px 24px' }}>
-                <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-gray-100 flex items-center justify-center p-2 sm:p-3">
+              <div className="bg-white rounded-full flex items-center" style={{ width: '417px', height: '148px', gap: '20px', paddingLeft: '24px', paddingRight: '24px' }}>
+                <div className="flex-shrink-0 rounded-full bg-gray-100 flex items-center justify-center" style={{ width: '100px', height: '100px', padding: '12px' }}>
                   <img src="/States.png.png" alt="States" className="w-full h-full object-contain" />
                 </div>
                 <div className="text-left">
-                  <div className="text-4xl sm:text-5xl md:text-6xl font-bold mb-1" style={{ fontFamily: 'Archivo, sans-serif', color: '#A1B502' }}>
+                  <div className="font-bold mb-1" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '60px', color: '#A1B502' }}>
                     25
                   </div>
-                  <div className="text-gray-700 text-xs sm:text-sm" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                  <div className="text-gray-700" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px' }}>
                     States we cover
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white rounded-full flex items-center gap-3 sm:gap-4 w-full max-w-sm md:max-w-md lg:max-w-lg" style={{ minHeight: '100px', padding: '16px 24px' }}>
-                <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-gray-100 flex items-center justify-center p-2 sm:p-3">
+              <div className="bg-white rounded-full flex items-center" style={{ width: '417px', height: '148px', gap: '20px', paddingLeft: '24px', paddingRight: '24px' }}>
+                <div className="flex-shrink-0 rounded-full bg-gray-100 flex items-center justify-center" style={{ width: '100px', height: '100px', padding: '12px' }}>
                   <img src="/Installs.png.png" alt="Installs" className="w-full h-full object-contain" />
                 </div>
                 <div className="text-left">
-                  <div className="text-4xl sm:text-5xl md:text-6xl font-bold mb-1" style={{ fontFamily: 'Archivo, sans-serif', color: '#A1B502' }}>
+                  <div className="font-bold mb-1" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '60px', color: '#A1B502' }}>
                     20k+
                   </div>
-                  <div className="text-gray-700 text-xs sm:text-sm" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                  <div className="text-gray-700" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px' }}>
                     Completed installs
                   </div>
                 </div>
@@ -86,25 +87,25 @@ const HomeOwners = () => {
       </section>
 
       {/* Solar Options Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-8 md:px-12 lg:px-24 xl:px-48 mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-        <h2 className="text-center font-bold mb-8 sm:mb-12 text-3xl sm:text-4xl md:text-5xl" style={{ fontFamily: 'Quicksand, sans-serif', color: '#222222' }}>
+      <section className="bg-white" style={{ paddingTop: '100px', paddingBottom: '100px', paddingLeft: '200px', paddingRight: '200px', marginBottom: '100px' }}>
+        <h2 className="text-center font-bold mb-12" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', color: '#222222' }}>
           Solar Options
         </h2>
 
         {/* Three Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+        <div className="flex justify-center" style={{ gap: '0' }}>
           {/* Purchase Card */}
-          <div className="flex flex-col items-start p-8 sm:p-10 md:p-12 lg:p-14 rounded-t-lg md:rounded-t-none md:rounded-l-lg" style={{ backgroundColor: 'rgba(161, 181, 2, 0.05)' }}>
-            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white flex items-center justify-center mb-4 sm:mb-6" style={{ border: '2px solid rgba(161, 181, 2, 0.30)' }}>
-              <img src="/purchase.png" alt="Purchase" className="w-10 h-10 sm:w-12 sm:h-12" />
+          <div className="flex flex-col items-start rounded-l-lg" style={{ backgroundColor: 'rgba(161, 181, 2, 0.05)', padding: '56px', width: '33.33%' }}>
+            <div className="rounded-full bg-white flex items-center justify-center mb-6" style={{ width: '80px', height: '80px', border: '2px solid rgba(161, 181, 2, 0.30)' }}>
+              <img src="/purchase.png" alt="Purchase" style={{ width: '48px', height: '48px' }} />
             </div>
-            <h3 className="font-bold mb-3 sm:mb-4 text-xl sm:text-2xl" style={{ fontFamily: 'Quicksand, sans-serif', color: '#222222' }}>
+            <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#222222' }}>
               Purchase
             </h3>
-            <p className="mb-4 sm:mb-6 text-sm sm:text-base" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', lineHeight: '1.6' }}>
+            <p className="mb-6" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#222222', lineHeight: '1.6' }}>
               Flexible Financing, Maximum Freedom Think going solar is out of reach? Think...
             </p>
-            <a href="#" className="flex items-center gap-2 font-bold text-sm sm:text-base" style={{ fontFamily: 'Archivo, sans-serif', color: '#A1B502' }}>
+            <a href="#" className="flex items-center gap-2 font-bold" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#A1B502' }}>
               Read More
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -113,36 +114,36 @@ const HomeOwners = () => {
           </div>
 
           {/* Finance Card */}
-          <div className="flex flex-col items-start p-8 sm:p-10 md:p-12 lg:p-14" style={{ backgroundColor: 'rgba(161, 181, 2, 0.10)' }}>
-            <h3 className="font-bold mb-3 sm:mb-4 text-xl sm:text-2xl" style={{ fontFamily: 'Quicksand, sans-serif', color: '#222222' }}>
+          <div className="flex flex-col items-start" style={{ backgroundColor: 'rgba(161, 181, 2, 0.10)', padding: '56px', width: '33.33%' }}>
+            <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#222222' }}>
               Finance
             </h3>
-            <p className="mb-4 sm:mb-6 text-sm sm:text-base" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', lineHeight: '1.6' }}>
+            <p className="mb-6" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#222222', lineHeight: '1.6' }}>
               Installing solar panels is a great way to reduce your energy costs and sup...
             </p>
-            <a href="#" className="flex items-center gap-2 font-bold mb-4 sm:mb-6 text-sm sm:text-base" style={{ fontFamily: 'Archivo, sans-serif', color: '#A1B502' }}>
+            <a href="#" className="flex items-center gap-2 font-bold mb-6" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#A1B502' }}>
               Read More
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </a>
-            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white flex items-center justify-center" style={{ border: '2px solid rgba(161, 181, 2, 0.30)' }}>
-              <img src="/finance.png" alt="Finance" className="w-10 h-10 sm:w-12 sm:h-12" />
+            <div className="rounded-full bg-white flex items-center justify-center" style={{ width: '80px', height: '80px', border: '2px solid rgba(161, 181, 2, 0.30)' }}>
+              <img src="/finance.png" alt="Finance" style={{ width: '48px', height: '48px' }} />
             </div>
           </div>
 
           {/* TPO Card */}
-          <div className="flex flex-col items-start p-8 sm:p-10 md:p-12 lg:p-14 rounded-b-lg md:rounded-b-none md:rounded-r-lg" style={{ backgroundColor: 'rgba(161, 181, 2, 0.05)' }}>
-            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white flex items-center justify-center mb-4 sm:mb-6" style={{ border: '2px solid rgba(161, 181, 2, 0.30)' }}>
-              <img src="/tpo.png" alt="TPO" className="w-10 h-10 sm:w-12 sm:h-12" />
+          <div className="flex flex-col items-start rounded-r-lg" style={{ backgroundColor: 'rgba(161, 181, 2, 0.05)', padding: '56px', width: '33.33%' }}>
+            <div className="rounded-full bg-white flex items-center justify-center mb-6" style={{ width: '80px', height: '80px', border: '2px solid rgba(161, 181, 2, 0.30)' }}>
+              <img src="/tpo.png" alt="TPO" style={{ width: '48px', height: '48px' }} />
             </div>
-            <h3 className="font-bold mb-3 sm:mb-4 text-xl sm:text-2xl" style={{ fontFamily: 'Quicksand, sans-serif', color: '#222222' }}>
+            <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#222222' }}>
               TPO
             </h3>
-            <p className="mb-4 sm:mb-6 text-sm sm:text-base" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', lineHeight: '1.6' }}>
+            <p className="mb-6" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#222222', lineHeight: '1.6' }}>
               Installing solar panels is a great way to reduce your energy costs and sup...
             </p>
-            <a href="#" className="flex items-center gap-2 font-bold text-sm sm:text-base" style={{ fontFamily: 'Archivo, sans-serif', color: '#A1B502' }}>
+            <a href="#" className="flex items-center gap-2 font-bold" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#A1B502' }}>
               Read More
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -153,12 +154,12 @@ const HomeOwners = () => {
       </section>
 
       {/* Why Bold Energy Section */}
-      <section className="w-full relative min-h-screen">
+      <section className="w-full relative" style={{ height: '1000px' }}>
         <img
           src="/whyboldenergybg.png"
           alt="Why Bold Energy"
           className="w-full h-full object-cover absolute inset-0"
-          style={{ transform: 'scaleX(-1)', minHeight: '600px' }}
+          style={{ transform: 'scaleX(-1)', height: '1000px' }}
         />
         {/* Color Overlay */}
         <div
@@ -170,13 +171,13 @@ const HomeOwners = () => {
         />
 
         {/* Content */}
-        <div className="absolute inset-0 flex flex-col items-center py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8" style={{ zIndex: 2 }}>
-          <h2 className="font-bold mb-8 sm:mb-12 text-3xl sm:text-4xl md:text-5xl" style={{ fontFamily: 'Quicksand, sans-serif', color: '#000000' }}>
+        <div className="absolute inset-0 flex flex-col items-center" style={{ zIndex: 2, paddingTop: '100px' }}>
+          <h2 className="font-bold mb-12" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', color: '#000000' }}>
             Why Bold Energy
           </h2>
 
           {/* Bold Energy Image - Center */}
-          <div id="centerImage" className="absolute" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)', width: '410px', height: '528px' }}>
+          <div id="centerImage" className="absolute" style={{ left: '50%', top: 'calc(50% + 50px)', transform: 'translate(-50%, -50%)', width: '410px', height: '528px' }}>
             {/* SVG Dashed Border */}
             <svg style={{ position: 'absolute', width: '410px', height: '528px', top: 0, left: 0 }}>
               <rect
@@ -187,7 +188,7 @@ const HomeOwners = () => {
                 rx="205"
                 ry="205"
                 fill="none"
-                stroke="#A1B502"
+                stroke="#385887"
                 strokeWidth="1"
                 strokeDasharray="5 10"
               />
@@ -203,17 +204,20 @@ const HomeOwners = () => {
           </div>
 
           {/* Top Left - Why Bold Energy */}
-          <div className="absolute" style={{ left: '270px', top: '220px', maxWidth: '300px' }}>
+          <div className="absolute" style={{ left: '270px', top: '270px', maxWidth: '240px' }}>
             <div className="flex items-start gap-3 mb-3">
               <div id="whyBoldIcon" className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: '#385887' }}>
                 <img src="/volt.png" alt="Volt" style={{ width: '24px', height: '28px' }} />
               </div>
             </div>
-            <h3 className="font-bold mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', color: '#222222' }}>
+            <h3 id="whyBoldHeading" className="font-bold mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', color: '#222222' }}>
               Why Bold Energy
             </h3>
             <p className="mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '14px', color: '#666666', lineHeight: '1.5' }}>
-              Ethical. Transparent. Relentless. We don't just install solar. We help you save money and the environment.
+              Ethical. Transparent. Relentless.<br />
+              We don't just install solar. We<br />
+              help you save money and the<br />
+              environment.
             </p>
             <a href="#" className="flex items-center gap-2 font-bold" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '13px', color: '#385887' }}>
               Read More
@@ -224,13 +228,13 @@ const HomeOwners = () => {
           </div>
 
           {/* Bottom Left - ROI Calculator */}
-          <div className="absolute" style={{ left: '270px', bottom: '200px', maxWidth: '300px' }}>
+          <div className="absolute" style={{ left: '270px', top: '570px', maxWidth: '240px' }}>
             <div className="flex items-start gap-3 mb-3">
               <div id="roiIcon" className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: '#385887' }}>
                 <img src="/roicalculator.png" alt="ROI Calculator" style={{ width: '24px', height: '28px' }} />
               </div>
             </div>
-            <h3 className="font-bold mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', color: '#222222' }}>
+            <h3 id="roiHeading" className="font-bold mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', color: '#222222' }}>
               ROI calculator
             </h3>
             <p className="mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '14px', color: '#666666', lineHeight: '1.5' }}>
@@ -245,13 +249,13 @@ const HomeOwners = () => {
           </div>
 
           {/* Right Side - Environmental Impact Calculator */}
-          <div className="absolute" style={{ right: '180px', top: '50%', transform: 'translateY(-50%)', maxWidth: '300px', zIndex: 3 }}>
+          <div className="absolute" style={{ right: '180px', top: 'calc(50% + 50px)', transform: 'translateY(-50%)', maxWidth: '300px', zIndex: 3 }}>
             <div className="flex items-start gap-3 mb-3">
               <div id="envImpactIcon" className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: '#385887' }}>
                 <img src="/calculator.png" alt="Calculator" style={{ width: '28px', height: '28px' }} />
               </div>
             </div>
-            <h3 className="font-bold mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', color: '#222222' }}>
+            <h3 id="envImpactHeading" className="font-bold mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', color: '#222222' }}>
               Environmental Impact Calculator
             </h3>
             <p className="mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '14px', color: '#666666', lineHeight: '1.5' }}>
@@ -266,7 +270,7 @@ const HomeOwners = () => {
           </div>
 
           {/* Bold BG Image - Right Side */}
-          <div className="absolute" style={{ right: '0', top: '50%', transform: 'translateY(-50%)', width: '379px', height: '932px' }}>
+          <div className="absolute" style={{ right: '0', top: 'calc(50% + 50px)', transform: 'translateY(-50%)', width: '379px', height: '932px' }}>
             <img
               src="/boldbg.png"
               alt="Bold Energy"
@@ -276,7 +280,7 @@ const HomeOwners = () => {
 
           {/* Connector Lines using react-xarrows */}
           <Xarrow
-            start="whyBoldIcon"
+            start="whyBoldHeading"
             end="centerImage"
             startAnchor="right"
             endAnchor="left"
@@ -284,11 +288,13 @@ const HomeOwners = () => {
             strokeWidth={1}
             dashness={{ strokeLen: 5, nonStrokeLen: 5 }}
             showHead={false}
-            path="straight"
+            path="grid"
+            gridBreak="50%"
+            gridRadius={0}
             zIndex={1}
           />
           <Xarrow
-            start="roiIcon"
+            start="roiHeading"
             end="centerImage"
             startAnchor="right"
             endAnchor="left"
@@ -296,11 +302,13 @@ const HomeOwners = () => {
             strokeWidth={1}
             dashness={{ strokeLen: 5, nonStrokeLen: 5 }}
             showHead={false}
-            path="straight"
+            path="grid"
+            gridBreak="50%"
+            gridRadius={0}
             zIndex={1}
           />
           <Xarrow
-            start="envImpactIcon"
+            start="envImpactHeading"
             end="centerImage"
             startAnchor="left"
             endAnchor="right"
@@ -308,7 +316,9 @@ const HomeOwners = () => {
             strokeWidth={1}
             dashness={{ strokeLen: 5, nonStrokeLen: 5 }}
             showHead={false}
-            path="straight"
+            path="grid"
+            gridBreak="50%"
+            gridRadius={0}
             zIndex={1}
           />
         </div>
