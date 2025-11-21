@@ -1,5 +1,4 @@
 import Testimonials from '../components/Testimonials';
-import Xarrow from 'react-xarrows';
 
 const HomeOwners = () => {
   return (
@@ -177,7 +176,7 @@ const HomeOwners = () => {
           </h2>
 
           {/* Bold Energy Image - Center */}
-          <div id="centerImage" className="absolute" style={{ left: '50%', top: 'calc(50% + 50px)', transform: 'translate(-50%, -50%)', width: '410px', height: '528px' }}>
+          <div className="absolute" style={{ left: '50%', top: 'calc(50% + 50px)', transform: 'translate(-50%, -50%)', width: '410px', height: '528px' }}>
             {/* SVG Dashed Border */}
             <svg style={{ position: 'absolute', width: '410px', height: '528px', top: 0, left: 0 }}>
               <rect
@@ -278,48 +277,54 @@ const HomeOwners = () => {
             />
           </div>
 
-          {/* Connector Lines using react-xarrows */}
-          <Xarrow
-            start="whyBoldHeading"
-            end="centerImage"
-            startAnchor="right"
-            endAnchor="left"
-            color="#385887"
-            strokeWidth={1}
-            dashness={{ strokeLen: 5, nonStrokeLen: 5 }}
-            showHead={false}
-            path="grid"
-            gridBreak="50%"
-            gridRadius={0}
-            zIndex={1}
+          {/* Connector Lines using SVG files */}
+          {/* Connector from Why Bold Energy to Center Image */}
+          <img
+              src="/connector-1.svg"
+              alt=""
+              className="absolute"
+              style={{
+                left: '422px',
+                top: '348px',
+                width: '360px',
+                height: '90px',
+                pointerEvents: 'none',
+                zIndex: 1
+              }}
           />
-          <Xarrow
-            start="roiHeading"
-            end="centerImage"
-            startAnchor="right"
-            endAnchor="left"
-            color="#385887"
-            strokeWidth={1}
-            dashness={{ strokeLen: 5, nonStrokeLen: 5 }}
-            showHead={false}
-            path="grid"
-            gridBreak="50%"
-            gridRadius={0}
-            zIndex={1}
+
+
+
+          {/* Connector from ROI Calculator to Center Image */}
+          <img
+              src="/connector-2.svg"
+              alt=""
+              className="absolute"
+              style={{
+                left: '380px',
+                top: '605px',
+                width: '360px',
+                height: '90px',
+                pointerEvents: 'none',
+                zIndex: 1
+              }}
           />
-          <Xarrow
-            start="envImpactHeading"
-            end="centerImage"
-            startAnchor="left"
-            endAnchor="right"
-            color="#385887"
-            strokeWidth={1}
-            dashness={{ strokeLen: 5, nonStrokeLen: 5 }}
-            showHead={false}
-            path="grid"
-            gridBreak="50%"
-            gridRadius={0}
-            zIndex={1}
+
+
+
+          {/* Connector from Environmental Impact Calculator to Center Image */}
+          <img
+            src="/connector-3.svg"
+            alt=""
+            className="absolute"
+            style={{
+              right: '490px',
+              top: 'calc(47% + 0px)',
+              width: '250px',
+              height: '80px',
+              pointerEvents: 'none',
+              zIndex: 1
+            }}
           />
         </div>
       </section>
