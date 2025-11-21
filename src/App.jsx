@@ -7,6 +7,7 @@ import CustomerReviews from './pages/CustomerReviews';
 import Blogs from './pages/Blogs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import PartnerWithBoldEnergy from './pages/PartnerWithBoldEnergy';
+import StatesWeCover from './pages/StatesWeCover';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/partner-with-bold-energy" element={<PartnerWithBoldEnergy />} />
+            <Route path="/states-we-cover" element={<StatesWeCover />} />
           </Routes>
         </main>
         <Footer />
