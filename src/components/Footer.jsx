@@ -274,7 +274,9 @@ const Footer = () => {
             <Link to="/blogs" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
               <p className="hover:opacity-80 transition-opacity cursor-pointer">Latest Blog</p>
             </Link>
-            <p className="hover:opacity-80 transition-opacity cursor-pointer">States we cover</p>
+            <Link to="/states-we-cover" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
+              <p className="hover:opacity-80 transition-opacity cursor-pointer">States we cover</p>
+            </Link>
             <Link to="/partner-with-bold-energy" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
               <p className="hover:opacity-80 transition-opacity cursor-pointer">Partner with Bold</p>
             </Link>
