@@ -114,7 +114,7 @@ const StatesWeCover = () => {
           </div>
 
           {/* Right - Description */}
-          <div style={{ flex: 1, maxWidth: '700px' }}>
+          <div style={{ flex: 1, maxWidth: '700px', marginLeft: '60px' }}>
             <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '20px', color: '#000000', lineHeight: '1.8', letterSpacing: '0.03em' }}>
               Bold Energy is headquartered in Connecticut, but our mission is nationwide. We currently serve homeowners and partners across 15+ states — and growing every quarter. With Tier-1 panels, transparent pricing, and flexible financing options, we make it easy for families from New England to the Rockies to take control of their energy future.
             </p>
