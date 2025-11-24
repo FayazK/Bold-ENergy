@@ -31,10 +31,10 @@ const Footer = () => {
 
         {/* Text Content */}
         <div className="absolute w-full flex flex-col items-center" style={{ top: '550px', zIndex: 2 }}>
-          <h2 className="mb-6 text-white font-bold text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px' }}>
+          <h2 className="mb-6 text-white font-bold text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', letterSpacing: '0.03em' }}>
             Partner With Us
           </h2>
-          <p className="text-white text-center mb-10" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '23px', maxWidth: '900px', lineHeight: '1.4' }}>
+          <p className="text-white text-center mb-10" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '23px', maxWidth: '900px', lineHeight: '1.4', letterSpacing: '0.03em' }}>
             We are an environmentally conscious renewable energy company that's focused on creating the most customer centric experience in the industry!
           </p>
 
@@ -42,14 +42,14 @@ const Footer = () => {
           <div className="flex gap-6">
             <button
               className="px-10 py-4 rounded-full font-bold hover:opacity-90 transition-opacity duration-300 flex items-center gap-3"
-              style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#FFFFFF', color: '#A1B502' }}
+              style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#FFFFFF', color: '#A1B502', letterSpacing: '0.2em' }}
             >
               <img src="/greenquote.png.png" alt="Get a Quote" className="w-7 h-5" />
               GET A QUOTE
             </button>
             <button
               className="px-10 py-4 rounded-full font-bold text-white hover:opacity-90 transition-opacity duration-300 flex items-center gap-3"
-              style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#385887' }}
+              style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#385887', letterSpacing: '0.2em' }}
             >
               <img src="/handshake.png.png" alt="Become a Sales Dealer" className="w-6 h-6" />
               BECOME A SALES DEALER
@@ -62,7 +62,7 @@ const Footer = () => {
       <div className="absolute w-full flex justify-center" style={{ top: '875.5px', zIndex: 10 }}>
         <div className="relative" style={{ width: '1350px', height: '789px', backgroundColor: '#FFFFFF', borderRadius: '10px' }}>
           {/* Text Content */}
-          <p className="absolute" style={{ left: '80px', top: '150px', fontFamily: 'Archivo, sans-serif', fontSize: '20px', fontWeight: 'bold', color: '#222222', maxWidth: '400px', paddingRight: '20px', lineHeight: '1.5' }}>
+          <p className="absolute" style={{ left: '80px', top: '150px', fontFamily: 'Archivo, sans-serif', fontSize: '20px', fontWeight: 'bold', color: '#222222', maxWidth: '400px', paddingRight: '20px', lineHeight: '1.5', letterSpacing: '0.03em' }}>
             As a national distributor of solar supplies we endeavor provide fast and knowledgeable service, we can get all the materials you need
           </p>
 
@@ -110,7 +110,7 @@ const Footer = () => {
             {/* Contact Us Button */}
             <button
               className="px-8 py-3 rounded-full text-white font-bold hover:opacity-90 transition-opacity duration-300 flex items-center justify-between"
-              style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#A1B502', width: '320px', height: '50px', marginTop: '10px' }}
+              style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#A1B502', width: '320px', height: '50px', marginTop: '10px', letterSpacing: '0.2em' }}
             >
               Contact Us
               <img src="/contactus.png.png" alt="Contact Us" className="w-5 h-5" />
@@ -120,14 +120,14 @@ const Footer = () => {
           {/* Blue Rectangle - Quote Form */}
           <div className="absolute flex flex-col" style={{ right: '60px', top: '50%', transform: 'translateY(-50%)', width: '759px', height: '669px', backgroundColor: '#385887', borderRadius: '10px', padding: '40px' }}>
             {/* Form Header */}
-            <p className="mb-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '22px', color: '#A1B502' }}>
+            <p className="mb-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '22px', color: '#A1B502', letterSpacing: '0.03em' }}>
               Get your free solar estimate today.
             </p>
             <div className="flex items-center gap-4 mb-10">
-              <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#FFFFFF' }}>
+              <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#FFFFFF', letterSpacing: '0.03em', whiteSpace: 'nowrap' }}>
                 Request A Quote
               </h3>
-              <div style={{ width: '250px', height: '3px', backgroundColor: '#A1B502' }}></div>
+              <div style={{ width: '150px', height: '3px', backgroundColor: '#A1B502' }}></div>
             </div>
 
             {/* Form Fields - Grid Layout */}
@@ -227,14 +227,14 @@ const Footer = () => {
             <div className="flex gap-4 self-center">
               <button
                 className="px-8 py-3 rounded-full text-white font-bold hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-2"
-                style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#A1B502' }}
+                style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#A1B502', letterSpacing: '0.2em' }}
               >
                 <img src="/dealer.png.png" alt="Dealer" className="w-6 h-5" />
                 GET A FREE QUOTE
               </button>
               <button
                 className="px-8 py-3 rounded-full font-bold hover:opacity-90 transition-opacity duration-300 flex items-center justify-center"
-                style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: 'transparent', border: '2px solid #A1B502', color: '#A1B502' }}
+                style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: 'transparent', border: '2px solid #A1B502', color: '#A1B502', letterSpacing: '0.2em' }}
               >
                 BECOME A SALES DEALER
               </button>
@@ -261,7 +261,7 @@ const Footer = () => {
 
         {/* Company Section */}
         <div className="absolute" style={{ top: '490px', left: 'calc(50% - 200px)', transform: 'translateX(-50%)' }}>
-          <h4 style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#FFFFFF', marginBottom: '15px' }}>
+          <h4 style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#FFFFFF', marginBottom: '15px', letterSpacing: '0.03em' }}>
             Company
           </h4>
           <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF', lineHeight: '2' }}>
@@ -284,7 +284,7 @@ const Footer = () => {
 
         {/* Contact Us Section */}
         <div className="absolute" style={{ top: '450px', right: 'calc((100vw - 1350px) / 2)', backgroundColor: 'rgba(255, 255, 255, 0.1)', borderRadius: '10px', padding: '30px', width: '370px', height: '298px' }}>
-          <h4 style={{ fontFamily: 'Archivo, sans-serif', fontSize: '30px', fontWeight: 'bold', color: '#FFFFFF', marginBottom: '25px' }}>
+          <h4 style={{ fontFamily: 'Archivo, sans-serif', fontSize: '30px', fontWeight: 'bold', color: '#FFFFFF', marginBottom: '25px', letterSpacing: '0.03em' }}>
             Contact Us
           </h4>
 

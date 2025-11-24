@@ -96,7 +96,7 @@ const StatesWeCover = () => {
 
         {/* Content */}
         <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
-          <h1 className="font-bold text-white text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '75px', marginTop: '10px' }}>
+          <h1 className="font-bold text-white text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '75px', marginTop: '10px', letterSpacing: '0.03em' }}>
             States We Cover
           </h1>
         </div>
@@ -108,14 +108,14 @@ const StatesWeCover = () => {
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '80px', marginBottom: '60px', marginLeft: '50px' }}>
           {/* Left - Heading */}
           <div style={{ flex: '0 0 550px' }}>
-            <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', lineHeight: '1.2' }}>
+            <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', lineHeight: '1.2', letterSpacing: '0.03em' }}>
               Expanding Solar, One<br />State at a Time
             </h2>
           </div>
 
           {/* Right - Description */}
           <div style={{ flex: 1, maxWidth: '700px' }}>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '20px', color: '#000000', lineHeight: '1.8' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '20px', color: '#000000', lineHeight: '1.8', letterSpacing: '0.03em' }}>
               Bold Energy is headquartered in Connecticut, but our mission is nationwide. We currently serve homeowners and partners across 15+ states — and growing every quarter. With Tier-1 panels, transparent pricing, and flexible financing options, we make it easy for families from New England to the Rockies to take control of their energy future.
             </p>
           </div>
@@ -133,7 +133,7 @@ const StatesWeCover = () => {
 
       {/* Where We Operate Now Section */}
       <section style={{ width: '100%', height: '1180px', backgroundColor: '#F5F5F5', paddingTop: '100px', paddingBottom: '100px', overflow: 'hidden' }}>
-        <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', textAlign: 'center', marginBottom: '60px' }}>
+        <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', textAlign: 'center', marginBottom: '60px', letterSpacing: '0.03em' }}>
           Where We Operate Now
         </h2>
 
@@ -219,7 +219,7 @@ const StatesWeCover = () => {
 
                   {/* Card Content */}
                   <div style={{ padding: '30px' }}>
-                    <h3 style={{ fontFamily: 'Archivo, sans-serif', fontSize: '25px', fontWeight: 'bold', color: '#000000', marginBottom: '20px' }}>
+                    <h3 style={{ fontFamily: 'Archivo, sans-serif', fontSize: '25px', fontWeight: 'bold', color: '#000000', marginBottom: '20px', letterSpacing: '0.03em' }}>
                       {card.heading}
                     </h3>
 
@@ -260,7 +260,8 @@ const StatesWeCover = () => {
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
-            gap: '12px'
+            gap: '12px',
+            letterSpacing: '0.2em'
           }}>
             <img src="/dealer.png.png" alt="Dealer" style={{ width: '24px', height: '18px' }} />
             BECOME A PARTNER
@@ -270,7 +271,7 @@ const StatesWeCover = () => {
 
       {/* What Customers Get Section */}
       <section style={{ width: '100%', paddingTop: '100px', paddingBottom: '100px', paddingLeft: '200px', paddingRight: '0', backgroundColor: '#FFFFFF' }}>
-        <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', textAlign: 'center', marginBottom: '60px', paddingRight: '200px' }}>
+        <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', textAlign: 'center', marginBottom: '60px', paddingRight: '200px', letterSpacing: '0.03em' }}>
           What Customers Get in Every State
         </h2>
 
@@ -284,8 +285,8 @@ const StatesWeCover = () => {
                 <img src="/boost.png.png" alt="Home Value" style={{ width: '35px', height: '35px' }} />
               </div>
               <div>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', marginBottom: '8px' }}>Home Value Boost:</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px', color: '#000000', lineHeight: '1.5' }}>Solar adds ~4-7% to resale value according to Zillow.</p>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', marginBottom: '8px', letterSpacing: '0.03em' }}>Home Value Boost:</h3>
+                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px', color: '#000000', lineHeight: '1.5', letterSpacing: '0.03em' }}>Solar adds ~4-7% to resale value according to Zillow.</p>
               </div>
             </div>
 
@@ -295,8 +296,8 @@ const StatesWeCover = () => {
                 <img src="/flexible.png.png" alt="Financing" style={{ width: '35px', height: '35px' }} />
               </div>
               <div>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', marginBottom: '8px' }}>Flexible Financing:</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px', color: '#000000', lineHeight: '1.5' }}>Loan, lease, and cash purchase options available with major solar lenders. Example: 25-year solar loan at ~5.99% APR with 30% federal tax credit applied</p>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', marginBottom: '8px', letterSpacing: '0.03em' }}>Flexible Financing:</h3>
+                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px', color: '#000000', lineHeight: '1.5', letterSpacing: '0.03em' }}>Loan, lease, and cash purchase options available with major solar lenders. Example: 25-year solar loan at ~5.99% APR with 30% federal tax credit applied</p>
               </div>
             </div>
 
@@ -306,8 +307,8 @@ const StatesWeCover = () => {
                 <img src="/benifits.png.png" alt="Net Metering" style={{ width: '35px', height: '35px' }} />
               </div>
               <div>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', marginBottom: '8px' }}>Net Metering Benefits:</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px', color: '#000000', lineHeight: '1.5' }}>In most regions, customers can "bank" excess daytime energy for nighttime use — reducing reliance on utilities</p>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', marginBottom: '8px', letterSpacing: '0.03em' }}>Net Metering Benefits:</h3>
+                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px', color: '#000000', lineHeight: '1.5', letterSpacing: '0.03em' }}>In most regions, customers can "bank" excess daytime energy for nighttime use — reducing reliance on utilities</p>
               </div>
             </div>
 
@@ -317,8 +318,8 @@ const StatesWeCover = () => {
                 <img src="/timeline.png.png" alt="Hardware" style={{ width: '35px', height: '35px' }} />
               </div>
               <div>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', marginBottom: '8px' }}>Top-Tier Hardware Everywhere:</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px', color: '#000000', lineHeight: '1.5' }}>Tier-1 solar panels + SolarEdge inverters backed by 25-year warranties.</p>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', marginBottom: '8px', letterSpacing: '0.03em' }}>Top-Tier Hardware Everywhere:</h3>
+                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px', color: '#000000', lineHeight: '1.5', letterSpacing: '0.03em' }}>Tier-1 solar panels + SolarEdge inverters backed by 25-year warranties.</p>
               </div>
             </div>
 
@@ -328,8 +329,8 @@ const StatesWeCover = () => {
                 <img src="/timeline.png.png" alt="Fast Install" style={{ width: '35px', height: '35px' }} />
               </div>
               <div>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', marginBottom: '8px' }}>Fast Install Timelines:</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px', color: '#000000', lineHeight: '1.5' }}>Once permits clear, installs are usually complete in 1-2 days, no matter the market.</p>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', marginBottom: '8px', letterSpacing: '0.03em' }}>Fast Install Timelines:</h3>
+                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px', color: '#000000', lineHeight: '1.5', letterSpacing: '0.03em' }}>Once permits clear, installs are usually complete in 1-2 days, no matter the market.</p>
               </div>
             </div>
           </div>
@@ -347,7 +348,7 @@ const StatesWeCover = () => {
 
       {/* Coverage Map Section */}
       <section style={{ width: '100%', height: '1049px', backgroundColor: '#F5F5F5', padding: '100px 200px', position: 'relative' }}>
-        <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', textAlign: 'center', marginBottom: '60px' }}>
+        <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', textAlign: 'center', marginBottom: '60px', letterSpacing: '0.03em' }}>
           Coverage Map
         </h2>
 
@@ -441,7 +442,7 @@ const StatesWeCover = () => {
             <div style={{ width: '36px', height: '36px', borderRadius: '5px', backgroundColor: '#A3B407', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <img src="/coveredarea.png.png" alt="Covered" style={{ width: '20px', height: '20px' }} />
             </div>
-            <span style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000' }}>Covered Area</span>
+            <span style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>Covered Area</span>
           </div>
 
           {/* Coming Soon */}
@@ -449,7 +450,7 @@ const StatesWeCover = () => {
             <div style={{ width: '36px', height: '36px', borderRadius: '5px', backgroundColor: '#3B5B84', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <img src="/comingsoon.png.png" alt="Coming Soon" style={{ width: '20px', height: '20px' }} />
             </div>
-            <span style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000' }}>Coming Soon</span>
+            <span style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>Coming Soon</span>
           </div>
         </div>
       </section>
@@ -499,10 +500,11 @@ const StatesWeCover = () => {
 
           <p style={{
             fontFamily: 'Archivo, sans-serif',
-            fontSize: '19px',
+            fontSize: '23px',
             color: '#FFFFFF',
             textAlign: 'center',
-            lineHeight: '1.8'
+            lineHeight: '1.8',
+            letterSpacing: '0.03em'
           }}>
             We're adding new states rapidly. If you don't see your state listed, reach out — Bold Energy<br />
             expansion markets are opening every quarter.
@@ -518,8 +520,8 @@ const StatesWeCover = () => {
                 </div>
               </div>
               <div style={{ width: '430px', height: '314px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000' }}>Dealers</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6' }}>Apply now to secure exclusive<br />partnerships in new territorie</p>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>Dealers</h3>
+                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>Apply now to secure exclusive<br />partnerships in new territorie</p>
                 <button style={{
                   backgroundColor: '#A1B502',
                   color: '#FFFFFF',
@@ -532,7 +534,8 @@ const StatesWeCover = () => {
                   cursor: 'pointer',
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '10px'
+                  gap: '10px',
+                  letterSpacing: '0.2em'
                 }}>
                   <img src="/dealer.png.png" alt="Dealer" style={{ width: '20px', height: '20px' }} />
                   APPLY NOW
@@ -548,8 +551,8 @@ const StatesWeCover = () => {
                 </div>
               </div>
               <div style={{ width: '430px', height: '314px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000' }}>Homeowners</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6' }}>Check your zip code to see if<br />we serve your area yet</p>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>Homeowners</h3>
+                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>Check your zip code to see if<br />we serve your area yet</p>
                 <button style={{
                   backgroundColor: '#A1B502',
                   color: '#FFFFFF',
@@ -562,7 +565,8 @@ const StatesWeCover = () => {
                   cursor: 'pointer',
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '10px'
+                  gap: '10px',
+                  letterSpacing: '0.2em'
                 }}>
                   <img src="/dealer.png.png" alt="Dealer" style={{ width: '20px', height: '20px' }} />
                   APPLY NOW

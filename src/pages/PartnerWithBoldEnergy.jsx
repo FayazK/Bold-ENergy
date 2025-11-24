@@ -30,7 +30,7 @@ const PartnerWithBoldEnergy = () => {
 
         {/* Content */}
         <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
-          <h1 className="font-bold text-white text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '75px' }}>
+          <h1 className="font-bold text-white text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '75px', letterSpacing: '0.03em' }}>
             Partner With Bold Energy
           </h1>
         </div>
@@ -41,13 +41,13 @@ const PartnerWithBoldEnergy = () => {
         <div style={{ display: 'flex', alignItems: 'center', gap: '80px' }}>
           {/* Left Content */}
           <div style={{ flex: 1 }}>
-            <h2 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', marginBottom: '30px' }}>
-              Powering Possibilities, Together
+            <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', marginBottom: '30px', letterSpacing: '0.03em' }}>
+              Powering Possibilities,<br />Together
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '19px', color: '#000000', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '19px', color: '#000000', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               At Bold Energy, we don't just talk about impact — we build it. By teaming up with like-minded dealers, financiers, contractors, and referral partners, we amplify clean-energy adoption, accelerate project timelines, and raise the bar for ethics and transparency across the solar industry.
             </p>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '19px', color: '#000000', lineHeight: '1.8', marginBottom: '30px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '19px', color: '#000000', lineHeight: '1.8', marginBottom: '30px', letterSpacing: '0.03em' }}>
               If you share our commitment to fair pricing, rock-solid installs, and zero-BS service, let's put our values to work side by side.
             </p>
             <button style={{
@@ -62,7 +62,8 @@ const PartnerWithBoldEnergy = () => {
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
-              gap: '12px'
+              gap: '12px',
+              letterSpacing: '0.2em'
             }}>
               <img src="/dealer.png.png" alt="Dealer" style={{ width: '18px', height: '18px' }} />
               BECOME A PARTNER
@@ -86,10 +87,10 @@ const PartnerWithBoldEnergy = () => {
         <div style={{ display: 'flex', alignItems: 'center', width: '1350px' }}>
           {/* Left Heading */}
           <div style={{ flex: '0 0 400px' }}>
-            <h2 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', lineHeight: '1.2', marginBottom: '20px' }}>
+            <h2 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', lineHeight: '1.2', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Why Partner With Bold Energy?
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '20px', color: '#A1B502', fontWeight: 'bold' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '20px', color: '#A1B502', fontWeight: 'bold', letterSpacing: '0.03em' }}>
               Your Goal → Our Solution
             </p>
           </div>
@@ -100,11 +101,11 @@ const PartnerWithBoldEnergy = () => {
             <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
                 <img src="/whypartner.png.png" alt="Close More Deals" style={{ width: '48px', height: '48px' }} />
-                <h3 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000' }}>
+                <h3 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
                   Close More Deals
                 </h3>
               </div>
-              <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', textAlign: 'left', width: '100%' }}>
+              <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', textAlign: 'left', width: '100%', letterSpacing: '0.03em' }}>
                 We provide ready-to-use proposal templates with customer-facing savings models, financing options, and ROI calculators that shorten the sales cycle and build confidence
               </p>
             </div>
@@ -113,11 +114,11 @@ const PartnerWithBoldEnergy = () => {
             <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
                 <img src="/whypartner.png.png" alt="Boost Revenue" style={{ width: '48px', height: '48px' }} />
-                <h3 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000' }}>
+                <h3 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
                   Boost Revenue
                 </h3>
               </div>
-              <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', textAlign: 'left', width: '100%' }}>
+              <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', textAlign: 'left', width: '100%', letterSpacing: '0.03em' }}>
                 Our transparent pricing, full-permit installs, and industry-leading reviews mean happier customers and more referrals in your pipeline.
               </p>
             </div>
@@ -130,11 +131,11 @@ const PartnerWithBoldEnergy = () => {
             <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
                 <img src="/whypartner.png.png" alt="Streamline Operations" style={{ width: '48px', height: '48px' }} />
-                <h3 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000' }}>
+                <h3 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
                   Streamline Operations
                 </h3>
               </div>
-              <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', textAlign: 'left', width: '100%' }}>
+              <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', textAlign: 'left', width: '100%', letterSpacing: '0.03em' }}>
                 Our dealer portal gives you real-time tracking, digital document uploads, and direct access to our ops team. Spend more time selling, less time chasing updates
               </p>
             </div>
@@ -143,11 +144,11 @@ const PartnerWithBoldEnergy = () => {
             <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
                 <img src="/whypartner.png.png" alt="Stand on Values" style={{ width: '48px', height: '48px' }} />
-                <h3 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000' }}>
+                <h3 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
                   Stand on Values
                 </h3>
               </div>
-              <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', textAlign: 'left', width: '100%' }}>
+              <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', textAlign: 'left', width: '100%', letterSpacing: '0.03em' }}>
                 Ethical pricing and transparent processes ensure your reputation grows with every deal
               </p>
             </div>
@@ -156,11 +157,11 @@ const PartnerWithBoldEnergy = () => {
             <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
                 <img src="/whypartner.png.png" alt="Deliver Faster Installs" style={{ width: '48px', height: '48px' }} />
-                <h3 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000' }}>
+                <h3 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
                   Deliver Faster Installs
                 </h3>
               </div>
-              <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', textAlign: 'left', width: '100%' }}>
+              <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', textAlign: 'left', width: '100%', letterSpacing: '0.03em' }}>
                 Permits secured upfront + local professional crews = installs in as little as 1-2 days once approvals clear.
               </p>
             </div>
@@ -180,7 +181,8 @@ const PartnerWithBoldEnergy = () => {
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
-            gap: '12px'
+            gap: '12px',
+            letterSpacing: '0.2em'
           }}>
             <img src="/dealer.png.png" alt="Dealer" style={{ width: '24px', height: '18px' }} />
             BECOME A PARTNER
@@ -191,7 +193,7 @@ const PartnerWithBoldEnergy = () => {
       {/* Dealer-Specific Sales Support Section */}
       <section style={{ paddingTop: '100px', paddingBottom: '100px', paddingLeft: '200px', paddingRight: '200px', backgroundColor: '#FFFFFF', height: '950px' }}>
         {/* Heading */}
-        <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', textAlign: 'center', marginBottom: '60px' }}>
+        <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', textAlign: 'center', marginBottom: '60px', letterSpacing: '0.03em' }}>
           Dealer-Specific Sales Support
         </h2>
 
@@ -214,7 +216,7 @@ const PartnerWithBoldEnergy = () => {
                 <img src="/chevron.svg.svg" alt="chevron" style={{ width: '40px', height: '25px', marginRight: '10px', transform: openAccordion === 'financing' ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }} />
               </div>
               {openAccordion === 'financing' && (
-                <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2' }}>
+                <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2', letterSpacing: '0.03em' }}>
                   <li>Multiple loan and lease options</li>
                   <li>$0-down financing available</li>
                   <li>Quick credit approvals</li>
@@ -232,7 +234,7 @@ const PartnerWithBoldEnergy = () => {
                 <img src="/chevron.svg.svg" alt="chevron" style={{ width: '40px', height: '25px', marginRight: '10px', transform: openAccordion === 'proposal' ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }} />
               </div>
               {openAccordion === 'proposal' && (
-                <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2' }}>
+                <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2', letterSpacing: '0.03em' }}>
                   <li>Customer energy bill comparisons</li>
                   <li>Predictable fixed payments vs. rising utility costs</li>
                   <li>Net metering benefits explained in plain English</li>
@@ -250,7 +252,7 @@ const PartnerWithBoldEnergy = () => {
                 <img src="/chevron.svg.svg" alt="chevron" style={{ width: '40px', height: '25px', marginRight: '10px', transform: openAccordion === 'training' ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }} />
               </div>
               {openAccordion === 'training' && (
-                <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2' }}>
+                <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2', letterSpacing: '0.03em' }}>
                   <li>Product knowledge sessions</li>
                   <li>Objection handling techniques</li>
                   <li>Sales process optimization</li>
@@ -268,7 +270,7 @@ const PartnerWithBoldEnergy = () => {
                 <img src="/chevron.svg.svg" alt="chevron" style={{ width: '40px', height: '25px', marginRight: '10px', transform: openAccordion === 'marketing' ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }} />
               </div>
               {openAccordion === 'marketing' && (
-                <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2' }}>
+                <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2', letterSpacing: '0.03em' }}>
                   <li>Branded collateral and brochures</li>
                   <li>Digital marketing materials</li>
                   <li>Social media content</li>
@@ -286,7 +288,7 @@ const PartnerWithBoldEnergy = () => {
                 <img src="/chevron.svg.svg" alt="chevron" style={{ width: '40px', height: '25px', marginRight: '10px', transform: openAccordion === 'support' ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }} />
               </div>
               {openAccordion === 'support' && (
-                <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2' }}>
+                <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2', letterSpacing: '0.03em' }}>
                   <li>Dedicated account manager</li>
                   <li>Priority customer service</li>
                   <li>Technical support team</li>
@@ -318,7 +320,7 @@ const PartnerWithBoldEnergy = () => {
 
         {/* Content */}
         <div className="absolute inset-0" style={{ zIndex: 2, paddingTop: '100px', paddingLeft: '200px', paddingRight: '200px' }}>
-          <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#FFFFFF', textAlign: 'center', marginBottom: '40px' }}>
+          <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#FFFFFF', textAlign: 'center', marginBottom: '40px', letterSpacing: '0.03em' }}>
             Our Commitments to Dealers
           </h2>
 
@@ -332,8 +334,8 @@ const PartnerWithBoldEnergy = () => {
                 </div>
               </div>
               <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px' }}>Permits Pulled</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6' }}>We secure approvals before any work begins.</p>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>Permits Pulled</h3>
+                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>We secure approvals before any work begins.</p>
               </div>
             </div>
 
@@ -345,8 +347,8 @@ const PartnerWithBoldEnergy = () => {
                 </div>
               </div>
               <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px' }}>Top-Tier Hardware</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6' }}>Tier-1 triple-black panels + SolarEdge Home Hub inverters (25-year warranty).</p>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>Top-Tier Hardware</h3>
+                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>Tier-1 triple-black panels + SolarEdge Home Hub inverters (25-year warranty).</p>
               </div>
             </div>
 
@@ -358,8 +360,8 @@ const PartnerWithBoldEnergy = () => {
                 </div>
               </div>
               <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px' }}>Transparent Pricing</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6' }}>No hidden fees — you and your customer see the same honest numbers.</p>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>Transparent Pricing</h3>
+                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>No hidden fees — you and your customer see the same honest numbers.</p>
               </div>
             </div>
 
@@ -371,8 +373,8 @@ const PartnerWithBoldEnergy = () => {
                 </div>
               </div>
               <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px' }}>Fast Installs</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6' }}>Most installs completed in 1-2 days with cleared permits.</p>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>Fast Installs</h3>
+                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>Most installs completed in 1-2 days with cleared permits.</p>
               </div>
             </div>
           </div>
@@ -387,8 +389,8 @@ const PartnerWithBoldEnergy = () => {
                 </div>
               </div>
               <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px' }}>Always-On Monitoring</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6' }}>Our support team tracks system performance 24/7.</p>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>Always-On Monitoring</h3>
+                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>Our support team tracks system performance 24/7.</p>
               </div>
             </div>
 
@@ -400,8 +402,8 @@ const PartnerWithBoldEnergy = () => {
                 </div>
               </div>
               <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px' }}>Cash Flow-Friendly</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6' }}>Faster approvals and quicker installs = faster commissions for you.</p>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>Cash Flow-Friendly</h3>
+                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>Faster approvals and quicker installs = faster commissions for you.</p>
               </div>
             </div>
           </div>
@@ -420,7 +422,8 @@ const PartnerWithBoldEnergy = () => {
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
-              gap: '12px'
+              gap: '12px',
+              letterSpacing: '0.2em'
             }}>
               <img src="/dealer.png.png" alt="Dealer" style={{ width: '24px', height: '18px' }} />
               BECOME A PARTNER
@@ -434,7 +437,7 @@ const PartnerWithBoldEnergy = () => {
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '80px' }}>
           {/* Left Content */}
           <div style={{ flex: 1 }}>
-            <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', marginBottom: '50px' }}>
+            <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', marginBottom: '50px', letterSpacing: '0.03em' }}>
               How the Dealer<br />Process Works
             </h2>
 
@@ -448,8 +451,8 @@ const PartnerWithBoldEnergy = () => {
                 </div>
                 <div style={{ borderLeft: '2px dotted #A1B502', position: 'absolute', left: '34px', top: '75px', height: '40px' }} />
                 <div>
-                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px' }}>Submit Deal</h3>
-                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000' }}>Upload contracts and docs in the portal</p>
+                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px', letterSpacing: '0.03em' }}>Submit Deal</h3>
+                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000', letterSpacing: '0.03em' }}>Upload contracts and docs in the portal</p>
                 </div>
               </div>
 
@@ -461,8 +464,8 @@ const PartnerWithBoldEnergy = () => {
                 </div>
                 <div style={{ borderLeft: '2px dotted #A1B502', position: 'absolute', left: '34px', top: '75px', height: '40px' }} />
                 <div>
-                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px' }}>Proposal Creation</h3>
-                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000' }}>We generate a customer-ready savings and financing proposal.</p>
+                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px', letterSpacing: '0.03em' }}>Proposal Creation</h3>
+                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000', letterSpacing: '0.03em' }}>We generate a customer-ready savings and financing proposal.</p>
                 </div>
               </div>
 
@@ -474,8 +477,8 @@ const PartnerWithBoldEnergy = () => {
                 </div>
                 <div style={{ borderLeft: '2px dotted #A1B502', position: 'absolute', left: '34px', top: '75px', height: '40px' }} />
                 <div>
-                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px' }}>Engineering & Permitting</h3>
-                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000' }}>Bold handles site survey, system design, and all utility paperwork.</p>
+                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px', letterSpacing: '0.03em' }}>Engineering & Permitting</h3>
+                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000', letterSpacing: '0.03em' }}>Bold handles site survey, system design, and all utility paperwork.</p>
                 </div>
               </div>
 
@@ -487,8 +490,8 @@ const PartnerWithBoldEnergy = () => {
                 </div>
                 <div style={{ borderLeft: '2px dotted #A1B502', position: 'absolute', left: '34px', top: '75px', height: '40px' }} />
                 <div>
-                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px' }}>Installation</h3>
-                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000' }}>Professional local crews complete installs in 1-2 days.</p>
+                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px', letterSpacing: '0.03em' }}>Installation</h3>
+                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000', letterSpacing: '0.03em' }}>Professional local crews complete installs in 1-2 days.</p>
                 </div>
               </div>
 
@@ -499,8 +502,8 @@ const PartnerWithBoldEnergy = () => {
                   <img src="/pto.png.svg" alt="PTO & Monitoring" style={{ width: '30px', height: '30px' }} />
                 </div>
                 <div>
-                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px' }}>PTO & Monitoring</h3>
-                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000' }}>Utilities grant "Permission to Operate," and systems go live with 24/7 tracking.</p>
+                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px', letterSpacing: '0.03em' }}>PTO & Monitoring</h3>
+                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000', letterSpacing: '0.03em' }}>Utilities grant "Permission to Operate," and systems go live with 24/7 tracking.</p>
                 </div>
               </div>
             </div>

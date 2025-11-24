@@ -23,13 +23,13 @@ const HomeOwners = () => {
         {/* Content */}
         <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
           <div className="text-center" style={{ paddingLeft: '200px', paddingRight: '200px' }}>
-            <h1 className="font-bold text-white mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '60px' }}>
+            <h1 className="font-bold text-white mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '60px', letterSpacing: '0.03em' }}>
               See if solar is the<br />right fit for you.
             </h1>
-            <p className="text-white mb-8" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '23px' }}>
+            <p className="text-white mb-8" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '23px', letterSpacing: '0.03em' }}>
               Join thousands switching to solar and save on your<br />energy bills while protecting the planet.
             </p>
-            <button className="px-10 py-4 rounded-full text-white font-bold text-lg hover:opacity-90 transition-opacity duration-300" style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502' }}>
+            <button className="px-10 py-4 rounded-full text-white font-bold text-lg hover:opacity-90 transition-opacity duration-300" style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.2em' }}>
               GET A FREE QUOTE
             </button>
           </div>
@@ -47,7 +47,7 @@ const HomeOwners = () => {
                   <div className="font-bold mb-1" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '60px', color: '#A1B502' }}>
                     25+
                   </div>
-                  <div className="text-gray-700" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px' }}>
+                  <div className="text-gray-700" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px', letterSpacing: '0.03em' }}>
                     Years of Solar Experience
                   </div>
                 </div>
@@ -61,7 +61,7 @@ const HomeOwners = () => {
                   <div className="font-bold mb-1" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '60px', color: '#A1B502' }}>
                     25
                   </div>
-                  <div className="text-gray-700" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px' }}>
+                  <div className="text-gray-700" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px', letterSpacing: '0.03em' }}>
                     States we cover
                   </div>
                 </div>
@@ -75,7 +75,7 @@ const HomeOwners = () => {
                   <div className="font-bold mb-1" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '60px', color: '#A1B502' }}>
                     20k+
                   </div>
-                  <div className="text-gray-700" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px' }}>
+                  <div className="text-gray-700" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px', letterSpacing: '0.03em' }}>
                     Completed installs
                   </div>
                 </div>
@@ -87,7 +87,7 @@ const HomeOwners = () => {
 
       {/* Solar Options Section */}
       <section className="bg-white" style={{ paddingTop: '100px', paddingBottom: '100px', paddingLeft: '200px', paddingRight: '200px', marginBottom: '100px' }}>
-        <h2 className="text-center font-bold mb-12" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', color: '#222222' }}>
+        <h2 className="text-center font-bold mb-12" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', color: '#222222', letterSpacing: '0.03em' }}>
           Solar Options
         </h2>
 
@@ -98,10 +98,10 @@ const HomeOwners = () => {
             <div className="rounded-full bg-white flex items-center justify-center mb-6" style={{ width: '80px', height: '80px', border: '2px solid rgba(161, 181, 2, 0.30)' }}>
               <img src="/purchase.png" alt="Purchase" style={{ width: '48px', height: '48px' }} />
             </div>
-            <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#222222' }}>
+            <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#222222', letterSpacing: '0.03em' }}>
               Purchase
             </h3>
-            <p className="mb-6" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#222222', lineHeight: '1.6' }}>
+            <p className="mb-6" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               Flexible Financing, Maximum Freedom Think going solar is out of reach? Think...
             </p>
             <a href="#" className="flex items-center gap-2 font-bold" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#A1B502' }}>
@@ -114,10 +114,10 @@ const HomeOwners = () => {
 
           {/* Finance Card */}
           <div className="flex flex-col items-start" style={{ backgroundColor: 'rgba(161, 181, 2, 0.10)', padding: '56px', width: '33.33%' }}>
-            <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#222222' }}>
+            <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#222222', letterSpacing: '0.03em' }}>
               Finance
             </h3>
-            <p className="mb-6" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#222222', lineHeight: '1.6' }}>
+            <p className="mb-6" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               Installing solar panels is a great way to reduce your energy costs and sup...
             </p>
             <a href="#" className="flex items-center gap-2 font-bold mb-6" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#A1B502' }}>
@@ -136,10 +136,10 @@ const HomeOwners = () => {
             <div className="rounded-full bg-white flex items-center justify-center mb-6" style={{ width: '80px', height: '80px', border: '2px solid rgba(161, 181, 2, 0.30)' }}>
               <img src="/tpo.png" alt="TPO" style={{ width: '48px', height: '48px' }} />
             </div>
-            <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#222222' }}>
+            <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#222222', letterSpacing: '0.03em' }}>
               TPO
             </h3>
-            <p className="mb-6" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#222222', lineHeight: '1.6' }}>
+            <p className="mb-6" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               Installing solar panels is a great way to reduce your energy costs and sup...
             </p>
             <a href="#" className="flex items-center gap-2 font-bold" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#A1B502' }}>
@@ -171,7 +171,7 @@ const HomeOwners = () => {
 
         {/* Content */}
         <div className="absolute inset-0 flex flex-col items-center" style={{ zIndex: 2, paddingTop: '100px' }}>
-          <h2 className="font-bold mb-12" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', color: '#000000' }}>
+          <h2 className="font-bold mb-12" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', color: '#000000', letterSpacing: '0.03em' }}>
             Why Bold Energy
           </h2>
 
@@ -209,10 +209,10 @@ const HomeOwners = () => {
                 <img src="/volt.png" alt="Volt" style={{ width: '24px', height: '28px' }} />
               </div>
             </div>
-            <h3 id="whyBoldHeading" className="font-bold mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', color: '#222222' }}>
+            <h3 id="whyBoldHeading" className="font-bold mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', color: '#222222', letterSpacing: '0.03em' }}>
               Why Bold Energy
             </h3>
-            <p className="mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '14px', color: '#666666', lineHeight: '1.5' }}>
+            <p className="mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '14px', color: '#666666', lineHeight: '1.5', letterSpacing: '0.03em' }}>
               Ethical. Transparent. Relentless.<br />
               We don't just install solar. We<br />
               help you save money and the<br />
@@ -233,10 +233,10 @@ const HomeOwners = () => {
                 <img src="/roicalculator.png" alt="ROI Calculator" style={{ width: '24px', height: '28px' }} />
               </div>
             </div>
-            <h3 id="roiHeading" className="font-bold mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', color: '#222222' }}>
+            <h3 id="roiHeading" className="font-bold mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', color: '#222222', letterSpacing: '0.03em' }}>
               ROI calculator
             </h3>
-            <p className="mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '14px', color: '#666666', lineHeight: '1.5' }}>
+            <p className="mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '14px', color: '#666666', lineHeight: '1.5', letterSpacing: '0.03em' }}>
               Crunch the Numbers. See the Light. Want to know what going solar really saves you? Our ROI calculator gives you the hard data.
             </p>
             <a href="#" className="flex items-center gap-2 font-bold" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '13px', color: '#385887' }}>
@@ -254,10 +254,10 @@ const HomeOwners = () => {
                 <img src="/calculator.png" alt="Calculator" style={{ width: '28px', height: '28px' }} />
               </div>
             </div>
-            <h3 id="envImpactHeading" className="font-bold mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', color: '#222222' }}>
+            <h3 id="envImpactHeading" className="font-bold mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', color: '#222222', letterSpacing: '0.03em' }}>
               Environmental Impact Calculator
             </h3>
-            <p className="mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '14px', color: '#666666', lineHeight: '1.5' }}>
+            <p className="mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '14px', color: '#666666', lineHeight: '1.5', letterSpacing: '0.03em' }}>
               There are many variations of passages of Lorem Ipsum.
             </p>
             <a href="#" className="flex items-center gap-2 font-bold" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '13px', color: '#385887' }}>

@@ -20,10 +20,10 @@ const PrivacyPolicy = () => {
         {/* Content */}
         <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
           <div className="text-center" style={{ paddingLeft: '200px', paddingRight: '200px' }}>
-            <h1 className="font-bold text-white mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '60px' }}>
+            <h1 className="font-bold text-white mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '60px', letterSpacing: '0.03em' }}>
               Privacy Policy & Terms
             </h1>
-            <p className="text-white" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '20px' }}>
+            <p className="text-white" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '20px', letterSpacing: '0.03em' }}>
               Last Updated: January 2025
             </p>
           </div>
@@ -35,50 +35,50 @@ const PrivacyPolicy = () => {
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           {/* Introduction */}
           <div className="mb-12">
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Bold Energy ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site or use our services.
             </p>
           </div>
 
           {/* Section 1 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               1. Information We Collect
             </h2>
-            <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887' }}>
+            <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887', letterSpacing: '0.03em' }}>
               Personal Information
             </h3>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               We may collect personal information that you voluntarily provide to us when you:
             </p>
-            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc' }}>
+            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc', letterSpacing: '0.03em' }}>
               <li>Request a quote or consultation</li>
               <li>Register for our services</li>
               <li>Subscribe to our newsletter</li>
               <li>Fill out a contact form</li>
               <li>Apply to become a sales dealer</li>
             </ul>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               This information may include: name, address, email address, phone number, property details, energy usage information, financial information for financing applications, and any other information you choose to provide.
             </p>
 
-            <h3 className="font-bold mb-4 mt-8" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887' }}>
+            <h3 className="font-bold mb-4 mt-8" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887', letterSpacing: '0.03em' }}>
               Automatically Collected Information
             </h3>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               When you visit our website, we may automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies installed on your device. We may also collect information about your browsing actions and patterns.
             </p>
           </div>
 
           {/* Section 2 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               2. How We Use Your Information
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               We use the information we collect in the following ways:
             </p>
-            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc' }}>
+            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc', letterSpacing: '0.03em' }}>
               <li>To provide, operate, and maintain our services</li>
               <li>To process your solar installation requests and quotes</li>
               <li>To communicate with you about your installation, including updates and support</li>
@@ -93,13 +93,13 @@ const PrivacyPolicy = () => {
 
           {/* Section 3 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               3. Disclosure of Your Information
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               We may share your information in the following situations:
             </p>
-            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc' }}>
+            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc', letterSpacing: '0.03em' }}>
               <li><strong>Service Providers:</strong> We may share your information with third-party service providers who perform services on our behalf, such as installation contractors, financing partners, customer service providers, and marketing agencies.</li>
               <li><strong>Business Transfers:</strong> We may share or transfer your information in connection with a merger, sale, or acquisition of all or a portion of our business.</li>
               <li><strong>Legal Compliance:</strong> We may disclose your information where required by law or in response to valid requests by public authorities.</li>
@@ -110,26 +110,26 @@ const PrivacyPolicy = () => {
 
           {/* Section 4 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               4. Cookies and Tracking Technologies
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               We use cookies and similar tracking technologies to track activity on our website and store certain information. Cookies are files with a small amount of data that may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our website.
             </p>
           </div>
 
           {/* Section 5 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               5. Data Security
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               We implement appropriate technical and organizational security measures to protect your personal information. However, please note that no method of transmission over the internet or electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your information, we cannot guarantee its absolute security.
             </p>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               We maintain physical, electronic, and procedural safeguards including:
             </p>
-            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc' }}>
+            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc', letterSpacing: '0.03em' }}>
               <li>Encryption of sensitive data during transmission</li>
               <li>Regular security assessments and updates</li>
               <li>Limited access to personal information by employees on a need-to-know basis</li>
@@ -139,13 +139,13 @@ const PrivacyPolicy = () => {
 
           {/* Section 6 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               6. Your Data Protection Rights
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Depending on your location, you may have the following rights regarding your personal information:
             </p>
-            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc' }}>
+            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc', letterSpacing: '0.03em' }}>
               <li><strong>Right to Access:</strong> You have the right to request copies of your personal data.</li>
               <li><strong>Right to Rectification:</strong> You have the right to request correction of inaccurate or incomplete information.</li>
               <li><strong>Right to Erasure:</strong> You have the right to request deletion of your personal data under certain conditions.</li>
@@ -153,59 +153,59 @@ const PrivacyPolicy = () => {
               <li><strong>Right to Data Portability:</strong> You have the right to request transfer of your data to another organization or directly to you.</li>
               <li><strong>Right to Object:</strong> You have the right to object to our processing of your personal data under certain conditions.</li>
             </ul>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               To exercise any of these rights, please contact us at info@bold.energy.
             </p>
           </div>
 
           {/* Section 7 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               7. Third-Party Links
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these third-party sites. We encourage you to read the privacy policies of any third-party sites you visit.
             </p>
           </div>
 
           {/* Section 8 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               8. California Privacy Rights
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               If you are a California resident, you have specific rights regarding your personal information under the California Consumer Privacy Act (CCPA):
             </p>
-            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc' }}>
+            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc', letterSpacing: '0.03em' }}>
               <li>Right to know what personal information is collected, used, shared, or sold</li>
               <li>Right to delete personal information held by businesses</li>
               <li>Right to opt-out of the sale of personal information</li>
               <li>Right to non-discrimination for exercising CCPA rights</li>
             </ul>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               We do not sell your personal information to third parties.
             </p>
           </div>
 
           {/* Section 9 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               9. Children's Privacy
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Our services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children under 18. If you become aware that a child has provided us with personal information, please contact us, and we will take steps to delete such information.
             </p>
           </div>
 
           {/* Section 10 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               10. Data Retention
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. This includes:
             </p>
-            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc' }}>
+            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc', letterSpacing: '0.03em' }}>
               <li>Maintaining records for warranty and service obligations</li>
               <li>Complying with legal, accounting, or reporting requirements</li>
               <li>Resolving disputes and enforcing our agreements</li>
@@ -214,52 +214,52 @@ const PrivacyPolicy = () => {
 
           {/* Section 11 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               11. International Data Transfers
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Your information may be transferred to and maintained on computers located outside of your state, province, country, or other governmental jurisdiction where data protection laws may differ. If you are located outside the United States and choose to provide information to us, please note that we transfer the data to the United States and process it there.
             </p>
           </div>
 
           {/* Section 12 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               12. Updates to This Privacy Policy
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this policy. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
             </p>
           </div>
 
           {/* Section 13 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               13. Contact Us
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               If you have any questions about this Privacy Policy or our data practices, please contact us:
             </p>
-            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px' }}>
+            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px', letterSpacing: '0.03em' }}>
               <strong>Bold Energy</strong>
             </div>
-            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px' }}>
+            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px', letterSpacing: '0.03em' }}>
               30 Old Kings Hwy S, Darien, Suite #1001, CT 06820
             </div>
-            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px' }}>
+            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px', letterSpacing: '0.03em' }}>
               Email: info@bold.energy
             </div>
-            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px' }}>
+            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px', letterSpacing: '0.03em' }}>
               Phone: 123-456-7890
             </div>
           </div>
 
           {/* Consent Section */}
           <div className="mb-12" style={{ backgroundColor: '#F1F4D9', padding: '40px', borderRadius: '10px' }}>
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               Your Consent
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', letterSpacing: '0.03em' }}>
               By using our website and services, you consent to the collection and use of information in accordance with this Privacy Policy. If you do not agree with this policy, please do not use our website or services.
             </p>
           </div>
@@ -271,33 +271,33 @@ const PrivacyPolicy = () => {
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', color: '#222222' }}>
+            <h1 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', color: '#222222', letterSpacing: '0.03em' }}>
               Terms and Conditions
             </h1>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', letterSpacing: '0.03em' }}>
               Please read these terms and conditions carefully before using our services.
             </p>
           </div>
 
           {/* Section 1 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               1. Acceptance of Terms
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               By accessing and using Bold Energy's website and services, you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to abide by the above, please do not use this service.
             </p>
           </div>
 
           {/* Section 2 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               2. Services Description
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Bold Energy provides solar energy solutions including:
             </p>
-            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc' }}>
+            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc', letterSpacing: '0.03em' }}>
               <li>Solar panel installation and maintenance services</li>
               <li>Energy consultation and system design</li>
               <li>Solar financing and leasing options</li>
@@ -309,86 +309,86 @@ const PrivacyPolicy = () => {
 
           {/* Section 3 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               3. Service Agreement and Installation
             </h2>
-            <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887' }}>
+            <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887', letterSpacing: '0.03em' }}>
               Quote and Proposal
             </h3>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               All quotes and proposals are valid for 30 days from the date of issue unless otherwise specified. Pricing is subject to change based on site conditions, permit requirements, and material costs.
             </p>
-            <h3 className="font-bold mb-4 mt-8" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887' }}>
+            <h3 className="font-bold mb-4 mt-8" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887', letterSpacing: '0.03em' }}>
               Installation Process
             </h3>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Installation timelines are estimates and may vary due to weather conditions, permit delays, utility company requirements, and other factors beyond our control. We will make reasonable efforts to complete installation within the estimated timeframe.
             </p>
-            <h3 className="font-bold mb-4 mt-8" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887' }}>
+            <h3 className="font-bold mb-4 mt-8" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887', letterSpacing: '0.03em' }}>
               Permits and Approvals
             </h3>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Bold Energy will obtain all necessary permits and approvals for solar installation. However, the customer is responsible for providing access to their property and ensuring compliance with homeowners association (HOA) requirements, if applicable.
             </p>
           </div>
 
           {/* Section 4 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               4. Payment Terms
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Payment terms vary based on the financing option selected:
             </p>
-            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc' }}>
+            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc', letterSpacing: '0.03em' }}>
               <li><strong>Purchase:</strong> Payment terms will be outlined in your service agreement. Typically includes a deposit upon contract signing and final payment upon installation completion.</li>
               <li><strong>Financing:</strong> Financing terms are subject to credit approval through our lending partners. Monthly payments and interest rates will be detailed in your loan agreement.</li>
               <li><strong>TPO/Lease:</strong> Monthly lease or power purchase agreement (PPA) payments will be outlined in your TPO agreement.</li>
             </ul>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Late payments may result in additional fees and potential service interruption. We reserve the right to suspend services for non-payment.
             </p>
           </div>
 
           {/* Section 5 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               5. Warranties and Guarantees
             </h2>
-            <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887' }}>
+            <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887', letterSpacing: '0.03em' }}>
               Equipment Warranties
             </h3>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Solar panels, inverters, and other equipment come with manufacturer warranties. Typical warranties include:
             </p>
-            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc' }}>
+            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc', letterSpacing: '0.03em' }}>
               <li>Solar panels: 25-year performance warranty</li>
               <li>Inverters: 10-25 year warranty (depending on manufacturer)</li>
               <li>Batteries: 10-year warranty (if applicable)</li>
             </ul>
-            <h3 className="font-bold mb-4 mt-8" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887' }}>
+            <h3 className="font-bold mb-4 mt-8" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887', letterSpacing: '0.03em' }}>
               Installation Warranty
             </h3>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Bold Energy provides a workmanship warranty covering installation defects for a period specified in your service agreement. This warranty covers labor and installation-related issues but does not cover damage caused by extreme weather, acts of God, or improper use.
             </p>
-            <h3 className="font-bold mb-4 mt-8" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887' }}>
+            <h3 className="font-bold mb-4 mt-8" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#385887', letterSpacing: '0.03em' }}>
               Performance Guarantee
             </h3>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               While we provide energy production estimates, actual performance may vary based on weather conditions, shading, system maintenance, and other environmental factors. Estimated savings are based on current utility rates and are not guaranteed.
             </p>
           </div>
 
           {/* Section 6 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               6. Customer Responsibilities
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Customers are responsible for:
             </p>
-            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc' }}>
+            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc', letterSpacing: '0.03em' }}>
               <li>Providing accurate information about property ownership and electrical system</li>
               <li>Ensuring safe and clear access to the installation site</li>
               <li>Maintaining homeowners insurance that covers solar equipment</li>
@@ -401,16 +401,16 @@ const PrivacyPolicy = () => {
 
           {/* Section 7 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               7. Cancellation and Refund Policy
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Customers have the right to cancel their service agreement within the legally required cooling-off period (typically 3 business days) for a full refund of any deposits paid.
             </p>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               After the cooling-off period, cancellation fees may apply based on work completed:
             </p>
-            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc' }}>
+            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc', letterSpacing: '0.03em' }}>
               <li>Before permits are pulled: Cancellation fee equal to administrative costs</li>
               <li>After permits are obtained: Non-refundable permit and design fees</li>
               <li>After installation begins: Payment for work completed plus restocking fees</li>
@@ -419,13 +419,13 @@ const PrivacyPolicy = () => {
 
           {/* Section 8 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               8. Limitation of Liability
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Bold Energy's liability is limited to the cost of the solar system installation. We are not liable for:
             </p>
-            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc' }}>
+            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc', letterSpacing: '0.03em' }}>
               <li>Indirect, incidental, or consequential damages</li>
               <li>Loss of profits or energy savings</li>
               <li>Damage caused by extreme weather events or acts of God</li>
@@ -437,100 +437,100 @@ const PrivacyPolicy = () => {
 
           {/* Section 9 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               9. Intellectual Property
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               All content on the Bold Energy website, including text, graphics, logos, images, and software, is the property of Bold Energy and is protected by copyright and trademark laws. You may not use, reproduce, or distribute any content without written permission.
             </p>
           </div>
 
           {/* Section 10 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               10. Dispute Resolution
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Any disputes arising from these terms or our services shall be resolved through:
             </p>
-            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc' }}>
+            <ul style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', paddingLeft: '40px', listStyleType: 'disc', letterSpacing: '0.03em' }}>
               <li><strong>Negotiation:</strong> Initial attempt to resolve through direct communication</li>
               <li><strong>Mediation:</strong> If negotiation fails, both parties agree to participate in mediation</li>
               <li><strong>Arbitration:</strong> Binding arbitration in accordance with the American Arbitration Association rules</li>
             </ul>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               This agreement shall be governed by the laws of the state of Connecticut.
             </p>
           </div>
 
           {/* Section 11 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               11. Indemnification
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               You agree to indemnify and hold Bold Energy harmless from any claims, losses, damages, or expenses arising from your violation of these terms or misuse of our services.
             </p>
           </div>
 
           {/* Section 12 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               12. Force Majeure
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Bold Energy shall not be liable for any failure to perform due to circumstances beyond our reasonable control, including but not limited to: natural disasters, government actions, labor disputes, material shortages, pandemics, or utility company delays.
             </p>
           </div>
 
           {/* Section 13 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               13. Modifications to Terms
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Bold Energy reserves the right to modify these terms at any time. Changes will be posted on this page with an updated "Last Updated" date. Continued use of our services after changes constitutes acceptance of the modified terms.
             </p>
           </div>
 
           {/* Section 14 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               14. Severability
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               If any provision of these terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary so that these terms shall otherwise remain in full force and effect.
             </p>
           </div>
 
           {/* Section 15 */}
           <div className="mb-12">
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#222222', letterSpacing: '0.03em' }}>
               15. Contact Information
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               For questions about these Terms and Conditions, please contact:
             </p>
-            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px' }}>
+            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px', letterSpacing: '0.03em' }}>
               <strong>Bold Energy</strong>
             </div>
-            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px' }}>
+            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px', letterSpacing: '0.03em' }}>
               30 Old Kings Hwy S, Darien, Suite #1001, CT 06820
             </div>
-            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px' }}>
+            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px', letterSpacing: '0.03em' }}>
               Email: info@bold.energy
             </div>
-            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px' }}>
+            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px', letterSpacing: '0.03em' }}>
               Phone: 123-456-7890
             </div>
           </div>
 
           {/* Agreement Section */}
           <div style={{ backgroundColor: '#385887', padding: '40px', borderRadius: '10px' }}>
-            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#FFFFFF' }}>
+            <h2 className="font-bold mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '36px', color: '#FFFFFF', letterSpacing: '0.03em' }}>
               Agreement
             </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF', lineHeight: '1.8' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF', lineHeight: '1.8', letterSpacing: '0.03em' }}>
               By using Bold Energy's website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services.
             </p>
           </div>

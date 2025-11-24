@@ -22,7 +22,7 @@ const CustomerReviews = () => {
 
         {/* Heading */}
         <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
-          <h1 className="font-bold text-white" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '75px' }}>
+          <h1 className="font-bold text-white" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '75px', letterSpacing: '0.03em' }}>
             Customer Reviews
           </h1>
         </div>
@@ -77,7 +77,7 @@ const CustomerReviews = () => {
             </div>
 
             {/* Review Text */}
-            <p className="mb-6 text-center" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', color: '#222222', lineHeight: '1.6' }}>
+            <p className="mb-6 text-center" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               "Everything about my experience with Empower has been positive! They took care of EVERYTHING and the savings on my monthly electricity bill will be huge!. With the economy being so shaky right now, it's a relief to know I'm locked in to a very reasonable monthly fee for electricity. I don't see why everyone doesn't look into it!"
             </p>
 
@@ -89,12 +89,12 @@ const CustomerReviews = () => {
             </div>
 
             {/* Name */}
-            <p className="mb-2 font-bold text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', color: '#222222' }}>
+            <p className="mb-2 font-bold text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', color: '#222222', letterSpacing: '0.03em' }}>
               JOHN DOE
             </p>
 
             {/* Subtitle */}
-            <p className="text-center" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '13px', color: '#A1B502' }}>
+            <p className="text-center" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '13px', color: '#A1B502', letterSpacing: '0.03em' }}>
               Lorem Ipsum dolor.
             </p>
           </div>
@@ -110,7 +110,7 @@ const CustomerReviews = () => {
             </div>
 
             {/* Review Text */}
-            <p className="mb-6 text-center" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', color: '#222222', lineHeight: '1.6' }}>
+            <p className="mb-6 text-center" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               "Everything about my experience with Empower has been positive! They took care of EVERYTHING and the savings on my monthly electricity bill will be huge!. With the economy being so shaky right now, it's a relief to know I'm locked in to a very reasonable monthly fee for electricity. I don't see why everyone doesn't look into it!"
             </p>
 
@@ -122,12 +122,12 @@ const CustomerReviews = () => {
             </div>
 
             {/* Name */}
-            <p className="mb-2 font-bold text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', color: '#222222' }}>
+            <p className="mb-2 font-bold text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', color: '#222222', letterSpacing: '0.03em' }}>
               JOHN DOE
             </p>
 
             {/* Subtitle */}
-            <p className="text-center" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '13px', color: '#A1B502' }}>
+            <p className="text-center" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '13px', color: '#A1B502', letterSpacing: '0.03em' }}>
               Lorem Ipsum dolor.
             </p>
           </div>
@@ -163,7 +163,7 @@ const CustomerReviews = () => {
             </div>
 
             {/* Review Text */}
-            <p className="mb-6 text-center" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', color: '#222222', lineHeight: '1.6' }}>
+            <p className="mb-6 text-center" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               "Everything about my experience with Empower has been positive! They took care of EVERYTHING and the savings on my monthly electricity bill will be huge!. With the economy being so shaky right now, it's a relief to know I'm locked in to a very reasonable monthly fee for electricity. I don't see why everyone doesn't look into it!"
             </p>
 
@@ -175,12 +175,12 @@ const CustomerReviews = () => {
             </div>
 
             {/* Name */}
-            <p className="mb-2 font-bold text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', color: '#222222' }}>
+            <p className="mb-2 font-bold text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', color: '#222222', letterSpacing: '0.03em' }}>
               JOHN DOE
             </p>
 
             {/* Subtitle */}
-            <p className="text-center" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '13px', color: '#A1B502' }}>
+            <p className="text-center" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '13px', color: '#A1B502', letterSpacing: '0.03em' }}>
               Lorem Ipsum dolor.
             </p>
           </div>
@@ -196,7 +196,7 @@ const CustomerReviews = () => {
             </div>
 
             {/* Review Text */}
-            <p className="mb-6 text-center" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', color: '#222222', lineHeight: '1.6' }}>
+            <p className="mb-6 text-center" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               "Everything about my experience with Empower has been positive! They took care of EVERYTHING and the savings on my monthly electricity bill will be huge!. With the economy being so shaky right now, it's a relief to know I'm locked in to a very reasonable monthly fee for electricity. I don't see why everyone doesn't look into it!"
             </p>
 
@@ -208,12 +208,12 @@ const CustomerReviews = () => {
             </div>
 
             {/* Name */}
-            <p className="mb-2 font-bold text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', color: '#222222' }}>
+            <p className="mb-2 font-bold text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', color: '#222222', letterSpacing: '0.03em' }}>
               JOHN DOE
             </p>
 
             {/* Subtitle */}
-            <p className="text-center" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '13px', color: '#A1B502' }}>
+            <p className="text-center" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '13px', color: '#A1B502', letterSpacing: '0.03em' }}>
               Lorem Ipsum dolor.
             </p>
           </div>

@@ -2,10 +2,10 @@ const FollowUs = () => {
   return (
     <section className="py-8 bg-white" style={{ marginBottom: '100px' }}>
       <div className="text-center" style={{ paddingLeft: '200px', paddingRight: '200px' }}>
-        <p style={{ fontFamily: 'Archivo, sans-serif', color: '#385887', fontSize: '20px', fontWeight: 'bold', marginBottom: '0' }}>
+        <p style={{ fontFamily: 'Archivo, sans-serif', color: '#385887', fontSize: '20px', fontWeight: 'bold', marginBottom: '0', letterSpacing: '0.03em' }}>
           Follow Us
         </p>
-        <h2 className="mb-12" style={{ fontFamily: 'Quicksand, sans-serif', color: '#222222', fontSize: '50px', fontWeight: 'bold' }}>
+        <h2 className="mb-12" style={{ fontFamily: 'Quicksand, sans-serif', color: '#222222', fontSize: '50px', fontWeight: 'bold', letterSpacing: '0.03em' }}>
           @empowerenergy.co
         </h2>
 
@@ -56,7 +56,7 @@ const FollowUs = () => {
         {/* Instagram CTA Button */}
         <button
           className="px-10 py-4 rounded-full text-white font-bold text-lg hover:opacity-90 transition-opacity duration-300 flex items-center gap-3 mx-auto"
-          style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502' }}
+          style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.2em' }}
         >
           <img src="/insta.png.png" alt="Instagram" className="w-6 h-6" />
           FOLLOW ON INSTAGRAM

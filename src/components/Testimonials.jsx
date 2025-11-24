@@ -55,10 +55,10 @@ const Testimonials = () => {
         <div className="flex items-start justify-between">
           {/* Left Side Content */}
           <div className="relative">
-            <p className="mb-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '20px', color: '#222222' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '20px', color: '#385887', letterSpacing: '0.03em', fontWeight: 'bold', marginBottom: '10px' }}>
               Testimonials
             </p>
-            <h2 className="mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#222222' }}>
+            <h2 className="mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#222222', letterSpacing: '0.03em' }}>
               Customer Reviews
             </h2>
             <div style={{ width: '570px', height: '652px' }}>
@@ -211,7 +211,7 @@ const Testimonials = () => {
 
           {/* Right Side Content */}
           <div style={{ width: '590px', paddingTop: '50px', paddingBottom: '100px' }}>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.6' }}>
+            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               Because we believe energy should do more than power homes — it<br />
               should empower lives. With ethical practices, bold execution, and<br />
               transparent communication, we're redefining what it means to go<br />
