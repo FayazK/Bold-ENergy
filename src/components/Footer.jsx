@@ -62,12 +62,12 @@ const Footer = () => {
       <div className="absolute w-full flex justify-center" style={{ top: '875.5px', zIndex: 10 }}>
         <div className="relative" style={{ width: '1350px', height: '789px', backgroundColor: '#FFFFFF', borderRadius: '10px' }}>
           {/* Text Content */}
-          <p className="absolute" style={{ left: '80px', top: '150px', fontFamily: 'Archivo, sans-serif', fontSize: '20px', fontWeight: 'bold', color: '#222222', maxWidth: '400px', paddingRight: '20px', lineHeight: '1.5', letterSpacing: '0.03em' }}>
+          <p className="absolute" style={{ left: '80px', top: '100px', fontFamily: 'Archivo, sans-serif', fontSize: '20px', fontWeight: 'bold', color: '#222222', maxWidth: '400px', paddingRight: '20px', lineHeight: '1.5', letterSpacing: '0.03em' }}>
             As a national distributor of solar supplies we endeavor provide fast and knowledgeable service, we can get all the materials you need
           </p>
 
           {/* View Office Map */}
-          <div className="absolute flex items-center gap-3" style={{ left: '80px', top: '330px' }}>
+          <div className="absolute flex items-center gap-3" style={{ left: '80px', top: '280px' }}>
             <div className="flex items-center justify-center" style={{ width: '35px', height: '35px', borderRadius: '50%', backgroundColor: '#A1B502' }}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M6 3L11 8L6 13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -79,20 +79,22 @@ const Footer = () => {
           </div>
 
           {/* Divider Line */}
-          <div className="absolute" style={{ left: '80px', top: '410px', width: '400px', height: '1px', backgroundColor: '#CCCCCC' }}></div>
+          <div className="absolute" style={{ left: '80px', top: '360px', width: '400px', height: '1px', backgroundColor: '#CCCCCC' }}></div>
 
           {/* Contact Information */}
-          <div className="absolute flex flex-col" style={{ left: '80px', top: '450px', gap: '25px' }}>
+          <div className="absolute flex flex-col" style={{ left: '80px', top: '400px', gap: '25px' }}>
             {/* Location */}
-            <div className="flex items-center gap-3">
-              <img src="/location.png.png" alt="Location" className="w-4 h-6" />
-              <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', color: '#222222' }}>
+            <div className="flex items-center gap-4">
+              <div className="w-6 flex justify-center">
+                <img src="/location.png.png" alt="Location" className="w-4 h-6" />
+              </div>
+              <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', color: '#222222', whiteSpace: 'nowrap' }}>
                 30 Old Kings Hwy S, Darien, CT 06820, USA
               </span>
             </div>
 
             {/* Contact */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               <img src="/contact.png.png" alt="Contact" className="w-6 h-6" />
               <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', color: '#222222' }}>
                 123-456-7890
@@ -100,7 +102,7 @@ const Footer = () => {
             </div>
 
             {/* Hours */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               <img src="/clock.png.png" alt="Hours" className="w-6 h-6" />
               <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', color: '#222222' }}>
                 Mon - Fri: 9:00 AM - 5:00 PM
@@ -110,10 +112,19 @@ const Footer = () => {
             {/* Contact Us Button */}
             <button
               className="px-8 py-3 rounded-full text-white font-bold hover:opacity-90 transition-opacity duration-300 flex items-center justify-between"
-              style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#A1B502', width: '320px', height: '50px', marginTop: '10px', letterSpacing: '0.2em' }}
+              style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#A1B502', width: '400px', height: '50px', marginTop: '10px', letterSpacing: '0.2em' }}
             >
               Contact Us
               <img src="/contactus.png.png" alt="Contact Us" className="w-5 h-5" />
+            </button>
+
+            {/* Become a Sales Dealer Button */}
+            <button
+              className="px-8 py-3 rounded-full font-bold hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-4"
+              style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#385887', color: '#FFFFFF', width: '400px', height: '50px', marginTop: '5px', letterSpacing: '0.2em', whiteSpace: 'nowrap' }}
+            >
+              <img src="/dealer.png.png" alt="Dealer" className="w-6 h-5" />
+              BECOME A SALES DEALER
             </button>
           </div>
 
@@ -223,7 +234,7 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Submit Buttons */}
+            {/* Submit Button */}
             <div className="flex gap-4 self-center">
               <button
                 className="px-8 py-3 rounded-full text-white font-bold hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-2"
@@ -231,12 +242,6 @@ const Footer = () => {
               >
                 <img src="/dealer.png.png" alt="Dealer" className="w-6 h-5" />
                 GET A FREE QUOTE
-              </button>
-              <button
-                className="px-8 py-3 rounded-full font-bold hover:opacity-90 transition-opacity duration-300 flex items-center justify-center"
-                style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: 'transparent', border: '2px solid #A1B502', color: '#A1B502', letterSpacing: '0.2em' }}
-              >
-                BECOME A SALES DEALER
               </button>
             </div>
           </div>
@@ -251,22 +256,26 @@ const Footer = () => {
           style={{ width: '100%', height: '1000px', objectFit: 'cover', display: 'block' }}
         />
         {/* Bold Energy Logo */}
-        <div className="absolute" style={{ top: '450px', left: '250px' }}>
+        <Link to="/" className="absolute" style={{ top: '450px', left: '250px' }} onClick={() => window.scrollTo(0, 0)}>
           <img
             src="/boldenergy.png"
             alt="Bold Energy"
-            style={{ width: '353px', height: '250px' }}
+            style={{ width: '353px', height: '250px', cursor: 'pointer' }}
           />
-        </div>
+        </Link>
 
         {/* Company Section */}
-        <div className="absolute" style={{ top: '490px', left: 'calc(50% - 200px)', transform: 'translateX(-50%)' }}>
+        <div className="absolute" style={{ top: '490px', left: 'calc(50% - 50px)', transform: 'translateX(-50%)' }}>
           <h4 style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#FFFFFF', marginBottom: '15px', letterSpacing: '0.03em' }}>
             Company
           </h4>
           <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF', lineHeight: '2' }}>
-            <p>Homeowners</p>
-            <p>Sales Dealers</p>
+            <Link to="/homeowners" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
+              <p className="hover:opacity-80 transition-opacity cursor-pointer">Homeowners</p>
+            </Link>
+            <Link to="/partner-with-bold-energy" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
+              <p className="hover:opacity-80 transition-opacity cursor-pointer">Sales Dealers</p>
+            </Link>
             <Link to="/customer-reviews" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
               <p className="hover:opacity-80 transition-opacity cursor-pointer">Reviews</p>
             </Link>
@@ -350,11 +359,13 @@ const Footer = () => {
         </div>
 
         {/* Terms & Privacy - Right */}
-        <div className="absolute" style={{ top: '950px', left: '1650px', transform: 'translateX(-100%)' }}>
-          <Link to="/privacy-policy" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
-            <p className="hover:opacity-80 transition-opacity cursor-pointer" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF', whiteSpace: 'nowrap' }}>
-              Terms & Conditions    |    Privacy Policy
-            </p>
+        <div className="absolute flex items-center" style={{ top: '950px', left: '1650px', transform: 'translateX(-100%)', whiteSpace: 'nowrap' }}>
+          <Link to="/terms-and-conditions" className="hover:opacity-80 transition-opacity" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+            Terms & Conditions
+          </Link>
+          <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF', margin: '0 20px' }}>|</span>
+          <Link to="/privacy-policy" className="hover:opacity-80 transition-opacity" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+            Privacy Policy
           </Link>
         </div>
       </div>

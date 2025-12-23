@@ -4,29 +4,29 @@ const HomeOwners = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="w-full relative" style={{ height: '900px', marginBottom: '100px' }}>
+      <section className="w-full relative" style={{ height: '1150px', marginBottom: '100px' }}>
         <img
-          src="/homeowners.png"
+          src="/hero.jpeg"
           alt="Homeowners"
           className="w-full h-full object-cover"
-          style={{ height: '900px' }}
+          style={{ height: '1150px' }}
         />
         {/* Black Overlay */}
         <div
           className="absolute inset-0"
           style={{
-            backgroundColor: '#000000',
-            opacity: '0.5'
+            backgroundColor: 'rgba(0,0,0,0.6)',
+            
           }}
         />
 
         {/* Content */}
         <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
-          <div className="text-center" style={{ paddingLeft: '200px', paddingRight: '200px' }}>
-            <h1 className="font-bold text-white mb-6" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '60px', letterSpacing: '0.03em' }}>
-              See if solar is the<br />right fit for you.
+          <div className="text-center flex flex-col items-center justify-center" style={{ marginTop: '-100px' }}>
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight mb-6" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+              See if solar is the<br />Right Fit for You.
             </h1>
-            <p className="text-white mb-8" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '23px', letterSpacing: '0.03em' }}>
+            <p className="text-xl md:text-2xl text-white mb-8" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
               Join thousands switching to solar and save on your<br />energy bills while protecting the planet.
             </p>
             <button className="px-10 py-4 rounded-full text-white font-bold text-lg hover:opacity-90 transition-opacity duration-300" style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.2em' }}>
@@ -94,7 +94,7 @@ const HomeOwners = () => {
         {/* Three Cards */}
         <div className="flex justify-center" style={{ gap: '0' }}>
           {/* Purchase Card */}
-          <div className="flex flex-col items-start rounded-l-lg" style={{ backgroundColor: 'rgba(161, 181, 2, 0.05)', padding: '56px', width: '33.33%' }}>
+          <div className="flex flex-col items-start" style={{ backgroundColor: 'rgba(161, 181, 2, 0.05)', padding: '56px', width: '33.33%', borderTopLeftRadius: '32px', borderBottomLeftRadius: '32px' }}>
             <div className="rounded-full bg-white flex items-center justify-center mb-6" style={{ width: '80px', height: '80px', border: '2px solid rgba(161, 181, 2, 0.30)' }}>
               <img src="/purchase.png" alt="Purchase" style={{ width: '48px', height: '48px' }} />
             </div>
@@ -132,7 +132,7 @@ const HomeOwners = () => {
           </div>
 
           {/* TPO Card */}
-          <div className="flex flex-col items-start rounded-r-lg" style={{ backgroundColor: 'rgba(161, 181, 2, 0.05)', padding: '56px', width: '33.33%' }}>
+          <div className="flex flex-col items-start" style={{ backgroundColor: 'rgba(161, 181, 2, 0.05)', padding: '56px', width: '33.33%', borderTopRightRadius: '32px', borderBottomRightRadius: '32px' }}>
             <div className="rounded-full bg-white flex items-center justify-center mb-6" style={{ width: '80px', height: '80px', border: '2px solid rgba(161, 181, 2, 0.30)' }}>
               <img src="/tpo.png" alt="TPO" style={{ width: '48px', height: '48px' }} />
             </div>
@@ -195,7 +195,7 @@ const HomeOwners = () => {
             {/* Image Container */}
             <div style={{ position: 'relative', width: '100%', height: '100%', borderRadius: '205px', overflow: 'hidden', padding: '10px' }}>
               <img
-                src="/boldenergyimage.png"
+                src="/boldenergyimage.png?v=8"
                 alt="Bold Energy Center"
                 style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover', borderRadius: '195px' }}
               />
@@ -269,11 +269,11 @@ const HomeOwners = () => {
           </div>
 
           {/* Bold BG Image - Right Side */}
-          <div className="absolute" style={{ right: '0', top: 'calc(50% + 50px)', transform: 'translateY(-50%)', width: '379px', height: '932px' }}>
+          <div className="absolute" style={{ right: '0', top: 'calc(50% + 50px)', transform: 'translateY(-50%)', width: '300px', height: '750px' }}>
             <img
               src="/boldbg.png"
               alt="Bold Energy"
-              style={{ width: '379px', height: '932px', display: 'block' }}
+              style={{ width: '300px', height: '750px', display: 'block', objectFit: 'contain' }}
             />
           </div>
 

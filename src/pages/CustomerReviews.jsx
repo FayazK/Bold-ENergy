@@ -4,7 +4,7 @@ const CustomerReviews = () => {
       {/* Hero Section */}
       <section className="w-full relative">
         <img
-          src="/reviewssection.png"
+          src="/reviewsection.jpg"
           alt="Customer Reviews"
           style={{ width: '100%', height: '550px', objectFit: 'cover' }}
         />

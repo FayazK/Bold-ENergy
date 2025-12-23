@@ -23,7 +23,7 @@ const About = () => {
           <div className="text-left" style={{ width: '427px' }}>
             <div className="mb-4" style={{ width: '427px', height: '323px' }}>
               <img
-                src="/image1.png.png"
+                src="/fast-install.jpg?v=2"
                 alt="Fast, Clean Installs"
                 className="w-full h-full object-cover rounded-lg"
                 style={{ width: '427px', height: '323px' }}
@@ -40,7 +40,7 @@ const About = () => {
           <div className="text-left" style={{ width: '427px' }}>
             <div className="mb-4" style={{ width: '427px', height: '323px' }}>
               <img
-                src="/image2.png.png"
+                src="/honest-answers.jpg?v=2"
                 alt="Honest Answers"
                 className="w-full h-full object-cover rounded-lg"
                 style={{ width: '427px', height: '323px' }}
@@ -57,7 +57,7 @@ const About = () => {
           <div className="text-left" style={{ width: '427px' }}>
             <div className="mb-4" style={{ width: '427px', height: '323px' }}>
               <img
-                src="/image3.png.png"
+                src="/unmatched-service.jpg?v=2"
                 alt="Unmatched Service"
                 className="w-full h-full object-cover rounded-lg"
                 style={{ width: '427px', height: '323px' }}

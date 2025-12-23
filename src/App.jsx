@@ -7,6 +7,7 @@ import HomeOwners from './pages/HomeOwners';
 import CustomerReviews from './pages/CustomerReviews';
 import Blogs from './pages/Blogs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
 import PartnerWithBoldEnergy from './pages/PartnerWithBoldEnergy';
 import StatesWeCover from './pages/StatesWeCover';
 import './App.css';
@@ -24,6 +25,7 @@ function App() {
             <Route path="/customer-reviews" element={<CustomerReviews />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="/partner-with-bold-energy" element={<PartnerWithBoldEnergy />} />
             <Route path="/states-we-cover" element={<StatesWeCover />} />
           </Routes>

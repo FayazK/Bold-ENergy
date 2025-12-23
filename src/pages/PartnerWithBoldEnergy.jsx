@@ -13,7 +13,7 @@ const PartnerWithBoldEnergy = () => {
       {/* Hero Section */}
       <section className="w-full relative" style={{ height: '550px' }}>
         <img
-          src="/partnerwithboldenergy.png.jpg"
+          src="/partnerwithboldenergy.png.jpg?v=5"
           alt="Partner With Bold Energy"
           className="w-full h-full object-cover"
           style={{ width: '100%', height: '550px' }}
@@ -42,7 +42,7 @@ const PartnerWithBoldEnergy = () => {
           {/* Left Content */}
           <div style={{ flex: 1 }}>
             <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', marginBottom: '30px', letterSpacing: '0.03em' }}>
-              Powering Possibilities,<br />Together
+              <span style={{ whiteSpace: 'nowrap' }}>Powering Possibilities,</span><br/>Together
             </h2>
             <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '19px', color: '#000000', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
               At Bold Energy, we don't just talk about impact — we build it. By teaming up with like-minded dealers, financiers, contractors, and referral partners, we amplify clean-energy adoption, accelerate project timelines, and raise the bar for ethics and transparency across the solar industry.
@@ -87,7 +87,7 @@ const PartnerWithBoldEnergy = () => {
         <div style={{ display: 'flex', alignItems: 'center', width: '1350px' }}>
           {/* Left Heading */}
           <div style={{ flex: '0 0 400px' }}>
-            <h2 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', lineHeight: '1.2', marginBottom: '20px', letterSpacing: '0.03em' }}>
+            <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', lineHeight: '1.2', marginBottom: '20px', letterSpacing: '0.03em' }}>
               Why Partner With Bold Energy?
             </h2>
             <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '20px', color: '#A1B502', fontWeight: 'bold', letterSpacing: '0.03em' }}>
@@ -101,7 +101,7 @@ const PartnerWithBoldEnergy = () => {
             <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
                 <img src="/whypartner.png.png" alt="Close More Deals" style={{ width: '48px', height: '48px' }} />
-                <h3 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
                   Close More Deals
                 </h3>
               </div>
@@ -114,7 +114,7 @@ const PartnerWithBoldEnergy = () => {
             <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
                 <img src="/whypartner.png.png" alt="Boost Revenue" style={{ width: '48px', height: '48px' }} />
-                <h3 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
                   Boost Revenue
                 </h3>
               </div>
@@ -131,7 +131,7 @@ const PartnerWithBoldEnergy = () => {
             <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
                 <img src="/whypartner.png.png" alt="Streamline Operations" style={{ width: '48px', height: '48px' }} />
-                <h3 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
                   Streamline Operations
                 </h3>
               </div>
@@ -144,7 +144,7 @@ const PartnerWithBoldEnergy = () => {
             <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
                 <img src="/whypartner.png.png" alt="Stand on Values" style={{ width: '48px', height: '48px' }} />
-                <h3 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
                   Stand on Values
                 </h3>
               </div>
@@ -157,7 +157,7 @@ const PartnerWithBoldEnergy = () => {
             <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
                 <img src="/whypartner.png.png" alt="Deliver Faster Installs" style={{ width: '48px', height: '48px' }} />
-                <h3 style={{ fontFamily: 'Gotham Rounded, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
+                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
                   Deliver Faster Installs
                 </h3>
               </div>
@@ -200,7 +200,7 @@ const PartnerWithBoldEnergy = () => {
         <div style={{ display: 'flex', alignItems: 'flex-start', gap: '80px' }}>
           {/* Left Image */}
           <img
-            src="/support.png.jpg"
+            src="/support.png.jpg?v=3"
             alt="Sales Support"
             style={{ width: '575px', height: '670px', borderRadius: '30px', objectFit: 'cover' }}
           />
@@ -512,7 +512,7 @@ const PartnerWithBoldEnergy = () => {
           {/* Right Image */}
           <div>
             <img
-              src="/support.png.jpg"
+              src="/dealer-process.jpg?v=4"
               alt="Dealer Process"
               style={{ width: '660px', height: '760px', borderRadius: '30px', objectFit: 'cover' }}
             />

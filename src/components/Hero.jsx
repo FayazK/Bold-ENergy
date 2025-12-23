@@ -13,7 +13,7 @@ const Hero = () => {
       {/* Content centered */}
       <div className="absolute inset-0 flex items-center justify-center" style={{ marginTop: '-150px' }}>
         <div className="text-center px-6 max-w-4xl mx-auto">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight mb-6" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight mb-6 whitespace-nowrap" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
             Power Up. Be Bold
           </h1>
           <p className="text-xl md:text-2xl text-white mb-8" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
@@ -21,7 +21,7 @@ const Hero = () => {
           </p>
 
           {/* Three bullet points */}
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8 mt-8">
+          <div className="flex flex-wrap justify-center gap-[34px] md:gap-[42px] mt-8">
             <div className="flex items-center gap-2">
               <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white flex items-center justify-center">
                 <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">

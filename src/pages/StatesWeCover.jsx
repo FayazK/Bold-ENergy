@@ -6,61 +6,61 @@ const StatesWeCover = () => {
   const stateCards = [
     {
       id: 1,
-      image: '/support.png.jpg',
+      image: '/southwest-roof.jpg',
       heading: 'Southwest Region',
       states: ['Arizona', 'Arkansas', 'California', 'Colorado', 'Nevada', 'New Mexico', 'Utah']
     },
     {
       id: 2,
-      image: '/support.png.jpg',
+      image: '/northeast-roof.jpg',
       heading: 'Northeast Region',
       states: ['Connecticut', 'Maine', 'Massachusetts', 'New Hampshire', 'New Jersey', 'New York', 'Vermont']
     },
     {
       id: 3,
-      image: '/support.png.jpg',
+      image: '/southeast-roof.jpg',
       heading: 'Southeast Region',
       states: ['Florida', 'Georgia', 'North Carolina', 'South Carolina', 'Tennessee', 'Virginia']
     },
     {
       id: 4,
-      image: '/support.png.jpg',
+      image: '/midwest-roof.jpg',
       heading: 'Midwest Region',
       states: ['Illinois', 'Indiana', 'Michigan', 'Minnesota', 'Ohio', 'Wisconsin']
     },
     {
       id: 5,
-      image: '/support.png.jpg',
+      image: '/mountain-roof.jpg',
       heading: 'Mountain Region',
       states: ['Idaho', 'Montana', 'Wyoming', 'Oregon', 'Washington']
     },
     {
       id: 6,
-      image: '/support.png.jpg',
+      image: '/pacific-roof.jpg',
       heading: 'Pacific Region',
       states: ['California', 'Hawaii', 'Oregon', 'Washington', 'Alaska']
     },
     {
       id: 7,
-      image: '/support.png.jpg',
+      image: '/gulf-coast-roof.jpg',
       heading: 'Gulf Coast Region',
       states: ['Texas', 'Louisiana', 'Mississippi', 'Alabama', 'Florida']
     },
     {
       id: 8,
-      image: '/support.png.jpg',
+      image: '/great-plains-roof.jpg',
       heading: 'Great Plains Region',
       states: ['Kansas', 'Nebraska', 'North Dakota', 'South Dakota', 'Oklahoma']
     },
     {
       id: 9,
-      image: '/support.png.jpg',
+      image: '/mid-atlantic-roof.jpg',
       heading: 'Mid-Atlantic Region',
       states: ['Delaware', 'Maryland', 'Pennsylvania', 'Virginia', 'West Virginia']
     },
     {
       id: 10,
-      image: '/support.png.jpg',
+      image: '/new-england-roof.jpg',
       heading: 'New England Region',
       states: ['Rhode Island', 'Connecticut', 'Massachusetts', 'Vermont', 'New Hampshire', 'Maine']
     }
@@ -77,12 +77,12 @@ const StatesWeCover = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="w-full relative" style={{ height: '550px' }}>
+      <section className="w-full relative" style={{ height: '550px', overflow: 'hidden' }}>
         <img
-          src="/partnerwithboldenergy.png.jpg"
+          src="/states-cover-hero.jpg.png"
           alt="States We Cover"
-          className="w-full h-full object-cover"
-          style={{ width: '100%', height: '550px' }}
+          className="w-full"
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center' }}
         />
 
         {/* Dark Overlay */}
@@ -361,64 +361,7 @@ const StatesWeCover = () => {
               style={{ width: '1158px', height: '748px', objectFit: 'contain' }}
             />
 
-            {/* Green Area Icons (Covered) - Solar Panel Icons */}
-            {/* Colorado */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '230px', left: '280px' }} />
-            {/* Kansas */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '260px', left: '370px' }} />
-            {/* Oklahoma */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '320px', left: '370px' }} />
-            {/* Texas */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '400px', left: '350px' }} />
-            {/* New Mexico */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '330px', left: '260px' }} />
-            {/* Missouri */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '270px', left: '460px' }} />
-            {/* Arkansas */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '340px', left: '450px' }} />
-            {/* Louisiana */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '420px', left: '460px' }} />
-            {/* Kentucky */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '280px', left: '560px' }} />
-            {/* Tennessee */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '310px', left: '540px' }} />
-            {/* North Carolina */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '310px', left: '650px' }} />
-            {/* South Carolina */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '350px', left: '630px' }} />
-            {/* Georgia */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '380px', left: '600px' }} />
-            {/* Florida */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '460px', left: '630px' }} />
-            {/* Virginia */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '275px', left: '670px' }} />
-            {/* Maryland/Delaware */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '245px', left: '700px' }} />
-            {/* New Jersey */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '215px', left: '730px' }} />
-            {/* Connecticut/Mass */}
-            <img src="/covered.png.png" alt="Covered" style={{ position: 'absolute', width: '25px', height: '25px', top: '165px', left: '760px' }} />
-
-            {/* Blue Area Icons (Coming Soon) */}
-            {/* California */}
-            <img src="/comingsoon.png.png" alt="Coming Soon" style={{ position: 'absolute', width: '25px', height: '25px', top: '270px', left: '130px' }} />
-            {/* Minnesota */}
-            <img src="/comingsoon.png.png" alt="Coming Soon" style={{ position: 'absolute', width: '25px', height: '25px', top: '130px', left: '430px' }} />
-            {/* Wisconsin */}
-            <img src="/comingsoon.png.png" alt="Coming Soon" style={{ position: 'absolute', width: '25px', height: '25px', top: '150px', left: '490px' }} />
-            {/* Michigan */}
-            <img src="/comingsoon.png.png" alt="Coming Soon" style={{ position: 'absolute', width: '25px', height: '25px', top: '160px', left: '560px' }} />
-            {/* Illinois */}
-            <img src="/comingsoon.png.png" alt="Coming Soon" style={{ position: 'absolute', width: '25px', height: '25px', top: '230px', left: '500px' }} />
-            {/* Indiana */}
-            <img src="/comingsoon.png.png" alt="Coming Soon" style={{ position: 'absolute', width: '25px', height: '25px', top: '240px', left: '550px' }} />
-            {/* Ohio */}
-            <img src="/comingsoon.png.png" alt="Coming Soon" style={{ position: 'absolute', width: '25px', height: '25px', top: '230px', left: '600px' }} />
-            {/* Pennsylvania */}
-            <img src="/comingsoon.png.png" alt="Coming Soon" style={{ position: 'absolute', width: '25px', height: '25px', top: '200px', left: '670px' }} />
-            {/* New York */}
-            <img src="/comingsoon.png.png" alt="Coming Soon" style={{ position: 'absolute', width: '25px', height: '25px', top: '155px', left: '710px' }} />
-          </div>
+                      </div>
         </div>
 
         {/* Bottom Right Rectangle */}
@@ -439,16 +382,14 @@ const StatesWeCover = () => {
         }}>
           {/* Covered Area */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <div style={{ width: '36px', height: '36px', borderRadius: '5px', backgroundColor: '#A3B407', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img src="/coveredarea.png.png" alt="Covered" style={{ width: '20px', height: '20px' }} />
+            <div style={{ width: '36px', height: '36px', borderRadius: '5px', backgroundColor: '#A3B407' }}>
             </div>
             <span style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>Covered Area</span>
           </div>
 
           {/* Coming Soon */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <div style={{ width: '36px', height: '36px', borderRadius: '5px', backgroundColor: '#3B5B84', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img src="/comingsoon.png.png" alt="Coming Soon" style={{ width: '20px', height: '20px' }} />
+            <div style={{ width: '36px', height: '36px', borderRadius: '5px', backgroundColor: '#3B5B84' }}>
             </div>
             <span style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>Coming Soon</span>
           </div>
