@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Testimonials from '../components/Testimonials';
+import { FaHandshake, FaCheckCircle, FaClipboardCheck, FaStar, FaDollarSign, FaRocket, FaDesktop, FaChevronDown, FaFileUpload, FaFileAlt, FaCogs, FaHardHat, FaSatelliteDish } from 'react-icons/fa';
 
 const PartnerWithBoldEnergy = () => {
   const [openAccordion, setOpenAccordion] = useState('proposal');
@@ -65,7 +66,7 @@ const PartnerWithBoldEnergy = () => {
               gap: '12px',
               letterSpacing: '0.2em'
             }}>
-              <img src="/dealer.png.png" alt="Dealer" style={{ width: '18px', height: '18px' }} />
+              <FaHandshake className="w-5 h-5" />
               BECOME A PARTNER
             </button>
           </div>
@@ -95,12 +96,13 @@ const PartnerWithBoldEnergy = () => {
             </p>
           </div>
 
-          {/* 2 Cards - positioned with margin-left auto */}
+          {/* 2 Cards */}
           <div style={{ display: 'flex', gap: '30px', marginLeft: 'auto' }}>
-            {/* Card 1 - Close More Deals */}
             <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
-                <img src="/whypartner.png.png" alt="Close More Deals" style={{ width: '48px', height: '48px' }} />
+                <div className="w-12 h-12 rounded-full bg-[#A1B502]/10 flex items-center justify-center flex-shrink-0">
+                  <FaCheckCircle className="w-6 h-6 text-[#A1B502]" />
+                </div>
                 <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
                   Close More Deals
                 </h3>
@@ -110,10 +112,11 @@ const PartnerWithBoldEnergy = () => {
               </p>
             </div>
 
-            {/* Card 2 - Boost Revenue */}
             <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
-                <img src="/whypartner.png.png" alt="Boost Revenue" style={{ width: '48px', height: '48px' }} />
+                <div className="w-12 h-12 rounded-full bg-[#A1B502]/10 flex items-center justify-center flex-shrink-0">
+                  <FaCheckCircle className="w-6 h-6 text-[#A1B502]" />
+                </div>
                 <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
                   Boost Revenue
                 </h3>
@@ -127,10 +130,11 @@ const PartnerWithBoldEnergy = () => {
 
         {/* Second Row - 3 Cards Centered */}
         <div style={{ display: 'flex', gap: '30px', justifyContent: 'center' }}>
-            {/* Card 3 - Streamline Operations */}
             <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
-                <img src="/whypartner.png.png" alt="Streamline Operations" style={{ width: '48px', height: '48px' }} />
+                <div className="w-12 h-12 rounded-full bg-[#A1B502]/10 flex items-center justify-center flex-shrink-0">
+                  <FaCheckCircle className="w-6 h-6 text-[#A1B502]" />
+                </div>
                 <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
                   Streamline Operations
                 </h3>
@@ -140,10 +144,11 @@ const PartnerWithBoldEnergy = () => {
               </p>
             </div>
 
-            {/* Card 4 - Stand on Values */}
             <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
-                <img src="/whypartner.png.png" alt="Stand on Values" style={{ width: '48px', height: '48px' }} />
+                <div className="w-12 h-12 rounded-full bg-[#A1B502]/10 flex items-center justify-center flex-shrink-0">
+                  <FaCheckCircle className="w-6 h-6 text-[#A1B502]" />
+                </div>
                 <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
                   Stand on Values
                 </h3>
@@ -153,10 +158,11 @@ const PartnerWithBoldEnergy = () => {
               </p>
             </div>
 
-            {/* Card 5 - Deliver Faster Installs */}
             <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
-                <img src="/whypartner.png.png" alt="Deliver Faster Installs" style={{ width: '48px', height: '48px' }} />
+                <div className="w-12 h-12 rounded-full bg-[#A1B502]/10 flex items-center justify-center flex-shrink-0">
+                  <FaCheckCircle className="w-6 h-6 text-[#A1B502]" />
+                </div>
                 <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
                   Deliver Faster Installs
                 </h3>
@@ -184,7 +190,7 @@ const PartnerWithBoldEnergy = () => {
             gap: '12px',
             letterSpacing: '0.2em'
           }}>
-            <img src="/dealer.png.png" alt="Dealer" style={{ width: '24px', height: '18px' }} />
+            <FaHandshake className="w-5 h-5" />
             BECOME A PARTNER
           </button>
         </div>
@@ -192,7 +198,6 @@ const PartnerWithBoldEnergy = () => {
 
       {/* Dealer-Specific Sales Support Section */}
       <section style={{ paddingTop: '100px', paddingBottom: '100px', paddingLeft: '200px', paddingRight: '200px', backgroundColor: '#FFFFFF', height: '950px' }}>
-        {/* Heading */}
         <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', textAlign: 'center', marginBottom: '60px', letterSpacing: '0.03em' }}>
           Dealer-Specific Sales Support
         </h2>
@@ -207,95 +212,32 @@ const PartnerWithBoldEnergy = () => {
 
           {/* Right Content - Accordion Items */}
           <div style={{ flex: 1, height: '670px', overflow: 'hidden' }}>
-            {/* Item 1 - Financing That Works */}
-            <div style={{ borderBottom: '1px solid #E5E5E5', padding: '30px 0' }} onClick={() => toggleAccordion('financing')}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: openAccordion === 'financing' ? '#A1B502' : '#000000' }}>
-                  Financing That Works
-                </h3>
-                <img src="/chevron.svg.svg" alt="chevron" style={{ width: '40px', height: '25px', marginRight: '10px', transform: openAccordion === 'financing' ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }} />
+            {[
+              { key: 'financing', title: 'Financing That Works', items: ['Multiple loan and lease options', '$0-down financing available', 'Quick credit approvals', 'Competitive interest rates'] },
+              { key: 'proposal', title: 'Proposal Tools', items: ['Customer energy bill comparisons', 'Predictable fixed payments vs. rising utility costs', 'Net metering benefits explained in plain English', 'Long-term financial and environmental savings charts'] },
+              { key: 'training', title: 'Sales Training', items: ['Product knowledge sessions', 'Objection handling techniques', 'Sales process optimization', 'Ongoing coaching and support'] },
+              { key: 'marketing', title: 'Marketing Assets', items: ['Branded collateral and brochures', 'Digital marketing materials', 'Social media content', 'Co-branded campaigns'] },
+              { key: 'support', title: 'Dedicated Support', items: ['Dedicated account manager', 'Priority customer service', 'Technical support team', 'Installation coordination'] },
+            ].map((accordion, idx) => (
+              <div key={accordion.key} style={{ borderBottom: idx < 4 ? '1px solid #E5E5E5' : 'none', padding: '30px 0' }} onClick={() => toggleAccordion(accordion.key)}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }}>
+                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: openAccordion === accordion.key ? '#A1B502' : '#000000' }}>
+                    {accordion.title}
+                  </h3>
+                  <FaChevronDown
+                    className="w-5 h-5 text-[#222222] transition-transform duration-300"
+                    style={{ marginRight: '10px', transform: openAccordion === accordion.key ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                  />
+                </div>
+                {openAccordion === accordion.key && (
+                  <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2', letterSpacing: '0.03em' }}>
+                    {accordion.items.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
-              {openAccordion === 'financing' && (
-                <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2', letterSpacing: '0.03em' }}>
-                  <li>Multiple loan and lease options</li>
-                  <li>$0-down financing available</li>
-                  <li>Quick credit approvals</li>
-                  <li>Competitive interest rates</li>
-                </ul>
-              )}
-            </div>
-
-            {/* Item 2 - Proposal Tools */}
-            <div style={{ borderBottom: '1px solid #E5E5E5', padding: '30px 0' }} onClick={() => toggleAccordion('proposal')}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: openAccordion === 'proposal' ? '#A1B502' : '#000000' }}>
-                  Proposal Tools
-                </h3>
-                <img src="/chevron.svg.svg" alt="chevron" style={{ width: '40px', height: '25px', marginRight: '10px', transform: openAccordion === 'proposal' ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }} />
-              </div>
-              {openAccordion === 'proposal' && (
-                <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2', letterSpacing: '0.03em' }}>
-                  <li>Customer energy bill comparisons</li>
-                  <li>Predictable fixed payments vs. rising utility costs</li>
-                  <li>Net metering benefits explained in plain English</li>
-                  <li>Long-term financial and environmental savings charts</li>
-                </ul>
-              )}
-            </div>
-
-            {/* Item 3 - Sales Training */}
-            <div style={{ borderBottom: '1px solid #E5E5E5', padding: '30px 0' }} onClick={() => toggleAccordion('training')}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: openAccordion === 'training' ? '#A1B502' : '#000000' }}>
-                  Sales Training
-                </h3>
-                <img src="/chevron.svg.svg" alt="chevron" style={{ width: '40px', height: '25px', marginRight: '10px', transform: openAccordion === 'training' ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }} />
-              </div>
-              {openAccordion === 'training' && (
-                <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2', letterSpacing: '0.03em' }}>
-                  <li>Product knowledge sessions</li>
-                  <li>Objection handling techniques</li>
-                  <li>Sales process optimization</li>
-                  <li>Ongoing coaching and support</li>
-                </ul>
-              )}
-            </div>
-
-            {/* Item 4 - Marketing Assets */}
-            <div style={{ borderBottom: '1px solid #E5E5E5', padding: '30px 0' }} onClick={() => toggleAccordion('marketing')}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: openAccordion === 'marketing' ? '#A1B502' : '#000000' }}>
-                  Marketing Assets
-                </h3>
-                <img src="/chevron.svg.svg" alt="chevron" style={{ width: '40px', height: '25px', marginRight: '10px', transform: openAccordion === 'marketing' ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }} />
-              </div>
-              {openAccordion === 'marketing' && (
-                <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2', letterSpacing: '0.03em' }}>
-                  <li>Branded collateral and brochures</li>
-                  <li>Digital marketing materials</li>
-                  <li>Social media content</li>
-                  <li>Co-branded campaigns</li>
-                </ul>
-              )}
-            </div>
-
-            {/* Item 5 - Dedicated Support */}
-            <div style={{ padding: '30px 0' }} onClick={() => toggleAccordion('support')}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: openAccordion === 'support' ? '#A1B502' : '#000000' }}>
-                  Dedicated Support
-                </h3>
-                <img src="/chevron.svg.svg" alt="chevron" style={{ width: '40px', height: '25px', marginRight: '10px', transform: openAccordion === 'support' ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }} />
-              </div>
-              {openAccordion === 'support' && (
-                <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2', letterSpacing: '0.03em' }}>
-                  <li>Dedicated account manager</li>
-                  <li>Priority customer service</li>
-                  <li>Technical support team</li>
-                  <li>Installation coordination</li>
-                </ul>
-              )}
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -308,17 +250,8 @@ const PartnerWithBoldEnergy = () => {
           className="w-full h-full object-cover"
           style={{ width: '100%', height: '1040px' }}
         />
+        <div className="absolute inset-0" style={{ backgroundColor: '#000000', opacity: '0.5' }} />
 
-        {/* Dark Overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundColor: '#000000',
-            opacity: '0.5'
-          }}
-        />
-
-        {/* Content */}
         <div className="absolute inset-0" style={{ zIndex: 2, paddingTop: '100px', paddingLeft: '200px', paddingRight: '200px' }}>
           <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#FFFFFF', textAlign: 'center', marginBottom: '40px', letterSpacing: '0.03em' }}>
             Our Commitments to Dealers
@@ -326,86 +259,44 @@ const PartnerWithBoldEnergy = () => {
 
           {/* 4 Cards */}
           <div style={{ display: 'flex', justifyContent: 'center', gap: '30px' }}>
-            {/* Card 1 */}
-            <div style={{ position: 'relative', marginTop: '60px' }}>
-              <div style={{ width: '120px', height: '120px', borderRadius: '50%', backgroundColor: '#FFFFFF', position: 'absolute', top: '-60px', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ width: '100px', height: '100px', borderRadius: '50%', backgroundColor: '#EBEEF3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src="/permitspulled.png.png" alt="Permits Pulled" style={{ width: '50px', height: '50px' }} />
+            {[
+              { icon: <FaClipboardCheck className="w-7 h-7 text-[#A1B502]" />, title: 'Permits Pulled', desc: 'We secure approvals before any work begins.' },
+              { icon: <FaStar className="w-7 h-7 text-[#A1B502]" />, title: 'Top-Tier Hardware', desc: 'Tier-1 triple-black panels + SolarEdge Home Hub inverters (25-year warranty).' },
+              { icon: <FaDollarSign className="w-7 h-7 text-[#A1B502]" />, title: 'Transparent Pricing', desc: 'No hidden fees — you and your customer see the same honest numbers.' },
+              { icon: <FaRocket className="w-7 h-7 text-[#A1B502]" />, title: 'Fast Installs', desc: 'Most installs completed in 1-2 days with cleared permits.' },
+            ].map((card, i) => (
+              <div key={i} style={{ position: 'relative', marginTop: '60px' }}>
+                <div style={{ width: '120px', height: '120px', borderRadius: '50%', backgroundColor: '#FFFFFF', position: 'absolute', top: '-60px', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <div style={{ width: '100px', height: '100px', borderRadius: '50%', backgroundColor: '#EBEEF3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {card.icon}
+                  </div>
+                </div>
+                <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
+                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>{card.title}</h3>
+                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>{card.desc}</p>
                 </div>
               </div>
-              <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>Permits Pulled</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>We secure approvals before any work begins.</p>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div style={{ position: 'relative', marginTop: '60px' }}>
-              <div style={{ width: '120px', height: '120px', borderRadius: '50%', backgroundColor: '#FFFFFF', position: 'absolute', top: '-60px', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ width: '100px', height: '100px', borderRadius: '50%', backgroundColor: '#EBEEF3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src="/toptier.png.png" alt="Top Tier" style={{ width: '50px', height: '50px' }} />
-                </div>
-              </div>
-              <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>Top-Tier Hardware</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>Tier-1 triple-black panels + SolarEdge Home Hub inverters (25-year warranty).</p>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div style={{ position: 'relative', marginTop: '60px' }}>
-              <div style={{ width: '120px', height: '120px', borderRadius: '50%', backgroundColor: '#FFFFFF', position: 'absolute', top: '-60px', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ width: '100px', height: '100px', borderRadius: '50%', backgroundColor: '#EBEEF3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src="/transparent.png.png" alt="Transparent" style={{ width: '50px', height: '50px' }} />
-                </div>
-              </div>
-              <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>Transparent Pricing</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>No hidden fees — you and your customer see the same honest numbers.</p>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div style={{ position: 'relative', marginTop: '60px' }}>
-              <div style={{ width: '120px', height: '120px', borderRadius: '50%', backgroundColor: '#FFFFFF', position: 'absolute', top: '-60px', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ width: '100px', height: '100px', borderRadius: '50%', backgroundColor: '#EBEEF3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src="/fast.png.png" alt="Fast" style={{ width: '50px', height: '50px' }} />
-                </div>
-              </div>
-              <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>Fast Installs</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>Most installs completed in 1-2 days with cleared permits.</p>
-              </div>
-            </div>
+            ))}
           </div>
 
           {/* Second Row - 2 Cards */}
           <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', marginTop: '30px' }}>
-            {/* Card 5 */}
-            <div style={{ position: 'relative', marginTop: '60px' }}>
-              <div style={{ width: '120px', height: '120px', borderRadius: '50%', backgroundColor: '#FFFFFF', position: 'absolute', top: '-60px', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ width: '100px', height: '100px', borderRadius: '50%', backgroundColor: '#EBEEF3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src="/monitoring.png.png" alt="Monitoring" style={{ width: '50px', height: '50px' }} />
+            {[
+              { icon: <FaDesktop className="w-7 h-7 text-[#A1B502]" />, title: 'Always-On Monitoring', desc: 'Our support team tracks system performance 24/7.' },
+              { icon: <FaDollarSign className="w-7 h-7 text-[#A1B502]" />, title: 'Cash Flow-Friendly', desc: 'Faster approvals and quicker installs = faster commissions for you.' },
+            ].map((card, i) => (
+              <div key={i} style={{ position: 'relative', marginTop: '60px' }}>
+                <div style={{ width: '120px', height: '120px', borderRadius: '50%', backgroundColor: '#FFFFFF', position: 'absolute', top: '-60px', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <div style={{ width: '100px', height: '100px', borderRadius: '50%', backgroundColor: '#EBEEF3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {card.icon}
+                  </div>
+                </div>
+                <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
+                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>{card.title}</h3>
+                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>{card.desc}</p>
                 </div>
               </div>
-              <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>Always-On Monitoring</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>Our support team tracks system performance 24/7.</p>
-              </div>
-            </div>
-
-            {/* Card 6 */}
-            <div style={{ position: 'relative', marginTop: '60px' }}>
-              <div style={{ width: '120px', height: '120px', borderRadius: '50%', backgroundColor: '#FFFFFF', position: 'absolute', top: '-60px', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ width: '100px', height: '100px', borderRadius: '50%', backgroundColor: '#EBEEF3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img src="/transparent.png.png" alt="Cash Flow" style={{ width: '50px', height: '50px' }} />
-                </div>
-              </div>
-              <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>Cash Flow-Friendly</h3>
-                <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>Faster approvals and quicker installs = faster commissions for you.</p>
-              </div>
-            </div>
+            ))}
           </div>
 
           {/* Button */}
@@ -425,7 +316,7 @@ const PartnerWithBoldEnergy = () => {
               gap: '12px',
               letterSpacing: '0.2em'
             }}>
-              <img src="/dealer.png.png" alt="Dealer" style={{ width: '24px', height: '18px' }} />
+              <FaHandshake className="w-5 h-5" />
               BECOME A PARTNER
             </button>
           </div>
@@ -443,69 +334,27 @@ const PartnerWithBoldEnergy = () => {
 
             {/* Steps */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
-              {/* Step 1 */}
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', position: 'relative' }}>
-                <div style={{ position: 'absolute', left: '-35px', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Archivo, sans-serif', fontSize: '80px', fontWeight: 'bold', color: '#000000', opacity: '0.05', zIndex: 0 }}>1</div>
-                <div style={{ width: '70px', height: '70px', borderRadius: '50%', backgroundColor: '#FDFFEF', border: '2px solid #A1B502', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1, flexShrink: 0 }}>
-                  <img src="/submit.svg.svg" alt="Submit Deal" style={{ width: '30px', height: '30px' }} />
+              {[
+                { num: '1', icon: <FaFileUpload className="w-6 h-6 text-[#A1B502]" />, title: 'Submit Deal', desc: 'Upload contracts and docs in the portal' },
+                { num: '2', icon: <FaFileAlt className="w-6 h-6 text-[#A1B502]" />, title: 'Proposal Creation', desc: 'We generate a customer-ready savings and financing proposal.' },
+                { num: '3', icon: <FaCogs className="w-6 h-6 text-[#A1B502]" />, title: 'Engineering & Permitting', desc: 'Bold handles site survey, system design, and all utility paperwork.' },
+                { num: '4', icon: <FaHardHat className="w-6 h-6 text-[#A1B502]" />, title: 'Installation', desc: 'Professional local crews complete installs in 1-2 days.' },
+                { num: '5', icon: <FaSatelliteDish className="w-6 h-6 text-[#A1B502]" />, title: 'PTO & Monitoring', desc: 'Utilities grant "Permission to Operate," and systems go live with 24/7 tracking.' },
+              ].map((step, i, arr) => (
+                <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', position: 'relative' }}>
+                  <div style={{ position: 'absolute', left: '-35px', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Archivo, sans-serif', fontSize: '80px', fontWeight: 'bold', color: '#000000', opacity: '0.05', zIndex: 0 }}>{step.num}</div>
+                  <div style={{ width: '70px', height: '70px', borderRadius: '50%', backgroundColor: '#FDFFEF', border: '2px solid #A1B502', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1, flexShrink: 0 }}>
+                    {step.icon}
+                  </div>
+                  {i < arr.length - 1 && (
+                    <div style={{ borderLeft: '2px dotted #A1B502', position: 'absolute', left: '34px', top: '75px', height: '40px' }} />
+                  )}
+                  <div>
+                    <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px', letterSpacing: '0.03em' }}>{step.title}</h3>
+                    <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000', letterSpacing: '0.03em' }}>{step.desc}</p>
+                  </div>
                 </div>
-                <div style={{ borderLeft: '2px dotted #A1B502', position: 'absolute', left: '34px', top: '75px', height: '40px' }} />
-                <div>
-                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px', letterSpacing: '0.03em' }}>Submit Deal</h3>
-                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000', letterSpacing: '0.03em' }}>Upload contracts and docs in the portal</p>
-                </div>
-              </div>
-
-              {/* Step 2 */}
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', position: 'relative' }}>
-                <div style={{ position: 'absolute', left: '-35px', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Archivo, sans-serif', fontSize: '80px', fontWeight: 'bold', color: '#000000', opacity: '0.05', zIndex: 0 }}>2</div>
-                <div style={{ width: '70px', height: '70px', borderRadius: '50%', backgroundColor: '#FDFFEF', border: '2px solid #A1B502', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1, flexShrink: 0 }}>
-                  <img src="/proposal.svg.svg" alt="Proposal Creation" style={{ width: '30px', height: '30px' }} />
-                </div>
-                <div style={{ borderLeft: '2px dotted #A1B502', position: 'absolute', left: '34px', top: '75px', height: '40px' }} />
-                <div>
-                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px', letterSpacing: '0.03em' }}>Proposal Creation</h3>
-                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000', letterSpacing: '0.03em' }}>We generate a customer-ready savings and financing proposal.</p>
-                </div>
-              </div>
-
-              {/* Step 3 */}
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', position: 'relative' }}>
-                <div style={{ position: 'absolute', left: '-35px', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Archivo, sans-serif', fontSize: '80px', fontWeight: 'bold', color: '#000000', opacity: '0.05', zIndex: 0 }}>3</div>
-                <div style={{ width: '70px', height: '70px', borderRadius: '50%', backgroundColor: '#FDFFEF', border: '2px solid #A1B502', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1, flexShrink: 0 }}>
-                  <img src="/engineering.svg.svg" alt="Engineering & Permitting" style={{ width: '30px', height: '30px' }} />
-                </div>
-                <div style={{ borderLeft: '2px dotted #A1B502', position: 'absolute', left: '34px', top: '75px', height: '40px' }} />
-                <div>
-                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px', letterSpacing: '0.03em' }}>Engineering & Permitting</h3>
-                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000', letterSpacing: '0.03em' }}>Bold handles site survey, system design, and all utility paperwork.</p>
-                </div>
-              </div>
-
-              {/* Step 4 */}
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', position: 'relative' }}>
-                <div style={{ position: 'absolute', left: '-35px', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Archivo, sans-serif', fontSize: '80px', fontWeight: 'bold', color: '#000000', opacity: '0.05', zIndex: 0 }}>4</div>
-                <div style={{ width: '70px', height: '70px', borderRadius: '50%', backgroundColor: '#FDFFEF', border: '2px solid #A1B502', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1, flexShrink: 0 }}>
-                  <img src="/installation.svg.svg" alt="Installation" style={{ width: '30px', height: '30px' }} />
-                </div>
-                <div style={{ borderLeft: '2px dotted #A1B502', position: 'absolute', left: '34px', top: '75px', height: '40px' }} />
-                <div>
-                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px', letterSpacing: '0.03em' }}>Installation</h3>
-                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000', letterSpacing: '0.03em' }}>Professional local crews complete installs in 1-2 days.</p>
-                </div>
-              </div>
-
-              {/* Step 5 */}
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', position: 'relative' }}>
-                <div style={{ position: 'absolute', left: '-35px', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Archivo, sans-serif', fontSize: '80px', fontWeight: 'bold', color: '#000000', opacity: '0.05', zIndex: 0 }}>5</div>
-                <div style={{ width: '70px', height: '70px', borderRadius: '50%', backgroundColor: '#FDFFEF', border: '2px solid #A1B502', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1, flexShrink: 0 }}>
-                  <img src="/pto.png.svg" alt="PTO & Monitoring" style={{ width: '30px', height: '30px' }} />
-                </div>
-                <div>
-                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px', letterSpacing: '0.03em' }}>PTO & Monitoring</h3>
-                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000', letterSpacing: '0.03em' }}>Utilities grant "Permission to Operate," and systems go live with 24/7 tracking.</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 

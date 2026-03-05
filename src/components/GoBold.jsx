@@ -1,3 +1,5 @@
+import { FaFileAlt, FaHandshake } from 'react-icons/fa';
+
 const GoBold = () => {
   return (
     <section className="relative w-full" style={{ height: '950px', marginBottom: '100px' }}>
@@ -31,14 +33,14 @@ const GoBold = () => {
               className="px-10 py-4 rounded-full text-white font-bold text-lg hover:opacity-90 transition-opacity duration-300 flex items-center gap-3"
               style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.2em' }}
             >
-              <img src="/quote.png.png" alt="Get a Quote" className="w-6 h-6" />
+              <FaFileAlt className="w-5 h-5" />
               GET A QUOTE
             </button>
             <button
               className="px-10 py-4 rounded-full text-white font-bold text-lg hover:opacity-90 transition-opacity duration-300 flex items-center gap-3"
               style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#385887', letterSpacing: '0.2em' }}
             >
-              <img src="/dealer.png.png" alt="Become a Sales Dealer" className="w-7 h-6" />
+              <FaHandshake className="w-6 h-6" />
               BECOME A SALES DEALER
             </button>
           </div>

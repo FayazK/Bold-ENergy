@@ -1,3 +1,5 @@
+import { FaHome, FaUsers, FaSolarPanel, FaMapMarkedAlt, FaTools } from 'react-icons/fa';
+
 const Hero = () => {
   return (
     <section className="relative w-full" style={{ height: '120vh' }}>
@@ -59,11 +61,11 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4 mt-10">
             <button className="bg-bold-green text-white px-8 py-3 rounded-full font-bold text-lg hover:opacity-90 transition-opacity duration-300 flex items-center gap-3" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.2em' }}>
-              <img src="/house.png.png" alt="Home" className="w-7 h-6" />
+              <FaHome className="w-6 h-6" />
               $0 DOWN SOLAR
             </button>
             <button className="bg-white text-bold-green px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors duration-300 flex items-center gap-3" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.2em' }}>
-              <img src="/dealers.png.png" alt="Dealers" className="w-6 h-6" style={{ filter: 'brightness(0) saturate(100%) invert(58%) sepia(72%) saturate(426%) hue-rotate(31deg) brightness(96%) contrast(88%)' }} />
+              <FaUsers className="w-5 h-5 text-[#A1B502]" />
               BECOME A SALES DEALER
             </button>
           </div>
@@ -76,7 +78,7 @@ const Hero = () => {
           <div className="flex flex-wrap justify-center" style={{ gap: '100px' }}>
             <div className="bg-white rounded-full flex items-center gap-4" style={{ width: '417px', height: '148px', paddingLeft: '32px', paddingRight: '32px' }}>
               <div className="flex-shrink-0 w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center p-3">
-                <img src="/Solar_Experience.png.png" alt="Solar Experience" className="w-full h-full object-contain" />
+                <FaSolarPanel className="w-12 h-12 text-[#A1B502]" />
               </div>
               <div className="text-left">
                 <div className="text-6xl font-bold mb-1" style={{ fontFamily: 'Archivo, sans-serif', color: '#A1B502' }}>
@@ -90,7 +92,7 @@ const Hero = () => {
 
             <div className="bg-white rounded-full flex items-center gap-4" style={{ width: '417px', height: '148px', paddingLeft: '32px', paddingRight: '32px' }}>
               <div className="flex-shrink-0 w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center p-3">
-                <img src="/States.png.png" alt="States" className="w-full h-full object-contain" />
+                <FaMapMarkedAlt className="w-12 h-12 text-[#A1B502]" />
               </div>
               <div className="text-left">
                 <div className="text-6xl font-bold mb-1" style={{ fontFamily: 'Archivo, sans-serif', color: '#A1B502' }}>
@@ -104,7 +106,7 @@ const Hero = () => {
 
             <div className="bg-white rounded-full flex items-center gap-4" style={{ width: '417px', height: '148px', paddingLeft: '32px', paddingRight: '32px' }}>
               <div className="flex-shrink-0 w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center p-3">
-                <img src="/Installs.png.png" alt="Installs" className="w-full h-full object-contain" />
+                <FaTools className="w-12 h-12 text-[#A1B502]" />
               </div>
               <div className="text-left">
                 <div className="text-6xl font-bold mb-1" style={{ fontFamily: 'Archivo, sans-serif', color: '#A1B502' }}>

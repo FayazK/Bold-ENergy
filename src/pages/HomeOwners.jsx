@@ -1,4 +1,5 @@
 import Testimonials from '../components/Testimonials';
+import { FaSolarPanel, FaMapMarkedAlt, FaTools, FaShoppingCart, FaDollarSign, FaHandHoldingUsd, FaBolt, FaCalculator, FaLeaf, FaChevronRight } from 'react-icons/fa';
 
 const HomeOwners = () => {
   return (
@@ -16,7 +17,7 @@ const HomeOwners = () => {
           className="absolute inset-0"
           style={{
             backgroundColor: 'rgba(0,0,0,0.6)',
-            
+
           }}
         />
 
@@ -41,7 +42,7 @@ const HomeOwners = () => {
             <div className="flex justify-center" style={{ gap: '30px' }}>
               <div className="bg-white rounded-full flex items-center" style={{ width: '417px', height: '148px', gap: '20px', paddingLeft: '24px', paddingRight: '24px' }}>
                 <div className="flex-shrink-0 rounded-full bg-gray-100 flex items-center justify-center" style={{ width: '100px', height: '100px', padding: '12px' }}>
-                  <img src="/Solar_Experience.png.png" alt="Solar Experience" className="w-full h-full object-contain" />
+                  <FaSolarPanel className="w-12 h-12 text-[#A1B502]" />
                 </div>
                 <div className="text-left">
                   <div className="font-bold mb-1" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '60px', color: '#A1B502' }}>
@@ -55,7 +56,7 @@ const HomeOwners = () => {
 
               <div className="bg-white rounded-full flex items-center" style={{ width: '417px', height: '148px', gap: '20px', paddingLeft: '24px', paddingRight: '24px' }}>
                 <div className="flex-shrink-0 rounded-full bg-gray-100 flex items-center justify-center" style={{ width: '100px', height: '100px', padding: '12px' }}>
-                  <img src="/States.png.png" alt="States" className="w-full h-full object-contain" />
+                  <FaMapMarkedAlt className="w-12 h-12 text-[#A1B502]" />
                 </div>
                 <div className="text-left">
                   <div className="font-bold mb-1" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '60px', color: '#A1B502' }}>
@@ -69,7 +70,7 @@ const HomeOwners = () => {
 
               <div className="bg-white rounded-full flex items-center" style={{ width: '417px', height: '148px', gap: '20px', paddingLeft: '24px', paddingRight: '24px' }}>
                 <div className="flex-shrink-0 rounded-full bg-gray-100 flex items-center justify-center" style={{ width: '100px', height: '100px', padding: '12px' }}>
-                  <img src="/Installs.png.png" alt="Installs" className="w-full h-full object-contain" />
+                  <FaTools className="w-12 h-12 text-[#A1B502]" />
                 </div>
                 <div className="text-left">
                   <div className="font-bold mb-1" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '60px', color: '#A1B502' }}>
@@ -96,7 +97,7 @@ const HomeOwners = () => {
           {/* Purchase Card */}
           <div className="flex flex-col items-start" style={{ backgroundColor: 'rgba(161, 181, 2, 0.05)', padding: '56px', width: '33.33%', borderTopLeftRadius: '32px', borderBottomLeftRadius: '32px' }}>
             <div className="rounded-full bg-white flex items-center justify-center mb-6" style={{ width: '80px', height: '80px', border: '2px solid rgba(161, 181, 2, 0.30)' }}>
-              <img src="/purchase.png" alt="Purchase" style={{ width: '48px', height: '48px' }} />
+              <FaShoppingCart className="w-8 h-8 text-[#A1B502]" />
             </div>
             <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#222222', letterSpacing: '0.03em' }}>
               Purchase
@@ -106,9 +107,7 @@ const HomeOwners = () => {
             </p>
             <a href="#" className="flex items-center gap-2 font-bold" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#A1B502' }}>
               Read More
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
 
@@ -122,19 +121,17 @@ const HomeOwners = () => {
             </p>
             <a href="#" className="flex items-center gap-2 font-bold mb-6" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#A1B502' }}>
               Read More
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
             <div className="rounded-full bg-white flex items-center justify-center" style={{ width: '80px', height: '80px', border: '2px solid rgba(161, 181, 2, 0.30)' }}>
-              <img src="/finance.png" alt="Finance" style={{ width: '48px', height: '48px' }} />
+              <FaDollarSign className="w-8 h-8 text-[#A1B502]" />
             </div>
           </div>
 
           {/* TPO Card */}
           <div className="flex flex-col items-start" style={{ backgroundColor: 'rgba(161, 181, 2, 0.05)', padding: '56px', width: '33.33%', borderTopRightRadius: '32px', borderBottomRightRadius: '32px' }}>
             <div className="rounded-full bg-white flex items-center justify-center mb-6" style={{ width: '80px', height: '80px', border: '2px solid rgba(161, 181, 2, 0.30)' }}>
-              <img src="/tpo.png" alt="TPO" style={{ width: '48px', height: '48px' }} />
+              <FaHandHoldingUsd className="w-8 h-8 text-[#A1B502]" />
             </div>
             <h3 className="font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', color: '#222222', letterSpacing: '0.03em' }}>
               TPO
@@ -144,9 +141,7 @@ const HomeOwners = () => {
             </p>
             <a href="#" className="flex items-center gap-2 font-bold" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#A1B502' }}>
               Read More
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
         </div>
@@ -206,7 +201,7 @@ const HomeOwners = () => {
           <div className="absolute" style={{ left: '270px', top: '270px', maxWidth: '240px' }}>
             <div className="flex items-start gap-3 mb-3">
               <div id="whyBoldIcon" className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: '#385887' }}>
-                <img src="/volt.png" alt="Volt" style={{ width: '24px', height: '28px' }} />
+                <FaBolt className="w-6 h-7 text-white" />
               </div>
             </div>
             <h3 id="whyBoldHeading" className="font-bold mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', color: '#222222', letterSpacing: '0.03em' }}>
@@ -220,9 +215,7 @@ const HomeOwners = () => {
             </p>
             <a href="#" className="flex items-center gap-2 font-bold" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '13px', color: '#385887' }}>
               Read More
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#385887" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
 
@@ -230,7 +223,7 @@ const HomeOwners = () => {
           <div className="absolute" style={{ left: '270px', top: '570px', maxWidth: '240px' }}>
             <div className="flex items-start gap-3 mb-3">
               <div id="roiIcon" className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: '#385887' }}>
-                <img src="/roicalculator.png" alt="ROI Calculator" style={{ width: '24px', height: '28px' }} />
+                <FaCalculator className="w-6 h-7 text-white" />
               </div>
             </div>
             <h3 id="roiHeading" className="font-bold mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', color: '#222222', letterSpacing: '0.03em' }}>
@@ -241,9 +234,7 @@ const HomeOwners = () => {
             </p>
             <a href="#" className="flex items-center gap-2 font-bold" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '13px', color: '#385887' }}>
               Read More
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#385887" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
 
@@ -251,7 +242,7 @@ const HomeOwners = () => {
           <div className="absolute" style={{ right: '180px', top: 'calc(50% + 50px)', transform: 'translateY(-50%)', maxWidth: '300px', zIndex: 3 }}>
             <div className="flex items-start gap-3 mb-3">
               <div id="envImpactIcon" className="flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: '#385887' }}>
-                <img src="/calculator.png" alt="Calculator" style={{ width: '28px', height: '28px' }} />
+                <FaLeaf className="w-7 h-7 text-white" />
               </div>
             </div>
             <h3 id="envImpactHeading" className="font-bold mb-3" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', color: '#222222', letterSpacing: '0.03em' }}>
@@ -262,9 +253,7 @@ const HomeOwners = () => {
             </p>
             <a href="#" className="flex items-center gap-2 font-bold" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '13px', color: '#385887' }}>
               Read More
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#385887" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
 
@@ -278,7 +267,6 @@ const HomeOwners = () => {
           </div>
 
           {/* Connector Lines using SVG files */}
-          {/* Connector from Why Bold Energy to Center Image */}
           <img
               src="/connector-1.svg"
               alt=""
@@ -293,9 +281,6 @@ const HomeOwners = () => {
               }}
           />
 
-
-
-          {/* Connector from ROI Calculator to Center Image */}
           <img
               src="/connector-2.svg"
               alt=""
@@ -310,9 +295,6 @@ const HomeOwners = () => {
               }}
           />
 
-
-
-          {/* Connector from Environmental Impact Calculator to Center Image */}
           <img
             src="/connector-3.svg"
             alt=""

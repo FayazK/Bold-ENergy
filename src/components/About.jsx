@@ -1,3 +1,5 @@
+import { FaHome, FaUsers } from 'react-icons/fa';
+
 const About = () => {
   return (
     <section id="about" className="bg-white" style={{ paddingTop: '100px', marginBottom: '100px' }}>
@@ -78,14 +80,14 @@ const About = () => {
             className="px-10 py-4 rounded-full text-white font-bold text-lg hover:opacity-90 transition-opacity duration-300 flex items-center gap-3"
             style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.2em' }}
           >
-            <img src="/house.png.png" alt="Home Owners" className="w-7 h-6" />
+            <FaHome className="w-6 h-6" />
             HOME OWNERS
           </button>
           <button
             className="px-10 py-4 rounded-full text-white font-bold text-lg hover:opacity-90 transition-opacity duration-300 flex items-center gap-3"
             style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#385887', letterSpacing: '0.2em' }}
           >
-            <img src="/dealers.png.png" alt="Sales Dealers" className="w-6 h-6" />
+            <FaUsers className="w-5 h-5" />
             SALES DEALERS
           </button>
         </div>

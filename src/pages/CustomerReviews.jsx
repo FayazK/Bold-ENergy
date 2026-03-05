@@ -1,3 +1,5 @@
+import { FaQuoteLeft } from 'react-icons/fa';
+
 const CustomerReviews = () => {
   return (
     <div>
@@ -73,7 +75,9 @@ const CustomerReviews = () => {
           <div className="text-center" style={{ maxWidth: '620px', marginLeft: '200px' }}>
             {/* Colons Image */}
             <div className="flex justify-center mb-6">
-              <img src="/Colons.png.png" alt="Quote" style={{ width: '72px', height: '64px' }} />
+              <div className="w-[72px] h-[64px] rounded-full bg-[#A1B502] flex items-center justify-center">
+                <FaQuoteLeft className="w-8 h-8 text-white" />
+              </div>
             </div>
 
             {/* Review Text */}
@@ -106,7 +110,9 @@ const CustomerReviews = () => {
           <div className="text-center" style={{ maxWidth: '620px', marginRight: '200px' }}>
             {/* Colons Image */}
             <div className="flex justify-center mb-6">
-              <img src="/Colons.png.png" alt="Quote" style={{ width: '72px', height: '64px' }} />
+              <div className="w-[72px] h-[64px] rounded-full bg-[#A1B502] flex items-center justify-center">
+                <FaQuoteLeft className="w-8 h-8 text-white" />
+              </div>
             </div>
 
             {/* Review Text */}
@@ -159,7 +165,9 @@ const CustomerReviews = () => {
           <div className="text-center" style={{ maxWidth: '620px', marginLeft: '200px' }}>
             {/* Colons Image */}
             <div className="flex justify-center mb-6">
-              <img src="/Colons.png.png" alt="Quote" style={{ width: '72px', height: '64px' }} />
+              <div className="w-[72px] h-[64px] rounded-full bg-[#A1B502] flex items-center justify-center">
+                <FaQuoteLeft className="w-8 h-8 text-white" />
+              </div>
             </div>
 
             {/* Review Text */}
@@ -192,7 +200,9 @@ const CustomerReviews = () => {
           <div className="text-center" style={{ maxWidth: '620px', marginRight: '200px' }}>
             {/* Colons Image */}
             <div className="flex justify-center mb-6">
-              <img src="/Colons.png.png" alt="Quote" style={{ width: '72px', height: '64px' }} />
+              <div className="w-[72px] h-[64px] rounded-full bg-[#A1B502] flex items-center justify-center">
+                <FaQuoteLeft className="w-8 h-8 text-white" />
+              </div>
             </div>
 
             {/* Review Text */}

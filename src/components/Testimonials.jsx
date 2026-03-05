@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FaQuoteLeft } from 'react-icons/fa';
 
 const Testimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -148,10 +149,12 @@ const Testimonials = () => {
                           padding: '50px 24px 30px 24px'
                         }}
                       >
-                        {/* Colons Image */}
+                        {/* Quote Icon */}
                         {review.showColons && (
                           <div className="absolute" style={{ top: '-36px', left: '50%', transform: 'translateX(-50%)' }}>
-                            <img src="/Colons.png.png" alt="Quote" style={{ width: '72px', height: 'auto' }} />
+                            <div className="w-[72px] h-[72px] rounded-full bg-[#A1B502] flex items-center justify-center">
+                              <FaQuoteLeft className="w-8 h-8 text-white" />
+                            </div>
                           </div>
                         )}
 

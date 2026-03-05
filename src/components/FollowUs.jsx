@@ -1,3 +1,5 @@
+import { FaInstagram } from 'react-icons/fa';
+
 const FollowUs = () => {
   return (
     <section className="py-8 bg-white" style={{ marginBottom: '100px' }}>
@@ -58,7 +60,7 @@ const FollowUs = () => {
           className="px-10 py-4 rounded-full text-white font-bold text-lg hover:opacity-90 transition-opacity duration-300 flex items-center gap-3 mx-auto"
           style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.2em' }}
         >
-          <img src="/insta.png.png" alt="Instagram" className="w-6 h-6" />
+          <FaInstagram className="w-6 h-6" />
           FOLLOW ON INSTAGRAM
         </button>
       </div>

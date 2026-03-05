@@ -1,65 +1,57 @@
 import { Link, useLocation } from 'react-router-dom';
 
+const navLinks = [
+  { to: '/', label: 'Home' },
+  { to: '/home-owners', label: 'HomeOwners' },
+  { to: '/partner-with-bold-energy', label: 'Dealers' },
+  { to: '/customer-reviews', label: 'Reviews' },
+  { to: '/blogs', label: 'Blogs' },
+  { to: '/states-we-cover', label: 'States' },
+];
+
 const Header = () => {
   const location = useLocation();
 
   return (
     <header className="absolute top-0 left-0 right-0 z-50">
-      <nav className="py-6" style={{ paddingLeft: '200px', paddingRight: '200px' }}>
-        <div className="flex items-center relative">
+      <nav className="mx-auto max-w-[1440px] px-8 lg:px-16 xl:px-24 mt-[50px]">
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center shrink-0">
             <img
               src="/headerlogo.png"
               alt="Bold Energy"
-              className="h-36 w-auto"
+              className="h-14 w-auto"
             />
           </Link>
 
-          {/* Navigation Buttons - Right */}
-          <div className="ml-auto flex space-x-4" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', whiteSpace: 'nowrap' }}>
-            <Link
-              to="/"
-              className="px-6 py-2 font-medium hover:bg-white/10 rounded-lg transition-colors duration-300"
-              style={{ color: location.pathname === '/' ? '#A1B502' : '#FFFFFF' }}
-            >
-              Home
-            </Link>
-            <Link
-              to="/home-owners"
-              className="px-6 py-2 font-medium hover:bg-white/10 rounded-lg transition-colors duration-300"
-              style={{ color: location.pathname === '/home-owners' ? '#A1B502' : '#FFFFFF', whiteSpace: 'nowrap' }}
-            >
-              HomeOwners
-            </Link>
-            <Link
-              to="/partner-with-bold-energy"
-              className="px-6 py-2 font-medium hover:bg-white/10 rounded-lg transition-colors duration-300"
-              style={{ color: location.pathname === '/partner-with-bold-energy' ? '#A1B502' : '#FFFFFF' }}
-            >
-              Dealers
-            </Link>
-            <Link
-              to="/customer-reviews"
-              className="px-6 py-2 font-medium hover:bg-white/10 rounded-lg transition-colors duration-300"
-              style={{ color: location.pathname === '/customer-reviews' ? '#A1B502' : '#FFFFFF' }}
-            >
-              Reviews
-            </Link>
-            <Link
-              to="/blogs"
-              className="px-6 py-2 font-medium hover:bg-white/10 rounded-lg transition-colors duration-300"
-              style={{ color: location.pathname === '/blogs' ? '#A1B502' : '#FFFFFF' }}
-            >
-              Blogs
-            </Link>
-            <Link
-              to="/states-we-cover"
-              className="px-6 py-2 font-medium hover:bg-white/10 rounded-lg transition-colors duration-300"
-              style={{ color: location.pathname === '/states-we-cover' ? '#A1B502' : '#FFFFFF' }}
-            >
-              States
-            </Link>
+          {/* Navigation Links */}
+          <div
+            className="flex items-center gap-1"
+            style={{ fontFamily: 'Archivo, sans-serif' }}
+          >
+            {navLinks.map(({ to, label }) => {
+              const isActive = location.pathname === to;
+              return (
+                <Link
+                  key={to}
+                  to={to}
+                  className={`
+                    relative px-4 py-2 text-[15px] font-medium rounded-full
+                    transition-all duration-300 whitespace-nowrap
+                    ${isActive
+                      ? 'text-[#A1B502]'
+                      : 'text-white hover:text-[#A1B502]'
+                    }
+                  `}
+                >
+                  {label}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-5 h-[2px] bg-[#A1B502] rounded-full" />
+                  )}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </nav>

@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { FaFileAlt, FaHandshake, FaMapMarkerAlt, FaPhone, FaClock, FaArrowRight, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaChevronDown } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
@@ -44,14 +46,14 @@ const Footer = () => {
               className="px-10 py-4 rounded-full font-bold hover:opacity-90 transition-opacity duration-300 flex items-center gap-3"
               style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#FFFFFF', color: '#A1B502', letterSpacing: '0.2em' }}
             >
-              <img src="/greenquote.png.png" alt="Get a Quote" className="w-7 h-5" />
+              <FaFileAlt className="w-5 h-5" />
               GET A QUOTE
             </button>
             <button
               className="px-10 py-4 rounded-full font-bold text-white hover:opacity-90 transition-opacity duration-300 flex items-center gap-3"
               style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#385887', letterSpacing: '0.2em' }}
             >
-              <img src="/handshake.png.png" alt="Become a Sales Dealer" className="w-6 h-6" />
+              <FaHandshake className="w-6 h-6" />
               BECOME A SALES DEALER
             </button>
           </div>
@@ -69,9 +71,7 @@ const Footer = () => {
           {/* View Office Map */}
           <div className="absolute flex items-center gap-3" style={{ left: '80px', top: '280px' }}>
             <div className="flex items-center justify-center" style={{ width: '35px', height: '35px', borderRadius: '50%', backgroundColor: '#A1B502' }}>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaArrowRight className="w-4 h-4 text-white" />
             </div>
             <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#222222' }}>
               View Our Office Map
@@ -86,7 +86,7 @@ const Footer = () => {
             {/* Location */}
             <div className="flex items-center gap-4">
               <div className="w-6 flex justify-center">
-                <img src="/location.png.png" alt="Location" className="w-4 h-6" />
+                <FaMapMarkerAlt className="w-5 h-6 text-[#A1B502]" />
               </div>
               <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', color: '#222222', whiteSpace: 'nowrap' }}>
                 30 Old Kings Hwy S, Darien, CT 06820, USA
@@ -95,7 +95,7 @@ const Footer = () => {
 
             {/* Contact */}
             <div className="flex items-center gap-4">
-              <img src="/contact.png.png" alt="Contact" className="w-6 h-6" />
+              <FaPhone className="w-6 h-6 text-[#A1B502]" />
               <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', color: '#222222' }}>
                 123-456-7890
               </span>
@@ -103,7 +103,7 @@ const Footer = () => {
 
             {/* Hours */}
             <div className="flex items-center gap-4">
-              <img src="/clock.png.png" alt="Hours" className="w-6 h-6" />
+              <FaClock className="w-6 h-6 text-[#A1B502]" />
               <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', color: '#222222' }}>
                 Mon - Fri: 9:00 AM - 5:00 PM
               </span>
@@ -115,7 +115,7 @@ const Footer = () => {
               style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#A1B502', width: '400px', height: '50px', marginTop: '10px', letterSpacing: '0.2em' }}
             >
               Contact Us
-              <img src="/contactus.png.png" alt="Contact Us" className="w-5 h-5" />
+              <FaArrowRight className="w-5 h-5" />
             </button>
 
             {/* Become a Sales Dealer Button */}
@@ -123,7 +123,7 @@ const Footer = () => {
               className="px-8 py-3 rounded-full font-bold hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-4"
               style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#385887', color: '#FFFFFF', width: '400px', height: '50px', marginTop: '5px', letterSpacing: '0.2em', whiteSpace: 'nowrap' }}
             >
-              <img src="/dealer.png.png" alt="Dealer" className="w-6 h-5" />
+              <FaHandshake className="w-6 h-5" />
               BECOME A SALES DEALER
             </button>
           </div>
@@ -143,95 +143,26 @@ const Footer = () => {
 
             {/* Form Fields - Grid Layout */}
             <div className="grid grid-cols-2 gap-6 mt-6" style={{ marginBottom: '60px' }}>
-              {/* Solar System */}
-              <div>
-                <label className="block mb-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '19px', color: '#FFFFFF' }}>
-                  What You Want to Install?
-                </label>
-                <div className="flex items-center justify-between py-3 px-5 rounded" style={{ backgroundColor: '#FFFFFF', cursor: 'pointer' }}>
-                  <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '17px', color: '#222222' }}>
-                    Solar System
-                  </span>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                    <path d="M2 4L6 8L10 4" stroke="#222222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+              {[
+                { label: 'What You Want to Install?', value: 'Solar System' },
+                { label: 'System Completed By?', value: '4-6 months' },
+                { label: 'Monthly Electric Usage in Kwh?', value: '1300 KWH' },
+                { label: 'Solar System Type?', value: 'Widegrid' },
+                { label: 'Solar Panels Place?', value: 'Residential home' },
+                { label: 'Materials Type?', value: 'Solar panels' },
+              ].map((field, i) => (
+                <div key={i}>
+                  <label className="block mb-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '19px', color: '#FFFFFF' }}>
+                    {field.label}
+                  </label>
+                  <div className="flex items-center justify-between py-3 px-5 rounded" style={{ backgroundColor: '#FFFFFF', cursor: 'pointer' }}>
+                    <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '17px', color: '#222222' }}>
+                      {field.value}
+                    </span>
+                    <FaChevronDown className="w-3 h-3 text-[#222222]" />
+                  </div>
                 </div>
-              </div>
-
-              {/* 4-6 months */}
-              <div>
-                <label className="block mb-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '19px', color: '#FFFFFF' }}>
-                  System Completed By?
-                </label>
-                <div className="flex items-center justify-between py-3 px-5 rounded" style={{ backgroundColor: '#FFFFFF', cursor: 'pointer' }}>
-                  <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '17px', color: '#222222' }}>
-                    4-6 months
-                  </span>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                    <path d="M2 4L6 8L10 4" stroke="#222222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-              </div>
-
-              {/* 1300 KWH */}
-              <div>
-                <label className="block mb-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '19px', color: '#FFFFFF' }}>
-                  Monthly Electric Usage in Kwh?
-                </label>
-                <div className="flex items-center justify-between py-3 px-5 rounded" style={{ backgroundColor: '#FFFFFF', cursor: 'pointer' }}>
-                  <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '17px', color: '#222222' }}>
-                    1300 KWH
-                  </span>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                    <path d="M2 4L6 8L10 4" stroke="#222222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-              </div>
-
-              {/* Widegrid */}
-              <div>
-                <label className="block mb-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '19px', color: '#FFFFFF' }}>
-                  Solar System Type?
-                </label>
-                <div className="flex items-center justify-between py-3 px-5 rounded" style={{ backgroundColor: '#FFFFFF', cursor: 'pointer' }}>
-                  <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '17px', color: '#222222' }}>
-                    Widegrid
-                  </span>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                    <path d="M2 4L6 8L10 4" stroke="#222222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-              </div>
-
-              {/* Residential home */}
-              <div>
-                <label className="block mb-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '19px', color: '#FFFFFF' }}>
-                  Solar Panels Place?
-                </label>
-                <div className="flex items-center justify-between py-3 px-5 rounded" style={{ backgroundColor: '#FFFFFF', cursor: 'pointer' }}>
-                  <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '17px', color: '#222222' }}>
-                    Residential home
-                  </span>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                    <path d="M2 4L6 8L10 4" stroke="#222222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-              </div>
-
-              {/* Solar panels */}
-              <div>
-                <label className="block mb-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '19px', color: '#FFFFFF' }}>
-                  Materials Type?
-                </label>
-                <div className="flex items-center justify-between py-3 px-5 rounded" style={{ backgroundColor: '#FFFFFF', cursor: 'pointer' }}>
-                  <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '17px', color: '#222222' }}>
-                    Solar panels
-                  </span>
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                    <path d="M2 4L6 8L10 4" stroke="#222222" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* Submit Button */}
@@ -240,7 +171,7 @@ const Footer = () => {
                 className="px-8 py-3 rounded-full text-white font-bold hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-2"
                 style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#A1B502', letterSpacing: '0.2em' }}
               >
-                <img src="/dealer.png.png" alt="Dealer" className="w-6 h-5" />
+                <FaFileAlt className="w-5 h-5" />
                 GET A FREE QUOTE
               </button>
             </div>
@@ -301,7 +232,7 @@ const Footer = () => {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             {/* Phone */}
             <div className="flex items-start gap-3">
-              <img src="/phone.png" alt="Phone" style={{ width: '24px', height: '24px', flexShrink: 0 }} />
+              <FaPhone className="w-6 h-6 text-white" style={{ flexShrink: 0 }} />
               <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF' }}>
                 123-456-7890
               </span>
@@ -309,7 +240,7 @@ const Footer = () => {
 
             {/* Email */}
             <div className="flex items-start gap-3">
-              <img src="/email.png" alt="Email" style={{ width: '25px', height: '17px', flexShrink: 0 }} />
+              <FaEnvelope className="w-6 h-5 text-white" style={{ flexShrink: 0 }} />
               <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF' }}>
                 info@bold.energy
               </span>
@@ -317,7 +248,7 @@ const Footer = () => {
 
             {/* Address */}
             <div className="flex items-start gap-3">
-              <img src="/address.png" alt="Address" style={{ width: '24px', height: '32px', flexShrink: 0 }} />
+              <FaMapMarkerAlt className="w-6 h-8 text-white" style={{ flexShrink: 0 }} />
               <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '17px', color: '#FFFFFF', lineHeight: '1.4' }}>
                 30 Old Kings Hwy S, Darien, Suite #1001, CT 06820
               </span>
@@ -327,24 +258,17 @@ const Footer = () => {
 
         {/* Social Media Icons */}
         <div className="absolute flex gap-4" style={{ top: '820px', left: '250px' }}>
-          {/* Facebook */}
           <div className="flex items-center justify-center rounded-full" style={{ width: '60px', height: '60px', backgroundColor: '#FFFFFF' }}>
-            <img src="/fb.png" alt="Facebook" style={{ width: '12px', height: '20px' }} />
+            <FaFacebookF className="w-5 h-5 text-[#385887]" />
           </div>
-
-          {/* X (Twitter) */}
           <div className="flex items-center justify-center rounded-full" style={{ width: '60px', height: '60px', backgroundColor: '#FFFFFF' }}>
-            <img src="/x.png" alt="X" style={{ width: '20px', height: '20px' }} />
+            <FaXTwitter className="w-5 h-5 text-[#222222]" />
           </div>
-
-          {/* Instagram */}
           <div className="flex items-center justify-center rounded-full" style={{ width: '60px', height: '60px', backgroundColor: '#FFFFFF' }}>
-            <img src="/insta.png" alt="Instagram" style={{ width: '20px', height: '20px' }} />
+            <FaInstagram className="w-5 h-5 text-[#E1306C]" />
           </div>
-
-          {/* LinkedIn */}
           <div className="flex items-center justify-center rounded-full" style={{ width: '60px', height: '60px', backgroundColor: '#FFFFFF' }}>
-            <img src="/linkdin.png" alt="LinkedIn" style={{ width: '20px', height: '20px' }} />
+            <FaLinkedinIn className="w-5 h-5 text-[#0A66C2]" />
           </div>
         </div>
 

@@ -1,3 +1,5 @@
+import { FaChevronRight } from 'react-icons/fa';
+
 const Blogs = () => {
   return (
     <div>
@@ -62,9 +64,7 @@ const Blogs = () => {
             {/* Keep Reading Link */}
             <a href="#" className="flex items-center gap-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#A1B502', fontWeight: 'bold', textDecoration: 'none' }}>
               Keep Reading
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
 
@@ -99,9 +99,7 @@ const Blogs = () => {
             {/* Keep Reading Link */}
             <a href="#" className="flex items-center gap-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#A1B502', fontWeight: 'bold', textDecoration: 'none' }}>
               Keep Reading
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
 
@@ -136,9 +134,7 @@ const Blogs = () => {
             {/* Keep Reading Link */}
             <a href="#" className="flex items-center gap-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#A1B502', fontWeight: 'bold', textDecoration: 'none' }}>
               Keep Reading
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
         </div>
@@ -176,9 +172,7 @@ const Blogs = () => {
             {/* Keep Reading Link */}
             <a href="#" className="flex items-center gap-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#A1B502', fontWeight: 'bold', textDecoration: 'none' }}>
               Keep Reading
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
 
@@ -213,9 +207,7 @@ const Blogs = () => {
             {/* Keep Reading Link */}
             <a href="#" className="flex items-center gap-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#A1B502', fontWeight: 'bold', textDecoration: 'none' }}>
               Keep Reading
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
 
@@ -250,9 +242,7 @@ const Blogs = () => {
             {/* Keep Reading Link */}
             <a href="#" className="flex items-center gap-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#A1B502', fontWeight: 'bold', textDecoration: 'none' }}>
               Keep Reading
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
         </div>
@@ -290,9 +280,7 @@ const Blogs = () => {
             {/* Keep Reading Link */}
             <a href="#" className="flex items-center gap-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#A1B502', fontWeight: 'bold', textDecoration: 'none' }}>
               Keep Reading
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
 
@@ -327,9 +315,7 @@ const Blogs = () => {
             {/* Keep Reading Link */}
             <a href="#" className="flex items-center gap-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#A1B502', fontWeight: 'bold', textDecoration: 'none' }}>
               Keep Reading
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
 
@@ -364,9 +350,7 @@ const Blogs = () => {
             {/* Keep Reading Link */}
             <a href="#" className="flex items-center gap-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#A1B502', fontWeight: 'bold', textDecoration: 'none' }}>
               Keep Reading
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
         </div>
@@ -404,9 +388,7 @@ const Blogs = () => {
             {/* Keep Reading Link */}
             <a href="#" className="flex items-center gap-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#A1B502', fontWeight: 'bold', textDecoration: 'none' }}>
               Keep Reading
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
 
@@ -441,9 +423,7 @@ const Blogs = () => {
             {/* Keep Reading Link */}
             <a href="#" className="flex items-center gap-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#A1B502', fontWeight: 'bold', textDecoration: 'none' }}>
               Keep Reading
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
 
@@ -478,9 +458,7 @@ const Blogs = () => {
             {/* Keep Reading Link */}
             <a href="#" className="flex items-center gap-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#A1B502', fontWeight: 'bold', textDecoration: 'none' }}>
               Keep Reading
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M6 3L11 8L6 13" stroke="#A1B502" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <FaChevronRight className="w-3 h-3" />
             </a>
           </div>
         </div>
