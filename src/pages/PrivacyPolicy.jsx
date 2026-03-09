@@ -8,6 +8,7 @@ const PrivacyPolicy = () => {
           alt="Privacy Policy"
           className="w-full h-full object-cover"
           style={{ height: '400px' }}
+          loading="eager"
         />
         {/* Dark Overlay */}
         <div

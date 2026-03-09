@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { FaHandshake, FaClipboardCheck, FaHome, FaChartLine, FaCreditCard, FaExchangeAlt, FaMicrochip, FaClock, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const StatesWeCover = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [cardWidth, setCardWidth] = useState(430);
+  const [cardGap, setCardGap] = useState(30);
 
   const stateCards = [
     { id: 1, image: '/southwest-roof.jpg', heading: 'Southwest Region', states: ['Arizona', 'Arkansas', 'California', 'Colorado', 'Nevada', 'New Mexico', 'Utah'] },
@@ -17,6 +19,26 @@ const StatesWeCover = () => {
     { id: 10, image: '/new-england-roof.jpg', heading: 'New England Region', states: ['Rhode Island', 'Connecticut', 'Massachusetts', 'Vermont', 'New Hampshire', 'Maine'] },
   ];
 
+  const updateCardSize = useCallback(() => {
+    const w = window.innerWidth;
+    if (w < 640) {
+      setCardWidth(280);
+      setCardGap(16);
+    } else if (w < 1024) {
+      setCardWidth(340);
+      setCardGap(20);
+    } else {
+      setCardWidth(430);
+      setCardGap(30);
+    }
+  }, []);
+
+  useEffect(() => {
+    updateCardSize();
+    window.addEventListener('resize', updateCardSize);
+    return () => window.removeEventListener('resize', updateCardSize);
+  }, [updateCardSize]);
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % (stateCards.length - 2));
   };
@@ -28,73 +50,80 @@ const StatesWeCover = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="w-full relative" style={{ height: '550px', overflow: 'hidden' }}>
+      <section className="w-full relative h-[300px] sm:h-[400px] lg:h-[550px] overflow-hidden">
         <img
           src="/states-cover-hero.jpg.png"
           alt="States We Cover"
-          className="w-full"
-          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center' }}
+          className="w-full h-full object-cover object-center"
+          loading="eager"
         />
-        <div className="absolute inset-0" style={{ backgroundColor: '#000000', opacity: '0.5' }} />
-        <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
-          <h1 className="font-bold text-white text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '75px', marginTop: '10px', letterSpacing: '0.03em' }}>
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 flex items-center justify-center z-[2]">
+          <h1 className="font-bold text-white text-center text-3xl sm:text-4xl lg:text-5xl xl:text-[75px]" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
             States We Cover
           </h1>
         </div>
       </section>
 
       {/* Expanding Solar Section */}
-      <section style={{ padding: '100px 200px', backgroundColor: '#FFFFFF' }}>
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '80px', marginBottom: '60px', marginLeft: '50px' }}>
-          <div style={{ flex: '0 0 550px' }}>
-            <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', lineHeight: '1.2', letterSpacing: '0.03em' }}>
-              Expanding Solar, One<br />State at a Time
+      <section className="px-4 sm:px-8 lg:px-16 xl:px-[200px] py-12 sm:py-16 lg:py-[100px] bg-white">
+        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-[80px] mb-10 lg:mb-[60px] lg:ml-[50px]">
+          <div className="w-full lg:w-1/2">
+            <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black leading-tight" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+              Expanding Solar, One<br className="hidden lg:block" /> State at a Time
             </h2>
           </div>
-          <div style={{ flex: 1, maxWidth: '700px', marginLeft: '60px' }}>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '20px', color: '#000000', lineHeight: '1.8', letterSpacing: '0.03em' }}>
+          <div className="w-full lg:flex-1 lg:max-w-[700px] lg:ml-[60px]">
+            <p className="text-base sm:text-lg lg:text-[20px] text-black leading-relaxed lg:leading-[1.8]" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
               Bold Energy is headquartered in Connecticut, but our mission is nationwide. We currently serve homeowners and partners across 15+ states — and growing every quarter. With Tier-1 panels, transparent pricing, and flexible financing options, we make it easy for families from New England to the Rockies to take control of their energy future.
             </p>
           </div>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <img src="/bold1.png.png" alt="Bold Section" style={{ width: '1350px', height: '524px', objectFit: 'contain' }} />
+        <div className="flex justify-center">
+          <img src="/bold1.png.png" alt="Bold Section" className="w-full max-w-[1350px] h-auto object-contain" loading="lazy" />
         </div>
       </section>
 
       {/* Where We Operate Now Section */}
-      <section style={{ width: '100%', height: '1180px', backgroundColor: '#F5F5F5', paddingTop: '100px', paddingBottom: '100px', overflow: 'hidden' }}>
-        <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', textAlign: 'center', marginBottom: '60px', letterSpacing: '0.03em' }}>
+      <section className="w-full bg-[#F5F5F5] py-12 sm:py-16 lg:py-[100px] overflow-hidden">
+        <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black text-center mb-8 sm:mb-10 lg:mb-[60px]" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
           Where We Operate Now
         </h2>
 
-        <div style={{ position: 'relative' }}>
+        <div className="relative px-4 sm:px-8">
           <button
             onClick={prevSlide}
-            style={{ position: 'absolute', left: '20px', top: '50%', transform: 'translateY(-50%)', width: '50px', height: '50px', borderRadius: '50%', backgroundColor: '#A1B502', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10 }}
+            className="absolute left-2 sm:left-5 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-[50px] sm:h-[50px] rounded-full bg-[#A1B502] border-none cursor-pointer flex items-center justify-center z-10"
           >
-            <FaChevronLeft className="w-5 h-5 text-white" />
+            <FaChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
           </button>
 
           <button
             onClick={nextSlide}
-            style={{ position: 'absolute', right: '20px', top: '50%', transform: 'translateY(-50%)', width: '50px', height: '50px', borderRadius: '50%', backgroundColor: '#A1B502', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10 }}
+            className="absolute right-2 sm:right-5 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-[50px] sm:h-[50px] rounded-full bg-[#A1B502] border-none cursor-pointer flex items-center justify-center z-10"
           >
-            <FaChevronRight className="w-5 h-5 text-white" />
+            <FaChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
           </button>
 
-          <div style={{ overflow: 'hidden' }}>
-            <div style={{ display: 'flex', gap: '30px', transition: 'transform 0.3s ease', transform: `translateX(-${currentSlide * 460}px)` }}>
+          <div className="overflow-hidden mx-8 sm:mx-12">
+            <div
+              className="flex transition-transform duration-300 ease-in-out"
+              style={{ gap: `${cardGap}px`, transform: `translateX(-${currentSlide * (cardWidth + cardGap)}px)` }}
+            >
               {stateCards.map((card) => (
-                <div key={card.id} style={{ width: '430px', height: '812px', backgroundColor: '#FFFFFF', borderRadius: '20px', overflow: 'hidden', flexShrink: 0 }}>
-                  <img src={card.image} alt={card.heading} style={{ width: '430px', height: '323px', objectFit: 'cover' }} />
-                  <div style={{ padding: '30px' }}>
-                    <h3 style={{ fontFamily: 'Archivo, sans-serif', fontSize: '25px', fontWeight: 'bold', color: '#000000', marginBottom: '20px', letterSpacing: '0.03em' }}>
+                <div
+                  key={card.id}
+                  className="bg-white rounded-[20px] overflow-hidden flex-shrink-0 hover:shadow-lg transition-shadow duration-300"
+                  style={{ width: `${cardWidth}px` }}
+                >
+                  <img src={card.image} alt={card.heading} className="w-full h-[200px] sm:h-[260px] lg:h-[323px] object-cover" loading="lazy" />
+                  <div className="p-4 sm:p-6 lg:p-[30px] text-center">
+                    <h3 className="text-lg sm:text-xl lg:text-[25px] font-bold text-black mb-4 lg:mb-5" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
                       {card.heading}
                     </h3>
-                    <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }}>
+                    <ul className="list-disc pl-5 text-left inline-block">
                       {card.states.map((state, index) => (
-                        <li key={index} style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000', lineHeight: '2.2' }}>
+                        <li key={index} className="text-sm sm:text-base lg:text-[18px] text-black leading-[2.2]" style={{ fontFamily: 'Archivo, sans-serif' }}>
                           {state}
                         </li>
                       ))}
@@ -106,8 +135,8 @@ const StatesWeCover = () => {
           </div>
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
-          <button style={{ backgroundColor: '#A1B502', color: '#FFFFFF', padding: '15px 30px', border: 'none', borderRadius: '50px', fontFamily: 'Archivo, sans-serif', fontSize: '18px', fontWeight: 'bold', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '12px', letterSpacing: '0.2em' }}>
+        <div className="flex justify-center mt-8 sm:mt-10 lg:mt-[50px]">
+          <button className="bg-[#A1B502] text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 hover:brightness-110 hover:shadow-lg transition-all duration-300" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.05em' }}>
             <FaHandshake className="w-5 h-5" />
             BECOME A PARTNER
           </button>
@@ -115,13 +144,13 @@ const StatesWeCover = () => {
       </section>
 
       {/* What Customers Get Section */}
-      <section style={{ width: '100%', paddingTop: '100px', paddingBottom: '100px', paddingLeft: '200px', paddingRight: '0', backgroundColor: '#FFFFFF' }}>
-        <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', textAlign: 'center', marginBottom: '60px', paddingRight: '200px', letterSpacing: '0.03em' }}>
+      <section className="w-full py-12 sm:py-16 lg:py-[100px] px-4 sm:px-8 lg:px-16 xl:pl-[200px] xl:pr-0 bg-white">
+        <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black text-center mb-8 sm:mb-10 lg:mb-[60px] xl:pr-[200px]" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
           What Customers Get in Every State
         </h2>
 
-        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-8">
+          <div className="flex flex-col gap-3 sm:gap-4 w-full lg:w-auto">
             {[
               { icon: <FaChartLine className="w-5 h-5 text-[#A1B502]" />, title: 'Home Value Boost:', desc: 'Solar adds ~4-7% to resale value according to Zillow.' },
               { icon: <FaCreditCard className="w-5 h-5 text-[#A1B502]" />, title: 'Flexible Financing:', desc: 'Loan, lease, and cash purchase options available with major solar lenders. Example: 25-year solar loan at ~5.99% APR with 30% federal tax credit applied' },
@@ -129,72 +158,72 @@ const StatesWeCover = () => {
               { icon: <FaMicrochip className="w-5 h-5 text-[#A1B502]" />, title: 'Top-Tier Hardware Everywhere:', desc: 'Tier-1 solar panels + SolarEdge inverters backed by 25-year warranties.' },
               { icon: <FaClock className="w-5 h-5 text-[#A1B502]" />, title: 'Fast Install Timelines:', desc: 'Once permits clear, installs are usually complete in 1-2 days, no matter the market.' },
             ].map((card, i) => (
-              <div key={i} style={{ width: '660px', height: '132px', border: '1px solid rgba(161, 181, 2, 0.3)', borderRadius: '10px', display: 'flex', alignItems: 'center', padding: '20px', gap: '20px' }}>
-                <div style={{ width: '70px', height: '70px', borderRadius: '50%', backgroundColor: 'rgba(161, 181, 2, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+              <div key={i} className="w-full max-w-[660px] min-h-[100px] sm:min-h-[120px] lg:min-h-[132px] border border-[rgba(161,181,2,0.3)] rounded-[10px] flex items-center p-4 sm:p-5 gap-4 sm:gap-5 bg-white hover:shadow-md transition-shadow duration-300">
+                <div className="w-12 h-12 sm:w-[60px] sm:h-[60px] lg:w-[70px] lg:h-[70px] rounded-full bg-[rgba(161,181,2,0.1)] flex items-center justify-center flex-shrink-0">
                   {card.icon}
                 </div>
                 <div>
-                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', marginBottom: '8px', letterSpacing: '0.03em' }}>{card.title}</h3>
-                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '14px', color: '#000000', lineHeight: '1.5', letterSpacing: '0.03em' }}>{card.desc}</p>
+                  <h3 className="text-sm sm:text-[15px] lg:text-[16px] font-bold text-black mb-1 sm:mb-2" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>{card.title}</h3>
+                  <p className="text-xs sm:text-[13px] lg:text-[14px] text-black leading-snug lg:leading-[1.5]" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>{card.desc}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div style={{ flexShrink: 0, marginRight: '0px' }}>
-            <img src="/everystate.png.png" alt="Every State" style={{ width: '764px', height: '650px', objectFit: 'cover' }} />
+          <div className="flex-shrink-0 w-full lg:w-auto flex justify-center lg:justify-end">
+            <img src="/everystate.png.png" alt="Every State" className="w-full max-w-[764px] h-auto object-cover" loading="lazy" />
           </div>
         </div>
       </section>
 
       {/* Coverage Map Section */}
-      <section style={{ width: '100%', height: '1049px', backgroundColor: '#F5F5F5', padding: '100px 200px', position: 'relative' }}>
-        <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', textAlign: 'center', marginBottom: '60px', letterSpacing: '0.03em' }}>
+      <section className="w-full bg-[#F5F5F5] px-4 sm:px-8 lg:px-16 xl:px-[200px] py-12 sm:py-16 lg:py-[100px] relative">
+        <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black text-center mb-8 sm:mb-10 lg:mb-[60px]" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
           Coverage Map
         </h2>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div style={{ position: 'relative', width: '1158px', height: '748px' }}>
-            <img src="/map.png.png" alt="Coverage Map" style={{ width: '1158px', height: '748px', objectFit: 'contain' }} />
+        <div className="flex justify-center">
+          <div className="relative w-full max-w-[1158px]">
+            <img src="/map.png.png" alt="Coverage Map" className="w-full max-w-[1158px] h-auto object-contain" loading="lazy" />
           </div>
         </div>
-        <div style={{ position: 'absolute', bottom: '100px', right: '200px', width: '230px', height: '112px', backgroundColor: '#FFFFFF', borderRadius: '10px', boxShadow: '0px 4px 21px 0px rgba(0, 0, 0, 0.1)', padding: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: '10px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <div style={{ width: '36px', height: '36px', borderRadius: '5px', backgroundColor: '#A3B407' }}></div>
-            <span style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>Covered Area</span>
+        <div className="mt-6 lg:mt-0 lg:absolute lg:bottom-[100px] lg:right-[200px] w-full lg:w-[230px] bg-white rounded-[10px] shadow-[0px_4px_21px_0px_rgba(0,0,0,0.1)] p-4 sm:p-5 flex flex-row lg:flex-col justify-center gap-3 sm:gap-4 mx-auto lg:mx-0 max-w-[400px] lg:max-w-none">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-[5px] bg-[#A3B407] flex-shrink-0"></div>
+            <span className="text-sm sm:text-[16px] font-bold text-black" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>Covered Area</span>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-            <div style={{ width: '36px', height: '36px', borderRadius: '5px', backgroundColor: '#3B5B84' }}></div>
-            <span style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>Coming Soon</span>
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-[5px] bg-[#3B5B84] flex-shrink-0"></div>
+            <span className="text-sm sm:text-[16px] font-bold text-black" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>Coming Soon</span>
           </div>
         </div>
       </section>
 
       {/* Coming Soon Section */}
-      <section style={{ width: '100%', height: '816px', position: 'relative' }}>
-        <img src="/gobold.png.jpg" alt="Coming Soon Background" style={{ width: '100%', height: '816px', objectFit: 'cover' }} />
-        <div style={{ position: 'absolute', top: '0', left: '0', right: '0', bottom: '0', backgroundColor: '#000000', opacity: '0.5' }} />
-        <div style={{ position: 'absolute', top: '0', left: '0', right: '0', bottom: '0', display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '100px' }}>
-          <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#FFFFFF', marginBottom: '30px' }}>Coming Soon</h2>
-          <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '23px', color: '#FFFFFF', textAlign: 'center', lineHeight: '1.8', letterSpacing: '0.03em' }}>
-            We're adding new states rapidly. If you don't see your state listed, reach out — Bold Energy<br />
+      <section className="w-full relative min-h-[600px] sm:min-h-[700px] lg:min-h-[816px]">
+        <img src="/gobold.png.jpg" alt="Coming Soon Background" className="w-full h-full absolute inset-0 object-cover" loading="lazy" />
+        <div className="absolute inset-0 bg-black/35" />
+        <div className="relative z-[2] flex flex-col items-center px-4 sm:px-8 py-12 sm:py-16 lg:pt-[100px] lg:pb-[100px]">
+          <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-white mb-6 sm:mb-8 lg:mb-[30px]" style={{ fontFamily: 'Quicksand, sans-serif' }}>Coming Soon</h2>
+          <p className="text-base sm:text-lg lg:text-[23px] text-white text-center leading-relaxed lg:leading-[1.8] max-w-[800px]" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+            We're adding new states rapidly. If you don't see your state listed, reach out — Bold Energy
             expansion markets are opening every quarter.
           </p>
 
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', marginTop: '60px' }}>
+          <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-6 lg:gap-[30px] mt-10 sm:mt-12 lg:mt-[60px] w-full">
             {[
               { icon: <FaClipboardCheck className="w-7 h-7 text-[#A1B502]" />, title: 'Dealers', desc: 'Apply now to secure exclusive\npartnerships in new territorie' },
               { icon: <FaHome className="w-7 h-7 text-[#A1B502]" />, title: 'Homeowners', desc: 'Check your zip code to see if\nwe serve your area yet' },
             ].map((card, i) => (
-              <div key={i} style={{ position: 'relative', marginTop: '60px' }}>
-                <div style={{ width: '120px', height: '120px', borderRadius: '50%', backgroundColor: '#FFFFFF', position: 'absolute', top: '-60px', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <div style={{ width: '100px', height: '100px', borderRadius: '50%', backgroundColor: '#EBEEF3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div key={i} className="relative mt-[60px] flex justify-center">
+                <div className="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] rounded-full bg-white absolute -top-[50px] sm:-top-[60px] left-1/2 -translate-x-1/2 flex items-center justify-center z-[3]">
+                  <div className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] rounded-full bg-[#EBEEF3] flex items-center justify-center">
                     {card.icon}
                   </div>
                 </div>
-                <div style={{ width: '430px', height: '314px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>{card.title}</h3>
-                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em', whiteSpace: 'pre-line' }}>{card.desc}</p>
-                  <button style={{ backgroundColor: '#A1B502', color: '#FFFFFF', padding: '12px 25px', border: 'none', borderRadius: '50px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', fontWeight: 'bold', cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '10px', letterSpacing: '0.2em' }}>
+                <div className="w-full max-w-[430px] sm:w-[350px] lg:w-[430px] bg-white rounded-xl p-6 sm:p-[30px] pt-16 sm:pt-[80px] text-center flex flex-col justify-between items-center min-h-[260px] sm:min-h-[290px] lg:min-h-[314px]">
+                  <h3 className="text-lg sm:text-xl lg:text-[22px] font-bold text-black" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>{card.title}</h3>
+                  <p className="text-sm sm:text-[15px] lg:text-[16px] text-black leading-relaxed lg:leading-[1.6] whitespace-pre-line" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>{card.desc}</p>
+                  <button className="bg-[#A1B502] text-white px-6 py-3 rounded-xl font-bold text-sm sm:text-base flex items-center justify-center gap-3 hover:brightness-110 hover:shadow-lg transition-all duration-300" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.05em' }}>
                     <FaHandshake className="w-5 h-5" />
                     APPLY NOW
                   </button>

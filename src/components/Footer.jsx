@@ -1,296 +1,224 @@
 import { Link } from 'react-router-dom';
-import { FaFileAlt, FaHandshake, FaMapMarkerAlt, FaPhone, FaClock, FaArrowRight, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn, FaChevronDown } from 'react-icons/fa';
+import { FaFileAlt, FaHandshake, FaMapMarkerAlt, FaPhone, FaClock, FaArrowRight, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import { useFormModal } from '../context/FormModalContext';
 
 const Footer = () => {
+  const { openHomeownerForm, openDealerForm } = useFormModal();
+
   return (
     <footer className="w-full relative">
-      <div className="w-full relative">
+      {/* Green Partner Section */}
+      <div className="w-full relative overflow-hidden" style={{ minHeight: '500px' }}>
         <img
           src="/bold.png.png"
           alt="Bold Energy Footer"
-          style={{ width: '100%', height: '1270px', objectFit: 'cover' }}
+          className="w-full h-full object-cover absolute inset-0"
+          loading="lazy"
         />
-        {/* Green Overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundColor: '#A1B502',
-            opacity: '0.8',
-            width: '100%',
-            height: '1270px',
-            zIndex: 1
-          }}
-        />
+        <div className="absolute inset-0" style={{ backgroundColor: '#A1B502', opacity: '0.85', zIndex: 1 }} />
+
         {/* Bold Section Image */}
-        <div className="absolute w-full flex justify-center" style={{ top: '100px', zIndex: 2 }}>
+        <div className="relative flex justify-center pt-10 sm:pt-16 lg:pt-[100px] px-4" style={{ zIndex: 2 }}>
           <img
             src="/boldsection.png.png"
             alt="Bold Section"
-            style={{ width: '1100px', height: '400px', objectFit: 'cover' }}
+            className="w-full max-w-[1100px] h-auto object-contain"
+            loading="lazy"
           />
         </div>
 
         {/* Text Content */}
-        <div className="absolute w-full flex flex-col items-center" style={{ top: '550px', zIndex: 2 }}>
-          <h2 className="mb-6 text-white font-bold text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', letterSpacing: '0.03em' }}>
+        <div className="relative flex flex-col items-center px-4 sm:px-8 pt-6 sm:pt-12 pb-16 sm:pb-24" style={{ zIndex: 2 }}>
+          <h2 className="mb-4 sm:mb-6 text-white font-bold text-center text-2xl sm:text-3xl lg:text-4xl xl:text-[50px]" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
             Partner With Us
           </h2>
-          <p className="text-white text-center mb-10" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '23px', maxWidth: '900px', lineHeight: '1.4', letterSpacing: '0.03em' }}>
+          <p className="text-white text-center mb-6 sm:mb-10 text-sm sm:text-base lg:text-lg xl:text-[23px] max-w-[900px]" style={{ fontFamily: 'Archivo, sans-serif', lineHeight: '1.4', letterSpacing: '0.03em' }}>
             We are an environmentally conscious renewable energy company that's focused on creating the most customer centric experience in the industry!
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex gap-6">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6">
             <button
-              className="px-10 py-4 rounded-full font-bold hover:opacity-90 transition-opacity duration-300 flex items-center gap-3"
-              style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#FFFFFF', color: '#A1B502', letterSpacing: '0.2em' }}
+              onClick={openHomeownerForm}
+              className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-sm sm:text-base"
+              style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#FFFFFF', color: '#A1B502', letterSpacing: '0.05em' }}
             >
-              <FaFileAlt className="w-5 h-5" />
+              <FaFileAlt className="w-4 h-4 sm:w-5 sm:h-5" />
               GET A QUOTE
             </button>
             <button
-              className="px-10 py-4 rounded-full font-bold text-white hover:opacity-90 transition-opacity duration-300 flex items-center gap-3"
-              style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#385887', letterSpacing: '0.2em' }}
+              onClick={openDealerForm}
+              className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-sm sm:text-base"
+              style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#385887', letterSpacing: '0.05em' }}
             >
-              <FaHandshake className="w-6 h-6" />
-              BECOME A SALES DEALER
+              <FaHandshake className="w-5 h-5 sm:w-6 sm:h-6" />
+              PARTNER WITH BOLD
             </button>
           </div>
         </div>
       </div>
 
-      {/* White Rectangle - Half on bold section, half on footer */}
-      <div className="absolute w-full flex justify-center" style={{ top: '875.5px', zIndex: 10 }}>
-        <div className="relative" style={{ width: '1350px', height: '789px', backgroundColor: '#FFFFFF', borderRadius: '10px' }}>
-          {/* Text Content */}
-          <p className="absolute" style={{ left: '80px', top: '100px', fontFamily: 'Archivo, sans-serif', fontSize: '20px', fontWeight: 'bold', color: '#222222', maxWidth: '400px', paddingRight: '20px', lineHeight: '1.5', letterSpacing: '0.03em' }}>
+      {/* Contact Info Card */}
+      <div className="relative mx-auto px-4 sm:px-8 lg:px-12 xl:px-16" style={{ marginTop: '-60px', zIndex: 10 }}>
+        <div className="max-w-[900px] mx-auto bg-white rounded-[10px] shadow-lg p-6 sm:p-8 lg:p-10 xl:p-14">
+          <p className="text-sm sm:text-base lg:text-lg xl:text-xl font-bold mb-6 leading-relaxed" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', letterSpacing: '0.03em' }}>
             As a national distributor of solar supplies we endeavor provide fast and knowledgeable service, we can get all the materials you need
           </p>
 
-          {/* View Office Map */}
-          <div className="absolute flex items-center gap-3" style={{ left: '80px', top: '280px' }}>
-            <div className="flex items-center justify-center" style={{ width: '35px', height: '35px', borderRadius: '50%', backgroundColor: '#A1B502' }}>
-              <FaArrowRight className="w-4 h-4 text-white" />
+          <div className="flex items-center gap-3 mb-5 lg:mb-6">
+            <div className="flex items-center justify-center flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-full" style={{ backgroundColor: '#A1B502' }}>
+              <FaArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
             </div>
-            <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#222222' }}>
+            <span className="text-sm sm:text-base lg:text-lg font-bold" style={{ fontFamily: 'Poppins, sans-serif', color: '#222222' }}>
               View Our Office Map
             </span>
           </div>
 
-          {/* Divider Line */}
-          <div className="absolute" style={{ left: '80px', top: '360px', width: '400px', height: '1px', backgroundColor: '#CCCCCC' }}></div>
+          <div className="w-full max-w-[400px] h-px bg-gray-300 mb-5 lg:mb-6"></div>
 
-          {/* Contact Information */}
-          <div className="absolute flex flex-col" style={{ left: '80px', top: '400px', gap: '25px' }}>
-            {/* Location */}
-            <div className="flex items-center gap-4">
-              <div className="w-6 flex justify-center">
-                <FaMapMarkerAlt className="w-5 h-6 text-[#A1B502]" />
-              </div>
-              <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', color: '#222222', whiteSpace: 'nowrap' }}>
+          <div className="flex flex-col gap-4 sm:gap-5">
+            <div className="flex items-center gap-3 sm:gap-4">
+              <FaMapMarkerAlt className="w-4 h-5 sm:w-5 sm:h-6 text-[#A1B502] flex-shrink-0" />
+              <span className="text-xs sm:text-sm lg:text-base" style={{ fontFamily: 'Poppins, sans-serif', color: '#222222' }}>
                 30 Old Kings Hwy S, Darien, CT 06820, USA
               </span>
             </div>
-
-            {/* Contact */}
-            <div className="flex items-center gap-4">
-              <FaPhone className="w-6 h-6 text-[#A1B502]" />
-              <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', color: '#222222' }}>
-                123-456-7890
-              </span>
+            <div className="flex items-center gap-3 sm:gap-4">
+              <FaPhone className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#A1B502] flex-shrink-0" />
+              <span className="text-xs sm:text-sm lg:text-base" style={{ fontFamily: 'Poppins, sans-serif', color: '#222222' }}>123-456-7890</span>
+            </div>
+            <div className="flex items-center gap-3 sm:gap-4">
+              <FaClock className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#A1B502] flex-shrink-0" />
+              <span className="text-xs sm:text-sm lg:text-base" style={{ fontFamily: 'Poppins, sans-serif', color: '#222222' }}>Mon - Fri: 9:00 AM - 5:00 PM</span>
             </div>
 
-            {/* Hours */}
-            <div className="flex items-center gap-4">
-              <FaClock className="w-6 h-6 text-[#A1B502]" />
-              <span style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', color: '#222222' }}>
-                Mon - Fri: 9:00 AM - 5:00 PM
-              </span>
-            </div>
-
-            {/* Contact Us Button */}
-            <button
-              className="px-8 py-3 rounded-full text-white font-bold hover:opacity-90 transition-opacity duration-300 flex items-center justify-between"
-              style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#A1B502', width: '400px', height: '50px', marginTop: '10px', letterSpacing: '0.2em' }}
-            >
-              Contact Us
-              <FaArrowRight className="w-5 h-5" />
-            </button>
-
-            {/* Become a Sales Dealer Button */}
-            <button
-              className="px-8 py-3 rounded-full font-bold hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-4"
-              style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#385887', color: '#FFFFFF', width: '400px', height: '50px', marginTop: '5px', letterSpacing: '0.2em', whiteSpace: 'nowrap' }}
-            >
-              <FaHandshake className="w-6 h-5" />
-              BECOME A SALES DEALER
-            </button>
-          </div>
-
-          {/* Blue Rectangle - Quote Form */}
-          <div className="absolute flex flex-col" style={{ right: '60px', top: '50%', transform: 'translateY(-50%)', width: '759px', height: '669px', backgroundColor: '#385887', borderRadius: '10px', padding: '40px' }}>
-            {/* Form Header */}
-            <p className="mb-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '22px', color: '#A1B502', letterSpacing: '0.03em' }}>
-              Get your free solar estimate today.
-            </p>
-            <div className="flex items-center gap-4 mb-10">
-              <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#FFFFFF', letterSpacing: '0.03em', whiteSpace: 'nowrap' }}>
-                Request A Quote
-              </h3>
-              <div style={{ width: '150px', height: '3px', backgroundColor: '#A1B502' }}></div>
-            </div>
-
-            {/* Form Fields - Grid Layout */}
-            <div className="grid grid-cols-2 gap-6 mt-6" style={{ marginBottom: '60px' }}>
-              {[
-                { label: 'What You Want to Install?', value: 'Solar System' },
-                { label: 'System Completed By?', value: '4-6 months' },
-                { label: 'Monthly Electric Usage in Kwh?', value: '1300 KWH' },
-                { label: 'Solar System Type?', value: 'Widegrid' },
-                { label: 'Solar Panels Place?', value: 'Residential home' },
-                { label: 'Materials Type?', value: 'Solar panels' },
-              ].map((field, i) => (
-                <div key={i}>
-                  <label className="block mb-2" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '19px', color: '#FFFFFF' }}>
-                    {field.label}
-                  </label>
-                  <div className="flex items-center justify-between py-3 px-5 rounded" style={{ backgroundColor: '#FFFFFF', cursor: 'pointer' }}>
-                    <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '17px', color: '#222222' }}>
-                      {field.value}
-                    </span>
-                    <FaChevronDown className="w-3 h-3 text-[#222222]" />
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Submit Button */}
-            <div className="flex gap-4 self-center">
+            <div className="flex flex-col sm:flex-row gap-3 mt-2">
               <button
-                className="px-8 py-3 rounded-full text-white font-bold hover:opacity-90 transition-opacity duration-300 flex items-center justify-center gap-2"
-                style={{ fontFamily: 'Poppins, sans-serif', fontSize: '16px', backgroundColor: '#A1B502', letterSpacing: '0.2em' }}
+                onClick={openHomeownerForm}
+                className="sm:flex-1 max-w-[400px] py-2.5 sm:py-3 rounded-xl text-white font-bold hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-xs sm:text-sm lg:text-base"
+                style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.05em' }}
               >
-                <FaFileAlt className="w-5 h-5" />
+                <FaFileAlt className="w-4 h-4 sm:w-5 sm:h-5" />
                 GET A FREE QUOTE
+              </button>
+
+              <button
+                onClick={openDealerForm}
+                className="sm:flex-1 max-w-[400px] py-2.5 sm:py-3 rounded-xl font-bold text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-xs sm:text-sm lg:text-base"
+                style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#385887', letterSpacing: '0.05em' }}
+              >
+                <FaHandshake className="w-5 h-5" />
+                PARTNER WITH BOLD
               </button>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Footer Image */}
-      <div className="w-full relative">
+      {/* Footer Bottom */}
+      <div className="w-full relative overflow-hidden" style={{ marginTop: '-40px' }}>
         <img
           src="/footer.png.jpg"
           alt="Footer"
-          style={{ width: '100%', height: '1000px', objectFit: 'cover', display: 'block' }}
+          className="w-full h-full object-cover absolute inset-0"
+          loading="lazy"
+          style={{ minHeight: '100%' }}
         />
-        {/* Bold Energy Logo */}
-        <Link to="/" className="absolute" style={{ top: '450px', left: '250px' }} onClick={() => window.scrollTo(0, 0)}>
-          <img
-            src="/boldenergy.png"
-            alt="Bold Energy"
-            style={{ width: '353px', height: '250px', cursor: 'pointer' }}
-          />
-        </Link>
 
-        {/* Company Section */}
-        <div className="absolute" style={{ top: '490px', left: 'calc(50% - 50px)', transform: 'translateX(-50%)' }}>
-          <h4 style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#FFFFFF', marginBottom: '15px', letterSpacing: '0.03em' }}>
-            Company
-          </h4>
-          <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF', lineHeight: '2' }}>
-            <Link to="/homeowners" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
-              <p className="hover:opacity-80 transition-opacity cursor-pointer">Homeowners</p>
-            </Link>
-            <Link to="/partner-with-bold-energy" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
-              <p className="hover:opacity-80 transition-opacity cursor-pointer">Sales Dealers</p>
-            </Link>
-            <Link to="/customer-reviews" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
-              <p className="hover:opacity-80 transition-opacity cursor-pointer">Reviews</p>
-            </Link>
-            <Link to="/blogs" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
-              <p className="hover:opacity-80 transition-opacity cursor-pointer">Latest Blog</p>
-            </Link>
-            <Link to="/states-we-cover" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
-              <p className="hover:opacity-80 transition-opacity cursor-pointer">States we cover</p>
-            </Link>
-            <Link to="/partner-with-bold-energy" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
-              <p className="hover:opacity-80 transition-opacity cursor-pointer">Partner with Bold</p>
-            </Link>
-          </div>
-        </div>
-
-        {/* Contact Us Section */}
-        <div className="absolute" style={{ top: '450px', right: 'calc((100vw - 1350px) / 2)', backgroundColor: 'rgba(255, 255, 255, 0.1)', borderRadius: '10px', padding: '30px', width: '370px', height: '298px' }}>
-          <h4 style={{ fontFamily: 'Archivo, sans-serif', fontSize: '30px', fontWeight: 'bold', color: '#FFFFFF', marginBottom: '25px', letterSpacing: '0.03em' }}>
-            Contact Us
-          </h4>
-
-          {/* Contact Items */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            {/* Phone */}
-            <div className="flex items-start gap-3">
-              <FaPhone className="w-6 h-6 text-white" style={{ flexShrink: 0 }} />
-              <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF' }}>
-                123-456-7890
-              </span>
+        <div className="relative pt-20 sm:pt-28 lg:pt-36 pb-6 sm:pb-10 px-4 sm:px-8 lg:px-16 xl:px-[200px]" style={{ zIndex: 1 }}>
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8 lg:gap-12 xl:gap-16 mb-10 sm:mb-14">
+            {/* Logo */}
+            <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-auto">
+              <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+                <img
+                  src="/boldenergy.png"
+                  alt="Bold Energy"
+                  className="w-[160px] sm:w-[200px] lg:w-[280px] xl:w-[353px] h-auto cursor-pointer"
+                />
+              </Link>
             </div>
 
-            {/* Email */}
-            <div className="flex items-start gap-3">
-              <FaEnvelope className="w-6 h-5 text-white" style={{ flexShrink: 0 }} />
-              <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF' }}>
-                info@bold.energy
-              </span>
+            {/* Company Links */}
+            <div className="text-center md:text-left">
+              <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+                Company
+              </h4>
+              <div className="text-sm sm:text-base lg:text-lg text-white" style={{ fontFamily: 'Archivo, sans-serif', lineHeight: '2' }}>
+                <Link to="/customer-reviews" className="block hover:opacity-80 transition-opacity text-white no-underline">Reviews</Link>
+                <Link to="/blogs" className="block hover:opacity-80 transition-opacity text-white no-underline">Latest Blog</Link>
+                <Link to="/states-we-cover" className="block hover:opacity-80 transition-opacity text-white no-underline">States We Cover</Link>
+                <Link to="/partner-with-bold-energy" className="block hover:opacity-80 transition-opacity text-white no-underline">Partner with Bold</Link>
+              </div>
             </div>
 
-            {/* Address */}
-            <div className="flex items-start gap-3">
-              <FaMapMarkerAlt className="w-6 h-8 text-white" style={{ flexShrink: 0 }} />
-              <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '17px', color: '#FFFFFF', lineHeight: '1.4' }}>
-                30 Old Kings Hwy S, Darien, Suite #1001, CT 06820
-              </span>
+            {/* Contact Us */}
+            <div className="md:ml-auto w-full max-w-[370px] md:w-auto">
+              <div className="bg-white/10 rounded-[10px] p-5 sm:p-6 w-full max-w-[370px]">
+                <h4 className="text-xl sm:text-2xl lg:text-[30px] font-bold text-white mb-4 sm:mb-5" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+                  Contact Us
+                </h4>
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-start gap-3">
+                    <FaPhone className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 mt-1" />
+                    <span className="text-sm sm:text-base lg:text-lg text-white" style={{ fontFamily: 'Archivo, sans-serif' }}>123-456-7890</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <FaEnvelope className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 mt-1" />
+                    <span className="text-sm sm:text-base lg:text-lg text-white" style={{ fontFamily: 'Archivo, sans-serif' }}>info@bold.energy</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <FaMapMarkerAlt className="w-4 h-5 sm:w-5 sm:h-6 text-white flex-shrink-0 mt-0.5" />
+                    <span className="text-xs sm:text-sm lg:text-base text-white leading-relaxed" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                      30 Old Kings Hwy S, Darien, Suite #1001, CT 06820
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Social Media Icons */}
+          <div className="flex justify-center md:justify-start gap-3 sm:gap-4 mb-6 sm:mb-10">
+            {[
+              { icon: <FaFacebookF className="w-4 h-4 sm:w-5 sm:h-5 text-[#385887]" /> },
+              { icon: <FaXTwitter className="w-4 h-4 sm:w-5 sm:h-5 text-[#222222]" /> },
+              { icon: <FaInstagram className="w-4 h-4 sm:w-5 sm:h-5 text-[#E1306C]" /> },
+              { icon: <FaLinkedinIn className="w-4 h-4 sm:w-5 sm:h-5 text-[#0A66C2]" /> },
+            ].map((social, i) => (
+              <div key={i} className="flex items-center justify-center rounded-full bg-white w-9 h-9 sm:w-11 sm:h-11 lg:w-[60px] lg:h-[60px] hover:scale-110 transition-transform duration-300 cursor-pointer">
+                {social.icon}
+              </div>
+            ))}
+          </div>
+
+          {/* Contractor License Numbers */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center mb-6">
+            <p className="text-white text-xs sm:text-sm" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+              Licensed & Insured
+            </p>
+            <span className="hidden sm:block w-1 h-1 rounded-full bg-white/50" />
+            <p className="text-white/80 text-xs sm:text-sm" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+              CT HIC #0661633 | CT ELC.0209498-E1 | NJ HIC #13VH13073100
+            </p>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="w-full h-px bg-white/50 mb-4"></div>
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
+            <p className="text-xs sm:text-sm lg:text-base text-white text-center sm:text-left" style={{ fontFamily: 'Archivo, sans-serif' }}>
+              Copyright © 2025 Bold Energy. All Rights Reserved.
+            </p>
+            <div className="flex items-center gap-3 sm:gap-5">
+              <Link to="/terms-and-conditions" className="hover:opacity-80 transition-opacity text-xs sm:text-sm lg:text-base text-white no-underline" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                Terms & Conditions
+              </Link>
+              <span className="text-white text-xs sm:text-sm">|</span>
+              <Link to="/privacy-policy" className="hover:opacity-80 transition-opacity text-xs sm:text-sm lg:text-base text-white no-underline" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                Privacy Policy
+              </Link>
             </div>
           </div>
-        </div>
-
-        {/* Social Media Icons */}
-        <div className="absolute flex gap-4" style={{ top: '820px', left: '250px' }}>
-          <div className="flex items-center justify-center rounded-full" style={{ width: '60px', height: '60px', backgroundColor: '#FFFFFF' }}>
-            <FaFacebookF className="w-5 h-5 text-[#385887]" />
-          </div>
-          <div className="flex items-center justify-center rounded-full" style={{ width: '60px', height: '60px', backgroundColor: '#FFFFFF' }}>
-            <FaXTwitter className="w-5 h-5 text-[#222222]" />
-          </div>
-          <div className="flex items-center justify-center rounded-full" style={{ width: '60px', height: '60px', backgroundColor: '#FFFFFF' }}>
-            <FaInstagram className="w-5 h-5 text-[#E1306C]" />
-          </div>
-          <div className="flex items-center justify-center rounded-full" style={{ width: '60px', height: '60px', backgroundColor: '#FFFFFF' }}>
-            <FaLinkedinIn className="w-5 h-5 text-[#0A66C2]" />
-          </div>
-        </div>
-
-        {/* White Line */}
-        <div className="absolute" style={{ top: '920px', left: '250px', width: '1400px', height: '0.5px', backgroundColor: '#FFFFFF' }}></div>
-
-        {/* Copyright Text - Left */}
-        <div className="absolute" style={{ top: '950px', left: '250px' }}>
-          <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#FFFFFF' }}>
-            Copyright © 2025 Bold Energy. All Rights Reserved.
-          </p>
-        </div>
-
-        {/* Terms & Privacy - Right */}
-        <div className="absolute flex items-center" style={{ top: '950px', left: '1650px', transform: 'translateX(-100%)', whiteSpace: 'nowrap' }}>
-          <Link to="/terms-and-conditions" className="hover:opacity-80 transition-opacity" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-            Terms & Conditions
-          </Link>
-          <span style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF', margin: '0 20px' }}>|</span>
-          <Link to="/privacy-policy" className="hover:opacity-80 transition-opacity" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#FFFFFF', textDecoration: 'none', whiteSpace: 'nowrap' }}>
-            Privacy Policy
-          </Link>
         </div>
       </div>
     </footer>

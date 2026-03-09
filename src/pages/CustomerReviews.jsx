@@ -4,41 +4,29 @@ const CustomerReviews = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="w-full relative">
+      <section className="w-full relative h-[300px] sm:h-[400px] lg:h-[550px]">
         <img
           src="/reviewsection.jpg"
           alt="Customer Reviews"
-          style={{ width: '100%', height: '550px', objectFit: 'cover' }}
+          className="w-full h-full object-cover object-center"
+          loading="eager"
         />
 
         {/* Black Overlay */}
         <div
-          className="absolute inset-0"
-          style={{
-            backgroundColor: '#000000',
-            opacity: '0.5',
-            width: '100%',
-            height: '550px'
-          }}
+          className="absolute inset-0 bg-black/35"
         />
 
         {/* Heading */}
-        <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
-          <h1 className="font-bold text-white" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '75px', letterSpacing: '0.03em' }}>
+        <div className="absolute inset-0 flex items-center justify-center z-[2]">
+          <h1 className="font-bold text-white text-3xl sm:text-4xl lg:text-5xl xl:text-[75px]" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
             Customer Reviews
           </h1>
         </div>
       </section>
 
       {/* Reviews Section */}
-      <section style={{
-        paddingLeft: '200px',
-        paddingRight: '200px',
-        paddingTop: '200px',
-        paddingBottom: '200px',
-        backgroundColor: '#EBEEF3',
-        position: 'relative'
-      }}>
+      <section className="px-4 sm:px-8 lg:px-16 xl:px-[200px] py-12 sm:py-16 lg:py-[100px] xl:py-[200px] relative" style={{ backgroundColor: '#EBEEF3' }}>
         {/* Background Image with Opacity */}
         <div style={{
           position: 'absolute',
@@ -55,16 +43,17 @@ const CustomerReviews = () => {
           zIndex: 0
         }}></div>
 
-        <div className="flex items-center" style={{ gap: '60px', position: 'relative', zIndex: 1 }}>
+        {/* First Review - Video Left, Review Right */}
+        <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-[60px] relative z-[1]">
           {/* Video Player - Left Side */}
-          <div style={{ width: '520px', height: '640px', backgroundColor: '#000000', position: 'relative', overflow: 'hidden', borderRadius: '8px' }}>
+          <div className="w-full max-w-[520px] h-[300px] sm:h-[400px] lg:h-[640px] bg-black relative overflow-hidden rounded-lg">
             {/* Video Thumbnail */}
-            <img src="/john.jpg" alt="Video" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/john.jpg" alt="Video" className="w-full h-full object-cover object-center" loading="lazy" />
 
             {/* Play Button */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <button className="w-20 h-20 rounded-full bg-white flex items-center justify-center hover:opacity-90 transition-opacity">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" style={{ marginLeft: '4px' }}>
+              <button className="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" style={{ marginLeft: '4px' }}>
                   <path d="M8 5v14l11-7L8 5z" fill="#222222"/>
                 </svg>
               </button>
@@ -72,7 +61,7 @@ const CustomerReviews = () => {
           </div>
 
           {/* Review Content - Right Side */}
-          <div className="text-center" style={{ maxWidth: '620px', marginLeft: '200px' }}>
+          <div className="text-center max-w-[620px] w-full mx-auto">
             {/* Colons Image */}
             <div className="flex justify-center mb-6">
               <div className="w-[72px] h-[64px] rounded-full bg-[#A1B502] flex items-center justify-center">
@@ -81,14 +70,14 @@ const CustomerReviews = () => {
             </div>
 
             {/* Review Text */}
-            <p className="mb-6 text-center" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+            <p className="mb-6 text-center text-base sm:text-lg lg:text-xl xl:text-2xl" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               "Everything about my experience with Empower has been positive! They took care of EVERYTHING and the savings on my monthly electricity bill will be huge!. With the economy being so shaky right now, it's a relief to know I'm locked in to a very reasonable monthly fee for electricity. I don't see why everyone doesn't look into it!"
             </p>
 
             {/* Stars */}
             <div className="mb-4 flex justify-center">
               {[...Array(5)].map((_, i) => (
-                <span key={i} style={{ color: '#FF8E28', fontSize: '24px' }}>★</span>
+                <span key={i} style={{ color: '#FF8E28', fontSize: '24px' }}>&#9733;</span>
               ))}
             </div>
 
@@ -105,9 +94,9 @@ const CustomerReviews = () => {
         </div>
 
         {/* Second Review - Review Left, Customer Image Right */}
-        <div className="flex items-center" style={{ gap: '60px', marginTop: '80px', position: 'relative', zIndex: 1 }}>
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-6 lg:gap-[60px] mt-16 lg:mt-24 relative z-[1]">
           {/* Review Content - Left Side */}
-          <div className="text-center" style={{ maxWidth: '620px', marginRight: '200px' }}>
+          <div className="text-center max-w-[620px] w-full mx-auto">
             {/* Colons Image */}
             <div className="flex justify-center mb-6">
               <div className="w-[72px] h-[64px] rounded-full bg-[#A1B502] flex items-center justify-center">
@@ -116,14 +105,14 @@ const CustomerReviews = () => {
             </div>
 
             {/* Review Text */}
-            <p className="mb-6 text-center" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+            <p className="mb-6 text-center text-base sm:text-lg lg:text-xl xl:text-2xl" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               "Everything about my experience with Empower has been positive! They took care of EVERYTHING and the savings on my monthly electricity bill will be huge!. With the economy being so shaky right now, it's a relief to know I'm locked in to a very reasonable monthly fee for electricity. I don't see why everyone doesn't look into it!"
             </p>
 
             {/* Stars */}
             <div className="mb-4 flex justify-center">
               {[...Array(5)].map((_, i) => (
-                <span key={i} style={{ color: '#FF8E28', fontSize: '24px' }}>★</span>
+                <span key={i} style={{ color: '#FF8E28', fontSize: '24px' }}>&#9733;</span>
               ))}
             </div>
 
@@ -139,22 +128,22 @@ const CustomerReviews = () => {
           </div>
 
           {/* Customer Image - Right Side */}
-          <div style={{ width: '520px', height: '640px', overflow: 'hidden', borderRadius: '8px' }}>
-            <img src="/img2.png" alt="Customer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <div className="w-full max-w-[520px] h-[300px] sm:h-[400px] lg:h-[640px] overflow-hidden rounded-lg">
+            <img src="/img2.png" alt="Customer" className="w-full h-full object-cover object-center" loading="lazy" />
           </div>
         </div>
 
         {/* Third Review - Video Left, Review Right (same as first) */}
-        <div className="flex items-center" style={{ gap: '60px', marginTop: '80px', position: 'relative', zIndex: 1 }}>
+        <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-[60px] mt-16 lg:mt-24 relative z-[1]">
           {/* Video Player - Left Side */}
-          <div style={{ width: '520px', height: '640px', backgroundColor: '#000000', position: 'relative', overflow: 'hidden', borderRadius: '8px' }}>
+          <div className="w-full max-w-[520px] h-[300px] sm:h-[400px] lg:h-[640px] bg-black relative overflow-hidden rounded-lg">
             {/* Video Thumbnail */}
-            <img src="/john.jpg" alt="Video" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/john.jpg" alt="Video" className="w-full h-full object-cover object-center" loading="lazy" />
 
             {/* Play Button */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <button className="w-20 h-20 rounded-full bg-white flex items-center justify-center hover:opacity-90 transition-opacity">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" style={{ marginLeft: '4px' }}>
+              <button className="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" style={{ marginLeft: '4px' }}>
                   <path d="M8 5v14l11-7L8 5z" fill="#222222"/>
                 </svg>
               </button>
@@ -162,7 +151,7 @@ const CustomerReviews = () => {
           </div>
 
           {/* Review Content - Right Side */}
-          <div className="text-center" style={{ maxWidth: '620px', marginLeft: '200px' }}>
+          <div className="text-center max-w-[620px] w-full mx-auto">
             {/* Colons Image */}
             <div className="flex justify-center mb-6">
               <div className="w-[72px] h-[64px] rounded-full bg-[#A1B502] flex items-center justify-center">
@@ -171,14 +160,14 @@ const CustomerReviews = () => {
             </div>
 
             {/* Review Text */}
-            <p className="mb-6 text-center" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+            <p className="mb-6 text-center text-base sm:text-lg lg:text-xl xl:text-2xl" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               "Everything about my experience with Empower has been positive! They took care of EVERYTHING and the savings on my monthly electricity bill will be huge!. With the economy being so shaky right now, it's a relief to know I'm locked in to a very reasonable monthly fee for electricity. I don't see why everyone doesn't look into it!"
             </p>
 
             {/* Stars */}
             <div className="mb-4 flex justify-center">
               {[...Array(5)].map((_, i) => (
-                <span key={i} style={{ color: '#FF8E28', fontSize: '24px' }}>★</span>
+                <span key={i} style={{ color: '#FF8E28', fontSize: '24px' }}>&#9733;</span>
               ))}
             </div>
 
@@ -195,9 +184,9 @@ const CustomerReviews = () => {
         </div>
 
         {/* Fourth Review - Review Left, Customer Image Right (same as second) */}
-        <div className="flex items-center" style={{ gap: '60px', marginTop: '80px', position: 'relative', zIndex: 1 }}>
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-6 lg:gap-[60px] mt-16 lg:mt-24 relative z-[1]">
           {/* Review Content - Left Side */}
-          <div className="text-center" style={{ maxWidth: '620px', marginRight: '200px' }}>
+          <div className="text-center max-w-[620px] w-full mx-auto">
             {/* Colons Image */}
             <div className="flex justify-center mb-6">
               <div className="w-[72px] h-[64px] rounded-full bg-[#A1B502] flex items-center justify-center">
@@ -206,14 +195,14 @@ const CustomerReviews = () => {
             </div>
 
             {/* Review Text */}
-            <p className="mb-6 text-center" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+            <p className="mb-6 text-center text-base sm:text-lg lg:text-xl xl:text-2xl" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               "Everything about my experience with Empower has been positive! They took care of EVERYTHING and the savings on my monthly electricity bill will be huge!. With the economy being so shaky right now, it's a relief to know I'm locked in to a very reasonable monthly fee for electricity. I don't see why everyone doesn't look into it!"
             </p>
 
             {/* Stars */}
             <div className="mb-4 flex justify-center">
               {[...Array(5)].map((_, i) => (
-                <span key={i} style={{ color: '#FF8E28', fontSize: '24px' }}>★</span>
+                <span key={i} style={{ color: '#FF8E28', fontSize: '24px' }}>&#9733;</span>
               ))}
             </div>
 
@@ -229,8 +218,8 @@ const CustomerReviews = () => {
           </div>
 
           {/* Customer Image - Right Side */}
-          <div style={{ width: '520px', height: '640px', overflow: 'hidden', borderRadius: '8px' }}>
-            <img src="/img4.png" alt="Customer" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          <div className="w-full max-w-[520px] h-[300px] sm:h-[400px] lg:h-[640px] overflow-hidden rounded-lg">
+            <img src="/img4.png" alt="Customer" className="w-full h-full object-cover object-center" loading="lazy" />
           </div>
         </div>
       </section>

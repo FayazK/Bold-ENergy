@@ -1,376 +1,339 @@
 import { useState } from 'react';
+import CoverageMap from '../components/CoverageMap';
 import Testimonials from '../components/Testimonials';
-import { FaHandshake, FaCheckCircle, FaClipboardCheck, FaStar, FaDollarSign, FaRocket, FaDesktop, FaChevronDown, FaFileUpload, FaFileAlt, FaCogs, FaHardHat, FaSatelliteDish } from 'react-icons/fa';
+import { useFormModal } from '../context/FormModalContext';
+import { FaHandshake, FaMoneyBillWave, FaEye, FaCalendarCheck, FaHeadset, FaFileUpload, FaFileAlt, FaCogs, FaHardHat, FaSatelliteDish, FaPlay, FaTimes } from 'react-icons/fa';
+
+const keyBenefits = [
+  {
+    icon: <FaMoneyBillWave className="w-8 h-8 text-white" />,
+    title: 'Fast Payments',
+    points: [
+      'Commissions paid within days of install',
+      'No waiting 60–90 days for funding',
+      'Transparent payout tracking in your portal',
+    ],
+    color: '#385887',
+  },
+  {
+    icon: <FaEye className="w-8 h-8 text-white" />,
+    title: 'Full Transparency',
+    points: [
+      'No hidden fees or surprise deductions',
+      'You and your customer see the same numbers',
+      'Real-time deal status updates',
+    ],
+    color: '#A1B502',
+  },
+  {
+    icon: <FaCalendarCheck className="w-8 h-8 text-white" />,
+    title: 'Clear Timelines',
+    points: [
+      'Permits pulled before install is scheduled',
+      'Most installs completed in 1–2 days',
+      'PTO tracked and communicated proactively',
+    ],
+    color: '#385887',
+  },
+  {
+    icon: <FaHeadset className="w-8 h-8 text-white" />,
+    title: 'Partner Support',
+    points: [
+      'Dedicated account manager for every dealer',
+      'Sales training & proposal tools included',
+      'Marketing assets and co-branded materials',
+    ],
+    color: '#A1B502',
+  },
+];
+
+const processSteps = [
+  { icon: <FaFileUpload className="w-6 h-6 text-[#A1B502]" />, num: '01', title: 'Submit Deal', desc: 'Upload contracts and docs through the dealer portal.' },
+  { icon: <FaFileAlt className="w-6 h-6 text-[#A1B502]" />, num: '02', title: 'Proposal Created', desc: 'We generate a customer-ready savings & financing proposal.' },
+  { icon: <FaCogs className="w-6 h-6 text-[#A1B502]" />, num: '03', title: 'Engineering & Permits', desc: 'Bold handles site survey, system design, and all paperwork.' },
+  { icon: <FaHardHat className="w-6 h-6 text-[#A1B502]" />, num: '04', title: 'Installation', desc: 'Professional local crews complete installs in 1–2 days.' },
+  { icon: <FaSatelliteDish className="w-6 h-6 text-[#A1B502]" />, num: '05', title: 'PTO & Monitoring', desc: 'System goes live with 24/7 performance tracking.' },
+];
 
 const PartnerWithBoldEnergy = () => {
-  const [openAccordion, setOpenAccordion] = useState('proposal');
-
-  const toggleAccordion = (item) => {
-    setOpenAccordion(openAccordion === item ? null : item);
-  };
+  const [showVideo, setShowVideo] = useState(false);
+  const { openDealerForm } = useFormModal();
 
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="w-full relative" style={{ height: '550px' }}>
+      <section className="w-full relative h-[500px] sm:h-[600px] lg:h-[700px]">
         <img
           src="/partnerwithboldenergy.png.jpg?v=5"
           alt="Partner With Bold Energy"
           className="w-full h-full object-cover"
-          style={{ width: '100%', height: '550px' }}
+          loading="eager"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-black/10" />
 
-        {/* Dark Overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundColor: '#000000',
-            opacity: '0.5'
-          }}
-        />
-
-        {/* Content */}
-        <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
-          <h1 className="font-bold text-white text-center" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '75px', letterSpacing: '0.03em' }}>
-            Partner With Bold Energy
-          </h1>
-        </div>
-      </section>
-
-      {/* Powering Possibilities Section */}
-      <section style={{ padding: '100px 200px', backgroundColor: '#FFFFFF' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '80px' }}>
-          {/* Left Content */}
-          <div style={{ flex: 1 }}>
-            <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', marginBottom: '30px', letterSpacing: '0.03em' }}>
-              <span style={{ whiteSpace: 'nowrap' }}>Powering Possibilities,</span><br/>Together
-            </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '19px', color: '#000000', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>
-              At Bold Energy, we don't just talk about impact — we build it. By teaming up with like-minded dealers, financiers, contractors, and referral partners, we amplify clean-energy adoption, accelerate project timelines, and raise the bar for ethics and transparency across the solar industry.
+        <div className="absolute inset-0 flex items-center justify-center z-[2] px-4">
+          <div className="text-center flex flex-col items-center">
+            <p className="text-lg sm:text-xl font-bold text-[#A1B502] mb-3" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.05em' }}>
+              DEALER PROGRAM
             </p>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '19px', color: '#000000', lineHeight: '1.8', marginBottom: '30px', letterSpacing: '0.03em' }}>
-              If you share our commitment to fair pricing, rock-solid installs, and zero-BS service, let's put our values to work side by side.
+            <h1 className="font-bold text-white text-center text-3xl sm:text-5xl lg:text-7xl mb-6" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+              Partner With Bold Energy
+            </h1>
+            <p className="text-base sm:text-lg lg:text-xl text-white/90 max-w-[700px] mb-8" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+              Fast payments. Full transparency. Zero BS. Join the dealer network that puts your success first.
             </p>
-            <button style={{
-              backgroundColor: '#A1B502',
-              color: '#FFFFFF',
-              padding: '15px 30px',
-              border: 'none',
-              borderRadius: '50px',
-              fontFamily: 'Archivo, sans-serif',
-              fontSize: '18px',
-              fontWeight: 'bold',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '12px',
-              letterSpacing: '0.2em'
-            }}>
-              <FaHandshake className="w-5 h-5" />
-              BECOME A PARTNER
-            </button>
-          </div>
-
-          {/* Right Image */}
-          <div>
-            <img
-              src="/possibilities.png.png"
-              alt="Possibilities"
-              style={{ width: '863px', height: '664px', objectFit: 'cover' }}
-            />
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button
+                onClick={openDealerForm}
+                className="px-8 py-4 rounded-xl font-bold text-lg text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3"
+                style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.05em' }}
+              >
+                <FaHandshake className="w-5 h-5" />
+                BECOME A PARTNER
+              </button>
+              <button
+                onClick={() => setShowVideo(true)}
+                className="px-8 py-4 rounded-xl font-bold text-lg text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 border-2 border-white"
+                style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.05em', backgroundColor: 'transparent' }}
+              >
+                <FaPlay className="w-4 h-4" />
+                WATCH VIDEO
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Why Partner Section */}
-      <section style={{ height: '920px', padding: '100px 200px', backgroundColor: '#FAFBF2', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '30px' }}>
-        {/* First Row - Heading + 2 Cards */}
-        <div style={{ display: 'flex', alignItems: 'center', width: '1350px' }}>
-          {/* Left Heading */}
-          <div style={{ flex: '0 0 400px' }}>
-            <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', lineHeight: '1.2', marginBottom: '20px', letterSpacing: '0.03em' }}>
-              Why Partner With Bold Energy?
-            </h2>
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '20px', color: '#A1B502', fontWeight: 'bold', letterSpacing: '0.03em' }}>
-              Your Goal → Our Solution
-            </p>
-          </div>
-
-          {/* 2 Cards */}
-          <div style={{ display: 'flex', gap: '30px', marginLeft: 'auto' }}>
-            <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
-                <div className="w-12 h-12 rounded-full bg-[#A1B502]/10 flex items-center justify-center flex-shrink-0">
-                  <FaCheckCircle className="w-6 h-6 text-[#A1B502]" />
-                </div>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
-                  Close More Deals
-                </h3>
-              </div>
-              <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', textAlign: 'left', width: '100%', letterSpacing: '0.03em' }}>
-                We provide ready-to-use proposal templates with customer-facing savings models, financing options, and ROI calculators that shorten the sales cycle and build confidence
-              </p>
-            </div>
-
-            <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
-                <div className="w-12 h-12 rounded-full bg-[#A1B502]/10 flex items-center justify-center flex-shrink-0">
-                  <FaCheckCircle className="w-6 h-6 text-[#A1B502]" />
-                </div>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
-                  Boost Revenue
-                </h3>
-              </div>
-              <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', textAlign: 'left', width: '100%', letterSpacing: '0.03em' }}>
-                Our transparent pricing, full-permit installs, and industry-leading reviews mean happier customers and more referrals in your pipeline.
-              </p>
-            </div>
-          </div>
+      {/* Key Benefits Section */}
+      <section className="bg-white py-16 lg:py-[100px] px-4 sm:px-8 lg:px-16 xl:px-[200px]">
+        <div className="text-center mb-12 lg:mb-[60px]">
+          <p className="text-lg font-bold mb-2" style={{ fontFamily: 'Archivo, sans-serif', color: '#A1B502', letterSpacing: '0.03em' }}>
+            Why Dealers Choose Bold
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black mb-4" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+            Built for Your Success
+          </h2>
+          <p className="text-base lg:text-lg text-gray-700 max-w-[650px] mx-auto" style={{ fontFamily: 'Archivo, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+            Everything you need to close more deals, earn faster, and grow your solar business with confidence.
+          </p>
         </div>
 
-        {/* Second Row - 3 Cards Centered */}
-        <div style={{ display: 'flex', gap: '30px', justifyContent: 'center' }}>
-            <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
-                <div className="w-12 h-12 rounded-full bg-[#A1B502]/10 flex items-center justify-center flex-shrink-0">
-                  <FaCheckCircle className="w-6 h-6 text-[#A1B502]" />
-                </div>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
-                  Streamline Operations
-                </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          {keyBenefits.map((benefit, i) => (
+            <div
+              key={i}
+              className="bg-[#FAFBF2] rounded-2xl p-7 lg:p-8 flex flex-col hover:shadow-xl transition-all duration-300 border border-transparent hover:border-[#A1B502]/20"
+            >
+              <div
+                className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5"
+                style={{ backgroundColor: benefit.color }}
+              >
+                {benefit.icon}
               </div>
-              <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', textAlign: 'left', width: '100%', letterSpacing: '0.03em' }}>
-                Our dealer portal gives you real-time tracking, digital document uploads, and direct access to our ops team. Spend more time selling, less time chasing updates
-              </p>
+              <h3 className="text-xl font-bold text-black mb-4" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+                {benefit.title}
+              </h3>
+              <ul className="flex flex-col gap-2.5">
+                {benefit.points.map((point, j) => (
+                  <li key={j} className="flex items-start gap-2.5">
+                    <div className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: benefit.color }} />
+                    <span className="text-sm text-gray-600 leading-relaxed" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+                      {point}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
+          ))}
+        </div>
 
-            <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
-                <div className="w-12 h-12 rounded-full bg-[#A1B502]/10 flex items-center justify-center flex-shrink-0">
-                  <FaCheckCircle className="w-6 h-6 text-[#A1B502]" />
-                </div>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
-                  Stand on Values
-                </h3>
-              </div>
-              <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', textAlign: 'left', width: '100%', letterSpacing: '0.03em' }}>
-                Ethical pricing and transparent processes ensure your reputation grows with every deal
-              </p>
-            </div>
-
-            <div style={{ width: '430px', height: '285px', backgroundColor: '#FFFFFF', padding: '40px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px', width: '100%' }}>
-                <div className="w-12 h-12 rounded-full bg-[#A1B502]/10 flex items-center justify-center flex-shrink-0">
-                  <FaCheckCircle className="w-6 h-6 text-[#A1B502]" />
-                </div>
-                <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: '#000000', letterSpacing: '0.03em' }}>
-                  Deliver Faster Installs
-                </h3>
-              </div>
-              <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', textAlign: 'left', width: '100%', letterSpacing: '0.03em' }}>
-                Permits secured upfront + local professional crews = installs in as little as 1-2 days once approvals clear.
-              </p>
-            </div>
-          </div>
-
-        {/* Button */}
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '30px' }}>
-          <button style={{
-            backgroundColor: '#A1B502',
-            color: '#FFFFFF',
-            padding: '15px 30px',
-            border: 'none',
-            borderRadius: '50px',
-            fontFamily: 'Archivo, sans-serif',
-            fontSize: '18px',
-            fontWeight: 'bold',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '12px',
-            letterSpacing: '0.2em'
-          }}>
+        <div className="flex justify-center mt-12">
+          <button
+            onClick={openDealerForm}
+            className="px-8 py-4 rounded-xl font-bold text-lg text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3"
+            style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.05em' }}
+          >
             <FaHandshake className="w-5 h-5" />
             BECOME A PARTNER
           </button>
         </div>
       </section>
 
-      {/* Dealer-Specific Sales Support Section */}
-      <section style={{ paddingTop: '100px', paddingBottom: '100px', paddingLeft: '200px', paddingRight: '200px', backgroundColor: '#FFFFFF', height: '950px' }}>
-        <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', textAlign: 'center', marginBottom: '60px', letterSpacing: '0.03em' }}>
-          Dealer-Specific Sales Support
-        </h2>
-
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '80px' }}>
-          {/* Left Image */}
-          <img
-            src="/support.png.jpg?v=3"
-            alt="Sales Support"
-            style={{ width: '575px', height: '670px', borderRadius: '30px', objectFit: 'cover' }}
-          />
-
-          {/* Right Content - Accordion Items */}
-          <div style={{ flex: 1, height: '670px', overflow: 'hidden' }}>
-            {[
-              { key: 'financing', title: 'Financing That Works', items: ['Multiple loan and lease options', '$0-down financing available', 'Quick credit approvals', 'Competitive interest rates'] },
-              { key: 'proposal', title: 'Proposal Tools', items: ['Customer energy bill comparisons', 'Predictable fixed payments vs. rising utility costs', 'Net metering benefits explained in plain English', 'Long-term financial and environmental savings charts'] },
-              { key: 'training', title: 'Sales Training', items: ['Product knowledge sessions', 'Objection handling techniques', 'Sales process optimization', 'Ongoing coaching and support'] },
-              { key: 'marketing', title: 'Marketing Assets', items: ['Branded collateral and brochures', 'Digital marketing materials', 'Social media content', 'Co-branded campaigns'] },
-              { key: 'support', title: 'Dedicated Support', items: ['Dedicated account manager', 'Priority customer service', 'Technical support team', 'Installation coordination'] },
-            ].map((accordion, idx) => (
-              <div key={accordion.key} style={{ borderBottom: idx < 4 ? '1px solid #E5E5E5' : 'none', padding: '30px 0' }} onClick={() => toggleAccordion(accordion.key)}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }}>
-                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '24px', fontWeight: 'bold', color: openAccordion === accordion.key ? '#A1B502' : '#000000' }}>
-                    {accordion.title}
-                  </h3>
-                  <FaChevronDown
-                    className="w-5 h-5 text-[#222222] transition-transform duration-300"
-                    style={{ marginRight: '10px', transform: openAccordion === accordion.key ? 'rotate(180deg)' : 'rotate(0deg)' }}
-                  />
-                </div>
-                {openAccordion === accordion.key && (
-                  <ul style={{ marginTop: '20px', paddingLeft: '20px', fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '2', letterSpacing: '0.03em' }}>
-                    {accordion.items.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Commitments to Dealers Section */}
-      <section className="w-full relative" style={{ height: '1040px', marginTop: '50px' }}>
+      {/* Leadership Video Section */}
+      <section className="w-full relative py-16 lg:py-[100px] overflow-hidden">
         <img
           src="/gobold.png.jpg"
-          alt="Our Commitments to Dealers"
-          className="w-full h-full object-cover"
-          style={{ width: '100%', height: '1040px' }}
+          alt="Leadership background"
+          className="w-full h-full object-cover absolute inset-0"
+          loading="lazy"
         />
-        <div className="absolute inset-0" style={{ backgroundColor: '#000000', opacity: '0.5' }} />
+        <div className="absolute inset-0" style={{ backgroundColor: '#385887', opacity: 0.9 }} />
 
-        <div className="absolute inset-0" style={{ zIndex: 2, paddingTop: '100px', paddingLeft: '200px', paddingRight: '200px' }}>
-          <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#FFFFFF', textAlign: 'center', marginBottom: '40px', letterSpacing: '0.03em' }}>
-            Our Commitments to Dealers
-          </h2>
-
-          {/* 4 Cards */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '30px' }}>
-            {[
-              { icon: <FaClipboardCheck className="w-7 h-7 text-[#A1B502]" />, title: 'Permits Pulled', desc: 'We secure approvals before any work begins.' },
-              { icon: <FaStar className="w-7 h-7 text-[#A1B502]" />, title: 'Top-Tier Hardware', desc: 'Tier-1 triple-black panels + SolarEdge Home Hub inverters (25-year warranty).' },
-              { icon: <FaDollarSign className="w-7 h-7 text-[#A1B502]" />, title: 'Transparent Pricing', desc: 'No hidden fees — you and your customer see the same honest numbers.' },
-              { icon: <FaRocket className="w-7 h-7 text-[#A1B502]" />, title: 'Fast Installs', desc: 'Most installs completed in 1-2 days with cleared permits.' },
-            ].map((card, i) => (
-              <div key={i} style={{ position: 'relative', marginTop: '60px' }}>
-                <div style={{ width: '120px', height: '120px', borderRadius: '50%', backgroundColor: '#FFFFFF', position: 'absolute', top: '-60px', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <div style={{ width: '100px', height: '100px', borderRadius: '50%', backgroundColor: '#EBEEF3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    {card.icon}
+        <div className="relative z-[2] px-4 sm:px-8 lg:px-16 xl:px-[200px]">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-[80px]">
+            <div className="w-full lg:w-[55%]">
+              <div
+                className="relative rounded-2xl overflow-hidden cursor-pointer group aspect-video bg-black/20"
+                onClick={() => setShowVideo(true)}
+              >
+                <img
+                  src="/possibilities.png.png"
+                  alt="Leadership Welcome Video"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                    <FaPlay className="w-8 h-8 sm:w-10 sm:h-10 text-[#385887] ml-1.5" />
                   </div>
                 </div>
-                <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
-                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>{card.title}</h3>
-                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>{card.desc}</p>
+                <div className="absolute bottom-4 left-4 bg-black/60 rounded-lg px-3 py-1.5">
+                  <span className="text-white text-xs font-bold" style={{ fontFamily: 'Archivo, sans-serif' }}>0:45</span>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
 
-          {/* Second Row - 2 Cards */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', marginTop: '30px' }}>
-            {[
-              { icon: <FaDesktop className="w-7 h-7 text-[#A1B502]" />, title: 'Always-On Monitoring', desc: 'Our support team tracks system performance 24/7.' },
-              { icon: <FaDollarSign className="w-7 h-7 text-[#A1B502]" />, title: 'Cash Flow-Friendly', desc: 'Faster approvals and quicker installs = faster commissions for you.' },
-            ].map((card, i) => (
-              <div key={i} style={{ position: 'relative', marginTop: '60px' }}>
-                <div style={{ width: '120px', height: '120px', borderRadius: '50%', backgroundColor: '#FFFFFF', position: 'absolute', top: '-60px', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <div style={{ width: '100px', height: '100px', borderRadius: '50%', backgroundColor: '#EBEEF3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    {card.icon}
-                  </div>
-                </div>
-                <div style={{ width: '315px', height: '245px', backgroundColor: '#FFFFFF', borderRadius: '12px', padding: '30px', paddingTop: '80px', textAlign: 'center' }}>
-                  <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '22px', fontWeight: 'bold', color: '#000000', marginBottom: '15px', letterSpacing: '0.03em' }}>{card.title}</h3>
-                  <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#000000', lineHeight: '1.6', letterSpacing: '0.03em' }}>{card.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Button */}
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '60px' }}>
-            <button style={{
-              backgroundColor: '#A1B502',
-              color: '#FFFFFF',
-              padding: '15px 30px',
-              border: 'none',
-              borderRadius: '50px',
-              fontFamily: 'Archivo, sans-serif',
-              fontSize: '18px',
-              fontWeight: 'bold',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '12px',
-              letterSpacing: '0.2em'
-            }}>
-              <FaHandshake className="w-5 h-5" />
-              BECOME A PARTNER
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* How the Dealer Process Works Section */}
-      <section style={{ padding: '100px 200px', backgroundColor: '#FFFFFF' }}>
-        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '80px' }}>
-          {/* Left Content */}
-          <div style={{ flex: 1 }}>
-            <h2 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '50px', fontWeight: 'bold', color: '#000000', marginBottom: '50px', letterSpacing: '0.03em' }}>
-              How the Dealer<br />Process Works
-            </h2>
-
-            {/* Steps */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
-              {[
-                { num: '1', icon: <FaFileUpload className="w-6 h-6 text-[#A1B502]" />, title: 'Submit Deal', desc: 'Upload contracts and docs in the portal' },
-                { num: '2', icon: <FaFileAlt className="w-6 h-6 text-[#A1B502]" />, title: 'Proposal Creation', desc: 'We generate a customer-ready savings and financing proposal.' },
-                { num: '3', icon: <FaCogs className="w-6 h-6 text-[#A1B502]" />, title: 'Engineering & Permitting', desc: 'Bold handles site survey, system design, and all utility paperwork.' },
-                { num: '4', icon: <FaHardHat className="w-6 h-6 text-[#A1B502]" />, title: 'Installation', desc: 'Professional local crews complete installs in 1-2 days.' },
-                { num: '5', icon: <FaSatelliteDish className="w-6 h-6 text-[#A1B502]" />, title: 'PTO & Monitoring', desc: 'Utilities grant "Permission to Operate," and systems go live with 24/7 tracking.' },
-              ].map((step, i, arr) => (
-                <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '20px', position: 'relative' }}>
-                  <div style={{ position: 'absolute', left: '-35px', top: '50%', transform: 'translateY(-50%)', fontFamily: 'Archivo, sans-serif', fontSize: '80px', fontWeight: 'bold', color: '#000000', opacity: '0.05', zIndex: 0 }}>{step.num}</div>
-                  <div style={{ width: '70px', height: '70px', borderRadius: '50%', backgroundColor: '#FDFFEF', border: '2px solid #A1B502', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1, flexShrink: 0 }}>
-                    {step.icon}
-                  </div>
-                  {i < arr.length - 1 && (
-                    <div style={{ borderLeft: '2px dotted #A1B502', position: 'absolute', left: '34px', top: '75px', height: '40px' }} />
-                  )}
-                  <div>
-                    <h3 style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '18px', fontWeight: 'bold', color: '#A1B502', marginBottom: '5px', letterSpacing: '0.03em' }}>{step.title}</h3>
-                    <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#000000', letterSpacing: '0.03em' }}>{step.desc}</p>
-                  </div>
-                </div>
-              ))}
+            <div className="w-full lg:w-[45%]">
+              <p className="text-sm sm:text-base font-bold mb-3" style={{ fontFamily: 'Archivo, sans-serif', color: '#A1B502', letterSpacing: '0.05em' }}>
+                FROM OUR LEADERSHIP
+              </p>
+              <h2 className="text-2xl sm:text-3xl lg:text-[42px] lg:leading-tight font-bold text-white mb-5" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+                A Message From Our CEO
+              </h2>
+              <p className="text-base lg:text-lg text-white/80 leading-relaxed mb-6" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+                Hear directly from our leadership about why Bold Energy is built different — and why dealers across 25+ states trust us with their business.
+              </p>
+              <ul className="flex flex-col gap-3 mb-8">
+                {['Our vision for dealer partnerships', 'How we ensure your success', 'The Bold Energy difference'].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#A1B502] flex-shrink-0" />
+                    <span className="text-sm lg:text-base text-white/90" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <button
+                onClick={() => setShowVideo(true)}
+                className="px-6 py-3 rounded-xl font-bold text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-sm sm:text-base border-2 border-white"
+                style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.05em', backgroundColor: 'transparent' }}
+              >
+                <FaPlay className="w-4 h-4" />
+                WATCH THE VIDEO
+              </button>
             </div>
           </div>
-
-          {/* Right Image */}
-          <div>
-            <img
-              src="/dealer-process.jpg?v=4"
-              alt="Dealer Process"
-              style={{ width: '660px', height: '760px', borderRadius: '30px', objectFit: 'cover' }}
-            />
-          </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Dealer Process Section */}
+      <section className="bg-white py-16 lg:py-[100px] px-4 sm:px-8 lg:px-16 xl:px-[200px]">
+        <div className="text-center mb-12 lg:mb-[60px]">
+          <p className="text-lg font-bold mb-2" style={{ fontFamily: 'Archivo, sans-serif', color: '#385887', letterSpacing: '0.03em' }}>
+            Simple & Streamlined
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black mb-4" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+            How It Works
+          </h2>
+          <p className="text-base lg:text-lg text-gray-700 max-w-[600px] mx-auto" style={{ fontFamily: 'Archivo, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+            From deal submission to system activation — we handle the heavy lifting so you can focus on selling.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
+          {processSteps.map((step, i) => (
+            <div key={i} className="relative flex flex-col items-center text-center">
+              <div className="text-[48px] lg:text-[56px] font-bold leading-none mb-2" style={{ fontFamily: 'Quicksand, sans-serif', color: '#A1B502', opacity: 0.3 }}>
+                {step.num}
+              </div>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#FDFFEF', border: '2px solid #A1B502' }}>
+                {step.icon}
+              </div>
+              <h3 className="text-base lg:text-lg font-bold text-black mb-2" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+                {step.title}
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+                {step.desc}
+              </p>
+              {i < processSteps.length - 1 && (
+                <div className="hidden lg:block absolute top-[75px] -right-3 text-[#A1B502]/40 text-2xl" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                  ›
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <button
+            onClick={openDealerForm}
+            className="px-8 py-4 rounded-xl font-bold text-lg text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3"
+            style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#385887', letterSpacing: '0.05em' }}
+          >
+            <FaHandshake className="w-5 h-5" />
+            START YOUR APPLICATION
+          </button>
+        </div>
+      </section>
+
+      {/* CTA Banner */}
+      <section className="w-full py-16 lg:py-[80px] px-4 sm:px-8 lg:px-16 xl:px-[200px]" style={{ backgroundColor: '#A1B502' }}>
+        <div className="text-center">
+          <h2 className="text-2xl sm:text-3xl lg:text-[42px] font-bold text-white mb-4" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+            Ready to Grow Your Solar Business?
+          </h2>
+          <p className="text-base lg:text-lg text-white/90 max-w-[600px] mx-auto mb-8" style={{ fontFamily: 'Archivo, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+            Join our dealer network and get access to fast payments, top-tier hardware, and a team that has your back every step of the way.
+          </p>
+          <button
+            onClick={openDealerForm}
+            className="px-8 py-4 rounded-xl font-bold text-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 mx-auto"
+            style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#FFFFFF', color: '#A1B502', letterSpacing: '0.05em' }}
+          >
+            <FaHandshake className="w-5 h-5" />
+            PARTNER WITH BOLD
+          </button>
+        </div>
+      </section>
+
+      <CoverageMap />
       <Testimonials />
+
+      {/* Video Modal */}
+      <div
+        className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-all duration-300 ${showVideo ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}
+        aria-hidden={!showVideo}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Leadership Welcome Video"
+      >
+        <div className="absolute inset-0 bg-black/80" onClick={() => setShowVideo(false)} />
+        <div className={`relative w-full max-w-[900px] transition-transform duration-300 ${showVideo ? 'scale-100' : 'scale-95'}`}>
+          <button
+            onClick={() => setShowVideo(false)}
+            className="absolute -top-12 right-0 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors duration-200"
+            aria-label="Close video"
+          >
+            <FaTimes className="w-5 h-5 text-white" />
+          </button>
+          <div className="relative rounded-xl overflow-hidden bg-black aspect-video">
+            {showVideo && (
+              <div className="w-full h-full flex items-center justify-center bg-[#1a1a1a]">
+                <div className="text-center">
+                  <FaPlay className="w-16 h-16 text-white/30 mx-auto mb-4" />
+                  <p className="text-white/50 text-sm" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                    Leadership welcome video placeholder
+                  </p>
+                  <p className="text-white/30 text-xs mt-1" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                    Replace with video embed URL
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
