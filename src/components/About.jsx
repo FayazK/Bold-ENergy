@@ -8,16 +8,16 @@ const About = () => {
       <div className="px-4 sm:px-8 lg:px-16 xl:px-[200px]">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="text-2xl font-bold" style={{ fontFamily: 'Archivo, sans-serif', color: '#A1B502', marginBottom: '10px' }}>
+          <p className="text-2xl font-bold" style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502', marginBottom: '10px' }}>
             About us
           </p>
           <h2 className="font-bold text-gray-900 text-3xl sm:text-4xl lg:text-[50px] lg:leading-tight" style={{ fontFamily: 'Quicksand, sans-serif', marginBottom: '10px' }}>
             Solar That Actually Makes Sense
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-2" style={{ fontFamily: 'Archivo, sans-serif' }}>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             Let's be real — the energy game is rigged. Prices keep going up.
           </p>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'Archivo, sans-serif' }}>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             Utility companies keep cashing in. You deserve better.
           </p>
         </div>
@@ -36,7 +36,7 @@ const About = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Quicksand, sans-serif' }}>
               Fast, Clean Installs
             </h3>
-            <p className="text-base text-gray-700" style={{ fontFamily: 'Archivo, sans-serif' }}>
+            <p className="text-base text-gray-700" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Yes, we always pull permits.
             </p>
           </div>
@@ -53,7 +53,7 @@ const About = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Quicksand, sans-serif' }}>
               Honest Answers
             </h3>
-            <p className="text-base text-gray-700" style={{ fontFamily: 'Archivo, sans-serif' }}>
+            <p className="text-base text-gray-700" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Our team is available for you
             </p>
           </div>
@@ -70,7 +70,7 @@ const About = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Quicksand, sans-serif' }}>
               Unmatched Service
             </h3>
-            <p className="text-base text-gray-700" style={{ fontFamily: 'Archivo, sans-serif' }}>
+            <p className="text-base text-gray-700" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Before, during, and after install.
             </p>
           </div>
@@ -81,7 +81,7 @@ const About = () => {
           <button
             onClick={openHomeownerForm}
             className="px-8 py-4 rounded-xl text-white font-bold text-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3"
-            style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.05em' }}
+            style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.05em' }}
           >
             <FaHome className="w-6 h-6" />
             HOME OWNERS
@@ -89,7 +89,7 @@ const About = () => {
           <button
             onClick={openDealerForm}
             className="px-8 py-4 rounded-xl text-white font-bold text-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3"
-            style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#385887', letterSpacing: '0.05em' }}
+            style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#385887', letterSpacing: '0.05em' }}
           >
             <FaUsers className="w-6 h-6" />
             SALES DEALERS

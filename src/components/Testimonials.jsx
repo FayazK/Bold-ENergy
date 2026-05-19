@@ -55,13 +55,13 @@ const Testimonials = () => {
       <div className="relative px-4 sm:px-8 lg:px-16 xl:px-[200px]" style={{ zIndex: 1 }}>
         {/* Mobile/Tablet Layout */}
         <div className="lg:hidden">
-          <p className="text-base sm:text-lg font-bold mb-2" style={{ fontFamily: 'Archivo, sans-serif', color: '#385887', letterSpacing: '0.03em' }}>
+          <p className="text-base sm:text-lg font-bold mb-2" style={{ fontFamily: 'DM Sans, sans-serif', color: '#385887', letterSpacing: '0.03em' }}>
             Testimonials
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', color: '#222222', letterSpacing: '0.03em' }}>
             Customer Reviews
           </h2>
-          <p className="text-base mb-8" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+          <p className="text-base mb-8" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
             Because we believe energy should do more than power homes — it
             should empower lives. With ethical practices, bold execution, and
             transparent communication, we're redefining what it means to go
@@ -87,7 +87,7 @@ const Testimonials = () => {
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 text-center pb-6">
                     <p className="mb-1 font-bold text-sm text-white" style={{ fontFamily: 'Quicksand, sans-serif' }}>{review.name}</p>
-                    <p className="text-xs text-white" style={{ fontFamily: 'Poppins, sans-serif' }}>{review.subtitle}</p>
+                    <p className="text-xs text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>{review.subtitle}</p>
                   </div>
                 </div>
               ) : (
@@ -108,12 +108,12 @@ const Testimonials = () => {
                       <span key={i} style={{ color: '#FF8E28', fontSize: '24px' }}>★</span>
                     ))}
                   </div>
-                  <p className="mb-4 text-center text-sm sm:text-base" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', lineHeight: '1.6' }}>
+                  <p className="mb-4 text-center text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222', lineHeight: '1.6' }}>
                     "{review.review}"
                   </p>
                   <div className="mx-auto mb-4" style={{ width: '30px', height: '2px', backgroundColor: '#A1B502' }} />
                   <p className="mb-1 font-bold text-sm text-center" style={{ fontFamily: 'Quicksand, sans-serif', color: '#222222' }}>{review.name}</p>
-                  <p className="text-xs text-center" style={{ fontFamily: 'Poppins, sans-serif', color: '#A1B502' }}>{review.subtitle}</p>
+                  <p className="text-xs text-center" style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502' }}>{review.subtitle}</p>
                 </div>
               )
             ))}
@@ -124,7 +124,7 @@ const Testimonials = () => {
         <div className="hidden lg:flex flex-row items-start justify-between gap-8">
           {/* Left Side Content */}
           <div className="relative w-auto">
-            <p style={{ fontFamily: 'Archivo, sans-serif', fontSize: '20px', color: '#385887', letterSpacing: '0.03em', fontWeight: 'bold', marginBottom: '10px' }}>
+            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '20px', color: '#385887', letterSpacing: '0.03em', fontWeight: 'bold', marginBottom: '10px' }}>
               Testimonials
             </p>
             <h2 className="mb-4 text-[50px]" style={{ fontFamily: 'Quicksand, sans-serif', fontWeight: 'bold', color: '#222222', letterSpacing: '0.03em' }}>
@@ -184,7 +184,7 @@ const Testimonials = () => {
                           <p className="mb-2 font-bold" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', color: '#FFFFFF' }}>
                             {review.name}
                           </p>
-                          <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '13px', color: '#FFFFFF' }}>
+                          <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', color: '#FFFFFF' }}>
                             {review.subtitle}
                           </p>
                         </div>
@@ -221,7 +221,7 @@ const Testimonials = () => {
                             <span key={i} style={{ color: '#FF8E28', fontSize: '32px' }}>★</span>
                           ))}
                         </div>
-                        <p className="mb-6 text-center" style={{ fontFamily: 'Archivo, sans-serif', fontSize: '16px', color: '#222222', lineHeight: '1.6' }}>
+                        <p className="mb-6 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '16px', color: '#222222', lineHeight: '1.6' }}>
                           "{review.review}"
                         </p>
                         <div className="mb-4" style={{ width: '40px', height: '2px', backgroundColor: '#A1B502' }}></div>
@@ -229,7 +229,7 @@ const Testimonials = () => {
                           <p className="mb-2 font-bold" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', color: '#222222' }}>
                             {review.name}
                           </p>
-                          <p style={{ fontFamily: 'Poppins, sans-serif', fontSize: '13px', color: '#A1B502' }}>
+                          <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', color: '#A1B502' }}>
                             {review.subtitle}
                           </p>
                         </div>
@@ -262,7 +262,7 @@ const Testimonials = () => {
 
           {/* Right Side Content */}
           <div className="w-[590px] pt-[50px] pb-[100px]">
-            <p className="text-lg" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+            <p className="text-lg" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               Because we believe energy should do more than power homes — it
               should empower lives. With ethical practices, bold execution, and
               transparent communication, we're redefining what it means to go

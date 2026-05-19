@@ -50,14 +50,20 @@ const StatesWeCover = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="w-full relative h-[300px] sm:h-[400px] lg:h-[550px] overflow-hidden">
-        <img
-          src="/states-cover-hero.jpg.png"
-          alt="States We Cover"
-          className="w-full h-full object-cover object-center"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-black/35" />
+      <section className="w-full relative h-[300px] sm:h-[400px] lg:h-[550px]">
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src="/states-cover-hero.jpg.png"
+            alt="States We Cover"
+            className="w-full h-full object-cover object-center"
+            loading="eager"
+            style={{ transform: 'scale(1.05)' }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#385887]/40 via-transparent to-transparent" />
+          <div className="absolute top-[20%] right-[5%] w-[300px] h-[300px] bg-[#A1B502]/8 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute bottom-[30%] left-[5%] w-[400px] h-[400px] bg-[#385887]/10 rounded-full blur-[120px] pointer-events-none" />
+        </div>
         <div className="absolute inset-0 flex items-center justify-center z-[2]">
           <h1 className="font-bold text-white text-center text-3xl sm:text-4xl lg:text-5xl xl:text-[75px]" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
             States We Cover
@@ -74,7 +80,7 @@ const StatesWeCover = () => {
             </h2>
           </div>
           <div className="w-full lg:flex-1 lg:max-w-[700px] lg:ml-[60px]">
-            <p className="text-base sm:text-lg lg:text-[20px] text-black leading-relaxed lg:leading-[1.8]" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+            <p className="text-base sm:text-lg lg:text-[20px] text-black leading-relaxed lg:leading-[1.8]" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
               Bold Energy is headquartered in Connecticut, but our mission is nationwide. We currently serve homeowners and partners across 15+ states — and growing every quarter. With Tier-1 panels, transparent pricing, and flexible financing options, we make it easy for families from New England to the Rockies to take control of their energy future.
             </p>
           </div>
@@ -118,12 +124,12 @@ const StatesWeCover = () => {
                 >
                   <img src={card.image} alt={card.heading} className="w-full h-[200px] sm:h-[260px] lg:h-[323px] object-cover" loading="lazy" />
                   <div className="p-4 sm:p-6 lg:p-[30px] text-center">
-                    <h3 className="text-lg sm:text-xl lg:text-[25px] font-bold text-black mb-4 lg:mb-5" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+                    <h3 className="text-lg sm:text-xl lg:text-[25px] font-bold text-black mb-4 lg:mb-5" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
                       {card.heading}
                     </h3>
                     <ul className="list-disc pl-5 text-left inline-block">
                       {card.states.map((state, index) => (
-                        <li key={index} className="text-sm sm:text-base lg:text-[18px] text-black leading-[2.2]" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                        <li key={index} className="text-sm sm:text-base lg:text-[18px] text-black leading-[2.2]" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                           {state}
                         </li>
                       ))}
@@ -136,7 +142,7 @@ const StatesWeCover = () => {
         </div>
 
         <div className="flex justify-center mt-8 sm:mt-10 lg:mt-[50px]">
-          <button className="bg-[#A1B502] text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 hover:brightness-110 hover:shadow-lg transition-all duration-300" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.05em' }}>
+          <button className="bg-[#A1B502] text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 hover:brightness-110 hover:shadow-lg transition-all duration-300" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.05em' }}>
             <FaHandshake className="w-5 h-5" />
             BECOME A PARTNER
           </button>
@@ -164,7 +170,7 @@ const StatesWeCover = () => {
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-[15px] lg:text-[16px] font-bold text-black mb-1 sm:mb-2" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>{card.title}</h3>
-                  <p className="text-xs sm:text-[13px] lg:text-[14px] text-black leading-snug lg:leading-[1.5]" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>{card.desc}</p>
+                  <p className="text-xs sm:text-[13px] lg:text-[14px] text-black leading-snug lg:leading-[1.5]" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>{card.desc}</p>
                 </div>
               </div>
             ))}
@@ -204,7 +210,7 @@ const StatesWeCover = () => {
         <div className="absolute inset-0 bg-black/35" />
         <div className="relative z-[2] flex flex-col items-center px-4 sm:px-8 py-12 sm:py-16 lg:pt-[100px] lg:pb-[100px]">
           <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-white mb-6 sm:mb-8 lg:mb-[30px]" style={{ fontFamily: 'Quicksand, sans-serif' }}>Coming Soon</h2>
-          <p className="text-base sm:text-lg lg:text-[23px] text-white text-center leading-relaxed lg:leading-[1.8] max-w-[800px]" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+          <p className="text-base sm:text-lg lg:text-[23px] text-white text-center leading-relaxed lg:leading-[1.8] max-w-[800px]" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
             We're adding new states rapidly. If you don't see your state listed, reach out — Bold Energy
             expansion markets are opening every quarter.
           </p>
@@ -222,8 +228,8 @@ const StatesWeCover = () => {
                 </div>
                 <div className="w-full max-w-[430px] sm:w-[350px] lg:w-[430px] bg-white rounded-xl p-6 sm:p-[30px] pt-16 sm:pt-[80px] text-center flex flex-col justify-between items-center min-h-[260px] sm:min-h-[290px] lg:min-h-[314px]">
                   <h3 className="text-lg sm:text-xl lg:text-[22px] font-bold text-black" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>{card.title}</h3>
-                  <p className="text-sm sm:text-[15px] lg:text-[16px] text-black leading-relaxed lg:leading-[1.6] whitespace-pre-line" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>{card.desc}</p>
-                  <button className="bg-[#A1B502] text-white px-6 py-3 rounded-xl font-bold text-sm sm:text-base flex items-center justify-center gap-3 hover:brightness-110 hover:shadow-lg transition-all duration-300" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.05em' }}>
+                  <p className="text-sm sm:text-[15px] lg:text-[16px] text-black leading-relaxed lg:leading-[1.6] whitespace-pre-line" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>{card.desc}</p>
+                  <button className="bg-[#A1B502] text-white px-6 py-3 rounded-xl font-bold text-sm sm:text-base flex items-center justify-center gap-3 hover:brightness-110 hover:shadow-lg transition-all duration-300" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.05em' }}>
                     <FaHandshake className="w-5 h-5" />
                     APPLY NOW
                   </button>

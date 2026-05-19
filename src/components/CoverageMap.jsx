@@ -15,13 +15,13 @@ const CoverageMap = () => {
   return (
     <section className="w-full bg-[#F5F5F5] py-16 lg:py-[100px] px-4 sm:px-8 lg:px-16 xl:px-[200px]">
       <div className="text-center mb-10 lg:mb-[60px]">
-        <p className="text-lg font-bold mb-2" style={{ fontFamily: 'Archivo, sans-serif', color: '#385887', letterSpacing: '0.03em' }}>
+        <p className="text-lg font-bold mb-2" style={{ fontFamily: 'DM Sans, sans-serif', color: '#385887', letterSpacing: '0.03em' }}>
           Where We Operate
         </p>
         <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black mb-4" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
           Coverage Map
         </h2>
-        <p className="text-base lg:text-lg text-gray-700 max-w-[700px] mx-auto" style={{ fontFamily: 'Archivo, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+        <p className="text-base lg:text-lg text-gray-700 max-w-[700px] mx-auto" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
           Bold Energy currently serves homeowners and partners across 25+ states — and growing every quarter.
         </p>
       </div>
@@ -59,7 +59,7 @@ const CoverageMap = () => {
             {coveredStates.map((state) => (
               <div key={state} className="flex items-center gap-2 py-1">
                 <div className="w-2 h-2 rounded-full bg-[#A1B502] flex-shrink-0" />
-                <span className="text-sm lg:text-base text-black" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+                <span className="text-sm lg:text-base text-black" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
                   {state}
                 </span>
               </div>
@@ -68,7 +68,7 @@ const CoverageMap = () => {
           <button
             onClick={() => navigate('/states-we-cover')}
             className="bg-[#A1B502] text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 hover:brightness-110 hover:shadow-lg transition-all duration-300"
-            style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.05em' }}
+            style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.05em' }}
           >
             <FaMapMarkedAlt className="w-5 h-5" />
             VIEW ALL STATES

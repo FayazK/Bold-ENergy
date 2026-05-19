@@ -104,17 +104,20 @@ const Blogs = () => {
     <div>
       {/* Hero Section */}
       <section className="w-full relative h-[300px] sm:h-[400px] lg:h-[550px]">
-        <img
-          src="/blogs.png"
-          alt="Blog"
-          loading="eager"
-          className="w-full h-full object-cover"
-        />
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src="/blogs.png"
+            alt="Blog"
+            loading="eager"
+            className="w-full h-full object-cover"
+            style={{ transform: 'scale(1.05)' }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#385887]/40 via-transparent to-transparent" />
+          <div className="absolute top-[20%] right-[5%] w-[300px] h-[300px] bg-[#A1B502]/8 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute bottom-[30%] left-[5%] w-[400px] h-[400px] bg-[#385887]/10 rounded-full blur-[120px] pointer-events-none" />
+        </div>
 
-        {/* Black Overlay */}
-        <div className="absolute inset-0 bg-black/35" />
-
-        {/* Heading */}
         <div className="absolute inset-0 flex items-center justify-center z-[2]">
           <h1
             className="font-bold text-white text-3xl sm:text-4xl lg:text-5xl xl:text-[75px]"
@@ -137,7 +140,7 @@ const Blogs = () => {
               {/* Date */}
               <p
                 className="mb-4 text-center"
-                style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#666666', letterSpacing: '0.03em' }}
+                style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '18px', color: '#666666', letterSpacing: '0.03em' }}
               >
                 {blog.date}
               </p>
@@ -154,7 +157,7 @@ const Blogs = () => {
                 <div className="absolute top-[15px] left-[15px] h-[46px] bg-white rounded-[5px] flex items-center justify-center px-5 whitespace-nowrap shadow-sm">
                   <span
                     className="font-bold"
-                    style={{ fontFamily: 'Archivo, sans-serif', fontSize: '15px', color: '#A1B502' }}
+                    style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '15px', color: '#A1B502' }}
                   >
                     {blog.category}
                   </span>
@@ -164,7 +167,7 @@ const Blogs = () => {
               {/* Heading */}
               <h3
                 className="mb-6 text-center"
-                style={{ fontFamily: 'Archivo, sans-serif', fontSize: '25px', fontWeight: 'bold', color: '#222222', lineHeight: '1.3', letterSpacing: '0.03em' }}
+                style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '25px', fontWeight: 'bold', color: '#222222', lineHeight: '1.3', letterSpacing: '0.03em' }}
               >
                 {blog.heading}
               </h3>
@@ -172,7 +175,7 @@ const Blogs = () => {
               {/* Description */}
               <p
                 className="mb-8 text-center"
-                style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#666666', lineHeight: '1.5', letterSpacing: '0.03em' }}
+                style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '18px', color: '#666666', lineHeight: '1.5', letterSpacing: '0.03em' }}
               >
                 {blog.description}
               </p>
@@ -181,7 +184,7 @@ const Blogs = () => {
               <a
                 href="#"
                 className="flex items-center justify-center gap-2 hover:text-[#8a9c02] transition-colors duration-200"
-                style={{ fontFamily: 'Archivo, sans-serif', fontSize: '18px', color: '#A1B502', fontWeight: 'bold', textDecoration: 'none' }}
+                style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '18px', color: '#A1B502', fontWeight: 'bold', textDecoration: 'none' }}
               >
                 Keep Reading
                 <FaChevronRight className="w-3 h-3" />

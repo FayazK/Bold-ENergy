@@ -22,10 +22,10 @@ const GoBold = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-8" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
             Go Bold or Stay Stuck
           </h2>
-          <p className="text-base sm:text-lg lg:text-[23px] text-white mb-4" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+          <p className="text-base sm:text-lg lg:text-[23px] text-white mb-4" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
             You could keep paying overpriced utility bills and waiting for someone else to fix the planet.
           </p>
-          <p className="text-base sm:text-lg lg:text-[23px] text-white mb-10" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+          <p className="text-base sm:text-lg lg:text-[23px] text-white mb-10" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
             Or... you could go solar the Bold way and take control of your power, your wallet, and your future.
           </p>
 
@@ -34,7 +34,7 @@ const GoBold = () => {
             <button
               onClick={openHomeownerForm}
               className="px-8 py-4 rounded-xl text-white font-bold text-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3"
-              style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.05em' }}
+              style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.05em' }}
             >
               <FaFileAlt className="w-5 h-5" />
               GET A QUOTE
@@ -42,7 +42,7 @@ const GoBold = () => {
             <button
               onClick={openDealerForm}
               className="px-8 py-4 rounded-xl text-white font-bold text-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3"
-              style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#385887', letterSpacing: '0.05em' }}
+              style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#385887', letterSpacing: '0.05em' }}
             >
               <FaHandshake className="w-6 h-6" />
               BECOME A SALES DEALER

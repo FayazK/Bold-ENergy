@@ -33,7 +33,7 @@ const Footer = () => {
           <h2 className="mb-4 sm:mb-6 text-white font-bold text-center text-2xl sm:text-3xl lg:text-4xl xl:text-[50px]" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
             Partner With Us
           </h2>
-          <p className="text-white text-center mb-6 sm:mb-10 text-sm sm:text-base lg:text-lg xl:text-[23px] max-w-[900px]" style={{ fontFamily: 'Archivo, sans-serif', lineHeight: '1.4', letterSpacing: '0.03em' }}>
+          <p className="text-white text-center mb-6 sm:mb-10 text-sm sm:text-base lg:text-lg xl:text-[23px] max-w-[900px]" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.4', letterSpacing: '0.03em' }}>
             We are an environmentally conscious renewable energy company that's focused on creating the most customer centric experience in the industry!
           </p>
 
@@ -41,7 +41,7 @@ const Footer = () => {
             <button
               onClick={openHomeownerForm}
               className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-sm sm:text-base"
-              style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#FFFFFF', color: '#A1B502', letterSpacing: '0.05em' }}
+              style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#FFFFFF', color: '#A1B502', letterSpacing: '0.05em' }}
             >
               <FaFileAlt className="w-4 h-4 sm:w-5 sm:h-5" />
               GET A QUOTE
@@ -49,7 +49,7 @@ const Footer = () => {
             <button
               onClick={openDealerForm}
               className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-sm sm:text-base"
-              style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#385887', letterSpacing: '0.05em' }}
+              style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#385887', letterSpacing: '0.05em' }}
             >
               <FaHandshake className="w-5 h-5 sm:w-6 sm:h-6" />
               PARTNER WITH BOLD
@@ -61,7 +61,7 @@ const Footer = () => {
       {/* Contact Info Card */}
       <div className="relative mx-auto px-4 sm:px-8 lg:px-12 xl:px-16" style={{ marginTop: '-60px', zIndex: 10 }}>
         <div className="max-w-[900px] mx-auto bg-white rounded-[10px] shadow-lg p-6 sm:p-8 lg:p-10 xl:p-14">
-          <p className="text-sm sm:text-base lg:text-lg xl:text-xl font-bold mb-6 leading-relaxed" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', letterSpacing: '0.03em' }}>
+          <p className="text-sm sm:text-base lg:text-lg xl:text-xl font-bold mb-6 leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222', letterSpacing: '0.03em' }}>
             As a national distributor of solar supplies we endeavor provide fast and knowledgeable service, we can get all the materials you need
           </p>
 
@@ -69,7 +69,7 @@ const Footer = () => {
             <div className="flex items-center justify-center flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-full" style={{ backgroundColor: '#A1B502' }}>
               <FaArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
             </div>
-            <span className="text-sm sm:text-base lg:text-lg font-bold" style={{ fontFamily: 'Poppins, sans-serif', color: '#222222' }}>
+            <span className="text-sm sm:text-base lg:text-lg font-bold" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222' }}>
               View Our Office Map
             </span>
           </div>
@@ -79,24 +79,24 @@ const Footer = () => {
           <div className="flex flex-col gap-4 sm:gap-5">
             <div className="flex items-center gap-3 sm:gap-4">
               <FaMapMarkerAlt className="w-4 h-5 sm:w-5 sm:h-6 text-[#A1B502] flex-shrink-0" />
-              <span className="text-xs sm:text-sm lg:text-base" style={{ fontFamily: 'Poppins, sans-serif', color: '#222222' }}>
+              <span className="text-xs sm:text-sm lg:text-base" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222' }}>
                 30 Old Kings Hwy S, Darien, CT 06820, USA
               </span>
             </div>
             <div className="flex items-center gap-3 sm:gap-4">
               <FaPhone className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#A1B502] flex-shrink-0" />
-              <span className="text-xs sm:text-sm lg:text-base" style={{ fontFamily: 'Poppins, sans-serif', color: '#222222' }}>123-456-7890</span>
+              <span className="text-xs sm:text-sm lg:text-base" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222' }}>123-456-7890</span>
             </div>
             <div className="flex items-center gap-3 sm:gap-4">
               <FaClock className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#A1B502] flex-shrink-0" />
-              <span className="text-xs sm:text-sm lg:text-base" style={{ fontFamily: 'Poppins, sans-serif', color: '#222222' }}>Mon - Fri: 9:00 AM - 5:00 PM</span>
+              <span className="text-xs sm:text-sm lg:text-base" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222' }}>Mon - Fri: 9:00 AM - 5:00 PM</span>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 mt-2">
               <button
                 onClick={openHomeownerForm}
                 className="sm:flex-1 max-w-[400px] py-2.5 sm:py-3 rounded-xl text-white font-bold hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-xs sm:text-sm lg:text-base"
-                style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.05em' }}
+                style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.05em' }}
               >
                 <FaFileAlt className="w-4 h-4 sm:w-5 sm:h-5" />
                 GET A FREE QUOTE
@@ -105,7 +105,7 @@ const Footer = () => {
               <button
                 onClick={openDealerForm}
                 className="sm:flex-1 max-w-[400px] py-2.5 sm:py-3 rounded-xl font-bold text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-xs sm:text-sm lg:text-base"
-                style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#385887', letterSpacing: '0.05em' }}
+                style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#385887', letterSpacing: '0.05em' }}
               >
                 <FaHandshake className="w-5 h-5" />
                 PARTNER WITH BOLD
@@ -140,10 +140,10 @@ const Footer = () => {
 
             {/* Company Links */}
             <div className="text-center md:text-left">
-              <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+              <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
                 Company
               </h4>
-              <div className="text-sm sm:text-base lg:text-lg text-white" style={{ fontFamily: 'Archivo, sans-serif', lineHeight: '2' }}>
+              <div className="text-sm sm:text-base lg:text-lg text-white" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '2' }}>
                 <Link to="/customer-reviews" className="block hover:opacity-80 transition-opacity text-white no-underline">Reviews</Link>
                 <Link to="/blogs" className="block hover:opacity-80 transition-opacity text-white no-underline">Latest Blog</Link>
                 <Link to="/states-we-cover" className="block hover:opacity-80 transition-opacity text-white no-underline">States We Cover</Link>
@@ -154,21 +154,21 @@ const Footer = () => {
             {/* Contact Us */}
             <div className="md:ml-auto w-full max-w-[370px] md:w-auto">
               <div className="bg-white/10 rounded-[10px] p-5 sm:p-6 w-full max-w-[370px]">
-                <h4 className="text-xl sm:text-2xl lg:text-[30px] font-bold text-white mb-4 sm:mb-5" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+                <h4 className="text-xl sm:text-2xl lg:text-[30px] font-bold text-white mb-4 sm:mb-5" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
                   Contact Us
                 </h4>
                 <div className="flex flex-col gap-4">
                   <div className="flex items-start gap-3">
                     <FaPhone className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 mt-1" />
-                    <span className="text-sm sm:text-base lg:text-lg text-white" style={{ fontFamily: 'Archivo, sans-serif' }}>123-456-7890</span>
+                    <span className="text-sm sm:text-base lg:text-lg text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>123-456-7890</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <FaEnvelope className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 mt-1" />
-                    <span className="text-sm sm:text-base lg:text-lg text-white" style={{ fontFamily: 'Archivo, sans-serif' }}>info@bold.energy</span>
+                    <span className="text-sm sm:text-base lg:text-lg text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>info@bold.energy</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <FaMapMarkerAlt className="w-4 h-5 sm:w-5 sm:h-6 text-white flex-shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm lg:text-base text-white leading-relaxed" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                    <span className="text-xs sm:text-sm lg:text-base text-white leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                       30 Old Kings Hwy S, Darien, Suite #1001, CT 06820
                     </span>
                   </div>
@@ -194,11 +194,11 @@ const Footer = () => {
 
           {/* Contractor License Numbers */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center mb-6">
-            <p className="text-white text-xs sm:text-sm" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+            <p className="text-white text-xs sm:text-sm" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
               Licensed & Insured
             </p>
             <span className="hidden sm:block w-1 h-1 rounded-full bg-white/50" />
-            <p className="text-white/80 text-xs sm:text-sm" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+            <p className="text-white/80 text-xs sm:text-sm" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
               CT HIC #0661633 | CT ELC.0209498-E1 | NJ HIC #13VH13073100
             </p>
           </div>
@@ -206,15 +206,15 @@ const Footer = () => {
           {/* Bottom Bar */}
           <div className="w-full h-px bg-white/50 mb-4"></div>
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
-            <p className="text-xs sm:text-sm lg:text-base text-white text-center sm:text-left" style={{ fontFamily: 'Archivo, sans-serif' }}>
+            <p className="text-xs sm:text-sm lg:text-base text-white text-center sm:text-left" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Copyright © 2025 Bold Energy. All Rights Reserved.
             </p>
             <div className="flex items-center gap-3 sm:gap-5">
-              <Link to="/terms-and-conditions" className="hover:opacity-80 transition-opacity text-xs sm:text-sm lg:text-base text-white no-underline" style={{ fontFamily: 'Archivo, sans-serif' }}>
+              <Link to="/terms-and-conditions" className="hover:opacity-80 transition-opacity text-xs sm:text-sm lg:text-base text-white no-underline" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 Terms & Conditions
               </Link>
               <span className="text-white text-xs sm:text-sm">|</span>
-              <Link to="/privacy-policy" className="hover:opacity-80 transition-opacity text-xs sm:text-sm lg:text-base text-white no-underline" style={{ fontFamily: 'Archivo, sans-serif' }}>
+              <Link to="/privacy-policy" className="hover:opacity-80 transition-opacity text-xs sm:text-sm lg:text-base text-white no-underline" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 Privacy Policy
               </Link>
             </div>

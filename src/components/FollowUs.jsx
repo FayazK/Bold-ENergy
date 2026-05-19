@@ -4,7 +4,7 @@ const FollowUs = () => {
   return (
     <section className="py-8 bg-white mb-12 lg:mb-[100px]">
       <div className="text-center px-4 sm:px-8 lg:px-16 xl:px-[200px]">
-        <p style={{ fontFamily: 'Archivo, sans-serif', color: '#385887', fontSize: '20px', fontWeight: 'bold', marginBottom: '0', letterSpacing: '0.03em' }}>
+        <p style={{ fontFamily: 'DM Sans, sans-serif', color: '#385887', fontSize: '20px', fontWeight: 'bold', marginBottom: '0', letterSpacing: '0.03em' }}>
           Follow Us
         </p>
         <h2 className="mb-8 lg:mb-12 text-3xl sm:text-4xl lg:text-[50px] lg:leading-tight" style={{ fontFamily: 'Quicksand, sans-serif', color: '#222222', fontWeight: 'bold', letterSpacing: '0.03em' }}>
@@ -58,7 +58,7 @@ const FollowUs = () => {
         {/* Instagram CTA Button */}
         <button
           className="px-8 py-4 rounded-xl text-white font-bold text-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 mx-auto"
-          style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.05em' }}
+          style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.05em' }}
         >
           <FaInstagram className="w-6 h-6" />
           FOLLOW ON INSTAGRAM

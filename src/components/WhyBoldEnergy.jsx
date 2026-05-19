@@ -37,13 +37,13 @@ const WhyBoldEnergy = () => {
   return (
     <section className="w-full py-16 lg:py-[100px] px-4 sm:px-8 lg:px-16 xl:px-[200px] bg-white">
       <div className="text-center mb-12 lg:mb-[60px]">
-        <p className="text-lg font-bold mb-2" style={{ fontFamily: 'Archivo, sans-serif', color: '#A1B502', letterSpacing: '0.03em' }}>
+        <p className="text-lg font-bold mb-2" style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502', letterSpacing: '0.03em' }}>
           Why Choose Us
         </p>
         <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black mb-4" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
           Why Bold Energy
         </h2>
-        <p className="text-base lg:text-lg text-gray-700 max-w-[700px] mx-auto" style={{ fontFamily: 'Archivo, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+        <p className="text-base lg:text-lg text-gray-700 max-w-[700px] mx-auto" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
           We don't just install solar — we empower you to take control of your energy, your savings, and your future.
         </p>
       </div>
@@ -60,7 +60,7 @@ const WhyBoldEnergy = () => {
             <h3 className="text-lg lg:text-xl font-bold text-black mb-3" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
               {reason.title}
             </h3>
-            <p className="text-sm lg:text-base text-gray-600 leading-relaxed" style={{ fontFamily: 'Archivo, sans-serif', letterSpacing: '0.03em' }}>
+            <p className="text-sm lg:text-base text-gray-600 leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
               {reason.desc}
             </p>
           </div>

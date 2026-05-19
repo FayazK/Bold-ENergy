@@ -13,7 +13,7 @@ html, body {
 }
 
 body {
-  font-family: 'Archivo', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -30,4 +30,14 @@ img {
 
 button {
   cursor: pointer;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(161, 181, 2, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(161, 181, 2, 0.4); }
 }

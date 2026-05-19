@@ -23,7 +23,7 @@ const Header = () => {
             <img
               src="/headerlogo.png"
               alt="Bold Energy"
-              className="h-10 lg:h-14 w-auto"
+              className="h-14 lg:h-20 w-auto"
               loading="eager"
             />
           </Link>
@@ -31,7 +31,7 @@ const Header = () => {
           {/* Desktop Navigation Links */}
           <div
             className="hidden lg:flex items-center gap-1"
-            style={{ fontFamily: 'Archivo, sans-serif' }}
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             {navLinks.map(({ to, label }) => {
               const isActive = location.pathname === to;
@@ -86,7 +86,7 @@ const Header = () => {
         {menuOpen && (
           <div
             className="lg:hidden mt-4 rounded-xl bg-black/90 backdrop-blur-sm py-4 px-2"
-            style={{ fontFamily: 'Archivo, sans-serif' }}
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             {navLinks.map(({ to, label }) => {
               const isActive = location.pathname === to;

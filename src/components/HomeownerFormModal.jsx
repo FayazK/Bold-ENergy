@@ -111,11 +111,11 @@ const HomeownerFormModal = () => {
               </svg>
             </div>
             <h3 className="text-2xl font-bold text-white mb-3" style={{ fontFamily: 'Quicksand, sans-serif' }}>Thank You!</h3>
-            <p className="text-white/80" style={{ fontFamily: 'Archivo, sans-serif' }}>We'll be in touch within 24 hours with your free solar estimate.</p>
+            <p className="text-white/80" style={{ fontFamily: 'DM Sans, sans-serif' }}>We'll be in touch within 24 hours with your free solar estimate.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} noValidate className="p-6 sm:p-8 lg:p-10">
-            <p className="mb-2 text-sm sm:text-base lg:text-lg" style={{ fontFamily: 'Archivo, sans-serif', color: '#A1B502', letterSpacing: '0.03em' }}>
+            <p className="mb-2 text-sm sm:text-base lg:text-lg" style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502', letterSpacing: '0.03em' }}>
               Homeowner? Let's get you started.
             </p>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 mb-6 sm:mb-8">
@@ -128,7 +128,7 @@ const HomeownerFormModal = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-5 mb-6 sm:mb-8">
               {/* Full Name */}
               <div>
-                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   Full Name <span className="text-red-300">*</span>
                 </label>
                 <input
@@ -137,14 +137,14 @@ const HomeownerFormModal = () => {
                   value={form.fullName}
                   onChange={(e) => handleChange('fullName', e.target.value)}
                   className={inputClass('fullName')}
-                  style={{ fontFamily: 'Archivo, sans-serif', color: '#222222' }}
+                  style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222' }}
                 />
-                {errors.fullName && <p className="text-red-300 text-xs mt-1" style={{ fontFamily: 'Archivo, sans-serif' }}>{errors.fullName}</p>}
+                {errors.fullName && <p className="text-red-300 text-xs mt-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>{errors.fullName}</p>}
               </div>
 
               {/* Phone */}
               <div>
-                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   Phone Number <span className="text-red-300">*</span>
                 </label>
                 <input
@@ -153,14 +153,14 @@ const HomeownerFormModal = () => {
                   value={form.phone}
                   onChange={(e) => handleChange('phone', e.target.value)}
                   className={inputClass('phone')}
-                  style={{ fontFamily: 'Archivo, sans-serif', color: '#222222' }}
+                  style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222' }}
                 />
-                {errors.phone && <p className="text-red-300 text-xs mt-1" style={{ fontFamily: 'Archivo, sans-serif' }}>{errors.phone}</p>}
+                {errors.phone && <p className="text-red-300 text-xs mt-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>{errors.phone}</p>}
               </div>
 
               {/* Email */}
               <div>
-                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   Email Address <span className="text-red-300">*</span>
                 </label>
                 <input
@@ -169,14 +169,14 @@ const HomeownerFormModal = () => {
                   value={form.email}
                   onChange={(e) => handleChange('email', e.target.value)}
                   className={inputClass('email')}
-                  style={{ fontFamily: 'Archivo, sans-serif', color: '#222222' }}
+                  style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222' }}
                 />
-                {errors.email && <p className="text-red-300 text-xs mt-1" style={{ fontFamily: 'Archivo, sans-serif' }}>{errors.email}</p>}
+                {errors.email && <p className="text-red-300 text-xs mt-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>{errors.email}</p>}
               </div>
 
               {/* State */}
               <div>
-                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   State <span className="text-red-300">*</span>
                 </label>
                 <div className="relative">
@@ -184,19 +184,19 @@ const HomeownerFormModal = () => {
                     value={form.state}
                     onChange={(e) => handleChange('state', e.target.value)}
                     className={selectClass('state')}
-                    style={{ fontFamily: 'Archivo, sans-serif', color: form.state ? '#222222' : '#999', appearance: 'none' }}
+                    style={{ fontFamily: 'DM Sans, sans-serif', color: form.state ? '#222222' : '#999', appearance: 'none' }}
                   >
                     <option value="" disabled>Select your state</option>
                     {states.map((s) => <option key={s} value={s}>{s}</option>)}
                   </select>
                   <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-3 h-3 text-[#222222] pointer-events-none" />
                 </div>
-                {errors.state && <p className="text-red-300 text-xs mt-1" style={{ fontFamily: 'Archivo, sans-serif' }}>{errors.state}</p>}
+                {errors.state && <p className="text-red-300 text-xs mt-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>{errors.state}</p>}
               </div>
 
               {/* Install Type */}
               <div>
-                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   What to Install? <span className="text-red-300">*</span>
                 </label>
                 <div className="relative">
@@ -204,19 +204,19 @@ const HomeownerFormModal = () => {
                     value={form.installType}
                     onChange={(e) => handleChange('installType', e.target.value)}
                     className={selectClass('installType')}
-                    style={{ fontFamily: 'Archivo, sans-serif', color: form.installType ? '#222222' : '#999', appearance: 'none' }}
+                    style={{ fontFamily: 'DM Sans, sans-serif', color: form.installType ? '#222222' : '#999', appearance: 'none' }}
                   >
                     <option value="" disabled>Select option</option>
                     {installOptions.map((o) => <option key={o} value={o}>{o}</option>)}
                   </select>
                   <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-3 h-3 text-[#222222] pointer-events-none" />
                 </div>
-                {errors.installType && <p className="text-red-300 text-xs mt-1" style={{ fontFamily: 'Archivo, sans-serif' }}>{errors.installType}</p>}
+                {errors.installType && <p className="text-red-300 text-xs mt-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>{errors.installType}</p>}
               </div>
 
               {/* Monthly Bill */}
               <div>
-                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'Archivo, sans-serif' }}>
+                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   Monthly Electric Bill? <span className="text-red-300">*</span>
                 </label>
                 <div className="relative">
@@ -224,14 +224,14 @@ const HomeownerFormModal = () => {
                     value={form.monthlyBill}
                     onChange={(e) => handleChange('monthlyBill', e.target.value)}
                     className={selectClass('monthlyBill')}
-                    style={{ fontFamily: 'Archivo, sans-serif', color: form.monthlyBill ? '#222222' : '#999', appearance: 'none' }}
+                    style={{ fontFamily: 'DM Sans, sans-serif', color: form.monthlyBill ? '#222222' : '#999', appearance: 'none' }}
                   >
                     <option value="" disabled>Select range</option>
                     {billOptions.map((o) => <option key={o} value={o}>{o}</option>)}
                   </select>
                   <FaChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-3 h-3 text-[#222222] pointer-events-none" />
                 </div>
-                {errors.monthlyBill && <p className="text-red-300 text-xs mt-1" style={{ fontFamily: 'Archivo, sans-serif' }}>{errors.monthlyBill}</p>}
+                {errors.monthlyBill && <p className="text-red-300 text-xs mt-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>{errors.monthlyBill}</p>}
               </div>
             </div>
 
@@ -239,7 +239,7 @@ const HomeownerFormModal = () => {
               <button
                 type="submit"
                 className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-white font-bold hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-sm sm:text-base"
-                style={{ fontFamily: 'Archivo, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.05em' }}
+                style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.05em' }}
               >
                 <FaFileAlt className="w-4 h-4 sm:w-5 sm:h-5" />
                 SUBMIT REQUEST

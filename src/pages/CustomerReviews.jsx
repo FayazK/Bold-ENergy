@@ -5,19 +5,20 @@ const CustomerReviews = () => {
     <div>
       {/* Hero Section */}
       <section className="w-full relative h-[300px] sm:h-[400px] lg:h-[550px]">
-        <img
-          src="/reviewsection.jpg"
-          alt="Customer Reviews"
-          className="w-full h-full object-cover object-center"
-          loading="eager"
-        />
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src="/reviewsection.jpg"
+            alt="Customer Reviews"
+            className="w-full h-full object-cover object-center"
+            loading="eager"
+            style={{ transform: 'scale(1.05)' }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#385887]/40 via-transparent to-transparent" />
+          <div className="absolute top-[20%] right-[5%] w-[300px] h-[300px] bg-[#A1B502]/8 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute bottom-[30%] left-[5%] w-[400px] h-[400px] bg-[#385887]/10 rounded-full blur-[120px] pointer-events-none" />
+        </div>
 
-        {/* Black Overlay */}
-        <div
-          className="absolute inset-0 bg-black/35"
-        />
-
-        {/* Heading */}
         <div className="absolute inset-0 flex items-center justify-center z-[2]">
           <h1 className="font-bold text-white text-3xl sm:text-4xl lg:text-5xl xl:text-[75px]" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
             Customer Reviews
@@ -70,7 +71,7 @@ const CustomerReviews = () => {
             </div>
 
             {/* Review Text */}
-            <p className="mb-6 text-center text-base sm:text-lg lg:text-xl xl:text-2xl" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+            <p className="mb-6 text-center text-base sm:text-lg lg:text-xl xl:text-2xl" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               "Everything about my experience with Empower has been positive! They took care of EVERYTHING and the savings on my monthly electricity bill will be huge!. With the economy being so shaky right now, it's a relief to know I'm locked in to a very reasonable monthly fee for electricity. I don't see why everyone doesn't look into it!"
             </p>
 
@@ -87,7 +88,7 @@ const CustomerReviews = () => {
             </p>
 
             {/* Subtitle */}
-            <p className="text-center" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '13px', color: '#A1B502', letterSpacing: '0.03em' }}>
+            <p className="text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', color: '#A1B502', letterSpacing: '0.03em' }}>
               Lorem Ipsum dolor.
             </p>
           </div>
@@ -105,7 +106,7 @@ const CustomerReviews = () => {
             </div>
 
             {/* Review Text */}
-            <p className="mb-6 text-center text-base sm:text-lg lg:text-xl xl:text-2xl" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+            <p className="mb-6 text-center text-base sm:text-lg lg:text-xl xl:text-2xl" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               "Everything about my experience with Empower has been positive! They took care of EVERYTHING and the savings on my monthly electricity bill will be huge!. With the economy being so shaky right now, it's a relief to know I'm locked in to a very reasonable monthly fee for electricity. I don't see why everyone doesn't look into it!"
             </p>
 
@@ -122,7 +123,7 @@ const CustomerReviews = () => {
             </p>
 
             {/* Subtitle */}
-            <p className="text-center" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '13px', color: '#A1B502', letterSpacing: '0.03em' }}>
+            <p className="text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', color: '#A1B502', letterSpacing: '0.03em' }}>
               Lorem Ipsum dolor.
             </p>
           </div>
@@ -160,7 +161,7 @@ const CustomerReviews = () => {
             </div>
 
             {/* Review Text */}
-            <p className="mb-6 text-center text-base sm:text-lg lg:text-xl xl:text-2xl" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+            <p className="mb-6 text-center text-base sm:text-lg lg:text-xl xl:text-2xl" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               "Everything about my experience with Empower has been positive! They took care of EVERYTHING and the savings on my monthly electricity bill will be huge!. With the economy being so shaky right now, it's a relief to know I'm locked in to a very reasonable monthly fee for electricity. I don't see why everyone doesn't look into it!"
             </p>
 
@@ -177,7 +178,7 @@ const CustomerReviews = () => {
             </p>
 
             {/* Subtitle */}
-            <p className="text-center" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '13px', color: '#A1B502', letterSpacing: '0.03em' }}>
+            <p className="text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', color: '#A1B502', letterSpacing: '0.03em' }}>
               Lorem Ipsum dolor.
             </p>
           </div>
@@ -195,7 +196,7 @@ const CustomerReviews = () => {
             </div>
 
             {/* Review Text */}
-            <p className="mb-6 text-center text-base sm:text-lg lg:text-xl xl:text-2xl" style={{ fontFamily: 'Archivo, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+            <p className="mb-6 text-center text-base sm:text-lg lg:text-xl xl:text-2xl" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
               "Everything about my experience with Empower has been positive! They took care of EVERYTHING and the savings on my monthly electricity bill will be huge!. With the economy being so shaky right now, it's a relief to know I'm locked in to a very reasonable monthly fee for electricity. I don't see why everyone doesn't look into it!"
             </p>
 
@@ -212,7 +213,7 @@ const CustomerReviews = () => {
             </p>
 
             {/* Subtitle */}
-            <p className="text-center" style={{ fontFamily: 'Poppins, sans-serif', fontSize: '13px', color: '#A1B502', letterSpacing: '0.03em' }}>
+            <p className="text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', color: '#A1B502', letterSpacing: '0.03em' }}>
               Lorem Ipsum dolor.
             </p>
           </div>
