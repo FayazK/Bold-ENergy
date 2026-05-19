@@ -21,9 +21,9 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center shrink-0">
             <img
-              src="/headerlogo.png"
+              src="/BOLD Energy Logo.svg"
               alt="Bold Energy"
-              className="h-14 lg:h-20 w-auto"
+              className="h-20 lg:h-28 w-auto"
               loading="eager"
             />
           </Link>

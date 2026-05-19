@@ -131,9 +131,9 @@ const Footer = () => {
             <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-auto">
               <Link to="/" onClick={() => window.scrollTo(0, 0)}>
                 <img
-                  src="/boldenergy.png"
+                  src="/BOLD Energy Logo.svg"
                   alt="Bold Energy"
-                  className="w-[160px] sm:w-[200px] lg:w-[280px] xl:w-[353px] h-auto cursor-pointer"
+                  className="w-[220px] sm:w-[280px] lg:w-[380px] xl:w-[460px] h-auto cursor-pointer"
                 />
               </Link>
             </div>
