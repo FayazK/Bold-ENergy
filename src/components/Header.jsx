@@ -3,11 +3,9 @@ import { Link, useLocation } from 'react-router-dom';
 
 const navLinks = [
   { to: '/', label: 'Home' },
-  { to: '/home-owners', label: 'HomeOwners' },
-  { to: '/partner-with-bold-energy', label: 'Dealers' },
-  { to: '/customer-reviews', label: 'Reviews' },
-  { to: '/blogs', label: 'Blogs' },
-  { to: '/states-we-cover', label: 'States' },
+  { to: '/home-owners', label: 'Homeowners' },
+  { to: '/partner-with-bold-energy', label: 'Become a Dealer' },
+  { to: '/states-we-cover', label: 'States we Cover' },
 ];
 
 const Header = () => {
@@ -23,7 +21,7 @@ const Header = () => {
             <img
               src="/BOLD Energy Logo.svg"
               alt="Bold Energy"
-              className="h-20 lg:h-28 w-auto"
+              className="h-24 lg:h-36 w-auto"
               loading="eager"
             />
           </Link>
@@ -50,7 +48,7 @@ const Header = () => {
                 >
                   {label}
                   {isActive && (
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-5 h-[2px] bg-[#A1B502] rounded-full" />
+                    <span className="absolute bottom-0 left-4 right-4 h-[2px] bg-[#A1B502] rounded-full" />
                   )}
                 </Link>
               );
@@ -106,7 +104,7 @@ const Header = () => {
                 >
                   {label}
                   {isActive && (
-                    <span className="absolute bottom-1 left-4 w-5 h-[2px] bg-[#A1B502] rounded-full" />
+                    <span className="absolute bottom-1 left-4 right-4 h-[2px] bg-[#A1B502] rounded-full" />
                   )}
                 </Link>
               );

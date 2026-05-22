@@ -2,7 +2,6 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import WhyBoldEnergy from '../components/WhyBoldEnergy';
 import GoBold from '../components/GoBold';
-import CoverageMap from '../components/CoverageMap';
 import FollowUs from '../components/FollowUs';
 import Testimonials from '../components/Testimonials';
 
@@ -14,7 +13,6 @@ const Home = () => {
       <About />
       <WhyBoldEnergy />
       <GoBold />
-      <CoverageMap />
       <FollowUs />
       <Testimonials />
 

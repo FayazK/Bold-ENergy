@@ -1,7 +1,24 @@
 import { useState, useEffect, useCallback } from 'react';
-import { FaHandshake, FaClipboardCheck, FaHome, FaChartLine, FaCreditCard, FaExchangeAlt, FaMicrochip, FaClock, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import { FaHandshake, FaClipboardCheck, FaHome, FaChartLine, FaCreditCard, FaExchangeAlt, FaMicrochip, FaClock, FaChevronLeft, FaChevronRight, FaMapMarkerAlt, FaArrowDown, FaArrowRight } from 'react-icons/fa';
+
+const COVERED_COLOR = '#A1B502';
+const COMING_SOON_COLOR = '#3D9DE0';
+
+const coveredStates = [
+  'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut',
+  'Delaware', 'Florida', 'Illinois', 'Indiana', 'Iowa',
+  'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland',
+  'Massachusetts', 'Michigan', 'Missouri', 'New Hampshire', 'New Jersey',
+  'New York', 'North Carolina', 'Ohio', 'Oklahoma', 'Pennsylvania',
+  'Rhode Island', 'South Carolina', 'Texas', 'Vermont', 'Virginia',
+  'Washington', 'West Virginia',
+];
+
+const comingSoonStates = ['Georgia'];
 
 const StatesWeCover = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [cardWidth, setCardWidth] = useState(430);
   const [cardGap, setCardGap] = useState(30);
@@ -50,24 +67,113 @@ const StatesWeCover = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="w-full relative h-[300px] sm:h-[400px] lg:h-[550px]">
-        <div className="absolute inset-0 overflow-hidden">
-          <img
-            src="/states-cover-hero.jpg.png"
-            alt="States We Cover"
-            className="w-full h-full object-cover object-center"
-            loading="eager"
-            style={{ transform: 'scale(1.05)' }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#385887]/40 via-transparent to-transparent" />
-          <div className="absolute top-[20%] right-[5%] w-[300px] h-[300px] bg-[#A1B502]/8 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute bottom-[30%] left-[5%] w-[400px] h-[400px] bg-[#385887]/10 rounded-full blur-[120px] pointer-events-none" />
-        </div>
-        <div className="absolute inset-0 flex items-center justify-center z-[2]">
-          <h1 className="font-bold text-white text-center text-3xl sm:text-4xl lg:text-5xl xl:text-[75px]" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
-            States We Cover
-          </h1>
+      <section
+        className="w-full relative overflow-hidden min-h-[700px] sm:min-h-[850px] lg:min-h-[950px] flex items-center"
+        style={{
+          background:
+            'radial-gradient(ellipse at top right, #1f3360 0%, #0f1a33 45%, #060b1a 100%)',
+        }}
+      >
+        {/* Subtle photo texture (very faint, for atmosphere) */}
+        <img
+          src="/states-cover-hero.jpg.png"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.08] mix-blend-screen pointer-events-none"
+          loading="eager"
+        />
+        {/* Gradient veil to add depth */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 pointer-events-none" />
+        {/* Brand glow orbs */}
+        <div className="absolute top-[10%] right-[5%] w-[500px] h-[500px] bg-[#A1B502]/15 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-[5%] left-[3%] w-[450px] h-[450px] bg-[#385887]/25 rounded-full blur-[140px] pointer-events-none" />
+
+        {/* Two-column content */}
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-20 pt-36 sm:pt-40 lg:pt-56 pb-12 lg:pb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-16 items-center">
+            {/* Left: Heading + copy + CTAs + stats */}
+            <div className="text-white">
+              <p
+                className="text-[#A1B502] text-xs sm:text-sm font-bold uppercase mb-4"
+                style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.18em' }}
+              >
+                32 States. One Mission.
+              </p>
+
+              <h1
+                className="font-bold leading-[1.05] mb-5 lg:mb-6 text-3xl sm:text-4xl lg:text-5xl xl:text-[64px]"
+                style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.01em' }}
+              >
+                States We <span className="text-[#A1B502]">Cover.</span>
+              </h1>
+
+              <p
+                className="text-base sm:text-lg text-white/85 max-w-[520px] leading-relaxed mb-8"
+                style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.01em' }}
+              >
+                From New England to the Pacific, Bold Energy powers homeowners and partners across 32 states — and new markets open every quarter. Find out if we're already in your area.
+              </p>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10">
+                <button
+                  onClick={() => {
+                    document.getElementById('coverage-map')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="px-6 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5"
+                  style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.03em' }}
+                >
+                  Check Your State
+                  <FaArrowDown className="w-3.5 h-3.5" />
+                </button>
+                <button
+                  onClick={() => navigate('/partner-with-bold-energy')}
+                  className="px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white border-2 border-white/70 bg-transparent hover:border-white hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2.5"
+                  style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}
+                >
+                  Become a Dealer
+                  <FaArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+
+              {/* Stats divider */}
+              <div className="h-px w-full bg-white/20 mb-6" />
+
+              {/* Quick stats */}
+              <div className="grid grid-cols-3 gap-4 sm:gap-6 max-w-[480px]">
+                {[
+                  { value: '32', label: 'Active States' },
+                  { value: '20k+', label: 'Installs' },
+                  { value: '25+', label: 'Years' },
+                ].map((s) => (
+                  <div key={s.label}>
+                    <div
+                      className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-white leading-none mb-1.5"
+                      style={{ fontFamily: 'Quicksand, sans-serif' }}
+                    >
+                      {s.value}
+                    </div>
+                    <div
+                      className="text-[10px] sm:text-[11px] font-bold uppercase text-white/70"
+                      style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.15em' }}
+                    >
+                      {s.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right: Coverage map (prominent) */}
+            <div className="flex items-center justify-center lg:justify-end">
+              <img
+                src="/coverage-map-clean.svg"
+                alt="USA Coverage Map"
+                className="w-full max-w-[420px] sm:max-w-[560px] lg:max-w-[640px] xl:max-w-[720px] h-auto"
+                loading="eager"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -119,17 +225,49 @@ const StatesWeCover = () => {
               {stateCards.map((card) => (
                 <div
                   key={card.id}
-                  className="bg-white rounded-[20px] overflow-hidden flex-shrink-0 hover:shadow-lg transition-shadow duration-300"
+                  className="group bg-white rounded-2xl overflow-hidden flex-shrink-0 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                   style={{ width: `${cardWidth}px` }}
                 >
-                  <img src={card.image} alt={card.heading} className="w-full h-[200px] sm:h-[260px] lg:h-[323px] object-cover" loading="lazy" />
-                  <div className="p-4 sm:p-6 lg:p-[30px] text-center">
-                    <h3 className="text-lg sm:text-xl lg:text-[25px] font-bold text-black mb-4 lg:mb-5" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
-                      {card.heading}
-                    </h3>
-                    <ul className="list-disc pl-5 text-left inline-block">
+                  {/* Image */}
+                  <div className="relative overflow-hidden h-[180px] sm:h-[220px] lg:h-[240px]">
+                    <img
+                      src={card.image}
+                      alt={card.heading}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-5 sm:p-6 lg:p-7">
+                    {/* Title + count */}
+                    <div className="flex items-baseline justify-between mb-4">
+                      <h3
+                        className="text-lg sm:text-xl lg:text-[22px] font-bold text-[#1a1a1a]"
+                        style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.01em' }}
+                      >
+                        {card.heading}
+                      </h3>
+                      <span
+                        className="text-xs sm:text-sm font-semibold text-[#A1B502] flex-shrink-0 ml-3"
+                        style={{ fontFamily: 'DM Sans, sans-serif' }}
+                      >
+                        {card.states.length} states
+                      </span>
+                    </div>
+
+                    {/* Divider */}
+                    <div className="h-px w-full bg-gray-100 mb-4" />
+
+                    {/* States — clean 2-column list */}
+                    <ul className="grid grid-cols-2 gap-y-2 gap-x-4">
                       {card.states.map((state, index) => (
-                        <li key={index} className="text-sm sm:text-base lg:text-[18px] text-black leading-[2.2]" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                        <li
+                          key={index}
+                          className="flex items-center gap-2 text-sm sm:text-[15px] text-gray-700"
+                          style={{ fontFamily: 'DM Sans, sans-serif' }}
+                        >
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#A1B502] flex-shrink-0" />
                           {state}
                         </li>
                       ))}
@@ -183,23 +321,67 @@ const StatesWeCover = () => {
       </section>
 
       {/* Coverage Map Section */}
-      <section className="w-full bg-[#F5F5F5] px-4 sm:px-8 lg:px-16 xl:px-[200px] py-12 sm:py-16 lg:py-[100px] relative">
+      <section id="coverage-map" className="w-full bg-[#F5F5F5] px-4 sm:px-8 lg:px-16 xl:px-[200px] py-12 sm:py-16 lg:py-[100px] scroll-mt-24">
         <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black text-center mb-8 sm:mb-10 lg:mb-[60px]" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
           Coverage Map
         </h2>
-        <div className="flex justify-center">
-          <div className="relative w-full max-w-[1158px]">
-            <img src="/map.png.png" alt="Coverage Map" className="w-full max-w-[1158px] h-auto object-contain" loading="lazy" />
+
+        <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-12 items-start max-w-[1400px] mx-auto">
+          {/* Coverage Map (SVG) */}
+          <div className="w-full">
+            <img
+              src="/coverage-map.svg"
+              alt="Bold Energy Coverage Map"
+              className="w-full h-auto object-contain"
+              loading="lazy"
+            />
           </div>
-        </div>
-        <div className="mt-6 lg:mt-0 lg:absolute lg:bottom-[100px] lg:right-[200px] w-full lg:w-[230px] bg-white rounded-[10px] shadow-[0px_4px_21px_0px_rgba(0,0,0,0.1)] p-4 sm:p-5 flex flex-row lg:flex-col justify-center gap-3 sm:gap-4 mx-auto lg:mx-0 max-w-[400px] lg:max-w-none">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-[5px] bg-[#A3B407] flex-shrink-0"></div>
-            <span className="text-sm sm:text-[16px] font-bold text-black" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>Covered Area</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-[5px] bg-[#3B5B84] flex-shrink-0"></div>
-            <span className="text-sm sm:text-[16px] font-bold text-black" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>Coming Soon</span>
+
+          {/* State Lists */}
+          <div className="grid grid-cols-1 sm:grid-cols-[1.6fr_1fr] gap-6 sm:gap-8">
+            {/* Covered States */}
+            <div>
+              <h3
+                className="text-xl sm:text-2xl lg:text-[28px] font-bold mb-4 sm:mb-6"
+                style={{ fontFamily: 'Quicksand, sans-serif', color: COVERED_COLOR }}
+              >
+                Covered States
+              </h3>
+              <ul className="grid grid-cols-2 gap-y-2.5 gap-x-4">
+                {coveredStates.map((name) => (
+                  <li
+                    key={name}
+                    className="flex items-center gap-2.5 text-sm sm:text-[15px] text-gray-800"
+                    style={{ fontFamily: 'DM Sans, sans-serif' }}
+                  >
+                    <FaMapMarkerAlt className="w-4 h-4 flex-shrink-0" style={{ color: COVERED_COLOR }} />
+                    {name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Coming Soon */}
+            <div>
+              <h3
+                className="text-xl sm:text-2xl lg:text-[28px] font-bold mb-4 sm:mb-6"
+                style={{ fontFamily: 'Quicksand, sans-serif', color: COMING_SOON_COLOR }}
+              >
+                Coming Soon
+              </h3>
+              <ul className="flex flex-col gap-2.5">
+                {comingSoonStates.map((name) => (
+                  <li
+                    key={name}
+                    className="flex items-center gap-2.5 text-sm sm:text-[15px] text-gray-800"
+                    style={{ fontFamily: 'DM Sans, sans-serif' }}
+                  >
+                    <FaMapMarkerAlt className="w-4 h-4 flex-shrink-0" style={{ color: COMING_SOON_COLOR }} />
+                    {name}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { FaFileAlt, FaTimes, FaChevronDown } from 'react-icons/fa';
 import { useFormModal } from '../context/FormModalContext';
+import { sendForm } from '../lib/sendForm';
 
 const states = [
   'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut',
@@ -26,6 +27,8 @@ const HomeownerFormModal = () => {
   });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState('');
 
   // Close on Escape key
   useEffect(() => {
@@ -59,17 +62,25 @@ const HomeownerFormModal = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = validate();
     setErrors(newErrors);
-    if (Object.keys(newErrors).length === 0) {
+    if (Object.keys(newErrors).length !== 0) return;
+    setSending(true);
+    setSendError('');
+    try {
+      await sendForm('homeowner_modal', form);
       setSubmitted(true);
       setTimeout(() => {
         setSubmitted(false);
         setForm({ fullName: '', phone: '', email: '', state: '', installType: '', monthlyBill: '' });
         closeHomeownerForm();
-      }, 2000);
+      }, 2500);
+    } catch (err) {
+      setSendError(err.message || 'Something went wrong. Please try again.');
+    } finally {
+      setSending(false);
     }
   };
 
@@ -235,14 +246,20 @@ const HomeownerFormModal = () => {
               </div>
             </div>
 
+            {sendError && (
+              <p className="text-red-300 text-sm mb-4 text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                {sendError}
+              </p>
+            )}
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-white font-bold hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-sm sm:text-base"
+                disabled={sending}
+                className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-white font-bold hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-sm sm:text-base disabled:opacity-60 disabled:cursor-not-allowed"
                 style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.05em' }}
               >
                 <FaFileAlt className="w-4 h-4 sm:w-5 sm:h-5" />
-                SUBMIT REQUEST
+                {sending ? 'SENDING…' : 'SUBMIT REQUEST'}
               </button>
             </div>
           </form>

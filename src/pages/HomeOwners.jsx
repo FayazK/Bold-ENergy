@@ -1,8 +1,9 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import CoverageMap from '../components/CoverageMap';
 import Testimonials from '../components/Testimonials';
 import { useFormModal } from '../context/FormModalContext';
-import { FaSolarPanel, FaMapMarkedAlt, FaTools, FaHandHoldingUsd, FaDollarSign, FaShoppingCart, FaFileAlt } from 'react-icons/fa';
+import { sendForm } from '../lib/sendForm';
+import { FaHandHoldingUsd, FaDollarSign, FaShoppingCart, FaFileAlt, FaStar, FaBolt, FaPhoneAlt, FaLock, FaArrowRight, FaMapMarkedAlt } from 'react-icons/fa';
 
 const solarOptions = [
   {
@@ -28,14 +29,53 @@ const solarOptions = [
   },
 ];
 
+const Field = ({ label, children }) => (
+  <label className="block">
+    <span
+      className="block text-[11px] font-bold text-gray-700 mb-1.5"
+      style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.12em' }}
+    >
+      {label}
+    </span>
+    {children}
+  </label>
+);
+
 const HomeOwners = () => {
   const { openHomeownerForm } = useFormModal();
   const navigate = useNavigate();
 
+  const [form, setForm] = useState({
+    fullName: '', phone: '', email: '', address: '',
+    utilityBill: '', ownRent: '', contactMethod: '',
+  });
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSending(true);
+    setSendError('');
+    try {
+      await sendForm('homeowner_hero', form);
+      setSubmitted(true);
+      setForm({ fullName: '', phone: '', email: '', address: '', utilityBill: '', ownRent: '', contactMethod: '' });
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      setSendError(err.message || 'Something went wrong. Please try again.');
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <div>
       {/* Hero Section */}
-      <section className="w-full relative h-screen min-h-[600px] lg:min-h-[900px] mb-24 sm:mb-28 lg:mb-[100px]">
+      <section className="w-full relative min-h-[700px] sm:min-h-[850px] lg:min-h-[950px] flex items-center">
+        {/* Background image */}
         <div className="absolute inset-0 overflow-hidden">
           <img
             src="/hero.jpeg"
@@ -44,73 +84,202 @@ const HomeOwners = () => {
             loading="eager"
             style={{ transform: 'scale(1.05)' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#385887]/40 via-transparent to-transparent" />
-          <div className="absolute top-[20%] right-[5%] w-[300px] h-[300px] bg-[#A1B502]/8 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute bottom-[30%] left-[5%] w-[400px] h-[400px] bg-[#385887]/10 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
         </div>
 
-        <div className="absolute inset-0 flex items-center justify-center z-[2]">
-          <div className="text-center flex flex-col items-center justify-center px-4">
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white tracking-tight mb-6" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
-              See if solar is the<br />
-              <span
-                className="text-transparent bg-clip-text"
-                style={{
-                  backgroundImage: 'linear-gradient(135deg, #A1B502 0%, #c8e003 50%, #A1B502 100%)',
-                  WebkitBackgroundClip: 'text',
-                }}
+        {/* Two-column content (top padding clears the absolute header) */}
+        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-20 pt-36 sm:pt-40 lg:pt-56 pb-12 lg:pb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-12 items-center">
+            {/* Left: Headline + CTAs */}
+            <div className="text-white">
+              {/* Heading */}
+              <h1
+                className="text-3xl sm:text-4xl lg:text-5xl xl:text-[64px] font-bold leading-[1.1] mb-6"
+                style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.01em' }}
               >
-                Right Fit for You.
-              </span>
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 mb-8 max-w-2xl leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
-              Join thousands switching to solar and save on your
-              energy bills while protecting the planet.
-            </p>
-            <button
-              onClick={openHomeownerForm}
-              className="px-8 py-4 rounded-xl text-white font-bold text-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3"
-              style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.05em' }}
-            >
-              <FaFileAlt className="w-5 h-5" />
-              GET A FREE QUOTE
-            </button>
-          </div>
-        </div>
+                Your Utility Company Is <span className="text-[#A1B502]">Overcharging You.</span> It's Time to Go <span className="text-[#A1B502]">Bold.</span>
+              </h1>
 
-        {/* Three Stats Pills */}
-        <div className="absolute bottom-0 left-0 right-0 transform translate-y-1/2 z-10">
-          <div className="w-full flex justify-center px-4 sm:px-8 xl:px-20">
-            <div className="flex flex-col xl:flex-row flex-wrap justify-center items-center gap-4 xl:gap-6 2xl:gap-10 will-change-transform">
-              {[
-                { icon: FaSolarPanel, value: '25+', label: 'Years of Solar Experience' },
-                { icon: FaMapMarkedAlt, value: '25', label: 'States We Cover' },
-                { icon: FaTools, value: '20k+', label: 'Completed Installs' },
-              ].map(({ icon: Icon, value, label }) => (
-                <div
-                  key={label}
-                  className="bg-white rounded-full flex items-center gap-3 w-full max-w-[360px] xl:max-w-none xl:w-[350px] 2xl:w-[400px] h-[90px] xl:h-[110px] 2xl:h-[130px] px-4 sm:px-6 xl:px-6 2xl:px-8 shadow-md"
-                >
-                  <div className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 xl:w-18 xl:h-18 2xl:w-20 2xl:h-20 rounded-full bg-gray-100 flex items-center justify-center p-2">
-                    <Icon className="w-7 h-7 sm:w-8 sm:h-8 xl:w-9 xl:h-9 2xl:w-10 2xl:h-10 text-[#A1B502]" />
-                  </div>
-                  <div className="text-left">
-                    <div
-                      className="text-2xl sm:text-3xl xl:text-4xl 2xl:text-5xl font-bold mb-0.5"
-                      style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502' }}
-                    >
-                      {value}
-                    </div>
-                    <div
-                      className="text-gray-700 text-xs xl:text-sm 2xl:text-base whitespace-nowrap"
-                      style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}
-                    >
-                      {label}
-                    </div>
-                  </div>
+              {/* Subtitle */}
+              <p
+                className="text-base sm:text-lg text-white/85 mb-6 max-w-xl leading-relaxed"
+                style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.01em' }}
+              >
+                Thousands of homeowners have already locked in lower energy costs with Bold Energy. Find out exactly how much you can save.
+              </p>
+
+              {/* Rating */}
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-8">
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} className="w-4 h-4 text-[#A1B502]" />
+                  ))}
                 </div>
-              ))}
+                <span className="text-[#A1B502] font-bold text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                  4.9/5 Stars
+                </span>
+                <span className="text-white/70 text-sm" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                  from 500+ Verified Homeowners
+                </span>
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8">
+                <button
+                  onClick={openHomeownerForm}
+                  className="px-6 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5"
+                  style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.03em' }}
+                >
+                  <FaBolt className="w-4 h-4" />
+                  Get My Free Savings Estimate
+                </button>
+                <a
+                  href="tel:+1"
+                  className="px-6 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base border-2 border-white/70 hover:border-white hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2.5"
+                  style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}
+                >
+                  <FaPhoneAlt className="w-4 h-4" />
+                  Call Now and Talk to an Expert
+                </a>
+              </div>
+
+              {/* Trust indicators */}
+              <div className="flex flex-wrap gap-x-5 gap-y-2 text-white/85 text-xs sm:text-sm" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <span className="flex items-center gap-1.5">
+                  <span className="text-[#A1B502]">★★★★★</span> 500+ Reviews
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="text-[#A1B502]">✓</span> No Hidden Fees
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="text-[#A1B502]">✓</span> Free Consultation
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="text-[#A1B502]">✓</span> Fast Timelines
+                </span>
+              </div>
+            </div>
+
+            {/* Right: Lead Form */}
+            <div className="bg-white rounded-3xl p-5 sm:p-6 lg:p-8 shadow-2xl">
+              <h2
+                className="text-xl sm:text-2xl lg:text-[28px] font-bold text-[#1a1a1a] mb-1"
+                style={{ fontFamily: 'Quicksand, sans-serif' }}
+              >
+                See How Much You'll Save
+              </h2>
+              <p
+                className="text-sm text-gray-600 mb-5 sm:mb-6"
+                style={{ fontFamily: 'DM Sans, sans-serif' }}
+              >
+                Join 500+ homeowners already saving with Bold Energy.
+              </p>
+
+              <form onSubmit={handleSubmit} className="flex flex-col gap-3.5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                  <Field label="FULL NAME">
+                    <input
+                      type="text" name="fullName" value={form.fullName} onChange={handleChange}
+                      placeholder="Jane Smith"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-gray-50 border border-gray-200 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#A1B502] focus:bg-white transition"
+                      style={{ fontFamily: 'DM Sans, sans-serif' }}
+                    />
+                  </Field>
+                  <Field label="PHONE NUMBER">
+                    <input
+                      type="tel" name="phone" value={form.phone} onChange={handleChange}
+                      placeholder="(555) 000-0000"
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-gray-50 border border-gray-200 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#A1B502] focus:bg-white transition"
+                      style={{ fontFamily: 'DM Sans, sans-serif' }}
+                    />
+                  </Field>
+                </div>
+
+                <Field label="EMAIL ADDRESS">
+                  <input
+                    type="email" name="email" value={form.email} onChange={handleChange}
+                    placeholder="jane@example.com"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-gray-50 border border-gray-200 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#A1B502] focus:bg-white transition"
+                    style={{ fontFamily: 'DM Sans, sans-serif' }}
+                  />
+                </Field>
+
+                <Field label="PROPERTY ADDRESS">
+                  <input
+                    type="text" name="address" value={form.address} onChange={handleChange}
+                    placeholder="123 Main St, City, State"
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-gray-50 border border-gray-200 text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-[#A1B502] focus:bg-white transition"
+                    style={{ fontFamily: 'DM Sans, sans-serif' }}
+                  />
+                </Field>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                  <Field label="MONTHLY UTILITY BILL">
+                    <select
+                      name="utilityBill" value={form.utilityBill} onChange={handleChange}
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-gray-50 border border-gray-200 text-sm text-gray-900 focus:outline-none focus:border-[#A1B502] focus:bg-white transition"
+                      style={{ fontFamily: 'DM Sans, sans-serif' }}
+                    >
+                      <option value="">Select range</option>
+                      <option value="<100">Under $100</option>
+                      <option value="100-200">$100 – $200</option>
+                      <option value="200-300">$200 – $300</option>
+                      <option value="300+">$300+</option>
+                    </select>
+                  </Field>
+                  <Field label="OWN OR RENT?">
+                    <select
+                      name="ownRent" value={form.ownRent} onChange={handleChange}
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-gray-50 border border-gray-200 text-sm text-gray-900 focus:outline-none focus:border-[#A1B502] focus:bg-white transition"
+                      style={{ fontFamily: 'DM Sans, sans-serif' }}
+                    >
+                      <option value="">Select one</option>
+                      <option value="own">Own</option>
+                      <option value="rent">Rent</option>
+                    </select>
+                  </Field>
+                </div>
+
+                <Field label="PREFERRED CONTACT METHOD">
+                  <select
+                    name="contactMethod" value={form.contactMethod} onChange={handleChange}
+                    className="w-full px-3.5 py-2.5 rounded-lg bg-gray-50 border border-gray-200 text-sm text-gray-900 focus:outline-none focus:border-[#A1B502] focus:bg-white transition"
+                    style={{ fontFamily: 'DM Sans, sans-serif' }}
+                  >
+                    <option value="">Select preference</option>
+                    <option value="phone">Phone</option>
+                    <option value="email">Email</option>
+                    <option value="text">Text</option>
+                  </select>
+                </Field>
+
+                <button
+                  type="submit"
+                  disabled={sending}
+                  className="w-full mt-2 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                  style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.03em' }}
+                >
+                  {sending ? 'Sending…' : 'Calculate My Savings Now'}
+                  {!sending && <FaArrowRight className="w-4 h-4" />}
+                </button>
+
+                {submitted && (
+                  <p className="text-center text-sm text-[#A1B502] font-semibold mt-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                    ✓ Thanks! We'll be in touch within 24 hours.
+                  </p>
+                )}
+                {sendError && (
+                  <p className="text-center text-sm text-red-600 mt-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                    {sendError}
+                  </p>
+                )}
+
+                <p className="text-center text-xs text-gray-500 flex items-center justify-center gap-1.5 mt-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                  <FaLock className="w-3 h-3" />
+                  No spam. No pressure. 100% free estimate.
+                </p>
+              </form>
             </div>
           </div>
         </div>
@@ -251,7 +420,6 @@ const HomeOwners = () => {
         </div>
       </section>
 
-      <CoverageMap />
       <Testimonials />
     </div>
   );

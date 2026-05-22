@@ -1,273 +1,208 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { FaQuoteLeft } from 'react-icons/fa';
+import { useState, useEffect, useCallback } from 'react';
+import { FaQuoteLeft, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+
+const reviews = [
+  {
+    id: 1,
+    name: 'Fred N.',
+    review:
+      "I'm very satisfied with Empower. The crew is knowledgeable, friendly and professional. They kept in touch with me during the whole process. I already recommended Empower Energy Solutions to friends and family members and one has already signed up.",
+  },
+  {
+    id: 2,
+    name: 'Ted G.',
+    review:
+      "Ryan has been fantastic through the whole process. Helpful, knowledgeable and attentive to our needs. Always patient, never pushy and just an all around nice guy. If you're considering going Solar I highly recommend speaking with Ryan.",
+  },
+  {
+    id: 3,
+    name: 'Scott L.',
+    review:
+      "When Ryan knocked on our door, we felt comfortable listening to him as he explained the benefits of solar. His take-it-or-leave sales approach made us very comfortable deciding to move forward. An enjoyable experience.",
+  },
+  {
+    id: 4,
+    name: 'Nicolette T.',
+    review:
+      "Dalton is wonderful! Very genuine and knowledgeable. He did an excellent job explaining the solar program, details, and benefits — and wasn't pushy. Easy to work with and an excellent communicator. Our dog Charlie is a big fan too!",
+  },
+  {
+    id: 5,
+    name: 'Maxine S.',
+    review:
+      "We talked with a couple of different firms about solar, but Ryan was the only one who presented all the incentives and was up-front about the financing. He answered all of our questions and stayed in touch with us through the whole process.",
+  },
+  {
+    id: 6,
+    name: 'Rick S.',
+    review:
+      "Brenden was a pleasure to work with. Knowledgeable, professional, friendly & respectful. He made sure all of my questions were answered. I felt I could make an informed decision without feeling under pressure. I will recommend him to others.",
+  },
+];
 
 const Testimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const navigate = useNavigate();
+  const [visibleCount, setVisibleCount] = useState(3);
+  const [cardWidth, setCardWidth] = useState(380);
+  const [cardGap, setCardGap] = useState(24);
 
-  const reviews = [
-    {
-      id: 1,
-      name: 'JOHN DOE',
-      subtitle: 'Lorem Ipsum Dolor',
-      review: 'Everything about my experience with Empower has been positive! They took care of EVERYTHING and the savings on my monthly electricity bill will be huge!. With the economy being so shaky right now, it\'s a relief to know I\'m locked',
-      rating: 5,
-      showColons: true,
-      isVideo: false
-    },
-    {
-      id: 2,
-      name: 'JOHN DOE',
-      subtitle: 'Lorem Ipsum Dolor',
-      videoThumbnail: '/john.jpg',
-      isVideo: true
-    },
-    {
-      id: 3,
-      name: 'JOHN DOE',
-      subtitle: 'Lorem Ipsum Dolor',
-      review: 'Everything about my experience with Empower has been positive! They took care of EVERYTHING and the savings on my monthly electricity bill will be huge!. With the economy being so shaky right now, it\'s a relief to know I\'m locked',
-      rating: 2,
-      showColons: true,
-      isVideo: false
-    },
-  ];
+  const updateSizes = useCallback(() => {
+    const w = window.innerWidth;
+    if (w < 768) { setVisibleCount(1); setCardWidth(Math.min(w - 96, 340)); setCardGap(16); }
+    else if (w < 1024) { setVisibleCount(2); setCardWidth(330); setCardGap(20); }
+    else { setVisibleCount(3); setCardWidth(380); setCardGap(24); }
+  }, []);
 
-  const handleDotClick = (index, e) => {
-    e.stopPropagation();
-    setCurrentSlide(index);
-  };
+  useEffect(() => {
+    updateSizes();
+    window.addEventListener('resize', updateSizes);
+    return () => window.removeEventListener('resize', updateSizes);
+  }, [updateSizes]);
+
+  const maxSlide = Math.max(0, reviews.length - visibleCount);
+  useEffect(() => { if (currentSlide > maxSlide) setCurrentSlide(maxSlide); }, [maxSlide, currentSlide]);
+
+  const prev = () => setCurrentSlide((s) => Math.max(0, s - 1));
+  const next = () => setCurrentSlide((s) => Math.min(maxSlide, s + 1));
 
   return (
-    <section className="relative py-12 sm:py-16 lg:py-[100px]" style={{ backgroundColor: '#EBEEF3' }}>
-      {/* Background Image with Opacity */}
-      <div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: 'url(/reviewsectionbg.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: '0.05',
-          zIndex: 0
-        }}
-      />
-      <div className="relative px-4 sm:px-8 lg:px-16 xl:px-[200px]" style={{ zIndex: 1 }}>
-        {/* Mobile/Tablet Layout */}
-        <div className="lg:hidden">
-          <p className="text-base sm:text-lg font-bold mb-2" style={{ fontFamily: 'DM Sans, sans-serif', color: '#385887', letterSpacing: '0.03em' }}>
-            Testimonials
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ fontFamily: 'Quicksand, sans-serif', color: '#222222', letterSpacing: '0.03em' }}>
-            Customer Reviews
-          </h2>
-          <p className="text-base mb-8" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
-            Because we believe energy should do more than power homes — it
-            should empower lives. With ethical practices, bold execution, and
-            transparent communication, we're redefining what it means to go
-            solar.
-          </p>
+    <section className="py-14 lg:py-20 bg-[#F7F8FA] border-y border-[#1a1a1a]/[0.06]">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12">
+        {/* Header: heading on the left, rating chip on the right */}
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-8 lg:mb-10">
+          <div>
+            <p
+              className="text-[#A1B502] text-xs font-bold uppercase mb-2"
+              style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.2em' }}
+            >
+              Customer Stories
+            </p>
+            <h2
+              className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-[#1a1a1a] leading-[1.15]"
+              style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '-0.01em' }}
+            >
+              Trusted by homeowners
+              <br className="hidden sm:block" /> across the country.
+            </h2>
+          </div>
 
-          {/* Mobile Review Cards - Vertical Stack */}
-          <div className="flex flex-col gap-8 items-center">
-            {reviews.map((review) => (
-              review.isVideo ? (
-                <div
-                  key={review.id}
-                  className="w-full max-w-[400px] aspect-[3/4] rounded-lg overflow-hidden relative"
-                  style={{ backgroundImage: `url(${review.videoThumbnail})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-                >
-                  <div className="absolute inset-0 bg-black/20" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <button className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/90 flex items-center justify-center hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg">
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" style={{ marginLeft: '3px' }}>
-                        <path d="M8 5v14l11-7L8 5z" fill="#222222"/>
-                      </svg>
-                    </button>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 text-center pb-6">
-                    <p className="mb-1 font-bold text-sm text-white" style={{ fontFamily: 'Quicksand, sans-serif' }}>{review.name}</p>
-                    <p className="text-xs text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>{review.subtitle}</p>
-                  </div>
-                </div>
-              ) : (
-                <div
-                  key={review.id}
-                  className="w-full max-w-[400px] bg-white rounded-lg p-6 sm:p-8 pt-12 sm:pt-14 relative"
-                  style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}
-                >
-                  {review.showColons && (
-                    <div className="absolute left-1/2 -translate-x-1/2" style={{ top: '-30px' }}>
-                      <div className="w-[60px] h-[60px] rounded-full bg-[#A1B502] flex items-center justify-center">
-                        <FaQuoteLeft className="w-6 h-6 text-white" />
-                      </div>
-                    </div>
-                  )}
-                  <div className="mb-3 flex justify-center">
-                    {[...Array(review.rating)].map((_, i) => (
-                      <span key={i} style={{ color: '#FF8E28', fontSize: '24px' }}>★</span>
-                    ))}
-                  </div>
-                  <p className="mb-4 text-center text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222', lineHeight: '1.6' }}>
-                    "{review.review}"
-                  </p>
-                  <div className="mx-auto mb-4" style={{ width: '30px', height: '2px', backgroundColor: '#A1B502' }} />
-                  <p className="mb-1 font-bold text-sm text-center" style={{ fontFamily: 'Quicksand, sans-serif', color: '#222222' }}>{review.name}</p>
-                  <p className="text-xs text-center" style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502' }}>{review.subtitle}</p>
-                </div>
-              )
-            ))}
+          {/* Rating chip */}
+          <div className="flex items-center gap-3 bg-white rounded-xl px-4 py-3 self-start md:self-end border border-[#1a1a1a]/[0.06]">
+            <div className="flex flex-col">
+              <span
+                className="text-xl sm:text-2xl font-extrabold text-[#1a1a1a] leading-none"
+                style={{ fontFamily: 'Quicksand, sans-serif' }}
+              >
+                4.65<span className="text-[#1a1a1a]/50 text-base font-bold">/5</span>
+              </span>
+              <span
+                className="text-[10px] font-bold uppercase text-[#1a1a1a]/60 mt-1"
+                style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.15em' }}
+              >
+                500+ reviews
+              </span>
+            </div>
+            <div className="h-7 w-px bg-[#1a1a1a]/15" />
+            <div className="flex gap-0.5">
+              {[...Array(5)].map((_, i) => (
+                <FaStar key={i} className="w-4 h-4 text-[#FF8E28]" />
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Desktop Layout */}
-        <div className="hidden lg:flex flex-row items-start justify-between gap-8">
-          {/* Left Side Content */}
-          <div className="relative w-auto">
-            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '20px', color: '#385887', letterSpacing: '0.03em', fontWeight: 'bold', marginBottom: '10px' }}>
-              Testimonials
-            </p>
-            <h2 className="mb-4 text-[50px]" style={{ fontFamily: 'Quicksand, sans-serif', fontWeight: 'bold', color: '#222222', letterSpacing: '0.03em' }}>
-              Customer Reviews
-            </h2>
-            <div className="w-full max-w-[570px] h-[652px]">
-              <img
-                src="/CustomerReviewSectionImage1.png.jpg"
-                alt="Customer Review"
-                className="w-full h-full object-cover rounded-lg"
-                loading="lazy"
-                style={{ transform: 'scaleX(-1)' }}
-              />
-            </div>
-
-            {/* Review Cards Carousel - Desktop */}
-            <div className="absolute" style={{ top: '200px', left: '385px', width: 'calc(100vw - 385px - 200px)', overflow: 'visible', paddingTop: '30px' }}>
-              <div
-                className="flex transition-transform duration-300 ease-in-out"
-                style={{
-                  transform: `translateX(-${currentSlide * 410}px)`,
-                  gap: '40px'
-                }}
-              >
-                {reviews.map((review) => (
-                  review.isVideo ? (
-                    <div
-                      key={review.id}
-                      className="rounded-lg flex-shrink-0 flex items-center justify-center"
-                      style={{
-                        width: '370px',
-                        height: '450px',
-                        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                        backgroundColor: '#FFFFFF'
-                      }}
-                    >
-                      <div
-                        className="relative overflow-hidden"
-                        style={{
-                          width: '350px',
-                          height: '430px',
-                          backgroundImage: `url(${review.videoThumbnail})`,
-                          backgroundSize: 'cover',
-                          backgroundPosition: 'center',
-                          borderRadius: '8px'
-                        }}
-                      >
-                        <div className="absolute inset-0 bg-black/20"></div>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <button className="w-20 h-20 rounded-full bg-white/90 flex items-center justify-center hover:bg-white hover:scale-110 transition-all duration-300 shadow-lg">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" style={{ marginLeft: '4px' }}>
-                              <path d="M8 5v14l11-7L8 5z" fill="#222222"/>
-                            </svg>
-                          </button>
-                        </div>
-                        <div className="absolute bottom-0 left-0 right-0 text-center pb-8">
-                          <p className="mb-2 font-bold" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', color: '#FFFFFF' }}>
-                            {review.name}
-                          </p>
-                          <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', color: '#FFFFFF' }}>
-                            {review.subtitle}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    <div
-                      key={review.id}
-                      className="rounded-lg flex-shrink-0 flex items-center justify-center"
-                      style={{
-                        width: '370px',
-                        height: '450px',
-                        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                        backgroundColor: '#FFFFFF'
-                      }}
-                    >
-                      <div
-                        className="bg-white rounded-lg flex flex-col items-center relative"
-                        style={{
-                          width: '350px',
-                          height: '430px',
-                          padding: '50px 24px 30px 24px'
-                        }}
-                      >
-                        {review.showColons && (
-                          <div className="absolute" style={{ top: '-36px', left: '50%', transform: 'translateX(-50%)' }}>
-                            <div className="w-[72px] h-[72px] rounded-full bg-[#A1B502] flex items-center justify-center">
-                              <FaQuoteLeft className="w-8 h-8 text-white" />
-                            </div>
-                          </div>
-                        )}
-                        <div className="mb-4 flex justify-start">
-                          {[...Array(review.rating)].map((_, i) => (
-                            <span key={i} style={{ color: '#FF8E28', fontSize: '32px' }}>★</span>
-                          ))}
-                        </div>
-                        <p className="mb-6 text-center" style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '16px', color: '#222222', lineHeight: '1.6' }}>
-                          "{review.review}"
-                        </p>
-                        <div className="mb-4" style={{ width: '40px', height: '2px', backgroundColor: '#A1B502' }}></div>
-                        <div className="absolute bottom-0 left-0 right-0 text-center pb-8">
-                          <p className="mb-2 font-bold" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '16px', color: '#222222' }}>
-                            {review.name}
-                          </p>
-                          <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', color: '#A1B502' }}>
-                            {review.subtitle}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                ))}
-              </div>
-
-              {/* Dot Navigation - Desktop */}
-              <div className="flex gap-3 justify-center mt-6" style={{ marginLeft: '-500px' }}>
-                {reviews.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={(e) => handleDotClick(index, e)}
-                    className="rounded-full transition-all duration-300"
-                    style={{
-                      width: currentSlide === index ? '12px' : '10px',
-                      height: currentSlide === index ? '12px' : '10px',
-                      backgroundColor: currentSlide === index ? '#A1B502' : '#CCCCCC',
-                      border: 'none',
-                      cursor: 'pointer'
-                    }}
-                    aria-label={`Go to review ${index + 1}`}
+        {/* Carousel */}
+        <div className="relative">
+          {/* Cards track */}
+          <div className="overflow-hidden">
+            <div
+              className="flex transition-transform duration-300 ease-in-out"
+              style={{
+                gap: `${cardGap}px`,
+                transform: `translateX(-${currentSlide * (cardWidth + cardGap)}px)`,
+              }}
+            >
+              {reviews.map((r) => (
+                <article
+                  key={r.id}
+                  className="flex-shrink-0 group relative bg-white rounded-2xl border border-[#1a1a1a]/[0.08] hover:border-[#A1B502]/40 transition-colors duration-300 p-6 lg:p-7 flex flex-col"
+                  style={{ width: `${cardWidth}px`, minHeight: '260px' }}
+                >
+                  {/* Decorative big quote mark in corner */}
+                  <FaQuoteLeft
+                    className="absolute top-5 right-5 w-7 h-7 text-[#A1B502]/15 group-hover:text-[#A1B502]/30 transition-colors duration-300"
+                    aria-hidden="true"
                   />
-                ))}
-              </div>
+
+                  {/* Stars */}
+                  <div className="flex gap-0.5 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <FaStar key={i} className="w-3.5 h-3.5 text-[#FF8E28]" />
+                    ))}
+                  </div>
+
+                  {/* Review text */}
+                  <p
+                    className="text-[14px] lg:text-[15px] text-[#1a1a1a]/80 leading-relaxed mb-5 flex-grow"
+                    style={{ fontFamily: 'DM Sans, sans-serif' }}
+                  >
+                    "{r.review}"
+                  </p>
+
+                  {/* Author */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#A1B502] to-[#7d8c00] flex items-center justify-center text-white text-sm font-bold flex-shrink-0" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+                      {r.name.charAt(0)}
+                    </div>
+                    <div>
+                      <p
+                        className="text-sm font-bold text-[#1a1a1a] leading-tight"
+                        style={{ fontFamily: 'DM Sans, sans-serif' }}
+                      >
+                        {r.name}
+                      </p>
+                      <p
+                        className="text-[11px] font-medium text-[#1a1a1a]/50 leading-tight"
+                        style={{ fontFamily: 'DM Sans, sans-serif' }}
+                      >
+                        Verified Homeowner
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
 
-          {/* Right Side Content */}
-          <div className="w-[590px] pt-[50px] pb-[100px]">
-            <p className="text-lg" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222', lineHeight: '1.6', letterSpacing: '0.03em' }}>
-              Because we believe energy should do more than power homes — it
-              should empower lives. With ethical practices, bold execution, and
-              transparent communication, we're redefining what it means to go
-              solar.
-            </p>
+          {/* Controls + counter */}
+          <div className="flex items-center justify-between mt-6">
+            <div
+              className="text-sm font-medium text-[#1a1a1a]/60"
+              style={{ fontFamily: 'DM Sans, sans-serif' }}
+            >
+              <span className="text-[#1a1a1a] font-bold">{String(currentSlide + 1).padStart(2, '0')}</span>
+              <span className="mx-1.5">/</span>
+              {String(maxSlide + 1).padStart(2, '0')}
+            </div>
+
+            <div className="flex gap-2">
+              <button
+                onClick={prev}
+                disabled={currentSlide === 0}
+                aria-label="Previous"
+                className="w-10 h-10 rounded-full border border-[#1a1a1a]/15 flex items-center justify-center hover:bg-[#A1B502] hover:border-[#A1B502] hover:text-white transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-[#1a1a1a] disabled:hover:border-[#1a1a1a]/15"
+              >
+                <FaChevronLeft className="w-3.5 h-3.5" />
+              </button>
+              <button
+                onClick={next}
+                disabled={currentSlide >= maxSlide}
+                aria-label="Next"
+                className="w-10 h-10 rounded-full border border-[#1a1a1a]/15 flex items-center justify-center hover:bg-[#A1B502] hover:border-[#A1B502] hover:text-white transition-all duration-200 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-[#1a1a1a] disabled:hover:border-[#1a1a1a]/15"
+              >
+                <FaChevronRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
           </div>
         </div>
       </div>

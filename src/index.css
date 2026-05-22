@@ -8,8 +8,11 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: 100%;
   overflow-x: hidden;
+}
+
+html {
+  background-color: #0b0f17;
 }
 
 body {
@@ -17,6 +20,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,8 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 img {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+  image-rendering: auto;
 }
 
 button {
@@ -41,3 +48,32 @@ button {
   0%, 100% { box-shadow: 0 0 20px rgba(161, 181, 2, 0.2); }
   50% { box-shadow: 0 0 40px rgba(161, 181, 2, 0.4); }
 }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.marquee {
+  animation: marquee 50s linear infinite;
+}
+
+.marquee-reverse {
+  animation: marquee-reverse 50s linear infinite;
+}
+
+.marquee-wrap:hover .marquee,
+.marquee-wrap:hover .marquee-reverse {
+  animation-play-state: paused;
+}
+
+.marquee-fade {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+

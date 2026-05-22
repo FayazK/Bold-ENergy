@@ -7,8 +7,6 @@ import HomeownerFormModal from './components/HomeownerFormModal';
 import DealerFormModal from './components/DealerFormModal';
 import Home from './pages/Home';
 import HomeOwners from './pages/HomeOwners';
-import CustomerReviews from './pages/CustomerReviews';
-import Blogs from './pages/Blogs';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
 import PartnerWithBoldEnergy from './pages/PartnerWithBoldEnergy';
@@ -26,8 +24,6 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/home-owners" element={<HomeOwners />} />
-              <Route path="/customer-reviews" element={<CustomerReviews />} />
-              <Route path="/blogs" element={<Blogs />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
               <Route path="/partner-with-bold-energy" element={<PartnerWithBoldEnergy />} />

@@ -133,7 +133,7 @@ const Footer = () => {
                 <img
                   src="/BOLD Energy Logo.svg"
                   alt="Bold Energy"
-                  className="w-[220px] sm:w-[280px] lg:w-[380px] xl:w-[460px] h-auto cursor-pointer"
+                  className="w-[160px] sm:w-[200px] lg:w-[280px] xl:w-[353px] h-auto cursor-pointer"
                 />
               </Link>
             </div>
@@ -144,8 +144,6 @@ const Footer = () => {
                 Company
               </h4>
               <div className="text-sm sm:text-base lg:text-lg text-white" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '2' }}>
-                <Link to="/customer-reviews" className="block hover:opacity-80 transition-opacity text-white no-underline">Reviews</Link>
-                <Link to="/blogs" className="block hover:opacity-80 transition-opacity text-white no-underline">Latest Blog</Link>
                 <Link to="/states-we-cover" className="block hover:opacity-80 transition-opacity text-white no-underline">States We Cover</Link>
                 <Link to="/partner-with-bold-energy" className="block hover:opacity-80 transition-opacity text-white no-underline">Partner with Bold</Link>
               </div>
