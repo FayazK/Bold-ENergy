@@ -1,39 +1,45 @@
 const TermsAndConditions = () => {
   return (
-    <div className="w-full">
+    <div className="w-full terms-page">
       {/* Hero Section */}
-      <section className="w-full relative" style={{ height: '400px', marginBottom: '100px' }}>
+      <section className="w-full relative h-[280px] sm:h-[340px] lg:h-[400px] mb-12 sm:mb-16 lg:mb-[100px] overflow-hidden">
         <img
           src="/terms-hero.jpg"
-          alt="Terms and Conditions"
-          className="w-full h-full object-cover"
-          style={{ height: '400px' }}
+          alt=""
+          aria-hidden="true"
+          className="is-bg absolute inset-0"
           loading="eager"
         />
-        {/* Dark Overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundColor: '#000000',
-            opacity: '0.6'
-          }}
-        />
-        {/* Content */}
-        <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 2 }}>
-          <div className="text-center" style={{ paddingLeft: '200px', paddingRight: '200px' }}>
-            <h1 className="font-bold text-white mb-4" style={{ fontFamily: 'Quicksand, sans-serif', fontSize: '60px', letterSpacing: '0.03em' }}>
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 z-[2] flex items-center justify-center">
+          <div className="container-bold text-center pt-20 sm:pt-24">
+            <h1
+              className="font-bold text-white mb-3 sm:mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-[60px] leading-tight"
+              style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}
+            >
               Terms and Conditions
             </h1>
-            <p className="text-white" style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '20px', letterSpacing: '0.03em' }}>
+            <p
+              className="text-white text-sm sm:text-base lg:text-lg"
+              style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}
+            >
               Last Updated: January 2025
             </p>
           </div>
         </div>
       </section>
 
+      <style>{`
+        .terms-page .container-bold h2 { font-size: clamp(1.25rem, 3.5vw, 2rem) !important; line-height: 1.25 !important; }
+        .terms-page .container-bold h3 { font-size: clamp(1.05rem, 2.5vw, 1.4rem) !important; line-height: 1.3 !important; }
+        .terms-page .container-bold p,
+        .terms-page .container-bold li { font-size: clamp(0.95rem, 2.2vw, 1.05rem) !important; line-height: 1.7 !important; }
+        .terms-page .container-bold ul { padding-left: 1.5rem !important; }
+      `}</style>
+
       {/* Terms and Conditions Content */}
-      <section className="bg-white" style={{ paddingLeft: '200px', paddingRight: '200px', paddingBottom: '100px' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <section className="bg-white pb-16 sm:pb-20 lg:pb-[100px]">
+        <div className="container-bold" style={{ maxWidth: '1000px' }}>
           {/* Introduction */}
           <div className="mb-12">
             <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '20px', letterSpacing: '0.03em' }}>

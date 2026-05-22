@@ -90,14 +90,14 @@ const HomeownerFormModal = () => {
   };
 
   const inputClass = (field) =>
-    `w-full py-2 sm:py-2.5 lg:py-3 px-3 sm:px-4 lg:px-5 rounded-lg bg-white text-xs sm:text-sm lg:text-base outline-none transition-all duration-200 ${errors[field] ? 'ring-2 ring-red-400' : 'focus:ring-2 focus:ring-[#A1B502]'}`;
+    `w-full py-2.5 lg:py-3 px-3 sm:px-4 rounded-lg bg-white text-sm lg:text-base outline-none transition-all duration-200 ${errors[field] ? 'ring-2 ring-red-400' : 'focus:ring-2 focus:ring-[#A1B502]'}`;
 
   const selectClass = (field) =>
-    `w-full flex items-center justify-between py-2 sm:py-2.5 lg:py-3 px-3 sm:px-4 lg:px-5 rounded-lg bg-white cursor-pointer transition-all duration-200 ${errors[field] ? 'ring-2 ring-red-400' : 'hover:shadow-sm'}`;
+    `w-full flex items-center justify-between py-2.5 lg:py-3 px-3 sm:px-4 rounded-lg bg-white cursor-pointer transition-all duration-200 text-sm lg:text-base ${errors[field] ? 'ring-2 ring-red-400' : 'hover:shadow-sm'}`;
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-all duration-300 ${homeownerOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}
+      className={`fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 transition-all duration-300 ${homeownerOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'}`}
       aria-hidden={!homeownerOpen}
       role="dialog"
       aria-modal="true"
@@ -105,7 +105,7 @@ const HomeownerFormModal = () => {
     >
       <div className="absolute inset-0 bg-black/60" onClick={closeHomeownerForm} />
 
-      <div className={`relative w-full max-w-[700px] max-h-[90vh] overflow-y-auto rounded-xl shadow-2xl transition-transform duration-300 ${homeownerOpen ? 'scale-100' : 'scale-95'}`} style={{ backgroundColor: '#385887' }}>
+      <div className={`relative w-full max-w-[700px] max-h-[92vh] overflow-y-auto rounded-xl shadow-2xl transition-transform duration-300 ${homeownerOpen ? 'scale-100' : 'scale-95'}`} style={{ backgroundColor: '#385887' }}>
         <button
           onClick={closeHomeownerForm}
           className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors duration-200 z-10"
@@ -125,21 +125,21 @@ const HomeownerFormModal = () => {
             <p className="text-white/80" style={{ fontFamily: 'DM Sans, sans-serif' }}>We'll be in touch within 24 hours with your free solar estimate.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} noValidate className="p-6 sm:p-8 lg:p-10">
-            <p className="mb-2 text-sm sm:text-base lg:text-lg" style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502', letterSpacing: '0.03em' }}>
+          <form onSubmit={handleSubmit} noValidate className="p-5 sm:p-7 lg:p-10 pr-12 sm:pr-7 lg:pr-10">
+            <p className="mb-2 text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502', letterSpacing: '0.03em' }}>
               Homeowner? Let's get you started.
             </p>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 mb-6 sm:mb-8">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 mb-5 sm:mb-7">
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
                 Request A Quote
               </h3>
-              <div className="hidden sm:block w-16 lg:w-24 xl:w-[150px] h-[3px]" style={{ backgroundColor: '#A1B502' }} />
+              <div className="hidden sm:block flex-1 max-w-[150px] h-[3px]" style={{ backgroundColor: '#A1B502' }} />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-5 mb-6 sm:mb-8">
               {/* Full Name */}
               <div>
-                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <label className="block mb-1.5 sm:mb-2 text-sm text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   Full Name <span className="text-red-300">*</span>
                 </label>
                 <input
@@ -155,7 +155,7 @@ const HomeownerFormModal = () => {
 
               {/* Phone */}
               <div>
-                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <label className="block mb-1.5 sm:mb-2 text-sm text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   Phone Number <span className="text-red-300">*</span>
                 </label>
                 <input
@@ -171,7 +171,7 @@ const HomeownerFormModal = () => {
 
               {/* Email */}
               <div>
-                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <label className="block mb-1.5 sm:mb-2 text-sm text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   Email Address <span className="text-red-300">*</span>
                 </label>
                 <input
@@ -187,7 +187,7 @@ const HomeownerFormModal = () => {
 
               {/* State */}
               <div>
-                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <label className="block mb-1.5 sm:mb-2 text-sm text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   State <span className="text-red-300">*</span>
                 </label>
                 <div className="relative">
@@ -207,7 +207,7 @@ const HomeownerFormModal = () => {
 
               {/* Install Type */}
               <div>
-                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <label className="block mb-1.5 sm:mb-2 text-sm text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   What to Install? <span className="text-red-300">*</span>
                 </label>
                 <div className="relative">
@@ -227,7 +227,7 @@ const HomeownerFormModal = () => {
 
               {/* Monthly Bill */}
               <div>
-                <label className="block mb-1.5 sm:mb-2 text-xs sm:text-sm lg:text-base text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <label className="block mb-1.5 sm:mb-2 text-sm text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   Monthly Electric Bill? <span className="text-red-300">*</span>
                 </label>
                 <div className="relative">

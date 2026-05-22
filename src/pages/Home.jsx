@@ -9,7 +9,8 @@ const Home = () => {
   return (
     <div>
       <Hero />
-      <div style={{ height: '60px' }}></div>
+      {/* Spacer for the stats pills that overflow Hero's bottom */}
+      <div className="h-[180px] sm:h-[80px] lg:h-[100px]" aria-hidden="true" />
       <About />
       <WhyBoldEnergy />
       <GoBold />
@@ -17,8 +18,8 @@ const Home = () => {
       <Testimonials />
 
       {/* Contractor License Numbers */}
-      <div className="w-full bg-[#385887] py-4 px-4 sm:px-8 lg:px-16 xl:px-[200px]">
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center">
+      <div className="w-full bg-[#385887] py-4">
+        <div className="container-bold flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-center">
           <p className="text-white text-xs sm:text-sm" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
             Licensed & Insured
           </p>

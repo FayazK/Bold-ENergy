@@ -68,7 +68,7 @@ const StatesWeCover = () => {
     <div className="w-full">
       {/* Hero Section */}
       <section
-        className="w-full relative overflow-hidden min-h-[700px] sm:min-h-[850px] lg:min-h-[950px] flex items-center"
+        className="w-full relative overflow-hidden min-h-[640px] sm:min-h-[760px] lg:min-h-[860px] flex items-center"
         style={{
           background:
             'radial-gradient(ellipse at top right, #1f3360 0%, #0f1a33 45%, #060b1a 100%)',
@@ -89,38 +89,38 @@ const StatesWeCover = () => {
         <div className="absolute bottom-[5%] left-[3%] w-[450px] h-[450px] bg-[#385887]/25 rounded-full blur-[140px] pointer-events-none" />
 
         {/* Two-column content */}
-        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-20 pt-36 sm:pt-40 lg:pt-56 pb-12 lg:pb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-16 items-center">
+        <div className="relative z-10 container-bold pt-40 sm:pt-44 md:pt-52 lg:pt-60 pb-10 sm:pb-12 lg:pb-16 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-8 lg:gap-12 xl:gap-16 items-center">
             {/* Left: Heading + copy + CTAs + stats */}
             <div className="text-white">
               <p
-                className="text-[#A1B502] text-xs sm:text-sm font-bold uppercase mb-4"
+                className="text-[#A1B502] text-xs sm:text-sm font-bold uppercase mb-3 sm:mb-4"
                 style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.18em' }}
               >
                 32 States. One Mission.
               </p>
 
               <h1
-                className="font-bold leading-[1.05] mb-5 lg:mb-6 text-3xl sm:text-4xl lg:text-5xl xl:text-[64px]"
+                className="font-bold leading-[1.05] mb-4 sm:mb-5 lg:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[56px]"
                 style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.01em' }}
               >
                 States We <span className="text-[#A1B502]">Cover.</span>
               </h1>
 
               <p
-                className="text-base sm:text-lg text-white/85 max-w-[520px] leading-relaxed mb-8"
+                className="text-sm sm:text-base lg:text-lg text-white/85 max-w-[520px] leading-relaxed mb-6 sm:mb-8"
                 style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.01em' }}
               >
                 From New England to the Pacific, Bold Energy powers homeowners and partners across 32 states — and new markets open every quarter. Find out if we're already in your area.
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-10">
                 <button
                   onClick={() => {
                     document.getElementById('coverage-map')?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="px-6 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5"
+                  className="px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl text-white font-bold text-sm sm:text-base hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5"
                   style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.03em' }}
                 >
                   Check Your State
@@ -128,7 +128,7 @@ const StatesWeCover = () => {
                 </button>
                 <button
                   onClick={() => navigate('/partner-with-bold-energy')}
-                  className="px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white border-2 border-white/70 bg-transparent hover:border-white hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2.5"
+                  className="px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl font-bold text-sm sm:text-base text-white border-2 border-white/70 bg-transparent hover:border-white hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2.5"
                   style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}
                 >
                   Become a Dealer
@@ -137,10 +137,10 @@ const StatesWeCover = () => {
               </div>
 
               {/* Stats divider */}
-              <div className="h-px w-full bg-white/20 mb-6" />
+              <div className="h-px w-full bg-white/20 mb-5 sm:mb-6" />
 
               {/* Quick stats */}
-              <div className="grid grid-cols-3 gap-4 sm:gap-6 max-w-[480px]">
+              <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 max-w-[480px]">
                 {[
                   { value: '32', label: 'Active States' },
                   { value: '20k+', label: 'Installs' },
@@ -148,7 +148,7 @@ const StatesWeCover = () => {
                 ].map((s) => (
                   <div key={s.label}>
                     <div
-                      className="text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-white leading-none mb-1.5"
+                      className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-extrabold text-white leading-none mb-1.5"
                       style={{ fontFamily: 'Quicksand, sans-serif' }}
                     >
                       {s.value}
@@ -169,7 +169,7 @@ const StatesWeCover = () => {
               <img
                 src="/coverage-map-clean.svg"
                 alt="USA Coverage Map"
-                className="w-full max-w-[420px] sm:max-w-[560px] lg:max-w-[640px] xl:max-w-[720px] h-auto"
+                className="w-full max-w-[360px] sm:max-w-[480px] md:max-w-[560px] lg:max-w-[600px] xl:max-w-[680px] h-auto"
                 loading="eager"
               />
             </div>
@@ -178,15 +178,16 @@ const StatesWeCover = () => {
       </section>
 
       {/* Expanding Solar Section */}
-      <section className="px-4 sm:px-8 lg:px-16 xl:px-[200px] py-12 sm:py-16 lg:py-[100px] bg-white">
-        <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-[80px] mb-10 lg:mb-[60px] lg:ml-[50px]">
-          <div className="w-full lg:w-1/2">
-            <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black leading-tight" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
-              Expanding Solar, One<br className="hidden lg:block" /> State at a Time
+      <section className="py-12 sm:py-16 lg:py-[100px] bg-white">
+        <div className="container-bold">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-16 mb-10 lg:mb-[60px]">
+          <div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-[50px] font-bold text-black leading-tight" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+              Expanding Solar, One State at a Time
             </h2>
           </div>
-          <div className="w-full lg:flex-1 lg:max-w-[700px] lg:ml-[60px]">
-            <p className="text-base sm:text-lg lg:text-[20px] text-black leading-relaxed lg:leading-[1.8]" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
+          <div>
+            <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-black leading-relaxed lg:leading-[1.7]" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em' }}>
               Bold Energy is headquartered in Connecticut, but our mission is nationwide. We currently serve homeowners and partners across 15+ states — and growing every quarter. With Tier-1 panels, transparent pricing, and flexible financing options, we make it easy for families from New England to the Rockies to take control of their energy future.
             </p>
           </div>
@@ -194,11 +195,12 @@ const StatesWeCover = () => {
         <div className="flex justify-center">
           <img src="/bold1.png.png" alt="Bold Section" className="w-full max-w-[1350px] h-auto object-contain" loading="lazy" />
         </div>
+        </div>
       </section>
 
       {/* Where We Operate Now Section */}
       <section className="w-full bg-[#F5F5F5] py-12 sm:py-16 lg:py-[100px] overflow-hidden">
-        <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black text-center mb-8 sm:mb-10 lg:mb-[60px]" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-[50px] font-bold text-black text-center mb-8 sm:mb-10 lg:mb-[60px] px-4" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
           Where We Operate Now
         </h2>
 
@@ -279,22 +281,23 @@ const StatesWeCover = () => {
           </div>
         </div>
 
-        <div className="flex justify-center mt-8 sm:mt-10 lg:mt-[50px]">
-          <button className="bg-[#A1B502] text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 hover:brightness-110 hover:shadow-lg transition-all duration-300" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.05em' }}>
-            <FaHandshake className="w-5 h-5" />
+        <div className="flex justify-center mt-8 sm:mt-10 lg:mt-[50px] px-4">
+          <button className="bg-[#A1B502] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base lg:text-lg flex items-center justify-center gap-2.5 hover:brightness-110 hover:shadow-lg transition-all duration-300" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.05em' }}>
+            <FaHandshake className="w-4 h-4 sm:w-5 sm:h-5" />
             BECOME A PARTNER
           </button>
         </div>
       </section>
 
       {/* What Customers Get Section */}
-      <section className="w-full py-12 sm:py-16 lg:py-[100px] px-4 sm:px-8 lg:px-16 xl:pl-[200px] xl:pr-0 bg-white">
-        <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black text-center mb-8 sm:mb-10 lg:mb-[60px] xl:pr-[200px]" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+      <section className="w-full py-12 sm:py-16 lg:py-[100px] bg-white">
+        <div className="container-bold">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-[50px] font-bold text-black text-center mb-8 sm:mb-10 lg:mb-[60px] leading-tight" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
           What Customers Get in Every State
         </h2>
 
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-8">
-          <div className="flex flex-col gap-3 sm:gap-4 w-full lg:w-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-8 lg:gap-10">
+          <div className="flex flex-col gap-3 sm:gap-4">
             {[
               { icon: <FaChartLine className="w-5 h-5 text-[#A1B502]" />, title: 'Home Value Boost:', desc: 'Solar adds ~4-7% to resale value according to Zillow.' },
               { icon: <FaCreditCard className="w-5 h-5 text-[#A1B502]" />, title: 'Flexible Financing:', desc: 'Loan, lease, and cash purchase options available with major solar lenders. Example: 25-year solar loan at ~5.99% APR with 30% federal tax credit applied' },
@@ -302,31 +305,33 @@ const StatesWeCover = () => {
               { icon: <FaMicrochip className="w-5 h-5 text-[#A1B502]" />, title: 'Top-Tier Hardware Everywhere:', desc: 'Tier-1 solar panels + SolarEdge inverters backed by 25-year warranties.' },
               { icon: <FaClock className="w-5 h-5 text-[#A1B502]" />, title: 'Fast Install Timelines:', desc: 'Once permits clear, installs are usually complete in 1-2 days, no matter the market.' },
             ].map((card, i) => (
-              <div key={i} className="w-full max-w-[660px] min-h-[100px] sm:min-h-[120px] lg:min-h-[132px] border border-[rgba(161,181,2,0.3)] rounded-[10px] flex items-center p-4 sm:p-5 gap-4 sm:gap-5 bg-white hover:shadow-md transition-shadow duration-300">
-                <div className="w-12 h-12 sm:w-[60px] sm:h-[60px] lg:w-[70px] lg:h-[70px] rounded-full bg-[rgba(161,181,2,0.1)] flex items-center justify-center flex-shrink-0">
+              <div key={i} className="border border-[rgba(161,181,2,0.3)] rounded-[10px] flex items-center p-4 sm:p-5 gap-3 sm:gap-4 bg-white hover:shadow-md transition-shadow duration-300">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full bg-[rgba(161,181,2,0.1)] flex items-center justify-center flex-shrink-0">
                   {card.icon}
                 </div>
-                <div>
-                  <h3 className="text-sm sm:text-[15px] lg:text-[16px] font-bold text-black mb-1 sm:mb-2" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>{card.title}</h3>
-                  <p className="text-xs sm:text-[13px] lg:text-[14px] text-black leading-snug lg:leading-[1.5]" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>{card.desc}</p>
+                <div className="min-w-0">
+                  <h3 className="text-sm sm:text-base font-bold text-black mb-1" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>{card.title}</h3>
+                  <p className="text-xs sm:text-sm text-black leading-snug lg:leading-[1.5]" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em' }}>{card.desc}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="flex-shrink-0 w-full lg:w-auto flex justify-center lg:justify-end">
-            <img src="/everystate.png.png" alt="Every State" className="w-full max-w-[764px] h-auto object-cover" loading="lazy" />
+          <div className="flex justify-center lg:justify-end">
+            <img src="/everystate.png.png" alt="Every State" className="w-full max-w-[600px] h-auto object-contain" loading="lazy" />
           </div>
+        </div>
         </div>
       </section>
 
       {/* Coverage Map Section */}
-      <section id="coverage-map" className="w-full bg-[#F5F5F5] px-4 sm:px-8 lg:px-16 xl:px-[200px] py-12 sm:py-16 lg:py-[100px] scroll-mt-24">
-        <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black text-center mb-8 sm:mb-10 lg:mb-[60px]" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+      <section id="coverage-map" className="w-full bg-[#F5F5F5] py-12 sm:py-16 lg:py-[100px] scroll-mt-24">
+        <div className="container-bold">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-[50px] font-bold text-black text-center mb-8 sm:mb-10 lg:mb-[60px] leading-tight" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
           Coverage Map
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-12 items-start max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-8 lg:gap-12 items-start">
           {/* Coverage Map (SVG) */}
           <div className="w-full">
             <img
@@ -384,35 +389,36 @@ const StatesWeCover = () => {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Coming Soon Section */}
-      <section className="w-full relative min-h-[600px] sm:min-h-[700px] lg:min-h-[816px]">
-        <img src="/gobold.png.jpg" alt="Coming Soon Background" className="w-full h-full absolute inset-0 object-cover" loading="lazy" />
-        <div className="absolute inset-0 bg-black/35" />
-        <div className="relative z-[2] flex flex-col items-center px-4 sm:px-8 py-12 sm:py-16 lg:pt-[100px] lg:pb-[100px]">
-          <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-white mb-6 sm:mb-8 lg:mb-[30px]" style={{ fontFamily: 'Quicksand, sans-serif' }}>Coming Soon</h2>
-          <p className="text-base sm:text-lg lg:text-[23px] text-white text-center leading-relaxed lg:leading-[1.8] max-w-[800px]" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
+      <section className="w-full relative min-h-[520px] sm:min-h-[640px] lg:min-h-[760px] overflow-hidden">
+        <img src="/gobold.png.jpg" alt="" aria-hidden="true" className="is-bg absolute inset-0" loading="lazy" />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-[2] container-bold flex flex-col items-center py-12 sm:py-16 lg:py-[100px]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-[50px] font-bold text-white mb-5 sm:mb-6 lg:mb-[30px] leading-tight text-center" style={{ fontFamily: 'Quicksand, sans-serif' }}>Coming Soon</h2>
+          <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-white text-center leading-relaxed max-w-[800px]" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em' }}>
             We're adding new states rapidly. If you don't see your state listed, reach out — Bold Energy
             expansion markets are opening every quarter.
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-6 lg:gap-[30px] mt-10 sm:mt-12 lg:mt-[60px] w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 justify-items-center gap-12 sm:gap-6 lg:gap-[30px] mt-12 sm:mt-12 lg:mt-[60px] w-full max-w-[900px]">
             {[
               { icon: <FaClipboardCheck className="w-7 h-7 text-[#A1B502]" />, title: 'Dealers', desc: 'Apply now to secure exclusive\npartnerships in new territorie' },
               { icon: <FaHome className="w-7 h-7 text-[#A1B502]" />, title: 'Homeowners', desc: 'Check your zip code to see if\nwe serve your area yet' },
             ].map((card, i) => (
-              <div key={i} className="relative mt-[60px] flex justify-center">
-                <div className="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] rounded-full bg-white absolute -top-[50px] sm:-top-[60px] left-1/2 -translate-x-1/2 flex items-center justify-center z-[3]">
-                  <div className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] rounded-full bg-[#EBEEF3] flex items-center justify-center">
+              <div key={i} className="relative mt-12 sm:mt-[60px] flex justify-center w-full">
+                <div className="w-[88px] h-[88px] sm:w-[100px] sm:h-[100px] lg:w-[120px] lg:h-[120px] rounded-full bg-white absolute -top-[44px] sm:-top-[50px] lg:-top-[60px] left-1/2 -translate-x-1/2 flex items-center justify-center z-[3]">
+                  <div className="w-[68px] h-[68px] sm:w-[80px] sm:h-[80px] lg:w-[100px] lg:h-[100px] rounded-full bg-[#EBEEF3] flex items-center justify-center">
                     {card.icon}
                   </div>
                 </div>
-                <div className="w-full max-w-[430px] sm:w-[350px] lg:w-[430px] bg-white rounded-xl p-6 sm:p-[30px] pt-16 sm:pt-[80px] text-center flex flex-col justify-between items-center min-h-[260px] sm:min-h-[290px] lg:min-h-[314px]">
+                <div className="w-full max-w-[430px] bg-white rounded-xl p-5 sm:p-6 lg:p-[30px] pt-14 sm:pt-16 lg:pt-[80px] text-center flex flex-col justify-between items-center gap-4 min-h-[240px] sm:min-h-[280px] lg:min-h-[300px]">
                   <h3 className="text-lg sm:text-xl lg:text-[22px] font-bold text-black" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>{card.title}</h3>
-                  <p className="text-sm sm:text-[15px] lg:text-[16px] text-black leading-relaxed lg:leading-[1.6] whitespace-pre-line" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>{card.desc}</p>
-                  <button className="bg-[#A1B502] text-white px-6 py-3 rounded-xl font-bold text-sm sm:text-base flex items-center justify-center gap-3 hover:brightness-110 hover:shadow-lg transition-all duration-300" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.05em' }}>
-                    <FaHandshake className="w-5 h-5" />
+                  <p className="text-sm lg:text-base text-black leading-relaxed whitespace-pre-line" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em' }}>{card.desc}</p>
+                  <button className="bg-[#A1B502] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-sm sm:text-base flex items-center justify-center gap-2.5 hover:brightness-110 hover:shadow-lg transition-all duration-300" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.05em' }}>
+                    <FaHandshake className="w-4 h-4 sm:w-5 sm:h-5" />
                     APPLY NOW
                   </button>
                 </div>

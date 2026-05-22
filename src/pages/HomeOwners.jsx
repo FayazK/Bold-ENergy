@@ -74,13 +74,14 @@ const HomeOwners = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="w-full relative min-h-[700px] sm:min-h-[850px] lg:min-h-[950px] flex items-center">
+      <section className="w-full relative min-h-[640px] sm:min-h-[760px] lg:min-h-[860px] flex items-center overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0 overflow-hidden">
           <img
             src="/hero.jpeg"
-            alt="Homeowners"
-            className="w-full h-full object-cover"
+            alt=""
+            aria-hidden="true"
+            className="is-bg"
             loading="eager"
             style={{ transform: 'scale(1.05)' }}
           />
@@ -89,13 +90,13 @@ const HomeOwners = () => {
         </div>
 
         {/* Two-column content (top padding clears the absolute header) */}
-        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-20 pt-36 sm:pt-40 lg:pt-56 pb-12 lg:pb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 lg:gap-12 items-center">
+        <div className="relative z-10 container-bold pt-40 sm:pt-44 md:pt-52 lg:pt-60 pb-12 lg:pb-16 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-8 lg:gap-10 xl:gap-14 items-center">
             {/* Left: Headline + CTAs */}
             <div className="text-white">
               {/* Heading */}
               <h1
-                className="text-3xl sm:text-4xl lg:text-5xl xl:text-[64px] font-bold leading-[1.1] mb-6"
+                className="text-[26px] sm:text-3xl md:text-4xl lg:text-[42px] xl:text-[56px] font-bold leading-[1.1] mb-5 sm:mb-6"
                 style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.01em' }}
               >
                 Your Utility Company Is <span className="text-[#A1B502]">Overcharging You.</span> It's Time to Go <span className="text-[#A1B502]">Bold.</span>
@@ -103,14 +104,14 @@ const HomeOwners = () => {
 
               {/* Subtitle */}
               <p
-                className="text-base sm:text-lg text-white/85 mb-6 max-w-xl leading-relaxed"
+                className="text-sm sm:text-base lg:text-lg text-white/85 mb-5 sm:mb-6 max-w-xl leading-relaxed"
                 style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.01em' }}
               >
                 Thousands of homeowners have already locked in lower energy costs with Bold Energy. Find out exactly how much you can save.
               </p>
 
               {/* Rating */}
-              <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-8">
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-1 sm:gap-3 mb-6 sm:mb-8">
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
                     <FaStar key={i} className="w-4 h-4 text-[#A1B502]" />
@@ -119,28 +120,28 @@ const HomeOwners = () => {
                 <span className="text-[#A1B502] font-bold text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   4.9/5 Stars
                 </span>
-                <span className="text-white/70 text-sm" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <span className="text-white/70 text-xs sm:text-sm" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   from 500+ Verified Homeowners
                 </span>
               </div>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8">
                 <button
                   onClick={openHomeownerForm}
-                  className="px-6 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5"
+                  className="px-4 sm:px-6 py-3 sm:py-3.5 rounded-xl text-white font-bold text-xs sm:text-sm lg:text-base hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
                   style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.03em' }}
                 >
-                  <FaBolt className="w-4 h-4" />
-                  Get My Free Savings Estimate
+                  <FaBolt className="w-4 h-4 flex-shrink-0" />
+                  <span>Get My Free Savings Estimate</span>
                 </button>
                 <a
                   href="tel:+1"
-                  className="px-6 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base border-2 border-white/70 hover:border-white hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2.5"
+                  className="px-4 sm:px-6 py-3 sm:py-3.5 rounded-xl text-white font-bold text-xs sm:text-sm lg:text-base border-2 border-white/70 hover:border-white hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2"
                   style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}
                 >
-                  <FaPhoneAlt className="w-4 h-4" />
-                  Call Now and Talk to an Expert
+                  <FaPhoneAlt className="w-4 h-4 flex-shrink-0" />
+                  <span>Call Now and Talk to an Expert</span>
                 </a>
               </div>
 
@@ -286,90 +287,87 @@ const HomeOwners = () => {
       </section>
 
       {/* Solar Options Section */}
-      <section className="bg-white py-16 lg:py-[100px] px-4 sm:px-8 lg:px-16 xl:px-[200px]">
-        <div className="text-center mb-12 lg:mb-[60px]">
-          <p className="text-lg font-bold mb-2" style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502', letterSpacing: '0.03em' }}>
-            Your Solar Options
-          </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black mb-4" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
-            Choose the Right Plan for You
-          </h2>
-          <p className="text-base lg:text-lg text-gray-700 max-w-[700px] mx-auto" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
-            Whether you want zero upfront costs, affordable monthly payments, or maximum long-term savings — we have a solar solution that fits your lifestyle.
-          </p>
-        </div>
+      <section className="bg-white py-12 sm:py-16 lg:py-[100px]">
+        <div className="container-bold">
+          <div className="text-center mb-10 sm:mb-12 lg:mb-[60px]">
+            <p className="text-base sm:text-lg font-bold mb-2" style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502', letterSpacing: '0.03em' }}>
+              Your Solar Options
+            </p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-[50px] font-bold text-black mb-3 sm:mb-4 leading-tight" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+              Choose the Right Plan for You
+            </h2>
+            <p className="text-sm sm:text-base lg:text-lg text-gray-700 max-w-[700px] mx-auto" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+              Whether you want zero upfront costs, affordable monthly payments, or maximum long-term savings — we have a solar solution that fits your lifestyle.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {solarOptions.map((option, i) => (
-            <div
-              key={i}
-              className="group relative bg-[#FAFBF2] rounded-2xl p-8 lg:p-10 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 border border-transparent hover:border-[#A1B502]/20"
-            >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
+            {solarOptions.map((option, i) => (
               <div
-                className="w-20 h-20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
-                style={{ backgroundColor: option.color }}
+                key={i}
+                className="group relative bg-[#FAFBF2] rounded-2xl p-6 sm:p-8 lg:p-10 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 border border-transparent hover:border-[#A1B502]/20"
               >
-                {option.icon}
+                <div
+                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center mb-5 sm:mb-6 group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
+                  style={{ backgroundColor: option.color }}
+                >
+                  {option.icon}
+                </div>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-black mb-1" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+                  {option.title}
+                </h3>
+                <p className="text-xs sm:text-sm font-bold mb-4" style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502', letterSpacing: '0.03em' }}>
+                  {option.subtitle}
+                </p>
+                <div className="w-12 h-[3px] rounded-full mb-4 sm:mb-5" style={{ backgroundColor: option.color }} />
+                <p className="text-sm lg:text-base text-gray-600 leading-relaxed mb-6 sm:mb-8" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
+                  {option.description}
+                </p>
+                <button
+                  onClick={openHomeownerForm}
+                  className="mt-auto px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5 text-xs sm:text-sm"
+                  style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: option.color, letterSpacing: '0.05em' }}
+                >
+                  <FaFileAlt className="w-4 h-4" />
+                  GET A QUOTE
+                </button>
               </div>
-              <h3 className="text-2xl lg:text-3xl font-bold text-black mb-1" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
-                {option.title}
-              </h3>
-              <p className="text-sm font-bold mb-4" style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502', letterSpacing: '0.03em' }}>
-                {option.subtitle}
-              </p>
-              <div className="w-12 h-[3px] rounded-full mb-5" style={{ backgroundColor: option.color }} />
-              <p className="text-sm lg:text-base text-gray-600 leading-relaxed mb-8" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
-                {option.description}
-              </p>
-              <button
-                onClick={openHomeownerForm}
-                className="mt-auto px-6 py-3 rounded-xl font-bold text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-sm"
-                style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: option.color, letterSpacing: '0.05em' }}
-              >
-                <FaFileAlt className="w-4 h-4" />
-                GET A QUOTE
-              </button>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Why Bold Energy Section */}
-      <section className="w-full bg-[#F5F7E8] py-16 lg:py-[100px] px-4 sm:px-8 lg:px-16 xl:px-[200px]">
-        <div className="text-center mb-12 lg:mb-[60px]">
-          <p className="text-lg font-bold mb-2" style={{ fontFamily: 'DM Sans, sans-serif', color: '#385887', letterSpacing: '0.03em' }}>
+      <section className="w-full bg-[#F5F7E8] py-12 sm:py-16 lg:py-[100px]">
+        <div className="container-bold">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-[60px]">
+          <p className="text-base sm:text-lg font-bold mb-2" style={{ fontFamily: 'DM Sans, sans-serif', color: '#385887', letterSpacing: '0.03em' }}>
             Why Choose Us
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black mb-4" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-[50px] font-bold text-black mb-3 sm:mb-4 leading-tight" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
             Why Bold Energy
           </h2>
-          <p className="text-base lg:text-lg text-gray-700 max-w-[700px] mx-auto" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+          <p className="text-sm sm:text-base lg:text-lg text-gray-700 max-w-[700px] mx-auto" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
             Ethical. Transparent. Relentless. We don't just install solar — we help you save money and protect the environment.
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-[60px]">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-[60px]">
           <div className="w-full lg:w-[40%] flex justify-center">
-            <div className="relative" style={{ width: '320px', height: '420px' }}>
-              <svg style={{ position: 'absolute', width: '320px', height: '420px', top: 0, left: 0 }}>
-                <rect
-                  x="0.5" y="0.5" width="319" height="419"
-                  rx="160" ry="160"
-                  fill="none" stroke="#385887" strokeWidth="1" strokeDasharray="5 10"
-                />
-              </svg>
-              <div style={{ position: 'relative', width: '100%', height: '100%', borderRadius: '160px', overflow: 'hidden', padding: '10px' }}>
+            <div className="relative w-[260px] h-[340px] sm:w-[300px] sm:h-[400px] lg:w-[320px] lg:h-[420px]">
+              <div className="absolute inset-0 rounded-[50%] border border-dashed border-[#385887]/60" />
+              <div className="relative w-full h-full rounded-[50%] overflow-hidden p-2.5">
                 <img
                   src="/boldenergyimage.png?v=8"
                   alt="Bold Energy"
-                  style={{ width: '100%', height: '100%', display: 'block', objectFit: 'cover', borderRadius: '150px' }}
+                  className="w-full h-full object-cover rounded-[50%]"
                   loading="lazy"
                 />
               </div>
             </div>
           </div>
 
-          <div className="w-full lg:w-[60%] grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="w-full lg:w-[60%] grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {[
               { icon: '⚡', title: 'Ethical & Transparent', desc: 'No hidden fees or bait-and-switch. Honest numbers from day one so you can make confident decisions.' },
               { icon: '🛡️', title: 'Tier-1 Hardware', desc: 'Triple-black panels + SolarEdge inverters backed by 25-year warranties for lasting performance.' },
@@ -388,32 +386,33 @@ const HomeOwners = () => {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* CTA Banner */}
-      <section className="w-full py-16 lg:py-[80px] px-4 sm:px-8 lg:px-16 xl:px-[200px]" style={{ backgroundColor: '#385887' }}>
-        <div className="text-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-[42px] font-bold text-white mb-4" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+      <section className="w-full py-12 sm:py-16 lg:py-[80px] bg-[#385887]">
+        <div className="container-bold text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold text-white mb-3 sm:mb-4 leading-tight" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
             Ready to Go Solar?
           </h2>
-          <p className="text-base lg:text-lg text-white/80 max-w-[600px] mx-auto mb-8" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+          <p className="text-sm sm:text-base lg:text-lg text-white/80 max-w-[600px] mx-auto mb-6 sm:mb-8" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
             Get a personalized solar estimate for your home. Our team will walk you through every option and help you find the perfect fit.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <button
               onClick={openHomeownerForm}
-              className="px-8 py-4 rounded-xl font-bold text-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3"
+              className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base lg:text-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5"
               style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#A1B502', color: '#FFFFFF', letterSpacing: '0.05em' }}
             >
-              <FaFileAlt className="w-5 h-5" />
+              <FaFileAlt className="w-4 h-4 sm:w-5 sm:h-5" />
               GET A FREE QUOTE
             </button>
             <button
               onClick={() => navigate('/states-we-cover')}
-              className="px-8 py-4 rounded-xl font-bold text-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 border-2 border-white text-white"
+              className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base lg:text-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5 border-2 border-white text-white"
               style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.05em', backgroundColor: 'transparent' }}
             >
-              <FaMapMarkedAlt className="w-5 h-5" />
+              <FaMapMarkedAlt className="w-4 h-4 sm:w-5 sm:h-5" />
               VIEW COVERAGE MAP
             </button>
           </div>

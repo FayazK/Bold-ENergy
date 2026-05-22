@@ -35,20 +35,21 @@ const reasons = [
 
 const WhyBoldEnergy = () => {
   return (
-    <section className="w-full py-16 lg:py-[100px] px-4 sm:px-8 lg:px-16 xl:px-[200px] bg-white">
-      <div className="text-center mb-12 lg:mb-[60px]">
-        <p className="text-lg font-bold mb-2" style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502', letterSpacing: '0.03em' }}>
+    <section className="w-full py-12 sm:py-16 lg:py-[100px] bg-white">
+      <div className="container-bold">
+      <div className="text-center mb-10 sm:mb-12 lg:mb-[60px]">
+        <p className="text-base sm:text-lg font-bold mb-2" style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502', letterSpacing: '0.03em' }}>
           Why Choose Us
         </p>
-        <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black mb-4" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-[50px] font-bold text-black mb-3 sm:mb-4 leading-tight" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
           Why Bold Energy
         </h2>
-        <p className="text-base lg:text-lg text-gray-700 max-w-[700px] mx-auto" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+        <p className="text-sm sm:text-base lg:text-lg text-gray-700 max-w-[700px] mx-auto" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
           We don't just install solar — we empower you to take control of your energy, your savings, and your future.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
         {reasons.map((reason, i) => (
           <div
             key={i}
@@ -65,6 +66,7 @@ const WhyBoldEnergy = () => {
             </p>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

@@ -5,40 +5,96 @@
   --color-bold-green: #A1B502;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+/* ---------- Base reset / safety (in @layer base so Tailwind utilities still win) ---------- */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  html {
+    background-color: #0b0f17;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    min-width: 320px;
+  }
+
+  /* Prevent images from overflowing their containers without overriding explicit height utilities */
+  img, video, svg, iframe, canvas {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* Long unbreakable words (URLs, emails) shouldn't break layout */
+  p, span, li, label {
+    overflow-wrap: anywhere;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', sans-serif;
+    overflow-wrap: break-word;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  input, select, textarea {
+    font: inherit;
+    max-width: 100%;
+  }
 }
 
-html {
-  background-color: #0b0f17;
+/* Helper: image fills its (typically absolute-positioned) container */
+img.is-bg {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
 }
 
-body {
-  font-family: 'DM Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  background-color: #ffffff;
+/* ---------- Container utility ----------
+   Use on the inner content of any full-bleed section. Keeps content
+   inside a 1440px max-width and gives consistent responsive padding. */
+.container-bold {
   width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  position: relative;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 640px) {
+  .container-bold { padding-left: 1.5rem; padding-right: 1.5rem; }
+}
+@media (min-width: 1024px) {
+  .container-bold { padding-left: 2.5rem; padding-right: 2.5rem; }
+}
+@media (min-width: 1280px) {
+  .container-bold { padding-left: 4rem; padding-right: 4rem; }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Quicksand', sans-serif;
-}
+/* Make scrolled-to anchors clear of the absolute header */
+[id] { scroll-margin-top: 100px; }
 
-img {
-  image-rendering: auto;
-}
-
-button {
-  cursor: pointer;
-}
-
+/* ---------- Animations ---------- */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -76,4 +132,3 @@ button {
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
-

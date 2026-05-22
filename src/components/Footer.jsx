@@ -9,57 +9,66 @@ const Footer = () => {
   return (
     <footer className="w-full relative">
       {/* Green Partner Section */}
-      <div className="w-full relative overflow-hidden" style={{ minHeight: '500px' }}>
+      <div className="w-full relative overflow-hidden">
         <img
           src="/bold.png.png"
-          alt="Bold Energy Footer"
-          className="w-full h-full object-cover absolute inset-0"
+          alt=""
+          aria-hidden="true"
+          className="is-bg absolute inset-0"
           loading="lazy"
         />
-        <div className="absolute inset-0" style={{ backgroundColor: '#A1B502', opacity: '0.85', zIndex: 1 }} />
+        <div className="absolute inset-0 bg-[#A1B502]/85 z-[1]" />
 
-        {/* Bold Section Image */}
-        <div className="relative flex justify-center pt-10 sm:pt-16 lg:pt-[100px] px-4" style={{ zIndex: 2 }}>
-          <img
-            src="/boldsection.png.png"
-            alt="Bold Section"
-            className="w-full max-w-[1100px] h-auto object-contain"
-            loading="lazy"
-          />
-        </div>
+        <div className="relative z-[2] container-bold pt-10 sm:pt-16 lg:pt-[100px] pb-12 sm:pb-20">
+          {/* Bold Section Image */}
+          <div className="flex justify-center">
+            <img
+              src="/boldsection.png.png"
+              alt="Bold Section"
+              className="w-full max-w-[1100px] h-auto object-contain"
+              loading="lazy"
+            />
+          </div>
 
-        {/* Text Content */}
-        <div className="relative flex flex-col items-center px-4 sm:px-8 pt-6 sm:pt-12 pb-16 sm:pb-24" style={{ zIndex: 2 }}>
-          <h2 className="mb-4 sm:mb-6 text-white font-bold text-center text-2xl sm:text-3xl lg:text-4xl xl:text-[50px]" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
-            Partner With Us
-          </h2>
-          <p className="text-white text-center mb-6 sm:mb-10 text-sm sm:text-base lg:text-lg xl:text-[23px] max-w-[900px]" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.4', letterSpacing: '0.03em' }}>
-            We are an environmentally conscious renewable energy company that's focused on creating the most customer centric experience in the industry!
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6">
-            <button
-              onClick={openHomeownerForm}
-              className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-sm sm:text-base"
-              style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#FFFFFF', color: '#A1B502', letterSpacing: '0.05em' }}
+          {/* Text Content */}
+          <div className="flex flex-col items-center pt-6 sm:pt-12">
+            <h2
+              className="mb-4 sm:mb-6 text-white font-bold text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[50px]"
+              style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}
             >
-              <FaFileAlt className="w-4 h-4 sm:w-5 sm:h-5" />
-              GET A QUOTE
-            </button>
-            <button
-              onClick={openDealerForm}
-              className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-sm sm:text-base"
-              style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#385887', letterSpacing: '0.05em' }}
+              Partner With Us
+            </h2>
+            <p
+              className="text-white text-center mb-6 sm:mb-10 text-sm sm:text-base lg:text-lg xl:text-[22px] max-w-[900px] px-2"
+              style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.5', letterSpacing: '0.02em' }}
             >
-              <FaHandshake className="w-5 h-5 sm:w-6 sm:h-6" />
-              PARTNER WITH BOLD
-            </button>
+              We are an environmentally conscious renewable energy company that's focused on creating the most customer centric experience in the industry!
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 w-full sm:w-auto items-stretch sm:items-center">
+              <button
+                onClick={openHomeownerForm}
+                className="px-5 sm:px-8 py-3 sm:py-4 rounded-xl font-bold hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5 text-sm sm:text-base"
+                style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#FFFFFF', color: '#A1B502', letterSpacing: '0.05em' }}
+              >
+                <FaFileAlt className="w-4 h-4 sm:w-5 sm:h-5" />
+                GET A QUOTE
+              </button>
+              <button
+                onClick={openDealerForm}
+                className="px-5 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5 text-sm sm:text-base"
+                style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#385887', letterSpacing: '0.05em' }}
+              >
+                <FaHandshake className="w-5 h-5 sm:w-6 sm:h-6" />
+                PARTNER WITH BOLD
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Contact Info Card */}
-      <div className="relative mx-auto px-4 sm:px-8 lg:px-12 xl:px-16" style={{ marginTop: '-60px', zIndex: 10 }}>
+      <div className="relative container-bold -mt-12 sm:-mt-16 z-10">
         <div className="max-w-[900px] mx-auto bg-white rounded-[10px] shadow-lg p-6 sm:p-8 lg:p-10 xl:p-14">
           <p className="text-sm sm:text-base lg:text-lg xl:text-xl font-bold mb-6 leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222', letterSpacing: '0.03em' }}>
             As a national distributor of solar supplies we endeavor provide fast and knowledgeable service, we can get all the materials you need
@@ -116,24 +125,24 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="w-full relative overflow-hidden" style={{ marginTop: '-40px' }}>
+      <div className="w-full relative overflow-hidden -mt-10">
         <img
           src="/footer.png.jpg"
-          alt="Footer"
-          className="w-full h-full object-cover absolute inset-0"
+          alt=""
+          aria-hidden="true"
+          className="is-bg absolute inset-0"
           loading="lazy"
-          style={{ minHeight: '100%' }}
         />
 
-        <div className="relative pt-20 sm:pt-28 lg:pt-36 pb-6 sm:pb-10 px-4 sm:px-8 lg:px-16 xl:px-[200px]" style={{ zIndex: 1 }}>
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-8 lg:gap-12 xl:gap-16 mb-10 sm:mb-14">
+        <div className="relative z-[1] container-bold pt-20 sm:pt-28 lg:pt-36 pb-6 sm:pb-10">
+          <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] items-center md:items-start gap-8 md:gap-8 lg:gap-12 mb-10 sm:mb-14">
             {/* Logo */}
-            <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-auto">
+            <div className="flex justify-center md:justify-start">
               <Link to="/" onClick={() => window.scrollTo(0, 0)}>
                 <img
                   src="/BOLD Energy Logo.svg"
                   alt="Bold Energy"
-                  className="w-[160px] sm:w-[200px] lg:w-[280px] xl:w-[353px] h-auto cursor-pointer"
+                  className="w-[160px] sm:w-[200px] md:w-[220px] lg:w-[260px] xl:w-[300px] h-auto cursor-pointer"
                 />
               </Link>
             </div>
@@ -150,30 +159,29 @@ const Footer = () => {
             </div>
 
             {/* Contact Us */}
-            <div className="md:ml-auto w-full max-w-[370px] md:w-auto">
-              <div className="bg-white/10 rounded-[10px] p-5 sm:p-6 w-full max-w-[370px]">
-                <h4 className="text-xl sm:text-2xl lg:text-[30px] font-bold text-white mb-4 sm:mb-5" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
+            <div className="w-full md:w-auto md:max-w-[370px] justify-self-center md:justify-self-end">
+              <div className="bg-white/10 rounded-[10px] p-5 sm:p-6 w-full">
+                <h4 className="text-xl sm:text-2xl lg:text-[28px] font-bold text-white mb-4 sm:mb-5" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
                   Contact Us
                 </h4>
                 <div className="flex flex-col gap-4">
                   <div className="flex items-start gap-3">
                     <FaPhone className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 mt-1" />
-                    <span className="text-sm sm:text-base lg:text-lg text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>123-456-7890</span>
+                    <span className="text-sm sm:text-base text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>123-456-7890</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <FaEnvelope className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 mt-1" />
-                    <span className="text-sm sm:text-base lg:text-lg text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>info@bold.energy</span>
+                    <span className="text-sm sm:text-base text-white break-all" style={{ fontFamily: 'DM Sans, sans-serif' }}>info@bold.energy</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <FaMapMarkerAlt className="w-4 h-5 sm:w-5 sm:h-6 text-white flex-shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm lg:text-base text-white leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                    <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                       30 Old Kings Hwy S, Darien, Suite #1001, CT 06820
                     </span>
                   </div>
                 </div>
               </div>
             </div>
-
           </div>
 
           {/* Social Media Icons */}

@@ -20,52 +20,53 @@ const PartnerWithBoldEnergy = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="w-full relative min-h-[700px] sm:min-h-[850px] lg:min-h-[950px] flex items-center">
+      <section className="w-full relative min-h-[640px] sm:min-h-[760px] lg:min-h-[860px] flex items-center overflow-hidden">
         {/* Dark background image */}
         <div className="absolute inset-0 overflow-hidden">
           <img
             src="/partnerwithboldenergy.png.jpg?v=5"
-            alt="Partner With Bold Energy"
-            className="w-full h-full object-cover"
+            alt=""
+            aria-hidden="true"
+            className="is-bg"
             loading="eager"
             style={{ transform: 'scale(1.05)' }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
-          <div className="absolute top-[15%] right-[8%] w-[400px] h-[400px] bg-[#A1B502]/10 rounded-full blur-[120px] pointer-events-none" />
-          <div className="absolute bottom-[10%] left-[5%] w-[350px] h-[350px] bg-[#385887]/15 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute top-[15%] right-[8%] w-[260px] sm:w-[400px] h-[260px] sm:h-[400px] bg-[#A1B502]/10 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute bottom-[10%] left-[5%] w-[260px] sm:w-[350px] h-[260px] sm:h-[350px] bg-[#385887]/15 rounded-full blur-[120px] pointer-events-none" />
         </div>
 
-        <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-20 pt-36 sm:pt-40 lg:pt-56 pb-12 lg:pb-16">
+        <div className="relative z-10 container-bold pt-40 sm:pt-44 md:pt-52 lg:pt-60 pb-10 sm:pb-12 lg:pb-16 w-full">
           {/* Heading */}
           <h1
-            className="font-extrabold uppercase leading-[0.95] mb-6 lg:mb-8"
+            className="font-extrabold uppercase leading-[0.98] mb-5 sm:mb-6 lg:mb-8"
             style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '-0.01em' }}
           >
-            <span className="block text-3xl sm:text-5xl lg:text-7xl xl:text-[90px] text-white">
+            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[72px] text-white">
               Your Last Installer
             </span>
-            <span className="block text-3xl sm:text-5xl lg:text-7xl xl:text-[90px] text-[#A1B502] mt-1">
+            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[72px] text-[#A1B502] mt-1">
               Let You Down.
             </span>
-            <span className="block text-3xl sm:text-5xl lg:text-7xl xl:text-[90px] text-[#A1B502] mt-1">
+            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[72px] text-[#A1B502] mt-1">
               We Won't.
             </span>
           </h1>
 
           {/* Subtitle */}
           <p
-            className="text-base sm:text-lg text-white/85 max-w-[600px] leading-relaxed mb-8 lg:mb-10"
+            className="text-sm sm:text-base lg:text-lg text-white/85 max-w-[600px] leading-relaxed mb-6 sm:mb-8 lg:mb-10"
             style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.01em' }}
           >
             Debt-free. 100% privately funded. Operationally elite. Built from the ground up to make your sales org win.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-10 lg:mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-10 lg:mb-12">
             <button
               onClick={openDealerForm}
-              className="px-6 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5"
+              className="px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl text-white font-bold text-sm sm:text-base hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5"
               style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.03em' }}
             >
               Schedule a Call
@@ -75,7 +76,7 @@ const PartnerWithBoldEnergy = () => {
               onClick={() => {
                 document.getElementById('key-benefits')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base text-white border-2 border-white/70 bg-transparent hover:border-white hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2.5"
+              className="px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl font-bold text-sm sm:text-base text-white border-2 border-white/70 bg-transparent hover:border-white hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2.5"
               style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}
             >
               Learn More
@@ -84,10 +85,10 @@ const PartnerWithBoldEnergy = () => {
           </div>
 
           {/* Divider */}
-          <div className="h-px w-full bg-white/20 mb-6 lg:mb-8" />
+          <div className="h-px w-full bg-white/20 mb-5 sm:mb-6 lg:mb-8" />
 
           {/* Four stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 lg:gap-12 max-w-[700px]">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 lg:gap-10 max-w-[700px]">
             {[
               { value: '$0', label: 'Total Debt' },
               { value: '30', label: 'Active States' },
@@ -96,13 +97,13 @@ const PartnerWithBoldEnergy = () => {
             ].map((s) => (
               <div key={s.label}>
                 <div
-                  className="text-2xl sm:text-3xl lg:text-[36px] font-extrabold text-white leading-none mb-2"
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-extrabold text-white leading-none mb-1.5 sm:mb-2"
                   style={{ fontFamily: 'Quicksand, sans-serif' }}
                 >
                   {s.value}
                 </div>
                 <div
-                  className="text-[11px] sm:text-xs font-bold uppercase text-white/70"
+                  className="text-[10px] sm:text-[11px] font-bold uppercase text-white/70"
                   style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.15em' }}
                 >
                   {s.label}
@@ -114,8 +115,8 @@ const PartnerWithBoldEnergy = () => {
       </section>
 
       {/* Why Bold Energy Section */}
-      <section id="key-benefits" className="bg-white py-16 lg:py-[100px] px-4 sm:px-8 lg:px-12 xl:px-20">
-        <div className="max-w-[1440px] mx-auto">
+      <section id="key-benefits" className="bg-white py-12 sm:py-16 lg:py-[100px]">
+        <div className="container-bold">
           {/* Top pill */}
           <p
             className="text-[#A1B502] text-xs sm:text-sm font-bold uppercase mb-3"
@@ -125,19 +126,19 @@ const PartnerWithBoldEnergy = () => {
           </p>
           {/* Heading */}
           <h2
-            className="font-extrabold uppercase leading-[1.05] mb-10 lg:mb-12"
+            className="font-extrabold uppercase leading-[1.05] mb-8 sm:mb-10 lg:mb-12"
             style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '-0.01em' }}
           >
-            <span className="block text-3xl sm:text-4xl lg:text-5xl xl:text-[56px] text-[#1A2A4A]">
+            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] text-[#1A2A4A]">
               Built for Speed, Transparency,
             </span>
-            <span className="block text-3xl sm:text-4xl lg:text-5xl xl:text-[56px] text-[#A1B502]">
+            <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] text-[#A1B502]">
               and Real Results.
             </span>
           </h2>
 
-          {/* Five cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-5 mb-10 lg:mb-12">
+          {/* Five cards: 1 col mobile, 2 col tablet, 3 col small laptop, 5 col desktop */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-4 lg:gap-5 mb-8 sm:mb-10 lg:mb-12">
             {[
               {
                 idx: '01',
@@ -194,24 +195,24 @@ const PartnerWithBoldEnergy = () => {
             ].map((card) => (
               <div
                 key={card.idx}
-                className={`relative ${card.bg} rounded-2xl p-6 lg:p-7 overflow-hidden min-h-[340px] lg:min-h-[420px] flex flex-col`}
+                className={`relative ${card.bg} rounded-2xl p-5 sm:p-6 lg:p-7 overflow-hidden min-h-[280px] sm:min-h-[320px] lg:min-h-[380px] xl:min-h-[400px] flex flex-col`}
               >
                 {/* Big background number */}
                 <div
-                  className={`absolute top-4 right-5 text-5xl lg:text-[60px] font-extrabold leading-none ${card.numberColor}`}
+                  className={`absolute top-4 right-5 text-4xl sm:text-5xl lg:text-[54px] font-extrabold leading-none ${card.numberColor}`}
                   style={{ fontFamily: 'Quicksand, sans-serif' }}
                 >
                   {card.idx}
                 </div>
 
                 {/* Icon */}
-                <div className="mb-6 lg:mb-8 relative z-10">
+                <div className="mb-5 sm:mb-6 lg:mb-8 relative z-10">
                   {card.icon}
                 </div>
 
                 {/* Title */}
                 <h3
-                  className={`text-lg lg:text-xl font-bold mb-2 lg:mb-3 ${card.titleColor} relative z-10`}
+                  className={`text-base sm:text-lg lg:text-xl font-bold mb-2 lg:mb-3 ${card.titleColor} relative z-10`}
                   style={{ fontFamily: 'Quicksand, sans-serif' }}
                 >
                   {card.title}
@@ -269,7 +270,7 @@ const PartnerWithBoldEnergy = () => {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <button
               onClick={openDealerForm}
-              className="px-6 py-3.5 rounded-xl text-white font-bold text-sm sm:text-base hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5"
+              className="px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl text-white font-bold text-sm sm:text-base hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5"
               style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#A1B502', letterSpacing: '0.03em' }}
             >
               Become a Dealer Now
@@ -279,19 +280,19 @@ const PartnerWithBoldEnergy = () => {
               onClick={() => {
                 document.getElementById('two-products')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-6 py-3.5 rounded-xl font-bold text-sm sm:text-base text-[#1A2A4A] bg-white border-2 border-[#1A2A4A]/20 hover:border-[#1A2A4A]/50 hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2.5"
+              className="px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl font-bold text-sm sm:text-base text-[#1A2A4A] bg-white border-2 border-[#1A2A4A]/20 hover:border-[#1A2A4A]/50 hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2.5 text-center"
               style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}
             >
-              See How Bold Doubles Your Commissions
-              <FaArrowDown className="w-3.5 h-3.5" />
+              <span>See How Bold Doubles Your Commissions</span>
+              <FaArrowDown className="w-3.5 h-3.5 flex-shrink-0" />
             </button>
           </div>
         </div>
       </section>
 
       {/* Two Products One Partner Section */}
-      <section id="two-products" className="bg-white py-16 lg:py-[100px] px-4 sm:px-8 lg:px-12 xl:px-20">
-        <div className="max-w-[1440px] mx-auto">
+      <section id="two-products" className="bg-white py-12 sm:py-16 lg:py-[100px]">
+        <div className="container-bold">
           <p
             className="text-[#A1B502] text-xs sm:text-sm font-bold uppercase mb-3"
             style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.18em' }}
@@ -299,7 +300,7 @@ const PartnerWithBoldEnergy = () => {
             Two Products. One Partner.
           </p>
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl xl:text-[52px] font-extrabold text-[#1A2A4A] mb-10 lg:mb-12 leading-[1.1]"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] font-extrabold text-[#1A2A4A] mb-8 sm:mb-10 lg:mb-12 leading-[1.1]"
             style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '-0.01em' }}
           >
             Solar + Roofing = More Commission Per Deal
@@ -307,7 +308,7 @@ const PartnerWithBoldEnergy = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-8 lg:gap-12 items-start">
             {/* Left: Product cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 lg:gap-5">
               {/* Solar */}
               <div className="bg-[#F6F6F9] rounded-2xl p-5 lg:p-6">
                 <div className="mb-4">
@@ -395,17 +396,18 @@ const PartnerWithBoldEnergy = () => {
       </section>
 
       {/* Leadership Video Section */}
-      <section className="w-full relative py-16 lg:py-[100px] overflow-hidden">
+      <section className="w-full relative py-12 sm:py-16 lg:py-[100px] overflow-hidden">
         <img
           src="/gobold.png.jpg"
-          alt="Leadership background"
-          className="w-full h-full object-cover absolute inset-0"
+          alt=""
+          aria-hidden="true"
+          className="is-bg absolute inset-0"
           loading="lazy"
         />
-        <div className="absolute inset-0" style={{ backgroundColor: '#385887', opacity: 0.9 }} />
+        <div className="absolute inset-0 bg-[#385887]/90" />
 
-        <div className="relative z-[2] px-4 sm:px-8 lg:px-16 xl:px-[200px]">
-          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-[80px]">
+        <div className="relative z-[2] container-bold">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-[60px]">
             <div className="w-full lg:w-[55%]">
               <div
                 className="relative rounded-2xl overflow-hidden cursor-pointer group aspect-video bg-black/20"
@@ -414,13 +416,13 @@ const PartnerWithBoldEnergy = () => {
                 <img
                   src="/possibilities.png.png"
                   alt="Leadership Welcome Video"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="is-bg group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl">
-                    <FaPlay className="w-8 h-8 sm:w-10 sm:h-10 text-[#385887] ml-1.5" />
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl">
+                    <FaPlay className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-[#385887] ml-1.5" />
                   </div>
                 </div>
                 <div className="absolute bottom-4 left-4 bg-black/60 rounded-lg px-3 py-1.5">
@@ -430,20 +432,20 @@ const PartnerWithBoldEnergy = () => {
             </div>
 
             <div className="w-full lg:w-[45%]">
-              <p className="text-sm sm:text-base font-bold mb-3" style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502', letterSpacing: '0.05em' }}>
+              <p className="text-xs sm:text-sm font-bold mb-3" style={{ fontFamily: 'DM Sans, sans-serif', color: '#A1B502', letterSpacing: '0.15em' }}>
                 FROM OUR LEADERSHIP
               </p>
-              <h2 className="text-2xl sm:text-3xl lg:text-[42px] lg:leading-tight font-bold text-white mb-5" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] leading-tight font-bold text-white mb-4 sm:mb-5" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.02em' }}>
                 A Message From Our CEO
               </h2>
-              <p className="text-base lg:text-lg text-white/80 leading-relaxed mb-6" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
+              <p className="text-sm sm:text-base lg:text-lg text-white/80 leading-relaxed mb-5 sm:mb-6" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em' }}>
                 Hear directly from our leadership about why Bold Energy is built different — and why dealers across 25+ states trust us with their business.
               </p>
-              <ul className="flex flex-col gap-3 mb-8">
+              <ul className="flex flex-col gap-2.5 sm:gap-3 mb-6 sm:mb-8">
                 {['Our vision for dealer partnerships', 'How we ensure your success', 'The Bold Energy difference'].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-[#A1B502] flex-shrink-0" />
-                    <span className="text-sm lg:text-base text-white/90" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
+                    <span className="text-sm sm:text-base text-white/90" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                       {item}
                     </span>
                   </li>
@@ -451,8 +453,8 @@ const PartnerWithBoldEnergy = () => {
               </ul>
               <button
                 onClick={() => setShowVideo(true)}
-                className="px-6 py-3 rounded-xl font-bold text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 text-sm sm:text-base border-2 border-white"
-                style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.05em', backgroundColor: 'transparent' }}
+                className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5 text-sm sm:text-base border-2 border-white bg-transparent"
+                style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.05em' }}
               >
                 <FaPlay className="w-4 h-4" />
                 WATCH THE VIDEO
@@ -463,36 +465,37 @@ const PartnerWithBoldEnergy = () => {
       </section>
 
       {/* Dealer Process Section */}
-      <section className="bg-white py-16 lg:py-[100px] px-4 sm:px-8 lg:px-16 xl:px-[200px]">
-        <div className="text-center mb-12 lg:mb-[60px]">
-          <p className="text-lg font-bold mb-2" style={{ fontFamily: 'DM Sans, sans-serif', color: '#385887', letterSpacing: '0.03em' }}>
+      <section className="bg-white py-12 sm:py-16 lg:py-[100px]">
+        <div className="container-bold">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-[60px]">
+          <p className="text-base sm:text-lg font-bold mb-2" style={{ fontFamily: 'DM Sans, sans-serif', color: '#385887', letterSpacing: '0.03em' }}>
             Simple & Streamlined
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-[50px] font-bold text-black mb-4" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-[50px] font-bold text-black mb-3 sm:mb-4 leading-tight" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
             How It Works
           </h2>
-          <p className="text-base lg:text-lg text-gray-700 max-w-[600px] mx-auto" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+          <p className="text-sm sm:text-base lg:text-lg text-gray-700 max-w-[600px] mx-auto" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
             From deal submission to system activation — we handle the heavy lifting so you can focus on selling.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-4">
           {processSteps.map((step, i) => (
             <div key={i} className="relative flex flex-col items-center text-center">
-              <div className="text-[48px] lg:text-[56px] font-bold leading-none mb-2" style={{ fontFamily: 'Quicksand, sans-serif', color: '#A1B502', opacity: 0.3 }}>
+              <div className="text-4xl sm:text-[48px] lg:text-[52px] font-bold leading-none mb-2 text-[#A1B502]/30" style={{ fontFamily: 'Quicksand, sans-serif' }}>
                 {step.num}
               </div>
-              <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: '#FDFFEF', border: '2px solid #A1B502' }}>
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-3 sm:mb-4 bg-[#FDFFEF] border-2 border-[#A1B502]">
                 {step.icon}
               </div>
-              <h3 className="text-base lg:text-lg font-bold text-black mb-2" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+              <h3 className="text-base sm:text-lg font-bold text-black mb-2" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
                 {step.title}
               </h3>
-              <p className="text-sm text-gray-600 leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}>
                 {step.desc}
               </p>
               {i < processSteps.length - 1 && (
-                <div className="hidden lg:block absolute top-[75px] -right-3 text-[#A1B502]/40 text-2xl" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <div className="hidden lg:block absolute top-[75px] -right-3 text-[#A1B502]/40 text-2xl">
                   ›
                 </div>
               )}
@@ -500,33 +503,34 @@ const PartnerWithBoldEnergy = () => {
           ))}
         </div>
 
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-10 sm:mt-12">
           <button
             onClick={openDealerForm}
-            className="px-8 py-4 rounded-xl font-bold text-lg text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3"
+            className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base lg:text-lg text-white hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5"
             style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#385887', letterSpacing: '0.05em' }}
           >
-            <FaHandshake className="w-5 h-5" />
+            <FaHandshake className="w-4 h-4 sm:w-5 sm:h-5" />
             START YOUR APPLICATION
           </button>
+        </div>
         </div>
       </section>
 
       {/* CTA Banner */}
-      <section className="w-full py-16 lg:py-[80px] px-4 sm:px-8 lg:px-16 xl:px-[200px]" style={{ backgroundColor: '#A1B502' }}>
-        <div className="text-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-[42px] font-bold text-white mb-4" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
+      <section className="w-full py-12 sm:py-16 lg:py-[80px] bg-[#A1B502]">
+        <div className="container-bold text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold text-white mb-3 sm:mb-4 leading-tight" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
             Ready to Grow Your Solar Business?
           </h2>
-          <p className="text-base lg:text-lg text-white/90 max-w-[600px] mx-auto mb-8" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
+          <p className="text-sm sm:text-base lg:text-lg text-white/90 max-w-[600px] mx-auto mb-6 sm:mb-8" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
             Join our dealer network and get access to fast payments, top-tier hardware, and a team that has your back every step of the way.
           </p>
           <button
             onClick={openDealerForm}
-            className="px-8 py-4 rounded-xl font-bold text-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 mx-auto"
+            className="px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base lg:text-lg hover:brightness-110 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2.5 mx-auto"
             style={{ fontFamily: 'DM Sans, sans-serif', backgroundColor: '#FFFFFF', color: '#A1B502', letterSpacing: '0.05em' }}
           >
-            <FaHandshake className="w-5 h-5" />
+            <FaHandshake className="w-4 h-4 sm:w-5 sm:h-5" />
             PARTNER WITH BOLD
           </button>
         </div>

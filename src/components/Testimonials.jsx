@@ -48,9 +48,19 @@ const Testimonials = () => {
 
   const updateSizes = useCallback(() => {
     const w = window.innerWidth;
-    if (w < 768) { setVisibleCount(1); setCardWidth(Math.min(w - 96, 340)); setCardGap(16); }
-    else if (w < 1024) { setVisibleCount(2); setCardWidth(330); setCardGap(20); }
-    else { setVisibleCount(3); setCardWidth(380); setCardGap(24); }
+    if (w < 640) {
+      setVisibleCount(1);
+      setCardWidth(Math.min(w - 64, 320));
+      setCardGap(12);
+    } else if (w < 1024) {
+      setVisibleCount(2);
+      setCardWidth(Math.min((w - 100) / 2, 340));
+      setCardGap(16);
+    } else {
+      setVisibleCount(3);
+      setCardWidth(Math.min((w - 140) / 3, 380));
+      setCardGap(20);
+    }
   }, []);
 
   useEffect(() => {
@@ -66,8 +76,8 @@ const Testimonials = () => {
   const next = () => setCurrentSlide((s) => Math.min(maxSlide, s + 1));
 
   return (
-    <section className="py-14 lg:py-20 bg-[#F7F8FA] border-y border-[#1a1a1a]/[0.06]">
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12">
+    <section className="py-12 sm:py-14 lg:py-20 bg-[#F7F8FA] border-y border-[#1a1a1a]/[0.06]">
+      <div className="container-bold" style={{ maxWidth: '1280px' }}>
         {/* Header: heading on the left, rating chip on the right */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-8 lg:mb-10">
           <div>
@@ -78,11 +88,10 @@ const Testimonials = () => {
               Customer Stories
             </p>
             <h2
-              className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-[#1a1a1a] leading-[1.15]"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-[#1a1a1a] leading-[1.15]"
               style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '-0.01em' }}
             >
-              Trusted by homeowners
-              <br className="hidden sm:block" /> across the country.
+              Trusted by homeowners <br className="hidden sm:block" />across the country.
             </h2>
           </div>
 
