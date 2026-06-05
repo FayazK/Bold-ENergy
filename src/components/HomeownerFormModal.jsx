@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { FaFileAlt, FaTimes, FaChevronDown } from 'react-icons/fa';
 import { useFormModal } from '../context/FormModalContext';
 import { sendForm } from '../lib/sendForm';
+import Turnstile from './Turnstile';
+import { useBotGuard } from '../lib/useBotGuard';
 
 const states = [
   'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut',
@@ -29,6 +31,7 @@ const HomeownerFormModal = () => {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [sendError, setSendError] = useState('');
+  const guard = useBotGuard();
 
   // Close on Escape key
   useEffect(() => {
@@ -38,6 +41,12 @@ const HomeownerFormModal = () => {
     document.addEventListener('keydown', handleKey);
     return () => document.removeEventListener('keydown', handleKey);
   }, [homeownerOpen, closeHomeownerForm]);
+
+  // Fresh challenge + timing baseline each time the modal opens
+  useEffect(() => {
+    if (homeownerOpen) guard.reset();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [homeownerOpen]);
 
   // Lock body scroll when open
   useEffect(() => {
@@ -67,11 +76,16 @@ const HomeownerFormModal = () => {
     const newErrors = validate();
     setErrors(newErrors);
     if (Object.keys(newErrors).length !== 0) return;
+    if (!guard.token) {
+      setSendError('Please complete the verification below.');
+      return;
+    }
     setSending(true);
     setSendError('');
     try {
-      await sendForm('homeowner_modal', form);
+      await sendForm('homeowner_modal', form, guard.getSecurity());
       setSubmitted(true);
+      guard.reset();
       setTimeout(() => {
         setSubmitted(false);
         setForm({ fullName: '', phone: '', email: '', state: '', installType: '', monthlyBill: '' });
@@ -245,6 +259,16 @@ const HomeownerFormModal = () => {
                 {errors.monthlyBill && <p className="text-red-300 text-xs mt-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>{errors.monthlyBill}</p>}
               </div>
             </div>
+
+            {/* Honeypot — hidden from humans, bots tend to fill it */}
+            <input type="text" {...guard.honeypotProps} />
+
+            {/* Cloudflare Turnstile (bot protection) */}
+            {homeownerOpen && (
+              <div className="flex justify-center mb-4 sm:mb-5">
+                <Turnstile onToken={guard.setToken} resetSignal={guard.resetSignal} />
+              </div>
+            )}
 
             {sendError && (
               <p className="text-red-300 text-sm mb-4 text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>

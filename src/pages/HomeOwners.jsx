@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import Testimonials from '../components/Testimonials';
 import { useFormModal } from '../context/FormModalContext';
 import { sendForm } from '../lib/sendForm';
+import Turnstile from '../components/Turnstile';
+import { useBotGuard } from '../lib/useBotGuard';
 import { FaHandHoldingUsd, FaDollarSign, FaShoppingCart, FaFileAlt, FaStar, FaBolt, FaPhoneAlt, FaLock, FaArrowRight, FaMapMarkedAlt } from 'react-icons/fa';
 
 const solarOptions = [
@@ -52,17 +54,23 @@ const HomeOwners = () => {
   const [sending, setSending] = useState(false);
   const [sendError, setSendError] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const guard = useBotGuard();
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!guard.token) {
+      setSendError('Please complete the verification below.');
+      return;
+    }
     setSending(true);
     setSendError('');
     try {
-      await sendForm('homeowner_hero', form);
+      await sendForm('homeowner_hero', form, guard.getSecurity());
       setSubmitted(true);
       setForm({ fullName: '', phone: '', email: '', address: '', utilityBill: '', ownRent: '', contactMethod: '' });
+      guard.reset();
       setTimeout(() => setSubmitted(false), 4000);
     } catch (err) {
       setSendError(err.message || 'Something went wrong. Please try again.');
@@ -136,7 +144,7 @@ const HomeOwners = () => {
                   <span>Get My Free Savings Estimate</span>
                 </button>
                 <a
-                  href="tel:+1"
+                  href="tel:+14752212353"
                   className="px-4 sm:px-6 py-3 sm:py-3.5 rounded-xl text-white font-bold text-xs sm:text-sm lg:text-base border-2 border-white/70 hover:border-white hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2"
                   style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.03em' }}
                 >
@@ -254,6 +262,14 @@ const HomeOwners = () => {
                     <option value="text">Text</option>
                   </select>
                 </Field>
+
+                {/* Honeypot — hidden from humans, bots tend to fill it */}
+                <input type="text" {...guard.honeypotProps} />
+
+                {/* Cloudflare Turnstile (bot protection) */}
+                <div className="flex justify-center">
+                  <Turnstile onToken={guard.setToken} resetSignal={guard.resetSignal} />
+                </div>
 
                 <button
                   type="submit"

@@ -273,13 +273,13 @@ const TermsAndConditions = () => {
               <strong>Bold Energy</strong>
             </div>
             <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px', letterSpacing: '0.03em' }}>
-              30 Old Kings Hwy S, Darien, Suite #1001, CT 06820
+              3333 Preston Road, STE 300-165, Frisco, TX 75034
             </div>
             <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px', letterSpacing: '0.03em' }}>
-              Email: info@bold.energy
+              Email: Support@boldenergy.com
             </div>
             <div style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '18px', color: '#222222', lineHeight: '1.8', marginBottom: '10px', letterSpacing: '0.03em' }}>
-              Phone: 123-456-7890
+              Phone: +1 475-221-2353
             </div>
           </div>
 

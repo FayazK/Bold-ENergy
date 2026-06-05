@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { FaFileAlt, FaHandshake, FaMapMarkerAlt, FaPhone, FaClock, FaArrowRight, FaEnvelope, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
 import { useFormModal } from '../context/FormModalContext';
 
 const Footer = () => {
@@ -89,12 +88,12 @@ const Footer = () => {
             <div className="flex items-center gap-3 sm:gap-4">
               <FaMapMarkerAlt className="w-4 h-5 sm:w-5 sm:h-6 text-[#A1B502] flex-shrink-0" />
               <span className="text-xs sm:text-sm lg:text-base" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222' }}>
-                30 Old Kings Hwy S, Darien, CT 06820, USA
+                3333 Preston Road, STE 300-165, Frisco, TX 75034
               </span>
             </div>
             <div className="flex items-center gap-3 sm:gap-4">
               <FaPhone className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#A1B502] flex-shrink-0" />
-              <span className="text-xs sm:text-sm lg:text-base" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222' }}>123-456-7890</span>
+              <span className="text-xs sm:text-sm lg:text-base" style={{ fontFamily: 'DM Sans, sans-serif', color: '#222222' }}>+1 475-221-2353</span>
             </div>
             <div className="flex items-center gap-3 sm:gap-4">
               <FaClock className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-[#A1B502] flex-shrink-0" />
@@ -167,16 +166,16 @@ const Footer = () => {
                 <div className="flex flex-col gap-4">
                   <div className="flex items-start gap-3">
                     <FaPhone className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 mt-1" />
-                    <span className="text-sm sm:text-base text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>123-456-7890</span>
+                    <span className="text-sm sm:text-base text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>+1 475-221-2353</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <FaEnvelope className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0 mt-1" />
-                    <span className="text-sm sm:text-base text-white break-all" style={{ fontFamily: 'DM Sans, sans-serif' }}>info@bold.energy</span>
+                    <span className="text-sm sm:text-base text-white break-all" style={{ fontFamily: 'DM Sans, sans-serif' }}>Support@boldenergy.com</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <FaMapMarkerAlt className="w-4 h-5 sm:w-5 sm:h-6 text-white flex-shrink-0 mt-0.5" />
                     <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                      30 Old Kings Hwy S, Darien, Suite #1001, CT 06820
+                      3333 Preston Road, STE 300-165, Frisco, TX 75034
                     </span>
                   </div>
                 </div>
@@ -187,15 +186,28 @@ const Footer = () => {
           {/* Social Media Icons */}
           <div className="flex justify-center md:justify-start gap-3 sm:gap-4 mb-6 sm:mb-10">
             {[
-              { icon: <FaFacebookF className="w-4 h-4 sm:w-5 sm:h-5 text-[#385887]" /> },
-              { icon: <FaXTwitter className="w-4 h-4 sm:w-5 sm:h-5 text-[#222222]" /> },
-              { icon: <FaInstagram className="w-4 h-4 sm:w-5 sm:h-5 text-[#E1306C]" /> },
-              { icon: <FaLinkedinIn className="w-4 h-4 sm:w-5 sm:h-5 text-[#0A66C2]" /> },
-            ].map((social, i) => (
-              <div key={i} className="flex items-center justify-center rounded-full bg-white w-9 h-9 sm:w-11 sm:h-11 lg:w-[60px] lg:h-[60px] hover:scale-110 transition-transform duration-300 cursor-pointer">
-                {social.icon}
-              </div>
-            ))}
+              { icon: <FaFacebookF className="w-4 h-4 sm:w-5 sm:h-5 text-[#385887]" />, href: 'https://www.facebook.com/BoldEnergyOfficial', label: 'Facebook' },
+              { icon: <FaInstagram className="w-4 h-4 sm:w-5 sm:h-5 text-[#E1306C]" />, href: 'https://www.instagram.com/boldenergyofficial/', label: 'Instagram' },
+              { icon: <FaLinkedinIn className="w-4 h-4 sm:w-5 sm:h-5 text-[#0A66C2]" />, href: 'https://www.linkedin.com/company/empower-energy-solutions-inc/', label: 'LinkedIn' },
+            ].map((social, i) => {
+              const iconClasses = 'flex items-center justify-center rounded-full bg-white w-9 h-9 sm:w-11 sm:h-11 lg:w-[60px] lg:h-[60px] hover:scale-110 transition-transform duration-300 cursor-pointer';
+              return social.href ? (
+                <a
+                  key={i}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className={iconClasses}
+                >
+                  {social.icon}
+                </a>
+              ) : (
+                <div key={i} className={iconClasses} aria-label={social.label}>
+                  {social.icon}
+                </div>
+              );
+            })}
           </div>
 
           {/* Contractor License Numbers */}

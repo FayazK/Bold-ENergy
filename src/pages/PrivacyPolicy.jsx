@@ -53,7 +53,7 @@ const PrivacyPolicy = () => {
             },
             {
               title: '3. Contact Us',
-              body: 'If you have any questions about this Privacy Policy, please contact us at info@bold.energy.',
+              body: 'If you have any questions about this Privacy Policy, please contact us at Support@boldenergy.com.',
             },
           ].map((s) => (
             <div key={s.title} className="mb-10 sm:mb-12">

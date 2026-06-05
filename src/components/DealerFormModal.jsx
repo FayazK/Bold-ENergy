@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { FaHandshake, FaTimes, FaChevronDown } from 'react-icons/fa';
 import { useFormModal } from '../context/FormModalContext';
 import { sendForm } from '../lib/sendForm';
+import Turnstile from './Turnstile';
+import { useBotGuard } from '../lib/useBotGuard';
 
 const states = [
   'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut',
@@ -28,6 +30,7 @@ const DealerFormModal = () => {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [sendError, setSendError] = useState('');
+  const guard = useBotGuard();
 
   useEffect(() => {
     const handleKey = (e) => {
@@ -36,6 +39,12 @@ const DealerFormModal = () => {
     document.addEventListener('keydown', handleKey);
     return () => document.removeEventListener('keydown', handleKey);
   }, [dealerOpen, closeDealerForm]);
+
+  // Fresh challenge + timing baseline each time the modal opens
+  useEffect(() => {
+    if (dealerOpen) guard.reset();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dealerOpen]);
 
   useEffect(() => {
     if (dealerOpen) {
@@ -64,11 +73,16 @@ const DealerFormModal = () => {
     const newErrors = validate();
     setErrors(newErrors);
     if (Object.keys(newErrors).length !== 0) return;
+    if (!guard.token) {
+      setSendError('Please complete the verification below.');
+      return;
+    }
     setSending(true);
     setSendError('');
     try {
-      await sendForm('dealer_modal', form);
+      await sendForm('dealer_modal', form, guard.getSecurity());
       setSubmitted(true);
+      guard.reset();
       setTimeout(() => {
         setSubmitted(false);
         setForm({ fullName: '', company: '', phone: '', email: '', state: '', volume: '' });
@@ -238,6 +252,16 @@ const DealerFormModal = () => {
                 {errors.volume && <p className="text-red-300 text-xs mt-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>{errors.volume}</p>}
               </div>
             </div>
+
+            {/* Honeypot — hidden from humans, bots tend to fill it */}
+            <input type="text" {...guard.honeypotProps} />
+
+            {/* Cloudflare Turnstile (bot protection) */}
+            {dealerOpen && (
+              <div className="flex justify-center mb-4 sm:mb-5">
+                <Turnstile onToken={guard.setToken} resetSignal={guard.resetSignal} />
+              </div>
+            )}
 
             {sendError && (
               <p className="text-red-300 text-sm mb-4 text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>
