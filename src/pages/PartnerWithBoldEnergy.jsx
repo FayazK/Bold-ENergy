@@ -439,7 +439,7 @@ const PartnerWithBoldEnergy = () => {
                 A Message From Our CEO
               </h2>
               <p className="text-sm sm:text-base lg:text-lg text-white/80 leading-relaxed mb-5 sm:mb-6" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em' }}>
-                Hear directly from our leadership about why Bold Energy is built different — and why dealers across 25+ states trust us with their business.
+                Hear directly from our leadership about why Bold Energy is built different — and why dealers across 30 states trust us with their business.
               </p>
               <ul className="flex flex-col gap-2.5 sm:gap-3 mb-6 sm:mb-8">
                 {['Our vision for dealer partnerships', 'How we ensure your success', 'The Bold Energy difference'].map((item, i) => (

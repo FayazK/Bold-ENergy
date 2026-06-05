@@ -6,7 +6,7 @@ const Hero = () => {
 
   const stats = [
     { icon: FaSolarPanel, value: '25+', label: 'Years of Solar Experience' },
-    { icon: FaMapMarkedAlt, value: '25', label: 'States We Cover' },
+    { icon: FaMapMarkedAlt, value: '30', label: 'States We Cover' },
     { icon: FaTools, value: '20k+', label: 'Completed Installs' },
   ];
 

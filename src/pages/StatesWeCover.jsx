@@ -7,12 +7,12 @@ const COMING_SOON_COLOR = '#3D9DE0';
 
 const coveredStates = [
   'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut',
-  'Delaware', 'Florida', 'Illinois', 'Indiana', 'Iowa',
+  'Florida', 'Illinois', 'Indiana', 'Iowa',
   'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland',
   'Massachusetts', 'Michigan', 'Missouri', 'New Hampshire', 'New Jersey',
   'New York', 'North Carolina', 'Ohio', 'Oklahoma', 'Pennsylvania',
   'Rhode Island', 'South Carolina', 'Texas', 'Vermont', 'Virginia',
-  'Washington', 'West Virginia',
+  'Washington',
 ];
 
 const comingSoonStates = ['Georgia'];
@@ -32,7 +32,7 @@ const StatesWeCover = () => {
     { id: 6, image: '/pacific-roof.jpg', heading: 'Pacific Region', states: ['California', 'Hawaii', 'Oregon', 'Washington', 'Alaska'] },
     { id: 7, image: '/gulf-coast-roof.jpg', heading: 'Gulf Coast Region', states: ['Texas', 'Louisiana', 'Mississippi', 'Alabama', 'Florida'] },
     { id: 8, image: '/great-plains-roof.jpg', heading: 'Great Plains Region', states: ['Kansas', 'Nebraska', 'North Dakota', 'South Dakota', 'Oklahoma'] },
-    { id: 9, image: '/mid-atlantic-roof.jpg', heading: 'Mid-Atlantic Region', states: ['Delaware', 'Maryland', 'Pennsylvania', 'Virginia', 'West Virginia'] },
+    { id: 9, image: '/mid-atlantic-roof.jpg', heading: 'Mid-Atlantic Region', states: ['Maryland', 'Pennsylvania', 'Virginia'] },
     { id: 10, image: '/new-england-roof.jpg', heading: 'New England Region', states: ['Rhode Island', 'Connecticut', 'Massachusetts', 'Vermont', 'New Hampshire', 'Maine'] },
   ];
 
@@ -97,7 +97,7 @@ const StatesWeCover = () => {
                 className="text-[#A1B502] text-xs sm:text-sm font-bold uppercase mb-3 sm:mb-4"
                 style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.18em' }}
               >
-                32 States. One Mission.
+                30 States. One Mission.
               </p>
 
               <h1
@@ -111,7 +111,7 @@ const StatesWeCover = () => {
                 className="text-sm sm:text-base lg:text-lg text-white/85 max-w-[520px] leading-relaxed mb-6 sm:mb-8"
                 style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.01em' }}
               >
-                From New England to the Pacific, Bold Energy powers homeowners and partners across 32 states — and new markets open every quarter. Find out if we're already in your area.
+                From New England to the Pacific, Bold Energy powers homeowners and partners across 30 states — and new markets open every quarter. Find out if we're already in your area.
               </p>
 
               {/* CTAs */}
@@ -142,7 +142,7 @@ const StatesWeCover = () => {
               {/* Quick stats */}
               <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 max-w-[480px]">
                 {[
-                  { value: '32', label: 'Active States' },
+                  { value: '30', label: 'Active States' },
                   { value: '20k+', label: 'Installs' },
                   { value: '25+', label: 'Years' },
                 ].map((s) => (
@@ -188,7 +188,7 @@ const StatesWeCover = () => {
           </div>
           <div>
             <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-black leading-relaxed lg:leading-[1.7]" style={{ fontFamily: 'DM Sans, sans-serif', letterSpacing: '0.02em' }}>
-              Bold Energy is headquartered in Connecticut, but our mission is nationwide. We currently serve homeowners and partners across 15+ states — and growing every quarter. With Tier-1 panels, transparent pricing, and flexible financing options, we make it easy for families from New England to the Rockies to take control of their energy future.
+              Bold Energy is headquartered in Connecticut, but our mission is nationwide. We currently serve homeowners and partners across 30 states — and growing every quarter. With Tier-1 panels, transparent pricing, and flexible financing options, we make it easy for families from New England to the Rockies to take control of their energy future.
             </p>
           </div>
         </div>

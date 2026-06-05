@@ -22,7 +22,7 @@ const CoverageMap = () => {
           Coverage Map
         </h2>
         <p className="text-base lg:text-lg text-gray-700 max-w-[700px] mx-auto" style={{ fontFamily: 'DM Sans, sans-serif', lineHeight: '1.6', letterSpacing: '0.03em' }}>
-          Bold Energy currently serves homeowners and partners across 25+ states — and growing every quarter.
+          Bold Energy currently serves homeowners and partners across 30 states — and growing every quarter.
         </p>
       </div>
 
