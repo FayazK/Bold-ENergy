@@ -325,7 +325,7 @@ const StatesWeCover = () => {
       </section>
 
       {/* Coverage Map Section */}
-      <section id="coverage-map" className="w-full bg-[#F5F5F5] py-12 sm:py-16 lg:py-[100px] scroll-mt-24">
+      <section id="coverage-map" className="w-full bg-white py-12 sm:py-16 lg:py-[100px] scroll-mt-24">
         <div className="container-bold">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-[50px] font-bold text-black text-center mb-8 sm:mb-10 lg:mb-[60px] leading-tight" style={{ fontFamily: 'Quicksand, sans-serif', letterSpacing: '0.03em' }}>
           Coverage Map
